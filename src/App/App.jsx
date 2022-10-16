@@ -1,16 +1,14 @@
-import { useTranslation } from 'react-i18next';
-import { Suspense } from 'react';
-import cls from './App.module.sass';
+import { Suspense } from 'react'
+import { useRoutes } from 'react-router-dom'
+import { routes } from '../routes'
+import s from './App.module.sass'
 
-function App() {
-  const { t } = useTranslation();
+const App = () => {
   return (
-    <div className={cls.App}>
-      <Suspense fallback="">
-        <h1>{t('SaintCode')}</h1>
-      </Suspense>
+    <div className={s.App}>
+      <Suspense fallback="">{useRoutes(routes)}</Suspense>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
