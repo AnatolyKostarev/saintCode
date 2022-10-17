@@ -9,7 +9,7 @@ export const routes = [
   { path: '/', element: <Home /> },
   { path: '/school', element: <School /> },
   { path: '/program', element: <Preprogram /> },
-  { path: '/questions', element: <Questions /> },
+  { path: '/faq', element: <Questions /> },
   { path: '/blog', element: <Blog /> },
   { path: '*', element: <NotFound /> },
 ]
