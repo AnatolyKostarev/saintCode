@@ -11,7 +11,7 @@ export const Header = () => {
   const { t, i18n } = useTranslation()
 
   // For test translation
-  const toggle = async () => {
+  const toggleLang = async () => {
     await i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
   }
 
@@ -25,9 +25,9 @@ export const Header = () => {
         <div className={clsx(s.block)}>
           <Nav />
           <Button
-            toggleLang={toggle}
+            className={s.header__btn}
+            onClick={toggleLang}
             text={t('Люблю поговорить, позвони мне')}
-            className={s.call}
           />
         </div>
       </div>
