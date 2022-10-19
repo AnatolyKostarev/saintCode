@@ -1,8 +1,8 @@
 import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
 import { Header } from '../../components/Header/Header'
 import { Hero } from '../../components/Hero/Hero'
 import s from './Home.module.sass'
+import ForWho from '../../components/ForWho/ForWho'
 
 export const Home = () => {
   return (
@@ -10,9 +10,8 @@ export const Home = () => {
       <Header />
       <main>
         <Section className={s.hero}>
-          <Container>
-            <Hero />
-          </Container>
+          <Hero />
+          <ForWho />
         </Section>
       </main>
     </>
