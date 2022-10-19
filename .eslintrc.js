@@ -25,5 +25,7 @@ module.exports = {
     'react/jsx-no-useless-fragment': 'off',
     semi: ['warn', 'never'],
     'jsx-quotes': ['error', 'prefer-double'],
+    'jsx-a11y/img-redundant-alt': 'off',
+
   },
 }
