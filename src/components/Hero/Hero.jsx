@@ -9,17 +9,17 @@ export const Hero = () => {
   const { t } = useTranslation()
   return (
     <section className={clsx(s.Hero)}>
-      {/* <div className={clsx(s.container)}> */}
-      <Title>
-        {t('Перезапусти карьеру')}
-        <span className="transparent">
-          {' '}
-          ——
-          <br />
-          {t('научись программировать')}
-        </span>
-      </Title>
-      {/* </div> */}
+      <div className={clsx(s.container)}>
+        <Title>
+          {t('Перезапусти карьеру')}
+          <span className="transparent">
+            {' '}
+            ——
+            <br />
+            {t('научись программировать')}
+          </span>
+        </Title>
+      </div>
       <HeroArticle>
         <p>
           {t('Школа программирования')}

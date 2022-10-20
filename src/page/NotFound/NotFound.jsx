@@ -5,6 +5,9 @@ import { Header } from '../../components/Header/Header'
 import CryCat from '../../ui/CryCat/CryCat'
 import NotFoundArticle from '../../ui/NotFoundArticle/NotFoundArticle'
 import s from './NotFound.module.sass'
+import { Header } from '../../components/Header/Header'
+import CryCat from '../../ui/CryCat/CryCat'
+import NotFoundArticle from '../../ui/NotFoundArticle/NotFoundArticle'
 
 export const NotFound = () => {
   return (
