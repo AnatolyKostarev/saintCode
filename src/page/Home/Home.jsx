@@ -1,14 +1,18 @@
+import { Section } from '../../ui/Section/Section'
 import { Header } from '../../components/Header/Header'
 import { Hero } from '../../components/Hero/Hero'
-import { SchoolComparison } from '../../components/SchoolComparison/SchoolComparison'
+import s from './Home.module.sass'
+import ForWho from '../../components/ForWho/ForWho'
 
 export const Home = () => {
   return (
     <>
       <Header />
       <main>
-        <Hero />
-        <SchoolComparison />
+        <Section className={s.hero}>
+          <Hero />
+          <ForWho />
+        </Section>
       </main>
     </>
   )
