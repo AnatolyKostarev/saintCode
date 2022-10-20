@@ -39,7 +39,6 @@ export const SchoolComparison = () => {
             <img src={iconTables} alt="tables" />
           </div>
         </Container>
-
         <p
           className={s.p}
           style={
