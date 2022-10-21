@@ -3,6 +3,7 @@ import { Hero } from '../../components/Hero/Hero'
 import ForWho from '../../components/ForWho/ForWho'
 import { SchoolComparison } from '../../components/SchoolComparison/SchoolComparison'
 import { DailySchedule } from '../../components/DailySchedule/DailySchedule'
+import Footer from '../../components/Footer/Footer'
 
 export const Home = () => {
   return (
@@ -14,6 +15,7 @@ export const Home = () => {
         <SchoolComparison />
         <DailySchedule />
       </main>
+      <Footer />
     </>
   )
 }
