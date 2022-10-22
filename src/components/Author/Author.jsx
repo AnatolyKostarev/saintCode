@@ -23,8 +23,12 @@ const Author = ({ className }) => {
             />
           </div>
           <div className={clsx(s.text)}>
-            <p className={clsx(s.Author__name)}>Женя Гриценко</p>
-            <p className={clsx(s.Author__info)}>Основатель курса</p>
+            <p className={clsx(s.Author__name)}>
+              Женя Гриценко
+            </p>
+            <p className={clsx(s.Author__info)}>
+              Основатель курса
+            </p>
           </div>
         </div>
         <div className={clsx(s.right)}>
@@ -40,7 +44,9 @@ const Author = ({ className }) => {
           <SectionTitle className={s.title}>
             Мы помогаем людям без&nbsp;опыта
             {' '}
-            <span className="transparent">(с&nbsp;небольшим опытом)</span>
+            <span className="transparent">
+              (с&nbsp;небольшим опытом)
+            </span>
             {' '}
             в&nbsp;программировании получить
             первую работу веб-разработчиком.
