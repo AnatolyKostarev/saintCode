@@ -4,12 +4,14 @@ import { useTranslation } from 'react-i18next'
 import Title from '../../ui/Title/Title'
 import HeroArticle from '../../ui/HeroArticle/HeroArticle'
 import s from './Hero.module.sass'
+import { Section } from '../../ui/Section/Section'
+import { Container } from '../../ui/Container/Container'
 
 export const Hero = () => {
   const { t } = useTranslation()
   return (
-    <section className={clsx(s.Hero)}>
-      <div className={clsx(s.container)}>
+    <Section className={clsx(s.Hero)}>
+      <Container className={clsx(s.container)}>
         <Title>
           {t('Перезапусти карьеру')}
           <span className="transparent">
@@ -19,7 +21,7 @@ export const Hero = () => {
             {t('научись программировать')}
           </span>
         </Title>
-      </div>
+      </Container>
       <HeroArticle>
         <p>
           {t('Школа программирования')}
@@ -37,6 +39,6 @@ export const Hero = () => {
           </span>
         </p>
       </HeroArticle>
-    </section>
+    </Section>
   )
 }
