@@ -13,15 +13,15 @@ export const SchoolComparison = () => {
     showIsTable(!isTable)
   }
 
-  console.log(isTable)
-
   return (
     <>
       <Section className={s.schools__comparison}>
         <Container className={s.container}>
           <div>
             <SectionTitle>
-              <span>Сравнение</span>
+              <span>
+                Сравнение
+              </span>
               &nbsp;школ
             </SectionTitle>
             <p className={s.description}>

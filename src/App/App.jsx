@@ -5,7 +5,9 @@ import { routes } from '../routes'
 const App = () => {
   return (
     <>
-      <Suspense fallback="">{useRoutes(routes)}</Suspense>
+      <Suspense fallback="">
+        {useRoutes(routes)}
+      </Suspense>
     </>
   )
 }

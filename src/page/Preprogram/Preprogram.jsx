@@ -9,7 +9,9 @@ export const Preprogram = () => {
       <Header />
       <Section className={s.program}>
         <Container>
-          <h2>Подготовительная программа</h2>
+          <h2>
+            Подготовительная программа
+          </h2>
         </Container>
       </Section>
     </>

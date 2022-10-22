@@ -10,7 +10,9 @@ export const Questions = () => {
       <Header />
       <Section className={s.questions}>
         <Container>
-          <h2>ЧАВО</h2>
+          <h2>
+            ЧАВО
+          </h2>
         </Container>
       </Section>
     </>

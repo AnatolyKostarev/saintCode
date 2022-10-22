@@ -9,7 +9,9 @@ export const Blog = () => {
       <Header />
       <Section className={s.blog}>
         <Container>
-          <h2>Блог</h2>
+          <h2>
+            Блог
+          </h2>
         </Container>
       </Section>
     </>

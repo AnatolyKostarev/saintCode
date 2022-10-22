@@ -12,7 +12,9 @@ const ForWho = ({ className }) => {
     <section className={clsx(s.ForWho, className)}>
       <Container>
         <Title>
-          <span className="transparent--blue">Тебе</span>
+          <span className="transparent--blue">
+            Тебе
+          </span>
           {' '}
           подходит
           {' '}
@@ -32,7 +34,9 @@ const ForWho = ({ className }) => {
             <p className={clsx(s.text)}>
               Хочешь
               {' '}
-              <span className="focus">быстро найти первую работу</span>
+              <span className="focus">
+                быстро найти первую работу
+              </span>
               {' '}
               разработчиком
             </p>
@@ -42,7 +46,9 @@ const ForWho = ({ className }) => {
               Готов учиться пять дней в неделю с 12.00 до 19.00, пахать как раб на
               галерах,
               {' '}
-              <span className="focus">чтобы освоить за три месяца программу</span>
+              <span className="focus">
+                чтобы освоить за три месяца программу
+              </span>
               , которую другие
               осваивают за полтора года
             </p>

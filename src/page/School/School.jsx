@@ -9,7 +9,9 @@ export const School = () => {
       <Header />
       <Section className={s.school}>
         <Container>
-          <h2>О Школе</h2>
+          <h2>
+            О Школе
+          </h2>
         </Container>
       </Section>
     </>
