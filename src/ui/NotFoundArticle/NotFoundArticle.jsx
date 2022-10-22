@@ -9,7 +9,9 @@ const NotFoundArticle = ({ className }) => {
   return (
     <article className={clsx(s.NotFoundArticle, className)}>
       <Title>
-        <span className="transparent">Упс!</span>
+        <span className="transparent">
+          Упс!
+        </span>
         {' '}
         Очень жаль
       </Title>

@@ -11,12 +11,14 @@ export const DailySchedule = () => {
     <Section className={s.Schedule}>
       <Container>
         <SectionTitle>
-          <span>Расписание</span>
+          <span>
+            Расписание
+          </span>
           &nbsp;дня
         </SectionTitle>
         <div className={s.Schedule__cards}>
           {dailyCard.map(elem => (
-            <ScheduleCard time={elem.time} text={elem.text} />
+            <ScheduleCard time={elem.time} text={elem.text} key={elem.id} />
           ))}
         </div>
       </Container>

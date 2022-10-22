@@ -7,7 +7,9 @@ export const ScheduleCard = ({ text, time }) => {
   return (
     <div className={clsx(s.schedule__card)}>
       <TimeIcon time={time} />
-      <p>{text}</p>
+      <p>
+        {text}
+      </p>
     </div>
   )
 }

@@ -18,7 +18,9 @@ const Teachers = ({ className }) => {
   return (
     <Section className={clsx(s.Teachers, className)}>
       <Container>
-        <SectionTitle>Преподаватели</SectionTitle>
+        <SectionTitle>
+          Преподаватели
+        </SectionTitle>
         <div className={s.cards__container}>
           <TeacherCard
             largePhoto={Yuri2x}

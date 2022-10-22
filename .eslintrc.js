@@ -29,5 +29,6 @@ module.exports = {
     'linebreak-style': 'off',
     'arrow-parens': ['warn', 'as-needed'],
     'no-confusing-arrow': ['warn', { onlyOneSimpleParam: true }],
+    'react/jsx-one-expression-per-line': ['warn', { allow: 'none' }],
   },
 }

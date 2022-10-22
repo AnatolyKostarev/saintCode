@@ -10,16 +10,24 @@ const Nav = () => {
     <nav className={clsx(s.Nav)}>
       <ul className={clsx(s.list)}>
         <li>
-          <Link to="/school">{t('О школе')}</Link>
+          <Link to="/school">
+            {t('О школе')}
+          </Link>
         </li>
         <li>
-          <Link to="/program">{t('Подготовительная программа')}</Link>
+          <Link to="/program">
+            {t('Подготовительная программа')}
+          </Link>
         </li>
         <li>
-          <Link to="/faq">{t('ЧАВО')}</Link>
+          <Link to="/faq">
+            {t('ЧАВО')}
+          </Link>
         </li>
         <li>
-          <Link to="/blog">{t('Блог')}</Link>
+          <Link to="/blog">
+            {t('Блог')}
+          </Link>
         </li>
       </ul>
     </nav>
