@@ -1,0 +1,34 @@
+@import "src/config/styles/vars"
+
+.Teachers
+  padding: 100px 0
+  background-color: $middle
+.long
+  min-height: 500px
+.short
+  min-height: 400px
+.cards__container
+  display: flex
+  flex-wrap: wrap
+  gap: 40px
+  margin-top: 28px
+.list
+  display: flex
+  flex-direction: column
+  gap: 10px
+  &__item
+    font-weight: 400
+    font-size: 14px
+    line-height: 160%
+    color: #EDEDF0
+    display: flex
+    align-items: flex-start
+    max-width: 468px
+    &::before
+      content: ''
+      min-width: 6px
+      min-height: 6px
+      background: #E56F82
+      display: inline-block
+      margin-right: 10px
+      margin-top: 8px
