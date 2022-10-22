@@ -58,6 +58,7 @@ const Teachers = ({ className }) => {
               <li className={clsx(s.list__item)}>
                 Разработал систему контроля и взаимодействия автоматов по продаже воды
               </li>
+
             </ul>
           </TeacherCard>
           <TeacherCard
