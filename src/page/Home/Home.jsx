@@ -5,6 +5,7 @@ import { SchoolComparison } from '../../components/SchoolComparison/SchoolCompar
 import { DailySchedule } from '../../components/DailySchedule/DailySchedule'
 import Footer from '../../components/Footer/Footer'
 import Teachers from '../../components/Teachers/Teachers'
+import Author from '../../components/Author/Author'
 
 export const Home = () => {
   return (
@@ -15,6 +16,7 @@ export const Home = () => {
         <ForWho />
         <SchoolComparison />
         <DailySchedule />
+        <Author />
         <Teachers />
       </main>
       <Footer />
