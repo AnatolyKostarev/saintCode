@@ -6,9 +6,15 @@ import s from './FooterLinks.module.sass'
 const FooterLinks = ({ className }) => {
   return (
     <div className={clsx(s.FooterLinks, className)}>
-      <Link to="/program">Подготовительная программа</Link>
-      <Link to="/">Самостоятельное обучение</Link>
-      <Link to="/school">Вакансии</Link>
+      <Link to="/program">
+        Подготовительная программа
+      </Link>
+      <Link to="/">
+        Самостоятельное обучение
+      </Link>
+      <Link to="/school">
+        Вакансии
+      </Link>
     </div>
   )
 }
