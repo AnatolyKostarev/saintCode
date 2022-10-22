@@ -3,6 +3,11 @@ import { Section } from '../../ui/Section/Section'
 import { Container } from '../../ui/Container/Container'
 import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
 import ThreeIcon from './icon-months.svg'
+import { Panel } from '../../ui/Panel/Panel'
+import { List } from '../../ui/List/List'
+import {
+  trainingWeb, trainingJS, trainingReact, trainingJob,
+} from './trainingData'
 import s from './TrainingProgram.module.sass'
 
 export const TrainingProgram = () => {
@@ -28,36 +33,77 @@ export const TrainingProgram = () => {
             </p>
           </div>
         </div>
+        <div className={s.TrainingProgram__title}>
+          <p>
+            Научишься верстать статические веб-страницы за 3 недели
+          </p>
+          <p>
+            01
+          </p>
+        </div>
         <div className={s.TrainingProgram__tasks}>
-          <div>
-            <h3>
-              Научишься верстать статические веб-страницы за 3 недели
-            </h3>
-            <span>
-              01
-            </span>
-          </div>
           <div className={s.TrainingProgram__wrapper}>
-            <div className={s.TrainingProgram__task}>
-              <p>
-                &bull; Git
-              </p>
-              <ul>
-                <li>
-                  Terminal
-                </li>
-                <li>
-                  Поймёшь, как работать в команде
-                  {' '}
-                </li>
-                <li>
-                  {' '}
-                  Будешь писать понятные комментарии к своему коду
-                </li>
-              </ul>
-            </div>
+            <List items={trainingWeb} />
           </div>
-         
+          <Panel
+            className={s.TrainingProgram__panel}
+            text="Итог"
+            description="Свёрстан лендинг и сервис заказа пиццы"
+          />
+        </div>
+        <div className={s.TrainingProgram__title}>
+          <p>
+            Научишься создавать динамические веб-страницы за 5 недель на JavaScript
+          </p>
+          <p>
+            02
+          </p>
+        </div>
+        <div className={s.TrainingProgram__tasks}>
+          <div className={s.TrainingProgram__wrapper}>
+            <List items={trainingJS} />
+          </div>
+          <Panel
+            className={s.TrainingProgram__panel}
+            text="Итог"
+            description="Работающий сервис по заказу пиццы"
+          />
+        </div>
+        <div className={s.TrainingProgram__title}>
+          <p>
+            Научишься использовать React для создания современных веб-приложений за 4 недели
+          </p>
+          <p>
+            03
+          </p>
+        </div>
+        <div className={s.TrainingProgram__tasks}>
+          <div className={s.TrainingProgram__wrapper}>
+            <List items={trainingReact} />
+          </div>
+          <Panel
+            className={s.TrainingProgram__panel}
+            text="Итог"
+            description="Перепишешь сервис по заказу пиццы на React"
+          />
+        </div>
+        <div className={s.TrainingProgram__title}>
+          <p>
+            Подготовишься к поиску работы
+          </p>
+          <p>
+            04
+          </p>
+        </div>
+        <div className={s.TrainingProgram__tasks}>
+          <div className={s.TrainingProgram__wrapper}>
+            <List items={trainingJob} />
+          </div>
+          <Panel
+            className={s.TrainingProgram__panel}
+            text="Итог"
+            description="Разослал качественные резюме и сопроводительные письма в адекватные компании. Готов проходить техническое собеседование"
+          />
         </div>
       </Container>
     </Section>
