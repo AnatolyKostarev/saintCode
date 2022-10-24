@@ -17,6 +17,7 @@ export const PriceCard = ({
         <img src={icon} alt="offline" width="60" height="60" />
         <p>
           Дата старта:
+          {' '}
           {start}
         </p>
       </div>
