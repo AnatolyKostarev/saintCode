@@ -15,7 +15,7 @@ export const Price = () => {
         </SectionTitle>
         <div className={s.Price__wrapper}>
           {dataPrice.map(({ ...elem }) => (
-            <PriceCard {...elem} />
+            <PriceCard key={elem.id} {...elem} />
           ))}
         </div>
       </Container>
