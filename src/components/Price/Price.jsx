@@ -10,7 +10,9 @@ export const Price = () => {
   return (
     <Section className={s.Price}>
       <Container>
-        <SectionTitle className={s.Price__title}>Сколько стоит?</SectionTitle>
+        <SectionTitle className={s.Price__title}>
+          Сколько стоит?
+        </SectionTitle>
         <div className={s.Price__wrapper}>
           {dataPrice.map(({ ...elem }) => (
             <PriceCard {...elem} />

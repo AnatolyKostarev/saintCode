@@ -12,13 +12,11 @@ export const PriceCard = ({
   description,
 }) => {
   return (
-    
     <div className={s.Price__card}>
       <div className={s.Price__header}>
         <img src={icon} alt="offline" width="60" height="60" />
         <p>
           Дата старта:
-          {' '}
           {start}
         </p>
       </div>
@@ -26,12 +24,12 @@ export const PriceCard = ({
         {type}
       </p>
       <p className={s.Price__discount}>
-        {price}
+        {new Intl.NumberFormat('ru-Ru').format(price)}
         {' '}
         руб.
       </p>
       <p className={s.Price__real}>
-        {priceWithDiscount}
+        {new Intl.NumberFormat('ru-Ru').format(priceWithDiscount)}
         {' '}
         руб.
       </p>
