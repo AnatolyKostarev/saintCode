@@ -3,7 +3,7 @@ import Button from '../Button/Button'
 import s from './PriceCard.module.sass'
 
 export const PriceCard = ({
-  icon,
+  location,
   start,
   type,
   price,
@@ -14,16 +14,10 @@ export const PriceCard = ({
   return (
     <div className={s.Price__card}>
       <div className={s.Price__header}>
-        <img src={icon} alt="offline" width="60" height="60" />
         <p>
-          Дата старта:
-          {' '}
-          {start}
+          {location}
         </p>
       </div>
-      <p className={s.Price__type}>
-        {type}
-      </p>
       <p className={s.Price__discount}>
         {new Intl.NumberFormat('ru-Ru').format(price)}
         {' '}
@@ -34,9 +28,16 @@ export const PriceCard = ({
         {' '}
         руб.
       </p>
+      <p className={s.Price__startDate}>
+        Дата старта:
+        {start}
+      </p>
       <p className={s.Price__finalDate}>
-        Скидка до
+        Скидка до&nbsp;
         {discountLastDay}
+      </p>
+      <p className={s.Price__type}>
+        {type}
       </p>
       <p className={s.Price__description}>
         {description}
