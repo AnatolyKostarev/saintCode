@@ -1,7 +1,3 @@
-import offLineIcon from './icon-offline.svg'
-import onLineIcon from './icon-online.svg'
-import mixedIcon from './icon-mixed.svg'
-
 export const dataPrice = [
   {
     id: 1,
