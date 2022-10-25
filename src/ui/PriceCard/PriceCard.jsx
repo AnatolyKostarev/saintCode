@@ -29,7 +29,7 @@ export const PriceCard = ({
         руб.
       </p>
       <p className={s.Price__startDate}>
-        Дата старта:
+        Дата старта:&nbsp;
         {start}
       </p>
       <p className={s.Price__finalDate}>
