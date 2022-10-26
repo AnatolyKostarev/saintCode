@@ -2,12 +2,13 @@ import { Header } from '../../components/Header/Header'
 import { Hero } from '../../components/Hero/Hero'
 import ForWho from '../../components/ForWho/ForWho'
 import { SchoolComparison } from '../../components/SchoolComparison/SchoolComparison'
+import { Price } from '../../components/Price/Price'
+import { QuestionsRemain } from '../../components/QuestionsRemain/QuestionsRemain'
 import { DailySchedule } from '../../components/DailySchedule/DailySchedule'
 import { TrainingProgram } from '../../components/TrainingProgram/TrainingProgram'
 import Footer from '../../components/Footer/Footer'
 import Teachers from '../../components/Teachers/Teachers'
 import Author from '../../components/Author/Author'
-import { Price } from '../../components/Price/Price'
 
 export const Home = () => {
   return (
@@ -18,6 +19,7 @@ export const Home = () => {
         <ForWho />
         <SchoolComparison />
         <Price />
+        <QuestionsRemain />
         <DailySchedule />
         <TrainingProgram />
         <Author />
