@@ -1,0 +1,27 @@
+select
+    padding-right: 19px
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+    &:focus
+        outline: none
+
+.select
+    position: relative
+    &:after
+        position: absolute
+        content: url('./arrow.svg')
+        top: 15px
+        right: 19px
+        z-index: 1
+        text-align: center
+        pointer-events: none
+        box-sizing: border-box
+
+.label
+    display: inline-block
+    margin-bottom: 13px
+    font-size: 14px
+    font-weight: 700
+    line-height: 21px
+    text-align: left
