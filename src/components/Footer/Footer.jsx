@@ -1,9 +1,9 @@
 import React from 'react'
 import clsx from 'clsx'
-import s from './Footer.module.sass'
-import FooterContacts from '../../ui/FooterContacts/FooterContacts'
 import { Container } from '../../ui/Container/Container'
+import FooterContacts from '../../ui/FooterContacts/FooterContacts'
 import FooterCopyright from '../../ui/FooterCopyright/FooterCopyright'
+import s from './Footer.module.sass'
 
 const Footer = ({ className }) => {
   return (
