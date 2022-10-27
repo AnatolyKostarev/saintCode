@@ -9,6 +9,8 @@ import { TrainingProgram } from '../../components/TrainingProgram/TrainingProgra
 import Footer from '../../components/Footer/Footer'
 import Teachers from '../../components/Teachers/Teachers'
 import Author from '../../components/Author/Author'
+import Results from '../../components/Results/Results'
+import CommercialProject from '../../components/CommercialProject/CommercialProject'
 
 export const Home = () => {
   return (
@@ -23,6 +25,8 @@ export const Home = () => {
         <DailySchedule />
         <TrainingProgram />
         <Author />
+        <CommercialProject />
+        <Results />
         <Teachers />
       </main>
       <Footer />
