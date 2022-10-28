@@ -15,8 +15,8 @@ export const Home = () => {
   return (
     <>
       <Layout>
-        <ForWho />
         <Hero />
+        <ForWho />
         <SchoolComparison />
         <Price />
         <QuestionsRemain />
