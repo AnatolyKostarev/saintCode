@@ -1,13 +1,12 @@
 import React from 'react'
-import clsx from 'clsx'
-import s from './CommercialProject.module.sass'
 import { Section } from '../../ui/Section/Section'
 import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
 import { Container } from '../../ui/Container/Container'
+import s from './CommercialProject.module.sass'
 
-const CommercialProject = ({ className }) => {
+const CommercialProject = () => {
   return (
-    <Section className={clsx(s.CommercialProject, className)}>
+    <Section className={s.CommercialProject}>
       <Container>
         <SectionTitle className={s.title}>
           <span className="transparent">

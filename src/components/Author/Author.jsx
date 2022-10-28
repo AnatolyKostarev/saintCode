@@ -1,40 +1,39 @@
 import React from 'react'
-import clsx from 'clsx'
-import s from './Author.module.sass'
 import { Section } from '../../ui/Section/Section'
 import { Container } from '../../ui/Container/Container'
+import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
 import AuthorPhoto from './Author.png'
 import AuthorPhoto2x from './Author2x.png'
 import Devis from './devis.svg'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
+import s from './Author.module.sass'
 
-const Author = ({ className }) => {
+const Author = () => {
   return (
-    <Section className={clsx(s.Author, className)}>
+    <Section className={s.Author}>
       <Container className={s.Author__container}>
-        <div className={clsx(s.left)}>
-          <div className={clsx(s.img__container)}>
+        <div className={s.left}>
+          <div className={s.img__container}>
             <img
-              className={clsx(s.img)}
+              className={s.img}
               srcSet={`${AuthorPhoto} 1x, ${AuthorPhoto2x} 2x`}
               width="370"
               height="370"
               alt="Author photo"
             />
           </div>
-          <div className={clsx(s.text)}>
-            <p className={clsx(s.Author__name)}>
+          <div className={s.text}>
+            <p className={s.Author__name}>
               Женя Гриценко
             </p>
-            <p className={clsx(s.Author__info)}>
+            <p className={s.Author__info}>
               Основатель курса
             </p>
           </div>
         </div>
-        <div className={clsx(s.right)}>
-          <div className={clsx(s.devis__block)}>
+        <div className={s.right}>
+          <div className={s.devis__block}>
             <img
-              className={clsx(s.devis)}
+              className={s.devis}
               src={Devis}
               width="38"
               height="36"

@@ -1,11 +1,10 @@
 import React from 'react'
-import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
-import s from './Header.module.sass'
 import Logo from '../../ui/Logo/Logo'
 import Phone from '../../ui/Phone/Phone'
 import Nav from '../../ui/Nav/Nav'
 import Button from '../../ui/Button/Button'
+import s from './Header.module.sass'
 
 export const Header = () => {
   const { t, i18n } = useTranslation()
@@ -16,13 +15,13 @@ export const Header = () => {
   }
 
   return (
-    <header className={clsx(s.Header)}>
-      <div className={clsx(s.wrapper)}>
-        <div className={clsx(s.block)}>
+    <header className={s.Header}>
+      <div className={s.wrapper}>
+        <div className={s.block}>
           <Logo />
           <Phone />
         </div>
-        <div className={clsx(s.block)}>
+        <div className={s.block}>
           <Nav />
           <Button
             className={s.header__btn}
