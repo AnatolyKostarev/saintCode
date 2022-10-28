@@ -17,8 +17,8 @@ export const DailySchedule = () => {
           &nbsp;дня
         </SectionTitle>
         <div className={s.Schedule__cards}>
-          {dailyCard.map(elem => (
-            <ScheduleCard time={elem.time} text={elem.text} key={elem.id} />
+          {dailyCard.map(({ ...elem }) => (
+            <ScheduleCard {...elem} key={elem.id} />
           ))}
         </div>
       </Container>
