@@ -1,15 +1,15 @@
 import React from 'react'
-import clsx from 'clsx'
-import s from './ForWho.module.sass'
-import Title from '../../ui/Title/Title'
 import { Container } from '../../ui/Container/Container'
+import { Section } from '../../ui/Section/Section'
+import Title from '../../ui/Title/Title'
 import ForArticle from '../../ui/ForArticle/ForArticle'
 import leftSVG from './left.svg'
 import rightSVG from './rigth.svg'
+import s from './ForWho.module.sass'
 
-const ForWho = ({ className }) => {
+const ForWho = () => {
   return (
-    <section className={clsx(s.ForWho, className)}>
+    <Section className={s.ForWho}>
       <Container>
         <Title>
           <span className="transparent--blue">
@@ -29,9 +29,9 @@ const ForWho = ({ className }) => {
           </span>
           если ты:
         </Title>
-        <div className={clsx(s.article__wrapper)}>
+        <div className={s.article__wrapper}>
           <ForArticle svg={leftSVG}>
-            <p className={clsx(s.text)}>
+            <p className={s.text}>
               Хочешь
               {' '}
               <span className="focus">
@@ -42,7 +42,7 @@ const ForWho = ({ className }) => {
             </p>
           </ForArticle>
           <ForArticle svg={rightSVG}>
-            <p className={clsx(s.text)}>
+            <p className={s.text}>
               Готов учиться пять дней в неделю с 12.00 до 19.00, пахать как раб на
               галерах,
               {' '}
@@ -55,7 +55,7 @@ const ForWho = ({ className }) => {
           </ForArticle>
         </div>
       </Container>
-    </section>
+    </Section>
   )
 }
 

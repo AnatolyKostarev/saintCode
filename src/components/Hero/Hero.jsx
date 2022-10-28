@@ -1,17 +1,16 @@
 import React from 'react'
-import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
+import { Section } from '../../ui/Section/Section'
+import { Container } from '../../ui/Container/Container'
 import Title from '../../ui/Title/Title'
 import HeroArticle from '../../ui/HeroArticle/HeroArticle'
 import s from './Hero.module.sass'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
 
 export const Hero = () => {
   const { t } = useTranslation()
   return (
-    <Section className={clsx(s.Hero)}>
-      <Container className={clsx(s.container)}>
+    <Section className={s.Hero}>
+      <Container className={s.container}>
         <Title>
           {t('Перезапусти карьеру')}
           <span className="transparent">

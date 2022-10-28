@@ -1,4 +1,3 @@
-import clsx from 'clsx'
 import { Container } from '../../ui/Container/Container'
 import { Section } from '../../ui/Section/Section'
 import s from './NotFound.module.sass'
@@ -10,8 +9,8 @@ export const NotFound = () => {
   return (
     <>
       <Header />
-      <Section className={clsx(s.NotFound)}>
-        <Container className={clsx(s.container)}>
+      <Section className={s.NotFound}>
+        <Container className={s.container}>
           <CryCat />
           <NotFoundArticle />
         </Container>
