@@ -14,9 +14,15 @@ const TeacherCard = ({
 }) => {
   return (
     <div className={clsx(s.TeacherCard, className)}>
-      <div className={clsx(s.top)}>
-        <div className={clsx(s.photo__container)}>
-          <img className={clsx(s.img)} srcSet={`${smallPhoto} 1x, ${largePhoto} 2x`} width="160" height="160" alt="Teacher photo" />
+      <div className={s.top}>
+        <div className={s.photo__container}>
+          <img
+            className={s.img}
+            srcSet={`${smallPhoto} 1x, ${largePhoto} 2x`}
+            width="160"
+            height="160"
+            alt="Teacher photo"
+          />
         </div>
         <div className={s.name__block}>
           <p className={s.name}>
@@ -30,13 +36,13 @@ const TeacherCard = ({
           </p>
         </div>
       </div>
-      <div className={clsx(s.middle)}>
-        <p className={clsx(s.working)}>
+      <div className={s.middle}>
+        <p className={s.working}>
           Работал:
         </p>
-        { children }
+        {children}
       </div>
-      <div className={clsx(s.bottom)}>
+      <div className={s.bottom}>
         <p className={s.stack}>
           {stack}
         </p>
