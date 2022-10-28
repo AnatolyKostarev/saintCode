@@ -17,7 +17,7 @@ const Teachers = () => {
           {teachersData.map(({ ...elem }) => (
             <TeacherCard {...elem} key={elem.id}>
               {elem.list.map(list => (
-                <ul className={s.list}>
+                <ul className={s.list} key={list}>
                   <li className={s.list__item}>
                     {list}
                   </li>
