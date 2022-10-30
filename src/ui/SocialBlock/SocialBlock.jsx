@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
-import s from './SocialBlock.module.sass'
 import SocialRound from '../SocialRound/SocialRound'
+import s from './SocialBlock.module.sass'
 
 const SocialBlock = ({
   className, fb, vk, inst,
