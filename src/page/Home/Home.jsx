@@ -10,6 +10,7 @@ import Teachers from '../../components/Teachers/Teachers'
 import Author from '../../components/Author/Author'
 import Results from '../../components/Results/Results'
 import CommercialProject from '../../components/CommercialProject/CommercialProject'
+import StudentStory from '../../components/StudentStory/StudentStory'
 
 export const Home = () => {
   return (
@@ -21,6 +22,7 @@ export const Home = () => {
         <Price />
         <QuestionsRemain />
         <DailySchedule />
+        <StudentStory />
         <TrainingProgram />
         <Author />
         <CommercialProject />

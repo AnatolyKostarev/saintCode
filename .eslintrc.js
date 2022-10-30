@@ -32,5 +32,6 @@ module.exports = {
     'react/jsx-one-expression-per-line': ['warn', { allow: 'none' }],
     'max-len': ['error', { ignoreComments: true, code: 500 }],
     'react/jsx-props-no-spreading': ['warn', { custom: 'ignore' }],
+    'import/no-unresolved': 'warn',
   },
 }
