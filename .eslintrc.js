@@ -33,6 +33,7 @@ module.exports = {
     'no-confusing-arrow': ['warn', { onlyOneSimpleParam: true }],
     'max-len': ['warn', { ignoreComments: true, code: 500 }],
     'default-case': 'off',
+    'import/no-unresolved': 'off',
     'jsx-a11y/no-static-element-interactions': [
       'error',
       {
