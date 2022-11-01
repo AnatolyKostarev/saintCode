@@ -24,6 +24,20 @@ export const School = () => {
               onClick={schoolItemSwitcher}
               show={show}
             />
+            <SchoolItem
+              id={1}
+              title="text"
+              content="content"
+              onClick={schoolItemSwitcher}
+              show={show}
+            />
+            <SchoolItem
+              id={1}
+              title="text"
+              content="content"
+              onClick={schoolItemSwitcher}
+              show={show}
+            />
           </div>
         </Container>
       </Section>
