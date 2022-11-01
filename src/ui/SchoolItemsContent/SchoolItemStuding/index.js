@@ -1,0 +1,1 @@
+export { SchoolItemStuding } from './SchoolItemStuding'
