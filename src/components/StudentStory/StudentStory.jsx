@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import clsx from 'clsx'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss'
@@ -8,8 +8,12 @@ import { Container } from '../../ui/Container/Container'
 import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
 import StoryCard from '../../ui/StoryCard/StoryCard'
 import { studentData } from './studentData'
+import Modal from '../Modal/Modal'
 
 const StudentStory = () => {
+  const [isOpen, setIsOpen] = useState(false)
+  const [selectID, setSelectID] = useState(null)
+
   return (
     <Section className={clsx(s.StudentStory)}>
       <Container>
@@ -19,17 +23,22 @@ const StudentStory = () => {
       </Container>
       <Swiper
         className={clsx(s.swiper)}
-        // spaceBetween={50}
+        spaceBetween={50}
         slidesPerView={2.5}
       >
         {studentData.map(({ ...student }) => (
-          <SwiperSlide>
+          <SwiperSlide onClick={() => {
+            setSelectID(student.id)
+            setIsOpen(true)
+          }}
+          >
             <StoryCard
               {...student}
               genderOption={student.studentGender === 'female'
                 ? 'Устроилась фронтенд-разработчицей в '
                 : 'Устроился фронтенд-разработчиком в '}
               key={student.id}
+              className={s.closed}
             >
               {student.QA.map(e => (
                 <div key={e.answer}>
@@ -45,6 +54,34 @@ const StudentStory = () => {
           </SwiperSlide>
         ))}
       </Swiper>
+      <Modal
+        isOpen={isOpen}
+        setIsOpen={setIsOpen}
+      >
+        {studentData
+          .filter(elem => elem.id === selectID)
+          .map(({ ...elem }) => (
+            <StoryCard
+              {...elem}
+              genderOption={elem.studentGender === 'female'
+                ? 'Устроилась фронтенд-разработчицей в '
+                : 'Устроился фронтенд-разработчиком в '}
+              key={elem.id}
+              isOpen={isOpen}
+            >
+              {elem.QA.map(e => (
+                <div key={e.answer}>
+                  <strong className={clsx(s.question)}>
+                    {e.question}
+                  </strong>
+                  <p className={clsx(s.answer)}>
+                    {e.answer}
+                  </p>
+                </div>
+              ))}
+            </StoryCard>
+          ))}
+      </Modal>
     </Section>
   )
 }

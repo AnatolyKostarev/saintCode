@@ -22,6 +22,7 @@ const Teachers = () => {
                     {list}
                   </li>
                 </ul>
+
               ))}
             </TeacherCard>
           ))}

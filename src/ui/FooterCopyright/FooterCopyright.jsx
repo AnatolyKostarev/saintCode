@@ -1,6 +1,5 @@
 import React from 'react'
 import clsx from 'clsx'
-import { Link } from 'react-router-dom'
 import s from './FooterCopyright.module.sass'
 import { Container } from '../Container/Container'
 import Button from '../Button/Button'

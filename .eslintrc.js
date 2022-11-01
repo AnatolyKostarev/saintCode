@@ -33,5 +33,7 @@ module.exports = {
     'max-len': ['error', { ignoreComments: true, code: 500 }],
     'react/jsx-props-no-spreading': ['warn', { custom: 'ignore' }],
     'import/no-unresolved': 'warn',
+    'jsx-a11y/click-events-have-key-events': 'warn',
+    'jsx-a11y/no-static-element-interactions': 'warn',
   },
 }
