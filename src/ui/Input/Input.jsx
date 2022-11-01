@@ -1,4 +1,5 @@
 import React from 'react'
+import PropType from 'prop-types'
 import clsx from 'clsx'
 import s from './Input.module.sass'
 
@@ -28,4 +29,14 @@ export const Input = ({
       />
     </>
   )
+}
+
+Input.propTypes = {
+  id: PropType.number.isRequired,
+  label: PropType.string.isRequired,
+  type: PropType.string.isRequired,
+  value: PropType.number,
+}
+Input.defaultProps = {
+  value: '',
 }

@@ -3,7 +3,7 @@ import clsx from 'clsx'
 import { Link } from 'react-router-dom'
 import s from './FooterLinks.module.sass'
 
-const FooterLinks = ({ className }) => {
+export const FooterLinks = ({ className }) => {
   return (
     <div className={clsx(s.FooterLinks, className)}>
       <Link to="/program">
@@ -18,5 +18,3 @@ const FooterLinks = ({ className }) => {
     </div>
   )
 }
-
-export default FooterLinks

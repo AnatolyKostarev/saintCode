@@ -1,11 +1,11 @@
 import React from 'react'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
-import { Form } from '../../ui/Form/Form'
-import { Input } from '../../ui/Input/Input'
-import { Select } from '../../ui/Select/Select'
-import Button from '../../ui/Button/Button'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
+import { Form } from '../../ui/Form'
+import { Input } from '../../ui/Input'
+import { Select } from '../../ui/Select'
+import { Button } from '../../ui/Button'
 import s from './QuestionsReman.module.sass'
 
 export const QuestionsRemain = () => {

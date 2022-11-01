@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import s from './ForArticle.module.sass'
 
-const ForArticle = ({ className, svg, children }) => {
+export const ForArticle = ({ className, svg, children }) => {
   return (
     <article>
       <div className={clsx(s.container, className)}>
@@ -12,5 +12,3 @@ const ForArticle = ({ className, svg, children }) => {
     </article>
   )
 }
-
-export default ForArticle

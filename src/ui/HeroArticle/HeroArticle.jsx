@@ -1,9 +1,9 @@
 import React from 'react'
 import clsx from 'clsx'
-import s from './HeroArticle.module.sass'
 import LineSVG from './Subtract.svg'
+import s from './HeroArticle.module.sass'
 
-const HeroArticle = ({ children }) => {
+export const HeroArticle = ({ children }) => {
   return (
     <article className={clsx(s.HeroArticle)}>
       <div className={clsx(s.img__wrapper)}>
@@ -13,5 +13,3 @@ const HeroArticle = ({ children }) => {
     </article>
   )
 }
-
-export default HeroArticle

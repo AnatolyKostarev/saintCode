@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Layout } from '../../layout/Layout'
+import { Layout } from '../../layout'
 import { Section } from '../../ui/Section/Section'
 import { Container } from '../../ui/Container/Container'
 import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
@@ -48,7 +48,9 @@ export const School = () => {
     <Layout>
       <Section className={s.school}>
         <Container>
-          <SectionTitle className={s.school__title}>О Школе</SectionTitle>
+          <SectionTitle className={s.school__title}>
+            О Школе
+          </SectionTitle>
           <div className={s.school__items}>
             <div className={s.school__item} style={show ? hide : full}>
               <div className={s.school__btns}>

@@ -1,18 +1,18 @@
 import React from 'react'
 import clsx from 'clsx'
-import s from './FooterContacts.module.sass'
-import Address from '../Address/Address'
-import Place from '../Place/Place'
-import BusinessHours from '../BusinessHours/BusinessHours'
-import Phone from '../Phone/Phone'
-import Email from '../Email/Email'
-import FooterLinks from '../FooterLinks/FooterLinks'
+import { Address } from '../Address/Address'
+import { Place } from '../Place/Place'
+import { BusinessHours } from '../BusinessHours/BusinessHours'
+import { Phone } from '../Phone/Phone'
+import { Email } from '../Email/Email'
+import { FooterLinks } from '../FooterLinks/FooterLinks'
+import { SocialBlock } from '../SocialBlock/SocialBlock'
 import fb from './fb.svg'
 import vk from './vk.svg'
 import inst from './inst.svg'
-import SocialBlock from '../SocialBlock/SocialBlock'
+import s from './FooterContacts.module.sass'
 
-const FooterContacts = ({ className }) => {
+export const FooterContacts = ({ className }) => {
   return (
     <div className={clsx(s.FooterContacts, className)}>
       <div className={clsx(s.inner__left)}>
@@ -35,5 +35,3 @@ const FooterContacts = ({ className }) => {
     </div>
   )
 }
-
-export default FooterContacts
