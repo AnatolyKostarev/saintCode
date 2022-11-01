@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import schoolLogo from './school-logo.svg'
 import s from './Logo.module.sass'
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <Link to="/">
       <div className={clsx(s.Logo)}>
@@ -19,5 +19,3 @@ const Logo = () => {
     </Link>
   )
 }
-
-export default Logo

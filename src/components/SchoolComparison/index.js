@@ -1,0 +1,1 @@
+export { SchoolComparison } from './SchoolComparison'

@@ -1,10 +1,10 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import Logo from '../../ui/Logo/Logo'
-import Phone from '../../ui/Phone/Phone'
-import Nav from '../../ui/Nav/Nav'
-import Button from '../../ui/Button/Button'
+import { Logo } from '../../ui/Logo'
+import { Phone } from '../../ui/Phone'
+import { Nav } from '../../ui/Nav'
+import { Button } from '../../ui/Button'
 import s from './Header.module.sass'
 
 export const Header = () => {

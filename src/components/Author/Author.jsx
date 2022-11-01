@@ -1,13 +1,13 @@
 import React from 'react'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
 import AuthorPhoto from './Author.png'
 import AuthorPhoto2x from './Author2x.png'
 import Devis from './devis.svg'
 import s from './Author.module.sass'
 
-const Author = () => {
+export const Author = () => {
   return (
     <Section className={s.Author}>
       <Container className={s.Author__container}>
@@ -58,5 +58,3 @@ const Author = () => {
     </Section>
   )
 }
-
-export default Author

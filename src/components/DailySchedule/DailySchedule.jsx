@@ -1,8 +1,8 @@
 import React from 'react'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
-import { ScheduleCard } from '../../ui/ScheduleCard/ScheduleCard'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
+import { ScheduleCard } from '../../ui/ScheduleCard'
 import { dailyCard } from './dailyCard'
 import s from './DailySchedule.module.sass'
 

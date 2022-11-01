@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
 import s from './Nav.module.sass'
 
-const Nav = () => {
+export const Nav = () => {
   const { t } = useTranslation()
   return (
     <nav className={clsx(s.Nav)}>
@@ -33,5 +33,3 @@ const Nav = () => {
     </nav>
   )
 }
-
-export default Nav

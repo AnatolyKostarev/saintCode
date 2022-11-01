@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import s from './TeacherCard.module.sass'
 
-const TeacherCard = ({
+export const TeacherCard = ({
   className,
   smallPhoto,
   largePhoto,
@@ -50,5 +50,3 @@ const TeacherCard = ({
     </div>
   )
 }
-
-export default TeacherCard

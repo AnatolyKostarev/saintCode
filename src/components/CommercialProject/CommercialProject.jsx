@@ -1,10 +1,10 @@
 import React from 'react'
-import { Section } from '../../ui/Section/Section'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
-import { Container } from '../../ui/Container/Container'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
 import s from './CommercialProject.module.sass'
 
-const CommercialProject = () => {
+export const CommercialProject = () => {
   return (
     <Section className={s.CommercialProject}>
       <Container>
@@ -22,5 +22,3 @@ const CommercialProject = () => {
     </Section>
   )
 }
-
-export default CommercialProject

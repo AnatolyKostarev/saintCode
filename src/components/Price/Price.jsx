@@ -1,8 +1,8 @@
 import React from 'react'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
-import { PriceCard } from '../../ui/PriceCard/PriceCard'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
+import { PriceCard } from '../../ui/PriceCard'
 import { dataPrice } from './dataPrice'
 import s from './Price.module.sass'
 

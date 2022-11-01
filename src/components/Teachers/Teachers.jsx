@@ -1,12 +1,12 @@
 import React from 'react'
-import { Section } from '../../ui/Section/Section'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
-import { Container } from '../../ui/Container/Container'
-import TeacherCard from '../../ui/TeacherCard/TeacherCard'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
+import { TeacherCard } from '../../ui/TeacherCard'
 import { teachersData } from './teachersData'
 import s from './Teachers.module.sass'
 
-const Teachers = () => {
+export const Teachers = () => {
   return (
     <Section className={s.Teachers}>
       <Container>
@@ -30,5 +30,3 @@ const Teachers = () => {
     </Section>
   )
 }
-
-export default Teachers

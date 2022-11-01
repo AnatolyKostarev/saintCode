@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import s from './ResultsArticle.module.sass'
 
-const ResultsArticle = ({
+export const ResultsArticle = ({
   className, icon, subtitle, text,
 }) => {
   return (
@@ -23,5 +23,3 @@ const ResultsArticle = ({
     </article>
   )
 }
-
-export default ResultsArticle

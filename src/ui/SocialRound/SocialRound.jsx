@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import s from './SocialRound.module.sass'
 
-const SocialRound = ({
+export const SocialRound = ({
   className, icon, alt, href = '#',
 }) => {
   return (
@@ -11,5 +11,3 @@ const SocialRound = ({
     </a>
   )
 }
-
-export default SocialRound

@@ -1,9 +1,9 @@
 import React from 'react'
 import clsx from 'clsx'
-import SocialRound from '../SocialRound/SocialRound'
+import { SocialRound } from '../SocialRound/SocialRound'
 import s from './SocialBlock.module.sass'
 
-const SocialBlock = ({
+export const SocialBlock = ({
   className, fb, vk, inst,
 }) => {
   return (
@@ -14,5 +14,3 @@ const SocialBlock = ({
     </div>
   )
 }
-
-export default SocialBlock

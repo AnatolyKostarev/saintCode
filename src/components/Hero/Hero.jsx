@@ -1,9 +1,9 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
-import Title from '../../ui/Title/Title'
-import HeroArticle from '../../ui/HeroArticle/HeroArticle'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { Title } from '../../ui/Title'
+import { HeroArticle } from '../../ui/HeroArticle'
 import s from './Hero.module.sass'
 
 export const Hero = () => {

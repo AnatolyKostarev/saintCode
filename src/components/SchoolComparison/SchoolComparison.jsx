@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
-import Button from '../../ui/Button/Button'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
+import { Button } from '../../ui/Button'
 import iconTables from './icon-tables.svg'
 import s from './SchoolComparison.module.sass'
 

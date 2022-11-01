@@ -1,15 +1,15 @@
 import React from 'react'
 import clsx from 'clsx'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import 'swiper/scss'
-import s from './StudentStory.module.sass'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
-import StoryCard from '../../ui/StoryCard/StoryCard'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
+import { StoryCard } from '../../ui/StoryCard'
 import { studentData } from './studentData'
+// import 'swiper/css'
+import s from './StudentStory.module.sass'
 
-const StudentStory = () => {
+export const StudentStory = () => {
   return (
     <Section className={clsx(s.StudentStory)}>
       <Container>
@@ -48,5 +48,3 @@ const StudentStory = () => {
     </Section>
   )
 }
-
-export default StudentStory

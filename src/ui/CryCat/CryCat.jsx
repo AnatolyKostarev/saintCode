@@ -1,10 +1,10 @@
 import React from 'react'
 import clsx from 'clsx'
-import s from './CryCat.module.sass'
 import Pic from './cat.webp'
 import PicX2 from './cat-2x.webp'
+import s from './CryCat.module.sass'
 
-const CryCat = () => {
+export const CryCat = () => {
   return (
     <div className={clsx(s.CryCat)}>
       <img
@@ -18,5 +18,3 @@ const CryCat = () => {
     </div>
   )
 }
-
-export default CryCat

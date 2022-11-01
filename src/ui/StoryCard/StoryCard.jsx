@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import s from './StoryCard.module.sass'
 
-const StoryCard = ({
+export const StoryCard = ({
   studentPhoto,
   studentName,
   studentAge,
@@ -37,10 +37,10 @@ const StoryCard = ({
         </div>
       </div>
       <div className={clsx(s.more)}>
-        <span className={clsx(s.more__dots)}>...</span>
+        <span className={clsx(s.more__dots)}>
+          ...
+        </span>
       </div>
     </div>
   )
 }
-
-export default StoryCard
