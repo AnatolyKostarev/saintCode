@@ -6,7 +6,7 @@ import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
 import { StoryCard } from '../../ui/StoryCard'
 import { studentData } from './studentData'
-// import 'swiper/css'
+import 'swiper/scss'
 import s from './StudentStory.module.sass'
 
 export const StudentStory = () => {
