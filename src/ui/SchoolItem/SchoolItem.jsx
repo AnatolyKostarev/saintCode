@@ -2,28 +2,26 @@ import React from 'react'
 import s from './SchoolItem.module.sass'
 
 export const SchoolItem = ({
-  show, full, hide, isPlus, isCross, title, content, onClick,
+  children, id, title, onClick, show,
 }) => {
   return (
-    <div className={s.school__item} style={show ? hide : full}>
-      <div className={s.school__btns}>
-        <button type="button" onClick={onClick}>
-          {title}
-          <div className={s.school__cross} style={show ? isPlus : isCross}>
+    <>
+      <div className={show ? s.school__item : s.school__item__active}>
+        <button
+          className={s.school__btn}
+          id={id}
+          type="button"
+          onClick={onClick}
+        >
+          <p>
+            {title}
+          </p>
+          <p className={show ? s.school__cross : s.school__cross__rotate}>
             &#10006;
-          </div>
+          </p>
         </button>
+        {children}
       </div>
-      <p
-        className={s.school__text}
-        style={
-        show
-          ? { opacity: 0, transition: '0.4s' }
-          : { opacity: 1, transition: '1.2s' }
-      }
-      >
-        {content}
-      </p>
-    </div>
+    </>
   )
 }

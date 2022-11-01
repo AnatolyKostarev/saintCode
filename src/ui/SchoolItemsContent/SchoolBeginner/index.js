@@ -1,0 +1,1 @@
+export { SchoolBeginner } from './SchoolBeginner'

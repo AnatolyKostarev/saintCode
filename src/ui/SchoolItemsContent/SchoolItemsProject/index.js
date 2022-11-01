@@ -1,0 +1,1 @@
+export { SchoolItemsProject } from './SchoolItemsProject'
