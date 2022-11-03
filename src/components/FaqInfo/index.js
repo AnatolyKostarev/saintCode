@@ -1,0 +1,1 @@
+export { FaqInfo } from './FaqInfo'

@@ -10,9 +10,9 @@ import { SchoolItemStuding } from '../../ui/SchoolItemsContent/SchoolItemStuding
 import s from './SchoolInfo.module.sass'
 
 export const SchoolInfo = () => {
-  const [isProject, setIsProject] = useState(true)
-  const [isBeginner, setIsBeginner] = useState(true)
-  const [isHow, setIsHow] = useState(true)
+  const [isProject, setIsProject] = useState(false)
+  const [isBeginner, setIsBeginner] = useState(false)
+  const [isHow, setIsHow] = useState(false)
   const { t } = useTranslation()
 
   const isProjectSwitcher = () => {

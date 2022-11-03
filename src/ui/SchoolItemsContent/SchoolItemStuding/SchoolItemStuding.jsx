@@ -1,9 +1,10 @@
 import React from 'react'
+import clsx from 'clsx'
 import s from './SchoolItemStuding.module.sass'
 
-export const SchoolItemStuding = ({ show }) => {
+export const SchoolItemStuding = ({ show, className }) => {
   return (
-    <div className={show ? s.school__content : s.school__content__active}>
+    <div className={clsx(s.school__content, { [s.school__content__active]: show }, className)}>
       <p>
         Мы не стараемся запихнуть в тебя как можно больше фактов о программировании — это дорога в депрессию, подтверждено нашим опытом) Мы помогаем тебе научиться думать как инженер.
       </p>
