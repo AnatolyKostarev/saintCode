@@ -1,0 +1,1 @@
+export { FaqRequirements } from './FaqRequirements'
