@@ -8,6 +8,7 @@ import { SchoolItem } from '../../ui/SchoolItem'
 import { FaqRequirements } from '../../ui/FaqItemContent/FaqRequirements'
 import { FaqTodo } from '../../ui/FaqItemContent/FaqTodo'
 import { FaqToPay } from '../../ui/FaqItemContent/FaqToPay'
+import { Button } from '../../ui/Button'
 import s from './FaqInfo.module.sass'
 
 export const FaqInfo = () => {
@@ -32,9 +33,16 @@ export const FaqInfo = () => {
   return (
     <Section className={s.faq}>
       <Container>
-        <SectionTitle className={s.faq__title}>
-          {t('ЧАВО')}
-        </SectionTitle>
+        <div className={s.faq__header}>
+          <SectionTitle className={s.faq__title}>
+            {t('faq_title')}
+          </SectionTitle>
+          <div className={s.faq__ask}>
+            <p>Ты можешь задать собственный вопрос, если не нашёл ответ</p>
+            <Button className={s.faq__btn} text="Задать вопрос" />
+          </div>
+        </div>
+
         <div className={s.faq__items}>
           <SchoolItem
             className={clsx(s.faq__item, { [s.faq__item__active]: isRequire })}
