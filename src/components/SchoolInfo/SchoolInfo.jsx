@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
@@ -12,6 +13,7 @@ export const SchoolInfo = () => {
   const [isProject, setIsProject] = useState(true)
   const [isBeginner, setIsBeginner] = useState(true)
   const [isHow, setIsHow] = useState(true)
+  const { t } = useTranslation()
 
   const isProjectSwitcher = () => {
     setIsProject(!isProject)
@@ -30,11 +32,11 @@ export const SchoolInfo = () => {
     <Section className={s.school}>
       <Container>
         <SectionTitle className={s.school__title}>
-          О Школе
+          {t('Школа')}
         </SectionTitle>
         <div className={s.school__items}>
           <SchoolItem
-            title="Как мы создали проект?"
+            title={t('Проект')}
             id={1}
             onClick={isProjectSwitcher}
             show={isProject}
@@ -42,7 +44,7 @@ export const SchoolInfo = () => {
             <SchoolItemsProject show={isProject} />
           </SchoolItem>
           <SchoolItem
-            title="Какие проблемы поджидают новичка?"
+            title={t('Проблемы')}
             id={2}
             onClick={isBeginnerSwitcher}
             show={isBeginner}
@@ -50,7 +52,7 @@ export const SchoolInfo = () => {
             <SchoolBeginner show={isBeginner} />
           </SchoolItem>
           <SchoolItem
-            title="Как и почему мы учим программированию?"
+            title={t('Веб')}
             id={3}
             onClick={isHowSwitcher}
             show={isHow}
