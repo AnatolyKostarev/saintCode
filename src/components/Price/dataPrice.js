@@ -1,59 +1,44 @@
+import { v4 as uuidv4 } from 'uuid'
+
 export const dataPrice = [
   {
-    id: 1,
-    start: new Date(2022, 9, 18).toLocaleString('ru-Ru', {
-      day: '2-digit',
-      month: 'long',
-    }),
-    type: 'Вживую',
+    id: uuidv4(),
+    start: 'locale',
+    type: 'offline',
     price: 195_000,
     priceWithDiscount: 150_000,
-    discountLastDay: '05 ноября',
-    description:
-      'Каждый день ездишь в буткемп. Атмосфера и живое общение помогают сосредоточиться и поддерживают мотивацию.',
-    location: 'Санкт-Петербург',
+    discountLastDay: 'finalDate',
+    description: 'item1',
+    location: 'spb',
   },
   {
-    id: 2,
-    start: new Date(2022, 9, 18).toLocaleString('ru-Ru', {
-      day: '2-digit',
-      month: 'long',
-    }),
-    type: 'Онлайн',
+    id: uuidv4(),
+    start: 'locale',
+    type: 'online',
     price: 100_000,
     priceWithDiscount: 80_000,
-    discountLastDay: '05 ноября',
-    description:
-      'Вместе с офлайн-группой, но через Discord. В отличие от онлайн-школ, ты сразу получаешь ответы на все вопросы.',
-    location: 'Из любой точки',
-
+    discountLastDay: 'finalDate',
+    description: 'item2',
+    location: 'anyPlace',
   },
   {
-    id: 3,
-    start: new Date(2022, 9, 18).toLocaleString('ru-Ru', {
-      day: '2-digit',
-      month: 'long',
-    }),
-    type: 'Смешанный',
+    id: uuidv4(),
+    start: 'locale',
+    type: 'hybrid',
     price: 135_000,
     priceWithDiscount: 105_000,
-    discountLastDay: '05 ноября',
-    description:
-      'Частично онлайн, частично в буткемпе. Когда хочешь общаться вживую, но не готов оплатить офлайн.',
-    location: 'Санкт-Петербург',
+    discountLastDay: 'finalDate',
+    description: 'item3',
+    location: 'spb',
   },
   {
-    id: 4,
-    start: new Date(2022, 9, 18).toLocaleString('ru-Ru', {
-      day: '2-digit',
-      month: 'long',
-    }),
-    type: 'Вживую',
+    id: uuidv4(),
+    start: 'locale',
+    type: 'offline',
     price: 195_000,
     priceWithDiscount: 150_000,
-    discountLastDay: '05 ноября',
-    description:
-      'Ты вдали от дома, но хочешь учиться вживую — в близкой культурной среде, с преподавателями из России.',
-    location: 'Ташкент',
+    discountLastDay: 'finalDate',
+    description: 'item4',
+    location: 'tos',
   },
 ]

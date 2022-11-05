@@ -1,10 +1,12 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import s from './MemberCard.module.sass'
 
 export const MemberCardHeader = ({
   className, commonImg, retinaImg, status, memberName,
 }) => {
+  const { t } = useTranslation()
   return (
     <div className={clsx(s.member__header, className)}>
       <img
@@ -16,10 +18,10 @@ export const MemberCardHeader = ({
       />
       <div className={s.member__titles}>
         <p className={s.member__name}>
-          {memberName}
+          {t(`Member.name.${memberName}`)}
         </p>
         <p className={s.member__status}>
-          {status}
+          {t(`Member.status.${status}`)}
         </p>
       </div>
     </div>

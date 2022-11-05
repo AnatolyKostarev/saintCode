@@ -1,22 +1,24 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import s from './FaqTodo.module.sass'
 
 export const FaqTodo = ({ className, show }) => {
+  const { t } = useTranslation()
   return (
     <div className={clsx(s.faq__content, { [s.faq__content__active]: show }, className)}>
       <ul>
         <li>
-          Поговорить с родными и близкими, чтобы они не отвлекали тебя на время обучения. Все дела после 3–4 месяцев. Это важно.
+          {t('FaqTodo.keyOne')}
         </li>
         <li>
-          Пройти нашу подготовительную программу. В ней ты потренируешь самую сложную часть для новичков, а значит больше получишь от курса. А также поймёшь для себя, подходит ли тебе программирование как новая профессия.
+          {t('FaqTodo.keyTwo')}
         </li>
         <li>
-          Отложить деньги на пять месяцев. Три месяца ты будешь учиться и потом в среднем два месяца искать работу (откликаться на вакансии, решать тестовые задания, отрабатывать ошибки, которые совершил на собеседованиях).
+          {t('FaqTodo.keyThree')}
         </li>
         <li>
-          Настроиться пахать) Отдых тебя ждёт через пару лет.
+          {t('FaqTodo.keyFour')}
         </li>
       </ul>
     </div>

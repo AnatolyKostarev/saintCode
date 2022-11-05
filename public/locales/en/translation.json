@@ -1,4 +1,58 @@
 {
+  "Hero": {
+    "title": "Reboot your career",
+    "message": "learn to code",
+    "school": "Programming school",
+    "web": "for web developers in the format of a bootcamp:",
+    "junior": "From zero-level to Junior in three months,",
+    "offLine": "Singapore or online from anywhere."
+  },
+  "ForWho": {
+    "span1": "Our",
+    "span2": "format",
+    "span3": "suits",
+    "span4": "you,",
+    "span5": "if you:",
+    "span6": "want",
+    "span7": "to quickly find your first job as a",
+    "span8": "developer?",
+    "text1": "Ready to study five days a week from 12.00 to 19.00, plow like a galley slave,",
+    "text2": "in order to master in three months a program",
+    "text3": ", that others master in a year and a half"
+  },
+  "SchoolComparison": {
+    "title": "School",
+    "subtitle": "Comparison",
+    "description": "We have prepared a detailed comparison table for you, where all major programming schools are presented in comparison with ours.",
+    "btn": "View comparison table"
+  },
+  "Price": {
+    "title": "What is the price?"
+  },
+  "PriceCard": {
+    "location": {
+      "spb": "St. Petersburg",
+      "anyPlace": "From anywhere",
+      "tos": "Tashkent"
+    },
+    "currency": "RUB",
+    "start": "Starts:",
+    "locale": "November, 18th",
+    "finalDate": "November, 5th",
+    "discount": "Discount:",
+    "type": {
+      "offline": "Offline",
+      "online": "Online",
+      "hybrid": "Hybrid"
+    },
+    "description": {
+      "item1": "Every day you go to the bootcamp. The atmosphere and live communication help to focus and keep you motivated.",
+      "item2": "Together with an offline group, but via Discord. Unlike online schools, you immediately get answers to all questions.",
+      "item3": "Partly online, partly at the bootcamp. When you want to chat live, but are not ready to pay offline.",
+      "item4": "You are away from home, but you want to study live - in a close cultural environment, with teachers from Russia."
+    },
+    "btn": "Sign up"
+  },
   "SaintCode": "SaintCode",
   "Люблю поговорить, позвони мне": "I'd like to talk, call me",
   "Подготовительная программа": "Preparatory Program",
@@ -6,22 +60,124 @@
   "Школа": "About School",
   "ЧАВО": "FAQ",
   "Блог": "Blog",
-  "Перезапусти карьеру": "Reboot your career",
-  "научись программировать": "learn to code",
-  "Школа программирования": "Programming school",
-  "для веб-разработчиков в формате буткемпа:": "for web developers in the format of a bootcamp:",
-  "с 0 до Junior за 3 месяца,": "From zero-level to Junior in three months,",
-  "вживую в СПб или онлайн из любой точки": "Singapore or online from anywhere.",
   "Проект": "How did we create the project?",
   "Проблемы": "What problems do await the newcomer?",
   "Веб": "How and why do we teach programming?",
-  "Проект1": "At the heart of our project is the program of American bootcamps: they have existed for 10 years and a high percentage of their graduates find work.",
-  "Проект2": "We showed the resulting training program to friends who work in large Russian and foreign IT companies to understand how it meets the requirements of their companies.",
-  "Проект3": "We found like-minded people with extensive programming experience who tired of just writing code, they wanted to communicate with people more - they ripe for teaching. It turned out that their pedagogical skills often not enough, despite the fact that they have already trained interns in their companies or taught friends to code. We taught them how to teach professionally.",
-  "Проект4": "Our team is from St. Petersburg, if you know what that means) St. Petersburg is like a metaphor for the cultural capital, a place for nerds and human connection.",
-  "Требования": "What kind of computer and operating system do you need?",
-  "Нужно сделать": "What do you need to do before starting bootcamp training?",
-  "Оплата": "How can I pay for tuition?",
-  "faq_title": "Frequently asked Questions"
-
+  "SchoolItemsProject": {
+    "item1": "At the heart of our project is the program of American bootcamps: they have existed for 10 years and a high percentage of their graduates find work.",
+    "item2": "We showed the resulting training program to friends who work in large Russian and foreign IT companies to understand how it meets the requirements of their companies.",
+    "item3": "We found like-minded people with extensive programming experience who tired of just writing code, they wanted to communicate with people more - they ripe for teaching. It turned out that their pedagogical skills often not enough, despite the fact that they have already trained interns in their companies or taught friends to code. We taught them how to teach professionally.",
+    "item4": "Our team is from St. Petersburg, if you know what that means) St. Petersburg is like a metaphor for the cultural capital, a place for nerds and human connection."
+  },
+  "FaqInfo": {
+    "title": "Frequently asked Questions",
+    "ask": "Didn't you find an answer? Ask a Question",
+    "btnText": "Ask a Question",
+    "requirements": "What kind of computer and operating system do you need?",
+    "todo": "What do you need to do before starting bootcamp training?",
+    "payment": "How can I pay for tuition?"
+  },
+  "Team": "Our Team",
+  "FaqRequirements": {
+    "keyOne": "Any laptop will do, as long as it's fast. If it slows down, it's better to install Linux Ubuntu 20.04 LTS.",
+    "keyTwo": "It is preferable to have a Linux or MacOS operating system to get used to working with the command line."
+  },
+  "FaqTodo": {
+    "keyOne": "Talk to family and friends so that they do not distract you during the training. All cases after 3-4 months. It is important.",
+    "keyTwo": "Complete our preparatory program. You will practice the most difficult part for beginners, which means you will get more from the course. And also you will understand for yourself whether programming as a new profession suits you.",
+    "keyThree": "Set aside money for five months. You will study for three months and then, on average, look for a job for two months (respond to vacancies, solve test tasks, work out the mistakes that you made in interviews).",
+    "keyFour": "Tune in to plow) Rest awaits you in a couple of years."
+  },
+  "FaqToPay": {
+    "keyOne": "Cash or bank transfer.",
+    "keyTwo": "There is a loan (installment plan) up to 2 years from Tinkoff Bank."
+  },
+  "Member": {
+    "name": {
+      "name1": "Zhenya Gritsenko",
+      "name2": "Sasha Melnikov",
+      "name3": "Kostya Efimov",
+      "name4": "Sasha Chistyakov",
+      "name5": "Andrey Smirnov",
+      "name6": "Igor Poddubniy",
+      "name7": "Gleb Svechnikov",
+      "name8": "Yura Iovkov"
+    },
+    "status": {
+      "status1": "Founder",
+      "status2": "Co-founder",
+      "status3": "Technical Director, over 7 years of commercial experience",
+      "status4": "Project consultant, ex-technical director, over 20 years of commercial experience",
+      "status5": "Project consultant, over 10 years of commercial experience",
+      "status6": "JavaScript prep programmer with over 10 years of commercial experience",
+      "status7": "Creator of the first version of the front-end program, 14 years of commercial experience",
+      "status8": "Backend programmer, over 16 years of commercial experience"
+    },
+    "content": {
+      "content11": "Conducted an educational career guidance program for high school students \"City of the Future\" and a debate club",
+      "content12": "Organized a series of federal esports tournaments, as well as promotions with Greenpeace",
+      "content13": "Conducted more than 20 advertising campaigns, including for DNS",
+      "content21": "Main activity: consulting and corporate training",
+      "content22": "Trained more than 60 specialists (sales, consulting, legal support of business purchase transactions, soft skills, teamwork)",
+      "content23": "Author / co-author of the books “Start in business. Buy a ready-made business or open a franchise?”, “All about business in two hours. Secrets of lawyers and accountants»",
+      "content31": "Contributor of the first version of the JavaScript program",
+      "content32": "Made a digital system that manages meals in schools",
+      "content33": "Created one of the three existing systems for water vending machines on the market",
+      "content41": "DevOps Engineer, Software Architect, Backend developer",
+      "content42": "Taught Linux administration at the Graduate School of Engineering of the Polytechnic University",
+      "content43": "Permanent speaker of IT conferences",
+      "content44": "Participant of PC-conferences GolangConf and DevOpsConf",
+      "content45": "Co-organizer of the St. Petersburg community of DevOps engineers",
+      "content51": "Head of Client Development в X5 Retail Group",
+      "content52": "Conducted more than a thousand technical and not only interviews",
+      "content53": "Gives lectures on team leadership and soft skills",
+      "content54": "One of the organizers of Frontend Conf",
+      "content55": "Host of the Frontend Weekend podcast",
+      "content61": "C# developer at Veeam",
+      "content62": "Wrote a training program for students of the Polytechnic University on mobile development",
+      "content71": "UI developer",
+      "content72": "Studied at MIREA and PoliMi, interned at TVBlob, an Italian start-up to combine TV and the Internet before it became mainstream :)",
+      "content73": "Since 2011 specializes in frontend development. Worked at Early morning (web studio in Milan), Dnevnik.ru (international e-learning company), Intermedia (cloud office applications), Simlinic (IoT solutions for clinics), now developing interfaces at Infoculture.",
+      "content74": "Developed a program and led the circle \"Computer teaching mathematics\". In his free time, he is engaged in civic activism and maker work.",
+      "content81": "Taught computer graphics and databases at VPI VolgGTU",
+      "content82": "Backend for RomeWar game + wrote own framework for JS",
+      "content83": "Own startup AirCMS"
+    },
+    "title": {
+      "title": "Education:"
+    },
+    "education": {
+      "education11": "ITMO, University of Seoul, Oscar Brenifier Philosophical Counseling Program (phD Sorbonne University)",
+      "education12": "Moscow Institute of Advertising, Tourism and Show Business",
+      "education21": "St. Petersburg Electrotechnical University, Faculty of Electronics",
+      "education22": "RSUE, Faculty of Law"
+    }
+  },
+  "SchoolBegginer": {
+    "header": "So you decided to become a programmer. As a rule, you go to watch YouTube, read articles and maybe consult a friend. As soon as the first information entered your head, you realized that programming is too abstract. We need to define a bunch of new variables.",
+    "listTitle": "For example:",
+    "item1": "What industry do I want to work in?",
+    "item2": "How much time does it take to master?",
+    "item3": "How to study: on your own or go to school?",
+    "item4": "What is the best programming language for a beginner?",
+    "item5": "What technologies do you need to master in order to be hired for your first job?",
+    "item6": "What is the best school to study at? How are they really different? And which one is right for me?",
+    "item7": "When is it time to finish studying and have to spend most of the time looking for a job?",
+    "item8": "Why do employers ignore 95% of my applications? How to fix it?",
+    "item9": "Which companies are good for professional growth?",
+    "item10": "How do not to commit suicide when you read the job description of joon?",
+    "paragraph1": "Graduates from other schools often come to us because they could not find a job. They seem to already know something, but this is not enough to find a job.",
+    "paragraph2": "Sometimes you just need to clear your mind. Clearly prioritize and recognize your strengths.",
+    "paragraph3": "We are happy to help such guys, as we ourselves went through this hell)"
+  },
+  "SchoolItemStuding": {
+    "header": "We do not try to cram as many facts about programming into you as possible - this is a road to depression, confirmed by our experience) We help you learn to think like an engineer.",
+    "listTitle": "Think like a software engineer:",
+    "item1": "What questions do you need to answer before you take on the task.",
+    "item2": "How to draw a flowchart so as not to get confused.",
+    "item3": "How to highlight the main thing in the task.",
+    "item4": "How much time should be allocated to a task.",
+    "item5": "What do you need to figure out on your own, and when is it time to ask the elders.",
+    "item6": "How to formulate questions so that colleagues understand you."
+  }
 }

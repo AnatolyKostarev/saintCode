@@ -1,36 +1,38 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import s from './SchoolItemStuding.module.sass'
 
 export const SchoolItemStuding = ({ show, className }) => {
+  const { t } = useTranslation()
   return (
     <div className={clsx(s.school__content, { [s.school__content__active]: show }, className)}>
       <p>
-        Мы не стараемся запихнуть в тебя как можно больше фактов о программировании — это дорога в депрессию, подтверждено нашим опытом) Мы помогаем тебе научиться думать как инженер.
+        {t('SchoolItemStuding.header')}
       </p>
-      <p>
-        Думать как инженер (software engineer):
+      <div>
+        {t('SchoolItemStuding.listTitle')}
         <ul>
           <li>
-            На какие вопросы нужно себе ответить перед тем, как браться за задачу.
+            {t('SchoolItemStuding.item1')}
           </li>
           <li>
-            Как нарисовать блок-схему, чтобы не запутаться.
+            {t('SchoolItemStuding.item2')}
           </li>
           <li>
-            Как выделить в задаче главное.
+            {t('SchoolItemStuding.item3')}
           </li>
           <li>
-            Сколько времени нужно выделить на задачу.
+            {t('SchoolItemStuding.item4')}
           </li>
           <li>
-            С чем нужно разбираться самостоятельно, а когда уже пора спрашивать старших.
+            {t('SchoolItemStuding.item5')}
           </li>
           <li>
-            Как формулировать вопросы так, чтобы коллеги тебя понимали.
+            {t('SchoolItemStuding.item6')}
           </li>
         </ul>
-      </p>
+      </div>
     </div>
   )
 }

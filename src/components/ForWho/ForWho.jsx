@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Container } from '../../ui/Container'
 import { Section } from '../../ui/Section'
 import { Title } from '../../ui/Title'
@@ -8,49 +9,48 @@ import rightSVG from './rigth.svg'
 import s from './ForWho.module.sass'
 
 export const ForWho = () => {
+  const { t } = useTranslation()
   return (
     <Section className={s.ForWho}>
       <Container>
         <Title>
           <span className="transparent--blue">
-            Тебе
+            {t('ForWho.span1')}
           </span>
           {' '}
-          подходит
+          {t('ForWho.span2')}
           {' '}
           <span
             className="transparent--blue"
           >
-            наш
+            {t('ForWho.span3')}
             <br />
             {' '}
-            формат,
+            {t('ForWho.span4')}
             {' '}
           </span>
-          если ты:
+          {t('ForWho.span5')}
         </Title>
         <div className={s.article__wrapper}>
           <ForArticle svg={leftSVG}>
             <p className={s.text}>
-              Хочешь
+              {t('ForWho.span6')}
               {' '}
               <span className="focus">
-                быстро найти первую работу
+                {t('ForWho.span7')}
               </span>
               {' '}
-              разработчиком
+              {t('ForWho.span8')}
             </p>
           </ForArticle>
           <ForArticle svg={rightSVG}>
             <p className={s.text}>
-              Готов учиться пять дней в неделю с 12.00 до 19.00, пахать как раб на
-              галерах,
+              {t('ForWho.text1')}
               {' '}
               <span className="focus">
-                чтобы освоить за три месяца программу
+                {t('ForWho.text2')}
               </span>
-              , которую другие
-              осваивают за полтора года
+              {t('ForWho.text3')}
             </p>
           </ForArticle>
         </div>

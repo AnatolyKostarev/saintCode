@@ -1,73 +1,63 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import s from './SchoolBeginner.module.sass'
 
 export const SchoolBeginner = ({ show, className }) => {
+  const { t } = useTranslation()
   return (
     <div className={clsx(s.school__content, { [s.school__content__active]: show }, className)}>
       <p>
-        Вот ты решил стать программистом. Как правило, ты идёшь смотреть ютуб,
-        читать статьи и, может, советоваться со знакомым. Как только первая
-        информация поступила в твою голову, ты понял, что программирование — это
-        слишком абстрактно. Нужно определиться с кучей новых переменных.
+        {t('SchoolBegginer.header')}
       </p>
-      <p>
+      <div>
         <ul>
-          Например:
+          {t('SchoolBegginer.listTitle')}
           <li>
-            В какой отрасли я хочу работать?
+            {t('SchoolBegginer.item1')}
           </li>
           <li>
             {' '}
-            Сколько времени нужно на
-            освоение?
+            {t('SchoolBegginer.item2')}
           </li>
           <li>
             {' '}
-            Как учиться: самостоятельно или пойти в школу?
+            {t('SchoolBegginer.item3')}
           </li>
           <li>
-            Какой язык
-            программирования лучше для новичка?
+            {t('SchoolBegginer.item4')}
           </li>
           <li>
-            Какие технологии нужно освоить,
-            чтобы взяли на первую работу?
+            {t('SchoolBegginer.item5')}
           </li>
           <li>
             {' '}
-            В какой школе лучше учиться? Чем они
-            реально отличаются? И какая подходит именно мне?
+            {t('SchoolBegginer.item6')}
           </li>
           <li>
-            Когда пора
-            заканчивать учиться и надо тратить большую часть времени на поиск
-            работы?
+            {t('SchoolBegginer.item7')}
           </li>
           <li>
-            Почему работодатели игнорируют 95% моих откликов? Как это
-            исправить?
+            {t('SchoolBegginer.item8')}
           </li>
           <li>
             {' '}
-            Какие компании хорошие для профессионального роста?
+            {t('SchoolBegginer.item9')}
           </li>
           <li>
-            Как не
-            совершить суицид, когда читаешь описание вакансии джуна?
+            {t('SchoolBegginer.item10')}
           </li>
-               
         </ul>
-      </p>
-      <p>
-        К нам часто приходят выпускники из других школ, так как не смогли найти работу. Они вроде уже что-то умеют, но этого недостаточно, чтобы найти работу.
-      </p>
-      <p>
-        Порой нужно просто навести порядок в голове. Чётко расставить приоритеты и осознать свои сильные стороны.
-      </p>
-      <p>
-        Мы с радостью помогаем таким ребятам, так как сами прошли через этот ад)
-      </p>
+      </div>
+      <div>
+        {t('SchoolBegginer.paragraph1')}
+      </div>
+      <div>
+        {t('SchoolBegginer.paragraph2')}
+      </div>
+      <div>
+        {t('SchoolBegginer.paragraph3')}
+      </div>
     </div>
   )
 }
