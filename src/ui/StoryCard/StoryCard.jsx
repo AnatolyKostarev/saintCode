@@ -8,10 +8,12 @@ export const StoryCard = ({
   studentAge,
   studentResult,
   genderOption,
+  className,
+  isOpen,
   children,
 }) => {
   return (
-    <div className={clsx(s.StoryCard)}>
+    <div className={clsx(s.StoryCard, className)}>
       <div className={clsx(s.student)}>
         <div className={clsx(s.photo__wrapper)}>
           <img className={s.photo} width="104" height="104" src={studentPhoto} alt="Student - Photo" />
@@ -36,11 +38,14 @@ export const StoryCard = ({
           {children}
         </div>
       </div>
-      <div className={clsx(s.more)}>
-        <span className={clsx(s.more__dots)}>
-          ...
-        </span>
-      </div>
+      {isOpen
+          || (
+            <div className={clsx(s.more)}>
+              <span className={clsx(s.more__dots)}>
+                ...
+              </span>
+            </div>
+          )}
     </div>
   )
 }

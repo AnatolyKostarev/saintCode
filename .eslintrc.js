@@ -35,7 +35,7 @@ module.exports = {
     'default-case': 'off',
     'import/no-unresolved': 'off',
     'jsx-a11y/no-static-element-interactions': [
-      'error',
+      'warn',
       {
         handlers: [
           'onClick',
@@ -48,5 +48,9 @@ module.exports = {
         allowExpressionValues: true,
       },
     ],
+    'import/extensions': 'warn',
+    'jsx-a11y/click-events-have-key-events': 'warn',
+    'no-unused-expressions': 'warn',
+
   },
 }
