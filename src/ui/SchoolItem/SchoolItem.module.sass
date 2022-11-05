@@ -1,49 +1,35 @@
 .school
+    &__items
+        display: grid
+        grid-template-columns: repeat(2,minmax(560px, 50%))
+        justify-content: space-between
+        column-gap: 40px
     &__item
-        padding: 14.5px 25px 14.5px 25px
-        height: 77px
+        position: relative
+        padding: 29px 41px 32px
         background: rgba(85, 63, 67, 1)
-        overflow: hidden
-        transition: all 0.2s linear
-        &__active
-            @extend .school__item
-            padding-bottom: 25px
-            height: 100%
 
-    &__btn
+    &__btns
         display: flex
         justify-content: space-between
         align-items: center
-        width: 100%
-        font-size: 20px
-        font-weight: 700
-        line-height: 39px
-        text-align: left
-        background: transparent
-        border: 0
-        color: #fff
-        cursor: pointer
-        &:hover .school__cross
-            background: rgba(255, 255, 255, 1)
-            color: rgba(62, 43, 46, 1)
-            transition: all 0.2s linear
-        & p:first-child
+        & button
+            display: flex
+            justify-content: space-between
+            width: 100%
             font-size: 20px
-            font-weight: 600
-            line-height: 27px
+            font-weight: 700
+            line-height: 39px
             text-align: left
-    &__cross
-        padding: 4px 15px
-        width: 48px
-        height: 48px
-        border: 0
-        border-radius: 50%
-        background: rgba(62, 43, 46, 1)
-        font-size: 24px
-        color: rgba(255, 255, 255, 0.7)
-        transform: rotate(45deg)
-        transition: all 0.2s linear
-        &__rotate
-            @extend .school__cross
-            transform: rotate(90deg)
+            background: transparent
+            border: 0
+            color: #fff
+            cursor: pointer
 
+    &__text
+        margin-top: 37px
+        font-size: 16px
+        font-weight: 400
+        line-height: 30px
+        text-align: left
+        transition: 0.4s

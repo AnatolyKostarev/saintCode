@@ -1,12 +1,18 @@
 import { Layout } from '../../layout'
-import { SchoolInfo } from '../../components/SchoolInfo'
-import { Team } from '../../components/Team'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import s from './School.module.sass'
 
 export const School = () => {
   return (
     <Layout>
-      <SchoolInfo />
-      <Team />
+      <Section className={s.school}>
+        <Container>
+          <h2>
+            О Школе
+          </h2>
+        </Container>
+      </Section>
     </Layout>
   )
 }

@@ -1,10 +1,10 @@
 import React from 'react'
 import clsx from 'clsx'
 import s from './FooterCopyright.module.sass'
-import { Container } from '../Container/Container'
-import Button from '../Button/Button'
+import { Container } from '../Container'
+import { Button } from '../Button'
 
-const FooterCopyright = ({ className }) => {
+export const FooterCopyright = ({ className }) => {
   return (
     <div className={clsx(s.FooterCopyright, className)}>
       <Container className={s.copy}>
@@ -20,5 +20,3 @@ const FooterCopyright = ({ className }) => {
     </div>
   )
 }
-
-export default FooterCopyright

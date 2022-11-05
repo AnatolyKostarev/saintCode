@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import ReactDOM from 'react-dom'
 import s from './Modal.module.sass'

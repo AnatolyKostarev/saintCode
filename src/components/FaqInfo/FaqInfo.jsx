@@ -38,7 +38,9 @@ export const FaqInfo = () => {
             {t('faq_title')}
           </SectionTitle>
           <div className={s.faq__ask}>
-            <p>Ты можешь задать собственный вопрос, если не нашёл ответ</p>
+            <p>
+              Ты можешь задать собственный вопрос, если не нашёл ответ
+            </p>
             <Button className={s.faq__btn} text="Задать вопрос" />
           </div>
         </div>

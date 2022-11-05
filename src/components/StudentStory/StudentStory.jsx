@@ -1,18 +1,17 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import clsx from 'clsx'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss'
 import 'swiper/scss/pagination'
-import { Pagination } from 'swiper'
 import s from './StudentStory.module.sass'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
-import StoryCard from '../../ui/StoryCard/StoryCard'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
+import { StoryCard } from '../../ui/StoryCard'
 import { studentData } from './studentData'
 import Modal from '../Modal/Modal'
 
-const StudentStory = () => {
+export const StudentStory = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [selectID, setSelectID] = useState(null)
 
@@ -88,5 +87,3 @@ const StudentStory = () => {
     </Section>
   )
 }
-
-export default StudentStory
