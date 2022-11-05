@@ -1,11 +1,11 @@
 import React from 'react'
 import clsx from 'clsx'
 import { Link } from 'react-router-dom'
-import Title from '../Title/Title'
+import { Title } from '../Title'
+import { Button } from '../Button'
 import s from './NotFoundArticle.module.sass'
-import Button from '../Button/Button'
 
-const NotFoundArticle = ({ className }) => {
+export const NotFoundArticle = ({ className }) => {
   return (
     <article className={clsx(s.NotFoundArticle, className)}>
       <Title>
@@ -25,5 +25,3 @@ const NotFoundArticle = ({ className }) => {
     </article>
   )
 }
-
-export default NotFoundArticle

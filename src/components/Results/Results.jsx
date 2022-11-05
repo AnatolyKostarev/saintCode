@@ -1,12 +1,12 @@
 import React from 'react'
-import { Section } from '../../ui/Section/Section'
-import { Container } from '../../ui/Container/Container'
-import { SectionTitle } from '../../ui/SectionTitle/SectionTitle'
-import ResultsArticle from '../../ui/ResultsArticle/ResultsArticle'
+import { Section } from '../../ui/Section'
+import { Container } from '../../ui/Container'
+import { SectionTitle } from '../../ui/SectionTitle'
+import { ResultsArticle } from '../../ui/ResultsArticle'
 import { resultData } from './resultData'
 import s from './Results.module.sass'
 
-const Results = () => {
+export const Results = () => {
   return (
     <Section className={s.Results}>
       <Container className={s.Results__container}>
@@ -28,5 +28,3 @@ const Results = () => {
     </Section>
   )
 }
-
-export default Results

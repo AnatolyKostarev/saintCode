@@ -1,48 +1,43 @@
 import React from 'react'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import Logo from '../../ui/Logo/Logo'
-import Phone from '../../ui/Phone/Phone'
-import Nav from '../../ui/Nav/Nav'
-import Button from '../../ui/Button/Button'
+import { Logo } from '../../ui/Logo'
+import { Phone } from '../../ui/Phone'
+import { Nav } from '../../ui/Nav'
+import { Button } from '../../ui/Button'
 import s from './Header.module.sass'
 
 export const Header = () => {
   const { t, i18n } = useTranslation()
   const location = useLocation()
 
-  const background = {
-    header: 'rgba(57, 72, 61, 1)',
-    button: 'rgba(89, 248, 129, 1)',
-  }
-
   /* функция для изменения фона header, button в зависимости от адреса страницы */
-  
-  const changeHeaderBackGround = () => {
+  const background = {}
+  const changeBcg = () => {
     switch (location.pathname) {
       case '/school':
         background.header = 'rgba(62, 43, 46, 1)'
-        background.button = 'rgba(229, 111, 130, 1)'
+        background.button = 'rgba(233, 122, 140, 1)'
         break
       case '/program':
         background.header = 'rgba(62, 43, 46, 1)'
-        background.button = 'rgba(229, 111, 130, 1)'
+        background.button = 'rgba(233, 122, 140, 1)'
         break
       case '/faq':
         background.header = 'rgba(62, 43, 46, 1)'
-        background.button = 'rgba(229, 111, 130, 1)'
+        background.button = 'rgba(233, 122, 140, 1)'
         break
       case '/blog':
         background.header = 'rgba(72, 68, 57, 1)'
         background.button = 'rgba(255, 200, 52, 1)'
         break
       default:
-        background.header = 'rgba(57, 72, 61, 1)'
-        background.button = 'rgba(89, 248, 129, 1)'
+        background.header = ''
+        background.button = ''
     }
     return background
   }
-  changeHeaderBackGround()
+  changeBcg()
 
   // For test translation
   const toggleLang = async () => {

@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import s from './Button.module.sass'
 
-const Button = ({
+export const Button = ({
   text, className, onClick, style = {},
 }) => {
   return (
@@ -16,5 +16,3 @@ const Button = ({
     </button>
   )
 }
-
-export default Button

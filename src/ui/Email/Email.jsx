@@ -2,7 +2,7 @@ import React from 'react'
 import clsx from 'clsx'
 import s from './Email.module.sass'
 
-const Email = ({ className }) => {
+export const Email = ({ className }) => {
   return (
     <div className={clsx(s.Email, className)}>
       <a href="mailto:enter@saintcode.ru">
@@ -11,5 +11,3 @@ const Email = ({ className }) => {
     </div>
   )
 }
-
-export default Email

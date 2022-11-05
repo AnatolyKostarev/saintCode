@@ -1,0 +1,18 @@
+.school
+    &__content
+        margin-top: 37px
+        font-size: 16px
+        font-weight: 400
+        line-height: 24.8px
+        text-align: left
+        opacity: 0
+        transition: all 0.2s linear
+        & p:nth-child(-n + 4)
+            margin-bottom: 25px
+            & ul
+                list-style-type: disc
+                list-style-position: inside
+        &__active
+            @extend .school__content
+            opacity: 1
+            transition: all 0.6s linear

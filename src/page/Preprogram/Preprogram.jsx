@@ -1,4 +1,4 @@
-import { Layout } from '../../layout/Layout'
+import { Layout } from '../../layout'
 import { Container } from '../../ui/Container/Container'
 import { Section } from '../../ui/Section/Section'
 import s from './Preprogram.module.sass'

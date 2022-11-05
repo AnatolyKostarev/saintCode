@@ -1,0 +1,1 @@
+export { NotFoundArticle } from './NotFoundArticle'

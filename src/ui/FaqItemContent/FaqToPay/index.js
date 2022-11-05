@@ -1,0 +1,1 @@
+export { FaqToPay } from './FaqToPay'

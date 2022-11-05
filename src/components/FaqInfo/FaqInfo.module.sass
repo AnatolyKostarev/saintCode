@@ -1,0 +1,49 @@
+.faq
+    padding: 92px 127px 126px
+    background: rgba(62, 43, 46, 1)
+
+    &__header
+        display: flex
+        justify-content: flex-start
+        align-items: flex-end
+        gap: 0 40px
+        margin-bottom: 75px
+
+    &__title
+        flex-basis: 50%
+        color: #fff
+
+    &__ask
+        flex-basis: 50%
+        & p
+            margin-bottom: 25px
+            max-width: 351px
+            font-size: 20px
+            font-weight: 400
+            line-height: 32px
+            color: #ededf0
+            opacity: 0.7
+
+    &__btn
+        display: inline-block
+        padding: 15px 27px
+        height: 54px
+        color: #020303
+        font-size: 16px
+        line-height: 1.55
+        font-weight: 600
+        background-color: #e97a8c
+
+    &__items
+        display: grid
+        grid-template-columns: repeat(2,minmax(560px, 50%))
+        grid-template-rows: repeat(2, minmax(104px, auto))
+        justify-content: space-between
+        gap: 40px
+
+    &__item
+        padding: 25px 30px
+        height: 104px
+        &__active
+            padding-bottom: 25px
+            height: 100%

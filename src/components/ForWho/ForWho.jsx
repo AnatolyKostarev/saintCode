@@ -1,13 +1,13 @@
 import React from 'react'
-import { Container } from '../../ui/Container/Container'
-import { Section } from '../../ui/Section/Section'
-import Title from '../../ui/Title/Title'
-import ForArticle from '../../ui/ForArticle/ForArticle'
+import { Container } from '../../ui/Container'
+import { Section } from '../../ui/Section'
+import { Title } from '../../ui/Title'
+import { ForArticle } from '../../ui/ForArticle'
 import leftSVG from './left.svg'
 import rightSVG from './rigth.svg'
 import s from './ForWho.module.sass'
 
-const ForWho = () => {
+export const ForWho = () => {
   return (
     <Section className={s.ForWho}>
       <Container>
@@ -58,5 +58,3 @@ const ForWho = () => {
     </Section>
   )
 }
-
-export default ForWho

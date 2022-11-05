@@ -1,4 +1,4 @@
-import { Layout } from '../../layout/Layout'
+import { Layout } from '../../layout'
 import { Section } from '../../ui/Section/Section'
 import { Container } from '../../ui/Container/Container'
 import s from './Blog.module.sass'
