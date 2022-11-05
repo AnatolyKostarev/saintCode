@@ -35,5 +35,6 @@ module.exports = {
     'import/no-unresolved': 'warn',
     'jsx-a11y/click-events-have-key-events': 'warn',
     'jsx-a11y/no-static-element-interactions': 'warn',
+    'no-unused-expressions': 'warn',
   },
 }

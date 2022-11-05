@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import clsx from 'clsx'
 import ReactDOM from 'react-dom'
 import s from './Modal.module.sass'
@@ -9,6 +9,10 @@ const Modal = ({
   isOpen,
   setIsOpen,
 }) => {
+  isOpen
+    ? document.body.style.overflow = 'hidden'
+    : document.body.style.overflow = 'visible'
+
   if (!isOpen) return null
 
   return ReactDOM.createPortal(

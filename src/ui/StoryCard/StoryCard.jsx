@@ -1,8 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import s from './StoryCard.module.sass'
-
-const body = document.querySelector('body')
 
 const StoryCard = ({
   studentPhoto,
@@ -14,15 +12,6 @@ const StoryCard = ({
   isOpen,
   children,
 }) => {
-  useEffect(() => {
-    isOpen
-      ? body.style.overflow = 'hidden'
-      : body.style.overflow = 'visible'
-    return () => {
-      body.style.overflow = 'visible'
-    }
-  }, [])
-
   return (
     <div className={clsx(s.StoryCard, className)}>
       <div className={clsx(s.student)}>
@@ -49,11 +38,14 @@ const StoryCard = ({
           {children}
         </div>
       </div>
-      <div className={clsx(s.more)}>
-        <span className={clsx(s.more__dots)}>
-          ...
-        </span>
-      </div>
+      {isOpen
+          || (
+            <div className={clsx(s.more)}>
+              <span className={clsx(s.more__dots)}>
+                ...
+              </span>
+            </div>
+          )}
     </div>
   )
 }

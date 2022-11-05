@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import clsx from 'clsx'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss'
+import 'swiper/scss/pagination'
+import { Pagination } from 'swiper'
 import s from './StudentStory.module.sass'
 import { Section } from '../../ui/Section/Section'
 import { Container } from '../../ui/Container/Container'
@@ -23,14 +25,15 @@ const StudentStory = () => {
       </Container>
       <Swiper
         className={clsx(s.swiper)}
-        spaceBetween={50}
-        slidesPerView={2.5}
+        slidesPerView="auto"
       >
         {studentData.map(({ ...student }) => (
-          <SwiperSlide onClick={() => {
-            setSelectID(student.id)
-            setIsOpen(true)
-          }}
+          <SwiperSlide
+            className={clsx(s.slide)}
+            onClick={() => {
+              setSelectID(student.id)
+              setIsOpen(true)
+            }}
           >
             <StoryCard
               {...student}
