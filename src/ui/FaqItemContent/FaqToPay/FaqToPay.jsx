@@ -1,8 +1,10 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import s from './FaqToPay.module.sass'
 
 export const FaqToPay = ({ className, show }) => {
+  const { t } = useTranslation()
   return (
     <div
       className={clsx(
@@ -12,10 +14,10 @@ export const FaqToPay = ({ className, show }) => {
       )}
     >
       <p>
-        Наличными или переводом по реквизитам.
+        {t('FaqToPay.keyOne')}
       </p>
       <p>
-        Есть кредит (рассрочка) до 2 лет от Тинькофф банк.
+        {t('FaqToPay.keyTwo')}
       </p>
     </div>
   )

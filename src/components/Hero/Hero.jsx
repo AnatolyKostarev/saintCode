@@ -12,29 +12,29 @@ export const Hero = () => {
     <Section className={s.Hero}>
       <Container className={s.container}>
         <Title>
-          {t('Перезапусти карьеру')}
+          {t('Hero.title')}
           <span className="transparent">
             {' '}
             ——
             <br />
-            {t('научись программировать')}
+            {t('Hero.message')}
           </span>
         </Title>
       </Container>
       <HeroArticle>
         <p>
-          {t('Школа программирования')}
+          {t('Hero.school')}
           <br />
           {' '}
           <span className="transparent">
-            {t('для веб-разработчиков в формате буткемпа:')}
+            {t('Hero.web')}
           </span>
           <br />
-          {t('с 0 до Junior за 3 месяца,')}
+          {t('Hero.junior')}
           <br />
           {' '}
           <span className="transparent">
-            {t('вживую в СПб или онлайн из любой точки')}
+            {t('Hero.offLine')}
           </span>
         </p>
       </HeroArticle>

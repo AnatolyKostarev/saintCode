@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Button } from '../Button'
 import s from './PriceCard.module.sass'
 
@@ -11,43 +12,45 @@ export const PriceCard = ({
   discountLastDay,
   description,
 }) => {
+  const { t } = useTranslation()
   return (
     <div className={s.Price__card}>
       <div className={s.Price__header}>
         <p>
-          {location}
+          {t(`PriceCard.location.${location}`)}
         </p>
       </div>
       <div>
         <p className={s.Price__discount}>
           {new Intl.NumberFormat('ru-Ru').format(price)}
           {' '}
-          руб.
+          {t('PriceCard.currency')}
         </p>
         <p className={s.Price__real}>
           {new Intl.NumberFormat('ru-Ru').format(priceWithDiscount)}
           {' '}
-          руб.
+          {t('PriceCard.currency')}
         </p>
         <p className={s.Price__startDate}>
-          Дата старта:&nbsp;
-          {start}
+          {t('PriceCard.start')}
+            &nbsp;
+          {t('PriceCard.locale')}
         </p>
         <p className={s.Price__finalDate}>
-          Скидка до&nbsp;
-          {discountLastDay}
+          {t('PriceCard.discount')}
+          &nbsp;
+          {t(`PriceCard.${discountLastDay}`)}
         </p>
         <p className={s.Price__type}>
-          {type}
+          {t(`PriceCard.type.${type}`)}
         </p>
         <p className={s.Price__description}>
-          {description}
+          {t(`PriceCard.description.${description}`)}
         </p>
       </div>
       <div className={s.Price__wrap}>
-        <Button className={s.Price__btn} text="Записаться на курс" />
+        <Button className={s.Price__btn} text={t('PriceCard.btn')} />
       </div>
-   
     </div>
   )
 }

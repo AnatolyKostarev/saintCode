@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
@@ -8,6 +9,7 @@ import s from './SchoolComparison.module.sass'
 
 export const SchoolComparison = () => {
   const [isTable, showIsTable] = useState(false)
+  const { t } = useTranslation()
 
   const toggleTable = () => {
     showIsTable(!isTable)
@@ -20,19 +22,18 @@ export const SchoolComparison = () => {
           <div>
             <SectionTitle>
               <span>
-                Сравнение
+                {t('SchoolComparison.title')}
               </span>
-              &nbsp;школ
+              &nbsp;
+              {t('SchoolComparison.subtitle')}
             </SectionTitle>
             <p className={s.description}>
-              Мы подготовили для Вас подробную сравнительную таблицу, где
-              представлены все крупные школы по программированию в сравнении с
-              нашей
+              {t('SchoolComparison.description')}
             </p>
             <Button
               className={s.schools__btn}
               onClick={toggleTable}
-              text="Посмотреть сравнительную таблицу"
+              text={t('SchoolComparison.btn')}
             />
           </div>
           <div>

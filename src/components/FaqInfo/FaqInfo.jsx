@@ -35,18 +35,24 @@ export const FaqInfo = () => {
       <Container>
         <div className={s.faq__header}>
           <SectionTitle className={s.faq__title}>
-            {t('faq_title')}
+            {t('FaqInfo.title')}
           </SectionTitle>
           <div className={s.faq__ask}>
-            <p>Ты можешь задать собственный вопрос, если не нашёл ответ</p>
-            <Button className={s.faq__btn} text="Задать вопрос" />
+            <p>
+              {t('FaqInfo.ask')}
+            </p>
+            <Button
+              className={s.faq__btn}
+              text={t('FaqInfo.btnText')}
+
+            />
           </div>
         </div>
 
         <div className={s.faq__items}>
           <SchoolItem
             className={clsx(s.faq__item, { [s.faq__item__active]: isRequire })}
-            title={t('Требования')}
+            title={t('FaqInfo.requirements')}
             id={1}
             onClick={isRequireSwitcher}
             show={isRequire}
@@ -56,7 +62,7 @@ export const FaqInfo = () => {
 
           <SchoolItem
             className={clsx(s.faq__item, { [s.faq__item__active]: isTodo })}
-            title={t('Нужно сделать')}
+            title={t('FaqInfo.todo')}
             id={1}
             onClick={isTodoSwitcher}
             show={isTodo}
@@ -64,7 +70,7 @@ export const FaqInfo = () => {
             <FaqTodo show={isTodo} />
           </SchoolItem>
           <SchoolItem
-            title={t('Оплата')}
+            title={t('FaqInfo.payment')}
             id={1}
             onClick={isPaySwitcher}
             show={isPay}

@@ -8,16 +8,16 @@ export const SchoolItemsProject = ({ show, className }) => {
   return (
     <div className={clsx(s.school__content, { [s.school__content__active]: show }, className)}>
       <p>
-        {t('Проект1')}
+        {t('SchoolItemsProject.item1')}
       </p>
       <p>
-        {t('Проект2')}
+        {t('SchoolItemsProject.item1')}
       </p>
       <p>
-        {t('Проект3')}
+        {t('SchoolItemsProject.item1')}
       </p>
       <p>
-        {t('Проект4')}
+        {t('SchoolItemsProject.item1')}
       </p>
     </div>
   )
