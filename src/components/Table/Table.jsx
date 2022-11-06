@@ -7,6 +7,7 @@ import { Container } from '../../ui/Container'
 import { TableOption } from '../../ui/TableOption/TableOption'
 import { tableData } from './tableData'
 import { TableColumn } from '../../ui/TableColumn'
+
 export const Table = ({ className }) => {
   const [selectedSchool, setSelectedSchool] = useState(['Saint Code'])
 
