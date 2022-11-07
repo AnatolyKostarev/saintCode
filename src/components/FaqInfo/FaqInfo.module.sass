@@ -35,11 +35,11 @@
         background-color: #e97a8c
 
     &__items
-        display: grid
-        grid-template-columns: repeat(2,minmax(560px, 50%))
-        grid-template-rows: repeat(2, minmax(104px, auto))
+        display: flex
         justify-content: space-between
-        gap: 40px
+        align-items: flex-start
+        flex-wrap: wrap
+        gap: 40px 0
 
     &__item
         padding: 25px 30px
@@ -47,3 +47,29 @@
         &__active
             padding-bottom: 25px
             height: 100%
+
+        
+
+// Responsive styles
+
+@media (max-width: 425px)
+    .faq
+        padding: 25px 20px 45px
+
+        &__header
+            flex-direction: column
+            margin-bottom: 10px
+
+        &__ask
+            flex-basis: 50% 0
+            margin-top: 10px
+
+        &__items
+            gap: 20px 0
+
+        &__item
+            padding: 7px 30px
+            height: 148px
+            &__active
+                padding-bottom: 25px
+                height: 100%
