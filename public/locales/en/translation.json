@@ -53,6 +53,39 @@
     },
     "btn": "Sign up"
   },
+  "QuestionsRemain": {
+    "title": "Do you have any questions?",
+    "subtitle": "Sign up for a free consultation and we'll explain everything",
+    "input": {
+      "label": {
+        "name": "Name",
+        "phone": "Phone",
+        "messanger": "Messanger"
+      },
+      "placeholder": {
+        "name": "Аrtem",
+        "phone": "+7 999 999 99 99"
+      },
+      "option": {
+        "messanger": "Messanger",
+        "WhatsApp": "WhatsApp",
+        "Telegram": "Telegram",
+        "Viber": "Viber"
+      }
+    },
+    "btn": "Submit your application"
+  },
+  "DailySchedule": {
+    "title": "Daily",
+    "subtitle": "schedule"
+  },
+  "ScheduleCard": {
+    "text1": "With a mentor. New theory, collaborative problem solving, checking homework",
+    "text2": "Lunch and independent problem solving",
+    "text3": "With a mentor. Consolidation of material, analysis of difficult moments",
+    "text4": "Alone or with another student",
+    "text5": "Free time"
+  },
   "SaintCode": "SaintCode",
   "Люблю поговорить, позвони мне": "I'd like to talk, call me",
   "Подготовительная программа": "Preparatory Program",
