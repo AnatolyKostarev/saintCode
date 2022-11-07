@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
@@ -9,14 +10,15 @@ import { Button } from '../../ui/Button'
 import s from './QuestionsReman.module.sass'
 
 export const QuestionsRemain = () => {
+  const { t } = useTranslation()
   return (
     <Section className={s.QuestionsRemain}>
       <Container>
         <SectionTitle className={s.QuestionsRemain__title}>
-          Остались вопросы?
+          {t('QuestionsRemain.title')}
         </SectionTitle>
         <p>
-          Запишись на бесплатную консультацию — всё расскажем и объясним
+          {t('QuestionsRemain.subtitle')}
         </p>
         <Form
           className={s.QuestionsRemain__form}
@@ -26,46 +28,46 @@ export const QuestionsRemain = () => {
             <Input
               className={s.QuestionsRemain__input}
               type="text"
-              label="Имя"
+              label={t('QuestionsRemain.input.label.name')}
               id="user"
-              placeholder="Артём"
+              placeholder={t('QuestionsRemain.input.placeholder.name')}
             />
           </div>
           <div>
             <Input
               className={s.QuestionsRemain__input}
               type="tel"
-              label="Телефон"
+              label={t('QuestionsRemain.input.label.phone')}
               id="tel"
-              placeholder="+7 999 999 99 99"
+              placeholder={t('QuestionsRemain.input.placeholder.phone')}
             />
           </div>
           <div>
             <Select
               className={s.QuestionsRemain__input}
               type="tel"
-              label="Меcсенджер"
+              label={t('QuestionsRemain.input.label.messanger')}
               id="messanger"
               name="messanger"
             >
               <option selected disabled>
-                Месcенджер
+                {t('QuestionsRemain.input.option.messanger')}
               </option>
               <option>
-                WhatsApp
+                {t('QuestionsRemain.input.option.WhatsApp')}
               </option>
               <option>
-                Telegram
+                {t('QuestionsRemain.input.option.Telegram')}
               </option>
               <option>
-                Viber
+                {t('QuestionsRemain.input.option.Viber')}
               </option>
             </Select>
           </div>
 
           <Button
             className={s.QuestionsRemain__btn}
-            text="Оставить заявку"
+            text={t('QuestionsRemain.btn')}
             onClick={() => console.log('click')}
           />
         </Form>
