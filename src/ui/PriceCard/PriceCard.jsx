@@ -5,7 +5,7 @@ import s from './PriceCard.module.sass'
 
 export const PriceCard = ({
   location,
-  start,
+  // start,
   type,
   price,
   priceWithDiscount,
@@ -22,9 +22,11 @@ export const PriceCard = ({
       </div>
       <div>
         <p className={s.Price__discount}>
-          {new Intl.NumberFormat('ru-Ru').format(price)}
-          {' '}
-          {t('PriceCard.currency')}
+          <del>
+            {new Intl.NumberFormat('ru-Ru').format(price)}
+            {' '}
+            {t('PriceCard.currency')}
+          </del>
         </p>
         <p className={s.Price__real}>
           {new Intl.NumberFormat('ru-Ru').format(priceWithDiscount)}

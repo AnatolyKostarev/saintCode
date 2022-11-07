@@ -53,3 +53,34 @@
             color: #ededf0
         &:last-child
             margin: 0
+
+@media (max-width: 768px)
+    .member
+        &__header
+            margin-bottom: 18px
+
+        &__content
+            &:last-child
+                margin-top: 18px
+
+        &__description
+            margin-bottom: 2px
+
+@media (max-width: 425px)
+    .member
+        &__icon
+            max-width: 100px
+
+        &__name
+            margin-bottom: 5px
+            font-size: 16px
+            line-height: 19px
+
+        &__status
+            font-size: 10px
+            line-height: 14px
+
+        &__content
+            padding: 0 23px
+            &:last-child
+                padding: 0 5px
