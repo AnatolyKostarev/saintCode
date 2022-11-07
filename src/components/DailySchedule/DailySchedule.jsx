@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
@@ -7,14 +8,16 @@ import { dailyCard } from './dailyCard'
 import s from './DailySchedule.module.sass'
 
 export const DailySchedule = () => {
+  const { t } = useTranslation()
   return (
     <Section className={s.Schedule}>
       <Container>
         <SectionTitle>
           <span>
-            Расписание
+            {t('DailySchedule.title')}
           </span>
-          &nbsp;дня
+          &nbsp;
+          {t('DailySchedule.subtitle')}
         </SectionTitle>
         <div className={s.Schedule__cards}>
           {dailyCard.map(({ ...elem }) => (

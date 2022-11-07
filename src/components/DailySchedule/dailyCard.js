@@ -1,41 +1,43 @@
+import { v4 as uuidv4 } from 'uuid'
+
 export const dailyCard = [
   {
-    id: 1,
+    id: uuidv4(),
     time: '09:00',
-    text: 'С наставником. Новая теория, совместное решение задач, проверка домашней работы',
+    text: 'text1',
   },
   {
-    id: 2,
+    id: uuidv4(),
     time: '12:00',
-    text: 'Обед и самостоятельное решение задач',
+    text: 'text2',
   },
   {
-    id: 3,
+    id: uuidv4(),
     time: '',
     text: '',
   },
   {
-    id: 4,
+    id: uuidv4(),
     time: '14:00',
-    text: 'С наставником. Закрепление материала, разбор сложных моментов',
+    text: 'text3',
   },
   {
-    id: 5,
+    id: uuidv4(),
     time: '17:00',
-    text: 'Сам или в паре с другим студентом',
+    text: 'text4',
   },
   {
-    id: 6,
+    id: uuidv4(),
     time: '',
     text: '',
   },
   {
-    id: 7,
+    id: uuidv4(),
     time: '19:00',
-    text: 'Свободное время',
+    text: 'text5',
   },
   {
-    id: 8,
+    id: uuidv4(),
     time: '',
     text: '',
   },
