@@ -11,6 +11,7 @@ import { Author } from '../../components/Author'
 import { Results } from '../../components/Results'
 import { CommercialProject } from '../../components/CommercialProject'
 import { StudentStory } from '../../components/StudentStory'
+import { Table } from '../../components/Table'
 
 export const Home = () => {
   return (
@@ -19,6 +20,7 @@ export const Home = () => {
         <Hero />
         <ForWho />
         <SchoolComparison />
+        <Table />
         <Price />
         <QuestionsRemain />
         <DailySchedule />

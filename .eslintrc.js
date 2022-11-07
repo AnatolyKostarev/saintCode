@@ -51,6 +51,8 @@ module.exports = {
     'import/extensions': 'warn',
     'jsx-a11y/click-events-have-key-events': 'warn',
     'no-unused-expressions': 'warn',
+    'no-irregular-whitespace': 'warn',
+    'no-multi-str': 'warn',
 
   },
 }
