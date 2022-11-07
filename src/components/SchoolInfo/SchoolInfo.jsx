@@ -28,7 +28,6 @@ export const SchoolInfo = () => {
   }
 
   return (
-
     <Section className={s.school}>
       <Container>
         <SectionTitle className={s.school__title}>
@@ -62,6 +61,5 @@ export const SchoolInfo = () => {
         </div>
       </Container>
     </Section>
-    
   )
 }
