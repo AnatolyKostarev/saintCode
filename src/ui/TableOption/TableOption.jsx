@@ -1,29 +1,31 @@
-import React, { useState } from 'react'
+import React from 'react'
 import clsx from 'clsx'
 import s from './TableOption.module.sass'
 
 export const TableOption = ({
-  className, schoolName, selectedSchool, setSelectedSchool,
+  schoolName,
+  selectedSchool,
+  setSelectedSchool,
 }) => {
-  const [selected, setSelected] = useState(false)
-
   const addSchool = name => {
-    setSelected(!selected)
-    setSelectedSchool([...selectedSchool, name])
+    selectedSchool.length > 2
+      ? setSelectedSchool(['Saint Code', ...selectedSchool.splice(2), name])
+      : setSelectedSchool([...selectedSchool, name])
   }
   const delSchool = name => {
-    setSelected(!selected)
-    const newSelectedArr = selectedSchool.filter(elem => elem !== name)
-    setSelectedSchool([...newSelectedArr])
+    const filteredSchools = selectedSchool.filter(school => school !== name)
+    setSelectedSchool([...filteredSchools])
   }
 
   return (
     <button
       onClick={() => {
-        selected ? delSchool(schoolName) : addSchool(schoolName)
+        selectedSchool.includes(schoolName)
+          ? delSchool(schoolName)
+          : addSchool(schoolName)
       }}
       type="button"
-      className={clsx(s.TableOption, className, { [s.selected]: selected })}
+      className={clsx(s.TableOption, { [s.selected]: selectedSchool.includes(schoolName) })}
     >
       {schoolName}
     </button>

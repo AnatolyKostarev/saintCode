@@ -17,7 +17,15 @@
     display: flex
     align-items: stretch
     height: max-content
-
+  &__columns
+    display: flex
+    flex-direction: column
+  &__cell
+    width: max-content
+    padding: 0 20px
+  &__text
+    display: block
+    width: 260px
 .row
   background: #55705C
   padding: 19px 0
@@ -34,3 +42,12 @@
   color: #FFFFFF
   opacity: 0.5
   max-width: 200px
+.school
+  font-weight: 700
+  font-size: 18px
+  line-height: 120%
+  color: #FFFFFF
+  max-height: 25px
+  overflow: hidden
+  text-overflow: ellipsis
+  white-space: nowrap

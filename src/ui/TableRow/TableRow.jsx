@@ -4,24 +4,18 @@ import s from './TableRow.module.sass'
 import { Container } from '../Container'
 
 export const TableRow = ({
-  className, firstParam, secondParam, thirdParam, children,
+  firstParam, children,
 }) => {
   return (
-    <div className={clsx(s.TableRow, className)}>
+    <div className={clsx(s.TableRow)}>
       <Container>
         <div className={s.TableRow__flex}>
           <div className={clsx(s.TableRow__cell, s.first)}>
-            {children}
+            <span>
+              {firstParam}
+            </span>
           </div>
-          <div className={clsx(s.TableRow__cell)}>
-            {firstParam}
-          </div>
-          <div className={clsx(s.TableRow__cell)}>
-            {secondParam}
-          </div>
-          <div className={clsx(s.TableRow__cell)}>
-            {thirdParam}
-          </div>
+          { children }
         </div>
       </Container>
     </div>

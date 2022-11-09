@@ -6,7 +6,8 @@ import { SectionTitle } from '../../ui/SectionTitle'
 import { Container } from '../../ui/Container'
 import { TableOption } from '../../ui/TableOption/TableOption'
 import { tableData } from './tableData'
-import { TableColumn } from '../../ui/TableColumn'
+import { TableRow } from '../../ui/TableRow'
+import { tableDataKeys } from './tableDataKeys'
 
 export const Table = ({ className }) => {
   const [selectedSchool, setSelectedSchool] = useState(['Saint Code'])
@@ -26,7 +27,7 @@ export const Table = ({ className }) => {
         </p>
         <div className={clsx(s.Table__options)}>
           {tableData
-            .filter(elem => elem.id !== 0)
+            .filter(elem => elem.schoolName !== 'Saint Code')
             .map(elem => (
               <TableOption
                 key={elem.id}
@@ -36,32 +37,30 @@ export const Table = ({ className }) => {
               />
             ))}
         </div>
-        <div className={clsx(s.Table__row)}>
-          <TableColumn
-            className={s.first}
-            schoolName="Школа"
-            price="Цена за курс"
-            hoursWithTeacher="Кол-во часов с преподавателем"
-            practiceHours="Кол-во часов самостоятельной работы"
-            programDuration="Сколько дней длиться программа"
-            pricePerHour="Цена часа с преподавателем"
-            programQuality="Качество программы (субъективно)"
-            supportAfter="Какая поддержка после курса?"
-            groupSize="Размер группы"
-            hoursWithRecording="Кол-во часов с записанной теорией"
-            additionalInfo="дополнительная информация"
-            teacherSupportTime="время поддержки ментора"
-          />
-          {tableData
-            .filter(elem => selectedSchool.includes(elem.schoolName))
-            .map(({ ...elem }) => (
-              <TableColumn
-                key={elem.id}
-                {...elem}
-              />
-            ))}
-        </div>
       </Container>
+      <div className={clsx(s.Table__columns)}>
+        {tableDataKeys.map(elem => (
+          <TableRow
+            key={elem.key}
+            firstParam={elem.title}
+          >
+            {tableData
+              .filter(e => selectedSchool.includes(e.schoolName))
+              .map(e => (
+                <div
+                  key={e.id}
+                  className={clsx(s.Table__cell)}
+                >
+                  <span
+                    className={clsx(s.Table__text, { [s.school]: elem.key === 'schoolName' })}
+                  >
+                    {e[elem.key]}
+                  </span>
+                </div>
+              ))}
+          </TableRow>
+        ))}
+      </div>
     </Section>
   )
 }
