@@ -1,11 +1,18 @@
 .TableRow
   padding: 50px 0
+  &:first-child
+    padding: 19px 0
+    background: #55705C
+  &:nth-child(odd):not(:first-child)
+    background: #425246
   &__flex
     display: flex
-    justify-content: space-between
+    justify-content: start
   &__cell
     width: 25%
     padding: 0 20px
+    overflow: hidden
+
 .first
   font-weight: 400
   font-size: 14px
@@ -14,3 +21,6 @@
   text-transform: uppercase
   color: #FFFFFF
   opacity: 0.5
+  max-width: 160px
+  margin-right: 120px
+  padding: 0
