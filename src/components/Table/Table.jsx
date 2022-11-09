@@ -61,6 +61,7 @@ export const Table = ({ className }) => {
           </TableRow>
         ))}
       </div>
+
     </Section>
   )
 }
