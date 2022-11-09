@@ -56,12 +56,7 @@ export const SchoolComparison = () => {
                 opacity: 0,
               }
           }
-        >
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum
-          obcaecati corrupti amet repudiandae eveniet culpa praesentium rem
-          tempora! Reprehenderit nostrum voluptatum amet alias esse, sequi
-          dolorem voluptate a distinctio tempore.
-        </p>
+        />
       </Section>
     </>
   )
