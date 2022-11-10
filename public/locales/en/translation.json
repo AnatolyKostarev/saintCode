@@ -53,6 +53,43 @@
     },
     "btn": "Sign up"
   },
+  "QuestionsRemain": {
+    "title": "Is it difficult? Let's explain!",
+    "subtitle": "Leave a request - we will contact you via messenger.",
+    "input": {
+      "label": {
+        "name": "Name",
+        "phone": "Phone",
+        "messanger": "Messanger"
+      },
+      "placeholder": {
+        "name": "Аrtem",
+        "phone": "+7 999 999 99 99"
+      },
+      "option": {
+        "messanger": "Messanger",
+        "WhatsApp": "WhatsApp",
+        "Telegram": "Telegram",
+        "Viber": "Viber"
+      }
+    },
+    "btn": "Submit your application",
+    "conditions": {
+      "text": "By clicking on the \"Submit Application\" button, you accept",
+      "link": "terms for the transfer of information"
+    }
+  },
+  "DailySchedule": {
+    "title": "Daily",
+    "subtitle": "schedule"
+  },
+  "ScheduleCard": {
+    "text1": "With a mentor. New theory, collaborative problem solving, checking homework",
+    "text2": "Lunch and independent problem solving",
+    "text3": "With a mentor. Consolidation of material, analysis of difficult moments",
+    "text4": "Alone or with another student",
+    "text5": "Free time"
+  },
   "SaintCode": "SaintCode",
   "Люблю поговорить, позвони мне": "I'd like to talk, call me",
   "Подготовительная программа": "Preparatory Program",

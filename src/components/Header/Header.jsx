@@ -45,7 +45,10 @@ export const Header = () => {
   }
 
   return (
-    <header className={s.Header} style={{ background: background.header }}>
+    <header
+      className={s.Header}
+      style={{ background: background.header }}
+    >
       <div className={s.wrapper}>
         <div className={s.block}>
           <Logo />
@@ -55,11 +58,18 @@ export const Header = () => {
           <Nav />
           <Button
             className={s.header__btn}
-            onClick={toggleLang}
+            onClick={() => console.log('click')}
             text={t('Люблю поговорить, позвони мне')}
             style={{ background: background.button }}
           />
         </div>
+      </div>
+      <div className={s.header__switcher}>
+        <Button
+          className={s.header__btnSwitcher}
+          text="RU / ENG"
+          onClick={toggleLang}
+        />
       </div>
     </header>
   )

@@ -1,13 +1,33 @@
 .school
-    padding: 92px 127px 126px
+    padding: 96px 0 90px
     background: rgba(62, 43, 46, 1)
 
     &__title
-        margin-bottom: 50px
+        margin-bottom: 76px
         color: rgba(237, 237, 240, 0.5)
 
     &__items
-        display: grid
-        grid-template-columns: repeat(2,minmax(560px, 50%))
+        display: flex
         justify-content: space-between
-        gap: 40px
+        align-items: flex-start
+        flex-wrap: wrap
+        gap: 20px 40px
+
+// Responsive styles
+
+@media (max-width: 1024px)
+    .school
+        padding: 90px 64px
+
+@media (max-width: 768px)
+    .school
+        &__title
+            margin-bottom: 20px
+
+        &__items
+            flex-direction: column
+            gap: 20px 0
+
+@media (max-width: 576px)
+    .school
+        padding: 50px 20px 50px

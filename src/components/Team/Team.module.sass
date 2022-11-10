@@ -1,5 +1,5 @@
 .team
-    padding: 126px 127px 126px
+    padding: 96px 0 100px
     background-color: rgba(72, 68, 57, 1)
 
     &__title
@@ -8,6 +8,22 @@
 
     &__wrapper
         display: grid
-        grid-template-columns: repeat(2, minmax(560px, 50%))
+        grid-template-columns: repeat(2, minmax(45%, 560px))
         gap: 40px
-        
+
+@media (max-width: 768px)
+    .team
+        padding: 126px 154px 126px
+
+        &__wrapper
+            grid-template-columns: minmax(45%, 460px)
+
+@media (max-width: 576px)
+    .team
+        padding: 30px 10px
+
+        &__title
+            margin-bottom: 25px
+
+        &__wrapper
+            grid-template-columns: minmax(290px, 100%)

@@ -9,7 +9,7 @@ export const Logo = () => {
     <Link to="/">
       <div className={clsx(s.Logo)}>
         <img
-          className={clsx('logo__img')}
+          className={clsx(s.logo__img)}
           src={schoolLogo}
           alt="SaintCode - logo"
           width="160"
