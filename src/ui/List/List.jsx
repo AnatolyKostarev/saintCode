@@ -1,7 +1,9 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import s from './List.module.sass'
 
 export const List = ({ items }) => {
+  const { t } = useTranslation()
   return (
     <>
       {items.map(elem => (
@@ -10,12 +12,12 @@ export const List = ({ items }) => {
             <p className={s.list__title}>
               &bull;
               { ' ' }
-              {elem.title}
+              {t(`TrainingProgram.TrainingData.title.${elem.title}`)}
             </p>
           ) : null}
           {elem.items ? elem.items.map(item => (
             <li className={s.list__items} key={item}>
-              {item}
+              {t(`TrainingProgram.TrainingData.items.${item}`)}
             </li>
           )) : null}
         </ul>

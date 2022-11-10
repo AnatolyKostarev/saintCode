@@ -1,39 +1,41 @@
+import { v4 as uuidv4 } from 'uuid'
+
 export const trainingWeb = [
   {
-    id: 1,
+    id: uuidv4(),
     title: 'Git',
     items: [
-      'Terminal',
-      'Поймёшь, как работать в команде',
-      'Будешь писать понятные комментарии к своему коду',
+      'item_1',
+      'item_2',
+      'item_3',
     ],
     marker: true,
   },
   {
-    id: 2,
+    id: uuidv4(),
     title: 'CSS',
     items: [
-      'Типографика',
-      'Responsive and adaptive design',
-      'Сетка',
-      'Flexbox',
-      'Grid',
-      'БЭМ',
+      'item_4',
+      'item_5',
+      'item_7',
+      'item_8',
+      'item_9',
+      'item_10',
     ],
     marker: true,
   },
   {
-    id: 3,
+    id: uuidv4(),
     title: 'HTML',
     items: [
-      'Ссылки, кнопки, таблицы, формы',
-      'Локальный сервер',
-      'Семантическая вёрстка',
+      'item_11',
+      'item_12',
+      'item_13',
     ],
     marker: true,
   },
   {
-    id: 4,
+    id: uuidv4(),
     title: 'DevTools',
     marker: true,
   },
@@ -41,54 +43,54 @@ export const trainingWeb = [
 
 export const trainingJS = [
   {
-    id: 1,
+    id: uuidv4(),
     items: [
-      'Переменные, типы данных, операторы',
-      'Ветвления, циклы',
-      'Функции, массивы, объекты',
-      '--> Научился писать простые программы',
+      'item_14',
+      'item_15',
+      'item_16',
+      'item_17',
     ],
     marker: false,
   },
   {
-    id: 2,
+    id: uuidv4(),
     items: [
-      'Погружение в типы данных и их методы',
-      'Модули, деление программы на части',
-      'Работа с документом',
-      'События и обработка ошибок',
-      '--> Умеешь создавать простые сервисы',
+      'item_18',
+      'item_19',
+      'item_20',
+      'item_21',
+      'item_22',
     ],
     marker: false,
   },
   {
-    id: 3,
-    items: ['Асинхронное взаимодействие с сервером (API)', 'Хранение данных'],
+    id: uuidv4(),
+    items: ['item_23', 'item_24'],
     marker: false,
   },
 ]
 
 export const trainingReact = [
   {
-    id: 1,
+    id: uuidv4(),
     items: [
-      'Компоненты и их жизненный цикл',
-      'Состояние',
+      'item_25',
+      'item_26',
     ],
     marker: true,
   },
   {
-    id: 2,
+    id: uuidv4(),
     items: [
-      'События',
-      'Render',
+      'item_27',
+      'item_28',
     ],
     marker: true,
   },
   {
-    id: 3,
+    id: uuidv4(),
     items: [
-      'Hook',
+      'item_29',
     ],
     marker: true,
   },
@@ -96,11 +98,11 @@ export const trainingReact = [
 
 export const trainingJob = [
   {
-    id: 1,
+    id: uuidv4(),
     items: [
-      'Напишешь резюме и сопроводительное письмо (в американском стиле)',
-      'Поймёшь, как искать адекватные компании',
-      'Потренируешься проходить технические собеседования',
+      'item_30',
+      'item_31',
+      'item_32',
     ],
   },
 ]

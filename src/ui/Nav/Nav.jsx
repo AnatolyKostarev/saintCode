@@ -11,22 +11,22 @@ export const Nav = () => {
       <ul className={clsx(s.list)}>
         <li>
           <Link to="/school">
-            {t('О школе')}
+            {t('Nav.school')}
           </Link>
         </li>
         <li>
           <Link to="/program">
-            {t('Подготовительная программа')}
+            {t('Nav.program')}
           </Link>
         </li>
         <li>
           <Link to="/faq">
-            {t('ЧАВО')}
+            {t('Nav.faq')}
           </Link>
         </li>
         <li>
           <Link to="/blog">
-            {t('Блог')}
+            {t('Nav.blog')}
           </Link>
         </li>
       </ul>

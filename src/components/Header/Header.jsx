@@ -59,7 +59,7 @@ export const Header = () => {
           <Button
             className={s.header__btn}
             onClick={() => console.log('click')}
-            text={t('Люблю поговорить, позвони мне')}
+            text={t('Header.btn')}
             style={{ background: background.button }}
           />
         </div>

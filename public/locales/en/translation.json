@@ -1,4 +1,5 @@
 {
+  "SaintCode": "SaintCode",
   "Hero": {
     "title": "Reboot your career",
     "message": "learn to code",
@@ -90,16 +91,21 @@
     "text4": "Alone or with another student",
     "text5": "Free time"
   },
-  "SaintCode": "SaintCode",
-  "Люблю поговорить, позвони мне": "I'd like to talk, call me",
-  "Подготовительная программа": "Preparatory Program",
-  "О школе": "About",
-  "Школа": "About School",
-  "ЧАВО": "FAQ",
-  "Блог": "Blog",
-  "Проект": "How did we create the project?",
-  "Проблемы": "What problems do await the newcomer?",
-  "Веб": "How and why do we teach programming?",
+  "Header": {
+    "btn": "I'd like to talk, call me"
+  },
+  "SchoolInfo": {
+    "title": "About School",
+    "project": "How did we create the project?",
+    "problem": "What problems do await the newcomer?",
+    "web": "How and why do we teach programming?"
+  },
+  "Nav": {
+    "school": "About",
+    "program": "Preparatory Program",
+    "faq": "FAQ",
+    "blog": "Blog"
+  },
   "SchoolItemsProject": {
     "item1": "At the heart of our project is the program of American bootcamps: they have existed for 10 years and a high percentage of their graduates find work.",
     "item2": "We showed the resulting training program to friends who work in large Russian and foreign IT companies to understand how it meets the requirements of their companies.",
@@ -216,5 +222,71 @@
     "item4": "How much time should be allocated to a task.",
     "item5": "What do you need to figure out on your own, and when is it time to ask the elders.",
     "item6": "How to formulate questions so that colleagues understand you."
+  },
+  "TrainingProgram": {
+    "title_span": "Training program",
+    "title": "for web developer (frontend)",
+    "subtitle_one": "busy",
+    "subtitle_two": "months of study",
+    "total": "Result",
+    "task": {
+      "one": {
+        "title": "Learn how to design static web pages in 3 weeks",
+        "description": "Written landing page and pizza ordering service"
+      },
+      "two": {
+        "title": "Learn how to create dynamic web pages in 5 weeks with JavaScript",
+        "description": "Pizza ordering service"
+      },
+      "three": {
+        "title": "Learn how to use React to build modern web apps in 4 weeks",
+        "description": "Rewrite a pizza ordering service with React"
+      },
+      "four": {
+        "title": "Prepare for a job search",
+        "description": "Sent high-quality CVs and cover letters to relevant companies. Ready for a technical interview"
+      }
+    },
+    "TrainingData": {
+      "title": {
+        "Git": "Git",
+        "CSS": "CSS",
+        "HTML": "HTML",
+        "DevTools": "DevTools"
+      },
+      "items": {
+        "item_1": "Terminal",
+        "item_2": "Learn how to work in a team",
+        "item_3": "You will write understandable comments to your code",
+        "item_4": "Typography",
+        "item_5": "Responsive and adaptive design",
+        "item_7": "Grid",
+        "item_8": "Flexbox",
+        "item_9": "Grid",
+        "item_10": "BEM",
+        "item_11": "Links, buttons, tables, forms",
+        "item_12": "Local server",
+        "item_13": "Semantic layout",
+        "item_14": "Variables, data types, operators",
+        "item_15": "Branches, cycles",
+        "item_16": "Functions, arrays, objects",
+        "item_17": "Learned to write simple programs",
+        "item_18": "Dive into data types and their methods",
+        "item_19": "Modules, division of the program into parts",
+        "item_20": "Working with a document",
+        "item_21": "Events and error handling",
+        "item_22": "You can create simple services?",
+        "item_23": "Asynchronous communication with the server (API)",
+        "item_24": "Data storage",
+        "item_25": "Components and their lifecycle",
+        "item_26": "State",
+        "item_27": "Events",
+        "item_28": "Render",
+        "item_29": "Hook",
+        "item_30": "Write a resume and cover letter (American style)",
+        "item_31": "Learn how to find the right companies",
+        "item_32": "Practice passing technical interviews"
+      }
+    }
   }
 }

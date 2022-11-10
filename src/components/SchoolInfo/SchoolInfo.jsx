@@ -31,11 +31,11 @@ export const SchoolInfo = () => {
     <Section className={s.school}>
       <Container>
         <SectionTitle className={s.school__title}>
-          {t('Школа')}
+          {t('SchoolInfo.title')}
         </SectionTitle>
         <div className={s.school__items}>
           <SchoolItem
-            title={t('Проект')}
+            title={t('SchoolInfo.project')}
             id={1}
             onClick={isProjectSwitcher}
             show={isProject}
@@ -43,7 +43,7 @@ export const SchoolInfo = () => {
             <SchoolItemsProject show={isProject} />
           </SchoolItem>
           <SchoolItem
-            title={t('Проблемы')}
+            title={t('SchoolInfo.problems')}
             id={2}
             onClick={isBeginnerSwitcher}
             show={isBeginner}
@@ -51,7 +51,7 @@ export const SchoolInfo = () => {
             <SchoolBeginner show={isBeginner} />
           </SchoolItem>
           <SchoolItem
-            title={t('Веб')}
+            title={t('SchoolInfo.web')}
             id={3}
             onClick={isHowSwitcher}
             show={isHow}
