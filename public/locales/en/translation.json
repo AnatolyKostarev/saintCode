@@ -54,8 +54,8 @@
     "btn": "Sign up"
   },
   "QuestionsRemain": {
-    "title": "Do you have any questions?",
-    "subtitle": "Sign up for a free consultation and we'll explain everything",
+    "title": "Is it difficult? Let's explain!",
+    "subtitle": "Leave a request - we will contact you via messenger.",
     "input": {
       "label": {
         "name": "Name",
@@ -73,7 +73,11 @@
         "Viber": "Viber"
       }
     },
-    "btn": "Submit your application"
+    "btn": "Submit your application",
+    "conditions": {
+      "text": "By clicking on the \"Submit Application\" button, you accept",
+      "link": "terms for the transfer of information"
+    }
   },
   "DailySchedule": {
     "title": "Daily",
