@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
@@ -17,7 +18,7 @@ export const QuestionsRemain = () => {
         <SectionTitle className={s.QuestionsRemain__title}>
           {t('QuestionsRemain.title')}
         </SectionTitle>
-        <p>
+        <p className={s.QuestionsRemain__subtitle}>
           {t('QuestionsRemain.subtitle')}
         </p>
         <Form
@@ -50,7 +51,10 @@ export const QuestionsRemain = () => {
               id="messanger"
               name="messanger"
             >
-              <option selected disabled>
+              <option
+                selected
+                disabled
+              >
                 {t('QuestionsRemain.input.option.messanger')}
               </option>
               <option>
@@ -71,6 +75,15 @@ export const QuestionsRemain = () => {
             onClick={() => console.log('click')}
           />
         </Form>
+        <p className={s.QuestionsRemain__conditions}>
+          {t('QuestionsRemain.conditions.text')}
+          { ' ' }
+          <span>
+            <Link to="*">
+              {t('QuestionsRemain.conditions.link')}
+            </Link>
+          </span>
+        </p>
       </Container>
     </Section>
   )
