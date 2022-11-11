@@ -1,15 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Logo } from '../../ui/Logo'
 import { Phone } from '../../ui/Phone'
 import { Nav } from '../../ui/Nav'
 import { Button } from '../../ui/Button'
+import { ConsultForm } from '../../widgets/ConsultForm'
 import s from './Header.module.sass'
 
 export const Header = () => {
   const { t, i18n } = useTranslation()
   const location = useLocation()
+  const [isConsultForm, setIsConsultForm] = useState(false)
 
   /* функция для изменения фона header, button в зависимости от адреса страницы */
   const background = {}
@@ -58,7 +60,7 @@ export const Header = () => {
           <Nav />
           <Button
             className={s.header__btn}
-            onClick={() => console.log('click')}
+            onClick={() => setIsConsultForm(true)}
             text={t('Header.btn')}
             style={{ background: background.button }}
           />
@@ -71,6 +73,7 @@ export const Header = () => {
           onClick={toggleLang}
         />
       </div>
+      {isConsultForm && <ConsultForm setIsConsultForm={setIsConsultForm} />}
     </header>
   )
 }
