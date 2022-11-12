@@ -45,18 +45,21 @@ export const ConsultForm = ({ setIsConsultForm }) => {
             className={s.consultForm__name}
             type="text"
             placeholder="Имя"
+            size={31}
           />
           <input
             className={s.consultForm__tel}
             type="tel"
             placeholder="+7 (999) 999 99 99"
+            size={31}
           />
           <input
             className={s.consultForm__mail}
             type="mail"
             placeholder="Электронная почта"
+            size={31}
           />
-          <textarea className={s.consultForm__message}>
+          <textarea className={s.consultForm__message} cols={31}>
             Здесь можно написать вопрос = )
           </textarea>
         </div>
