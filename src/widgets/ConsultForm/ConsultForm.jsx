@@ -1,5 +1,4 @@
 import React, { useEffect } from 'react'
-import clsx from 'clsx'
 import { Link } from 'react-router-dom'
 import { Portal } from '../../ui/Portal'
 import { Form } from '../../ui/Form'
@@ -8,16 +7,18 @@ import iconClose from './icon-close.png'
 import s from './ConsultForm.module.sass'
 
 export const ConsultForm = ({ setIsConsultForm }) => {
-  const closeForm = e => {
+  const escConsultForm = e => {
     if (e.key === 'Escape') {
       setIsConsultForm(false)
     }
+  }
+  const closeForm = () => {
     setIsConsultForm(false)
   }
 
   useEffect(() => {
-    document.addEventListener('keydown', e => closeForm(e))
-    return document.removeEventListener('keydown', e => closeForm(e))
+    document.addEventListener('keydown', e => escConsultForm(e))
+    return document.removeEventListener('keydown', e => escConsultForm(e))
   }, [])
 
   return (
@@ -32,7 +33,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
         <button
           className={s.consultForm__close}
           type="submit"
-          onClick={e => closeForm(e)}
+          onClick={() => closeForm()}
         >
           <img
             src={iconClose}

@@ -11,6 +11,7 @@ export const PriceCard = ({
   priceWithDiscount,
   discountLastDay,
   description,
+  onClick,
 }) => {
   const { t } = useTranslation()
   return (
@@ -35,7 +36,7 @@ export const PriceCard = ({
         </p>
         <p className={s.Price__startDate}>
           {t('PriceCard.start')}
-            &nbsp;
+          &nbsp;
           {t('PriceCard.locale')}
         </p>
         <p className={s.Price__finalDate}>
@@ -51,7 +52,11 @@ export const PriceCard = ({
         </p>
       </div>
       <div className={s.Price__wrap}>
-        <Button className={s.Price__btn} text={t('PriceCard.btn')} />
+        <Button
+          className={s.Price__btn}
+          text={t('PriceCard.btn')}
+          onClick={onClick}
+        />
       </div>
     </div>
   )
