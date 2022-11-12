@@ -78,7 +78,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
               />
               <textarea
                 className={s.consultForm__message}
-                size={39}
+                cols={42}
               >
                 Здесь можно написать вопрос = )
               </textarea>

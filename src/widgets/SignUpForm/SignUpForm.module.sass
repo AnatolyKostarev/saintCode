@@ -14,6 +14,8 @@
         display: flex
         position: fixed
         inset: 0
+        width: 100%
+        height: 100%
         background: rgba(0, 0, 0, 0.6)
         z-index: 101
 
@@ -48,11 +50,11 @@
     &__mail
         display: inline-block
         margin-bottom: 25px
-        padding: 19px 20px 18px 21px
+        padding: 19px 20px 18px 20px
         max-width: 469px
         border: 1px solid #e0e0e0
         background: rgba(255, 255, 255, 1)
-        box-sizing: content-box
+        box-sizing: border-box
         &::placeholder
             font-size: 16px
             line-height: 1.33
@@ -63,30 +65,31 @@
     &__message
         @extend .consultForm__name
         margin-bottom: 0
-        padding: 9px 20px 47px
-        width: 469px
+        padding: 0 20px
+        max-width: 469px
+        line-height: 49px
         color: rgba(128, 128, 128, 1)
         resize: none
         box-sizing: border-box
         &::placeholder
             font-size: 14px
             font-weight: 400
-            line-height: 50px
             text-align: left
 
     &__btn
+        display: block
         margin-bottom: 20px
-        padding: 6px 191px 7px
+        padding: 18px 191px 18px 192px
         text-align: center
-        height: 60px
         border: 0
         font-size: 16px
         font-weight: 600
         color: #050f08
         background-color: rgba(160, 132, 235, 1)
+        cursor: pointer
 
     &__terms
-        width: 422px
+        max-width: 422px
         font-size: 14px
         font-weight: 400
         line-height: 21px
@@ -109,3 +112,61 @@
 
     100%
         opacity: 1
+
+@media (max-width: 425px)
+    .consultForm
+        padding: 45px 10px 34px
+        max-width: 100%
+        border-radius: 0
+
+        &__container
+            margin: 0
+            width: 100%
+            align-self: flex-end
+
+        &__title
+            margin-bottom: 20px
+            width: 100%
+            font-size: 25px
+            font-weight: 700
+            line-height: 30px
+            text-align: center
+
+        &__close
+            top: 13px
+            right: 13px
+
+        &__wrapper
+            margin-bottom: 20px
+
+        &__name,
+        &__tel,
+        &__mail
+            margin-bottom: 10px
+            padding: 14px 20px 13px 20px
+            width: 100%
+
+        &__message
+            margin: 0
+            padding: 0 20px 0 15px
+            font-size: 14px
+            font-weight: 400
+            line-height: 50px
+            letter-spacing: 0em
+            text-align: left
+
+        &__btn
+            width: 100%
+            margin-bottom: 15px
+            padding: 7px 112px 8px 113px
+            font-size: 14px
+            font-weight: 500
+            line-height: 50px
+
+        &__terms
+            font-size: 13px
+            line-height: 20px
+            & span
+                font-size: 13px
+                font-weight: 400
+                line-height: 17px
