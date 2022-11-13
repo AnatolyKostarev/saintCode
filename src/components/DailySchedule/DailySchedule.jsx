@@ -10,16 +10,16 @@ import s from './DailySchedule.module.sass'
 export const DailySchedule = () => {
   const { t } = useTranslation()
   return (
-    <Section className={s.Schedule}>
+    <Section className={s.schedule}>
       <Container>
-        <SectionTitle>
+        <SectionTitle className={s.schedule__title}>
           <span>
             {t('DailySchedule.title')}
           </span>
           &nbsp;
           {t('DailySchedule.subtitle')}
         </SectionTitle>
-        <div className={s.Schedule__cards}>
+        <div className={s.schedule__cards}>
           {dailyCard.map(({ ...elem }) => (
             <ScheduleCard {...elem} key={elem.id} />
           ))}
