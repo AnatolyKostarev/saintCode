@@ -32,18 +32,45 @@ export const ConsultForm = ({ setIsConsultForm }) => {
     return document.removeEventListener('keydown', e => escConsultForm(e))
   }, [])
 
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState,
+    formState: { errors, isValid },
+  } = useForm({ mode: 'onSubmit', defaultValues: initialValues })
+
+  function handleChange(e) {
+    setValue(prev => ({
+      ...prev,
+      [e.target.name]: e.target.value.trimStart(),
+    }))
+  }
+
+  useEffect(() => {
+    if (formState.isSubmitSuccessful) {
+      reset(initialValues)
+    }
+  }, [formState, reset])
+
+  const onSubmit = data => {
+    console.dir(data)
+    setValue(initialValues)
+    reset()
+  }
+
   return (
     <Portal>
       <Form
         className={s.consultForm}
-        onSubmit={e => e.preventDefault()}
+        onSubmit={handleSubmit(onSubmit)}
       >
         <p className={s.consultForm__title}>
           Получи консультацию
         </p>
         <button
           className={s.consultForm__close}
-          type="submit"
+          type="button"
           onClick={() => closeForm()}
         >
           <img
@@ -52,32 +79,147 @@ export const ConsultForm = ({ setIsConsultForm }) => {
           />
         </button>
         <div className={s.consultForm__wrapper}>
-          <input
-            className={s.consultForm__name}
-            type="text"
-            placeholder="Имя"
-            size={31}
-          />
-          <input
-            className={s.consultForm__tel}
-            type="tel"
-            placeholder="+7 (999) 999 99 99"
-            size={31}
-          />
-          <input
-            className={s.consultForm__mail}
-            type="mail"
-            placeholder="Электронная почта"
-            size={31}
-          />
-          <textarea className={s.consultForm__message} cols={31}>
-            Здесь можно написать вопрос = )
-          </textarea>
+          <div>
+            <input
+              className={s.consultForm__name}
+              id="name"
+              name="name"
+              {...register('name', {
+                // required: 'Обязательное поле',
+                minLength: {
+                  value: 3,
+                  message: 'Минимум 3 символа',
+                },
+                maxLength: {
+                  value: 50,
+                  message: 'Максимум 50 символов',
+                },
+              })}
+              type="text"
+              placeholder="Имя"
+              size={31}
+              onChange={handleChange}
+              value={value.name}
+              style={
+                errors.name ? { outline: '1px solid red' } : { outline: 'none' }
+              }
+            />
+            <>
+              {errors.name && (
+                <p className={s.error}>
+                  {errors.name.message || 'Error'}
+                </p>
+              )}
+            </>
+          </div>
+          <div>
+            <input
+              className={s.consultForm__tel}
+              id="tel"
+              name="tel"
+              {...register('tel', {
+                required: 'Обязательное поле',
+                pattern: {
+                  value:
+                    /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                  message: 'Введите в формате +999 999999999',
+                },
+              })}
+              type="tel"
+              placeholder="+999 999999999"
+              size={31}
+              onChange={handleChange}
+              value={value.tel}
+              style={
+                errors.tel ? { outline: '1px solid red' } : { outline: 'none' }
+              }
+            />
+            {errors.tel && (
+              <p className={s.error}>
+                {errors.tel.message || 'Error'}
+              </p>
+            )}
+          </div>
+          <div>
+            <input
+              className={s.consultForm__mail}
+              id="email"
+              name="email"
+              {...register('email', {
+                // required: 'Обязательное поле',
+                maxLength: {
+                  value: 50,
+                  message: 'Максимум 50 символов',
+                },
+                pattern: {
+                  value: /\S+@\S+\.\S+/,
+                  message: 'Недопустимый формат email',
+                },
+              })}
+              type="email"
+              placeholder="Электронная почта"
+              size={31}
+              onChange={handleChange}
+              value={value.email}
+              style={
+                errors.email
+                  ? { outline: '1px solid red' }
+                  : { outline: 'none' }
+              }
+            />
+            {errors.email && (
+              <p className={s.error}>
+                {errors.email.message || 'Error'}
+              </p>
+            )}
+          </div>
+
+          <div>
+            <textarea
+              className={s.consultForm__message}
+              id="message"
+              name="message"
+              {...register('message', {
+                minLength: {
+                  value: 0,
+                  message: '',
+                },
+                maxLength: {
+                  value: 500,
+                  message: 'Максимум 500 символов',
+                },
+              })}
+              placeholder="Здесь можно написать вопрос = )"
+              cols={31}
+              onChange={handleChange}
+              value={value.message}
+              style={
+                errors.message
+                  ? { outline: '1px solid red' }
+                  : { outline: 'none' }
+              }
+            >
+              Здесь можно написать вопрос = )
+            </textarea>
+            {errors.message && (
+              <p className={s.error}>
+                {errors.message.message || 'Error'}
+              </p>
+            )}
+          </div>
+          {errors.tel && (
+            <div className={s.errorBox}>
+              <p>
+                Пожалуйста, заполните все обязательные поля
+              </p>
+            </div>
+          )}
         </div>
         <Button
           className={s.consultForm__btn}
           text="Отправить"
           type="submit"
+          // disabled={!isValid}
         />
         <p className={s.consultForm__terms}>
           Нажимая на кнопку Отправить, ты
