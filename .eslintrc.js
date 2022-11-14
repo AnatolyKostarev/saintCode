@@ -18,7 +18,7 @@ module.exports = {
       2,
       { namedComponents: 'arrow-function' },
     ],
-    'react/jsx-props-no-spreading': ['warn', { custom: 'ignore' }],
+    'react/jsx-props-no-spreading': 'off',
     'react/jsx-no-useless-fragment': 'off',
     'react/jsx-one-expression-per-line': ['warn', { allow: 'none' }],
     'no-unused-vars': 'warn',
@@ -40,6 +40,6 @@ module.exports = {
     'no-unused-expressions': 'warn',
     'no-irregular-whitespace': 'warn',
     'no-multi-str': 'warn',
-
+    'no-useless-escape': 'off',
   },
 }
