@@ -22,6 +22,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
       setIsConsultForm(false)
     }
   }
+
   const closeForm = () => {
     setIsConsultForm(false)
   }
