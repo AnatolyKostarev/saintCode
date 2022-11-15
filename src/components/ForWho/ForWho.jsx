@@ -2,18 +2,18 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../ui/Container'
 import { Section } from '../../ui/Section'
-import { Title } from '../../ui/Title'
 import { ForArticle } from '../../ui/ForArticle'
 import leftSVG from './left.svg'
 import rightSVG from './rigth.svg'
 import s from './ForWho.module.sass'
+import { SectionTitle } from '../../ui/SectionTitle'
 
 export const ForWho = () => {
   const { t } = useTranslation()
   return (
     <Section className={s.ForWho}>
       <Container>
-        <Title>
+        <SectionTitle>
           <span className="transparent--blue">
             {t('ForWho.span1')}
           </span>
@@ -30,7 +30,7 @@ export const ForWho = () => {
             {' '}
           </span>
           {t('ForWho.span5')}
-        </Title>
+        </SectionTitle>
         <div className={s.article__wrapper}>
           <ForArticle svg={leftSVG}>
             <p className={s.text}>
