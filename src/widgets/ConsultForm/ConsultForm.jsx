@@ -7,15 +7,13 @@ import { Button } from '../../ui/Button'
 import iconClose from './icon-close.png'
 import s from './ConsultForm.module.sass'
 
-const initialValues = {
-  name: '',
-  tel: '',
-  email: '',
-  message: '',
-}
-
 export const ConsultForm = ({ setIsConsultForm }) => {
-  const [value, setValue] = useState(initialValues)
+  const [value, setValue] = useState({
+    name: '',
+    tel: '',
+    email: '',
+    message: '',
+  })
 
   const escConsultForm = e => {
     if (e.key === 'Escape') {
