@@ -55,13 +55,36 @@ export const ConsultForm = ({ setIsConsultForm }) => {
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
-      reset(initialValues)
+      reset({
+        name: '',
+        tel: '',
+        email: '',
+        message: '',
+      })
     }
   }, [formState, reset])
 
-  const onSubmit = data => {
-    console.dir(data)
-    setValue(initialValues)
+  const onSubmit = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ value }),
+      })
+        .then(res => res.json())
+        .then(() => {
+          setValue({
+            name: '',
+            tel: '',
+            email: '',
+            message: '',
+          })
+        })
+    } catch (error) {
+      console.log(error)
+    }
     reset()
   }
 
