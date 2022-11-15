@@ -209,10 +209,6 @@ export const ConsultForm = ({ setIsConsultForm }) => {
               id="message"
               name="message"
               {...register('message', {
-                minLength: {
-                  value: 0,
-                  message: '',
-                },
                 maxLength: {
                   value: 500,
                   message: 'Максимум 500 символов',
@@ -248,7 +244,6 @@ export const ConsultForm = ({ setIsConsultForm }) => {
           className={s.consultForm__btn}
           text="Отправить"
           type="submit"
-          // disabled={!isValid}
         />
         <p className={s.consultForm__terms}>
           Нажимая на кнопку Отправить, ты
