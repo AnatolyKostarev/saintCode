@@ -1,0 +1,1 @@
+export { IntersecPicture } from './IntersecPicture'
