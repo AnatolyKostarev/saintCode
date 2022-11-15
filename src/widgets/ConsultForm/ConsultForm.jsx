@@ -35,8 +35,16 @@ export const ConsultForm = ({ setIsConsultForm }) => {
     handleSubmit,
     reset,
     formState,
-    formState: { errors, isValid },
-  } = useForm({ mode: 'onSubmit', defaultValues: initialValues })
+    formState: { errors },
+  } = useForm({
+    mode: 'onSubmit',
+    defaultValues: {
+      name: '',
+      tel: '',
+      email: '',
+      message: '',
+    },
+  })
 
   function handleChange(e) {
     setValue(prev => ({
