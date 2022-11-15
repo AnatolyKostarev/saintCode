@@ -7,15 +7,13 @@ import { Button } from '../../ui/Button'
 import iconClose from './icon-close.png'
 import s from './ConsultForm.module.sass'
 
-const initialValues = {
-  name: '',
-  tel: '',
-  email: '',
-  message: '',
-}
-
 export const ConsultForm = ({ setIsConsultForm }) => {
-  const [value, setValue] = useState(initialValues)
+  const [value, setValue] = useState({
+    name: '',
+    tel: '',
+    email: '',
+    message: '',
+  })
 
   const escConsultForm = e => {
     if (e.key === 'Escape') {
@@ -37,8 +35,16 @@ export const ConsultForm = ({ setIsConsultForm }) => {
     handleSubmit,
     reset,
     formState,
-    formState: { errors, isValid },
-  } = useForm({ mode: 'onSubmit', defaultValues: initialValues })
+    formState: { errors },
+  } = useForm({
+    mode: 'onSubmit',
+    defaultValues: {
+      name: '',
+      tel: '',
+      email: '',
+      message: '',
+    },
+  })
 
   function handleChange(e) {
     setValue(prev => ({
@@ -49,13 +55,36 @@ export const ConsultForm = ({ setIsConsultForm }) => {
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
-      reset(initialValues)
+      reset({
+        name: '',
+        tel: '',
+        email: '',
+        message: '',
+      })
     }
   }, [formState, reset])
 
-  const onSubmit = data => {
-    console.dir(data)
-    setValue(initialValues)
+  const onSubmit = async () => {
+    try {
+      const response = await fetch('http://localhost:5000/send', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ value }),
+      })
+        .then(res => res.json())
+        .then(() => {
+          setValue({
+            name: '',
+            tel: '',
+            email: '',
+            message: '',
+          })
+        })
+    } catch (error) {
+      console.log(error)
+    }
     reset()
   }
 
@@ -180,10 +209,6 @@ export const ConsultForm = ({ setIsConsultForm }) => {
               id="message"
               name="message"
               {...register('message', {
-                minLength: {
-                  value: 0,
-                  message: '',
-                },
                 maxLength: {
                   value: 500,
                   message: 'Максимум 500 символов',
@@ -219,7 +244,6 @@ export const ConsultForm = ({ setIsConsultForm }) => {
           className={s.consultForm__btn}
           text="Отправить"
           type="submit"
-          // disabled={!isValid}
         />
         <p className={s.consultForm__terms}>
           Нажимая на кнопку Отправить, ты
