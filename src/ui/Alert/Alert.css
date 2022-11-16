@@ -1,0 +1,21 @@
+.warn,
+.success {
+  margin-bottom: 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+.warn {
+  background: #f95d51;
+}
+
+.success {
+  background: #59f881;
+}
+
+.children {
+  padding: 10px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.55;
+}
