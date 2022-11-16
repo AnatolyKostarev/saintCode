@@ -29,24 +29,24 @@ transporter.verify((err, success) => {
     : console.log(`🚀 Server is ready to take messages: ${success}`)
 })
 
-app.post('/send', async (res, req) => {
+app.post('/send', async (req, res) => {
   const mailOptions = {
-    from: `${res.body.value.email}`,
+    from: `${req.body.value.email}`,
     to: process.env.EMAIL,
-    subject: `Сообщение от пользователя ${res.body.value.name}`,
-    html: `<p>Здравствуйте! Перезвоните мне по номеру ${res.body.value.tel}</p>
-    <p>Или отправьте сообщение по email ${res.body.value.email}</p>
-    <p>Сообщение: ${res.body.value.message}</p>`,
+    subject: `Сообщение от пользователя ${req.body.value.name}`,
+    html: `<p>Здравствуйте! Перезвоните мне по номеру ${req.body.value.tel}</p>
+    <p>Или отправьте сообщение по email ${req.body.value.email}</p>
+    <p>Сообщение: ${req.body.value.message}</p>`,
   }
 
   transporter.sendMail(mailOptions, (err, data) => {
     if (err) {
-      req.json({
+      res.json({
         status: 'fail',
       })
     } else {
       console.log('Email sent successfully')
-      req.json({
+      res.json({
         status: 'success',
       })
     }
