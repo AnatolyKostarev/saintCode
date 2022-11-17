@@ -44,12 +44,13 @@
 
     &__wrapper
         margin-bottom: 30px
+        & div
+            margin-bottom: 25px
 
     &__name,
     &__tel,
     &__mail
         display: inline-block
-        margin-bottom: 25px
         padding: 19px 20px 18px 20px
         max-width: 469px
         border: 1px solid #e0e0e0
@@ -72,14 +73,16 @@
         resize: none
         box-sizing: border-box
         &::placeholder
-            font-size: 14px
+            padding-top: 10px
+            font-size: 16px
             font-weight: 400
             text-align: left
 
     &__btn
         display: block
         margin-bottom: 20px
-        padding: 18px 191px 18px 192px
+        padding: 0 191px 0 192px
+        height: 60px
         text-align: center
         border: 0
         font-size: 16px
@@ -87,6 +90,8 @@
         color: #050f08
         background-color: rgba(160, 132, 235, 1)
         cursor: pointer
+        &:disabled
+            cursor: not-allowed
 
     &__terms
         max-width: 422px
@@ -99,6 +104,12 @@
             line-height: 19px
             color: rgba(128, 128, 128, 1)
             border-bottom: 1px solid rgba(128, 128, 128, 1)
+
+.error
+    font-size: 13px
+    font-weight: 400
+    text-align: left
+    color: red
 
 @keyframes show
     0%
