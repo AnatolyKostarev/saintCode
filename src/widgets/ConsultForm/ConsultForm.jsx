@@ -104,7 +104,9 @@ export const ConsultForm = ({ setIsConsultForm }) => {
         className={s.consultForm}
         onSubmit={handleSubmit(onSubmit)}
       >
-        <p className={s.consultForm__title}>Получи консультацию</p>
+        <p className={s.consultForm__title}>
+          Получи консультацию
+        </p>
         <button
           className={s.consultForm__close}
           type="button"
@@ -152,7 +154,9 @@ export const ConsultForm = ({ setIsConsultForm }) => {
               />
               <>
                 {errors.name && (
-                  <p className={s.error}>{errors.name.message || 'Error'}</p>
+                  <p className={s.error}>
+                    {errors.name.message || 'Error'}
+                  </p>
                 )}
               </>
             </div>
@@ -180,9 +184,13 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                     : { outline: 'none' }
                 }
               />
-              {errors.tel && (
-                <p className={s.error}>{errors.tel.message || 'Error'}</p>
-              )}
+              <>
+                {errors.tel && (
+                  <p className={s.error}>
+                    {errors.tel.message || 'Error'}
+                  </p>
+                )}
+              </>
             </div>
             <div>
               <input
@@ -211,9 +219,13 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                     : { outline: 'none' }
                 }
               />
-              {errors.email && (
-                <p className={s.error}>{errors.email.message || 'Error'}</p>
-              )}
+              <>
+                {errors.email && (
+                  <p className={s.error}>
+                    {errors.email.message || 'Error'}
+                  </p>
+                )}
+              </>
             </div>
             <div>
               <textarea
@@ -238,9 +250,13 @@ export const ConsultForm = ({ setIsConsultForm }) => {
               >
                 Здесь можно написать вопрос = )
               </textarea>
-              {errors.message && (
-                <p className={s.error}>{errors.message.message || 'Error'}</p>
-              )}
+              <>
+                {errors.message && (
+                  <p className={s.error}>
+                    {errors.message.message || 'Error'}
+                  </p>
+                )}
+              </>
             </div>
             {errors.tel && (
               <Alert type="warn">
@@ -255,12 +271,17 @@ export const ConsultForm = ({ setIsConsultForm }) => {
           type="submit"
           disabled={disabled}
         />
-        <p className={s.consultForm__terms}>Нажимая на кнопку Отправить, ты</p>
+        <p className={s.consultForm__terms}>
+          Нажимая на кнопку Отправить, ты
+        </p>
 
         <p className={s.consultForm__terms}>
-          принимаешь{' '}
-          <Link to="/">
-            <span>условия передачи информации</span>
+          принимаешь
+          {' '}
+          <Link to="*">
+            <span>
+              условия передачи информации
+            </span>
           </Link>
         </p>
       </Form>
