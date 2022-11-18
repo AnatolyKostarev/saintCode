@@ -1,11 +1,22 @@
 @import './src/config/styles/vars'
 
 .StudentStory
-  padding: 100px 0
+  padding: 100px 0 60px 0
   background: $second
 .swiper
   margin-top: 60px
-  padding-left: 200px
+  padding: 0 200px
+  max-width: max-content
+
+  &__pagination
+    display: flex
+    max-width: max-content
+    margin-top: 40px
+    margin-left: calc(100% - 200px)
+  &__values
+    margin: 0 30px
+  &__separator
+    margin: 0 10px
 .slide
   width: max-content
   margin-right: 50px
