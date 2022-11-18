@@ -1,0 +1,43 @@
+.QuestionsRemain
+    &__form
+        display: flex
+        justify-content: space-between
+        align-items: flex-end
+        margin-bottom: 21px
+
+    &__input
+        width: 280px
+        padding: 15px 109px 15px 19px
+        font-size: 16px
+        font-weight: 400
+        line-height: 24px
+        text-align: left
+        border: 0
+        color: rgba(2, 3, 3, 0.8)
+        background-color: #fff
+        &::placeholder
+            font-size: 16px
+            font-weight: 400
+            line-height: 24px
+            text-align: left
+            color: rgba(2, 3, 3, 0.3)
+
+    &__btn
+        width: 280px
+        padding: 15px 28px
+        font-size: 16px
+        font-weight: 700
+        line-height: 24px
+        text-align: center
+        color: rgba(2, 3, 3, 1)
+        background: rgba(175, 124, 250, 1)
+        transition: all 0.2s linear
+        &:hover
+            background-color: lighten(rgba(175, 124, 250, 1), 10%)
+            transition: all 0.2s linear
+
+@media (max-width: 320px)
+    .QuestionsRemain
+        &__form
+            flex-direction: column
+            align-items: center
