@@ -43,7 +43,7 @@ export const SchoolInfo = () => {
             <SchoolItemsProject show={isProject} />
           </SchoolItem>
           <SchoolItem
-            title={t('SchoolInfo.problems')}
+            title={t('SchoolInfo.problem')}
             id={2}
             onClick={isBeginnerSwitcher}
             show={isBeginner}
