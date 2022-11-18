@@ -16,13 +16,13 @@ export const Teachers = () => {
         <div className={s.cards__container}>
           {teachersData.map(({ ...elem }) => (
             <TeacherCard {...elem} key={elem.id}>
-              {elem.list.map(list => (
-                <ul className={s.list} key={list}>
-                  <li className={s.list__item}>
+              <ul className={s.list}>
+                {elem.list.map(list => (
+                  <li key={list} className={s.list__item}>
                     {list}
                   </li>
-                </ul>
-              ))}
+                ))}
+              </ul>
             </TeacherCard>
           ))}
         </div>

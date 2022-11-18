@@ -2,7 +2,9 @@ import React, { useState } from 'react'
 import clsx from 'clsx'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/scss'
-import 'swiper/scss/pagination'
+import 'swiper/scss/navigation'
+import 'swiper/scss/virtual'
+import { Navigation, Virtual } from 'swiper'
 import s from './StudentStory.module.sass'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
@@ -10,6 +12,7 @@ import { SectionTitle } from '../../ui/SectionTitle'
 import { StoryCard } from '../../ui/StoryCard'
 import { studentData } from './studentData'
 import { Modal } from '../Modal'
+import arrow from './Vector.svg'
 
 export const StudentStory = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -25,6 +28,7 @@ export const StudentStory = () => {
       <Swiper
         className={clsx(s.swiper)}
         slidesPerView="auto"
+        modules={[Navigation, Virtual]}
       >
         {studentData.map(({ ...student }) => (
           <SwiperSlide
@@ -55,6 +59,21 @@ export const StudentStory = () => {
             </StoryCard>
           </SwiperSlide>
         ))}
+        <div className={clsx(s.swiper__pagination)}>
+          <input type="image" src={arrow} alt="<" />
+          <div className={clsx(s.swiper__values)}>
+            <span>
+              1
+            </span>
+            <span className={s.swiper__separator}>
+              /
+            </span>
+            <span>
+              5
+            </span>
+          </div>
+          <input style={{ transform: 'rotate(-180deg)' }} type="image" src={arrow} alt=">" />
+        </div>
       </Swiper>
       <Modal
         isOpen={isOpen}
