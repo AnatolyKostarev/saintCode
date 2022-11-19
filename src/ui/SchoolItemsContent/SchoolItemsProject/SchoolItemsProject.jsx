@@ -11,13 +11,13 @@ export const SchoolItemsProject = ({ show, className }) => {
         {t('SchoolItemsProject.item1')}
       </p>
       <p>
-        {t('SchoolItemsProject.item1')}
+        {t('SchoolItemsProject.item2')}
       </p>
       <p>
-        {t('SchoolItemsProject.item1')}
+        {t('SchoolItemsProject.item3')}
       </p>
       <p>
-        {t('SchoolItemsProject.item1')}
+        {t('SchoolItemsProject.item4')}
       </p>
     </div>
   )
