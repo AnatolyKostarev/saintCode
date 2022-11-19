@@ -95,7 +95,7 @@
     "btn": "I'd like to talk, call me"
   },
   "SchoolInfo": {
-    "title": "About School",
+    "title": "About",
     "project": "How did we create the project?",
     "problem": "What problems do await the newcomer?",
     "web": "How and why do we teach programming?"
@@ -107,33 +107,33 @@
     "blog": "Blog"
   },
   "SchoolItemsProject": {
-    "item1": "At the heart of our project is the program of American bootcamps: they have existed for 10 years and a high percentage of their graduates find work.",
-    "item2": "We showed the resulting training program to friends who work in large Russian and foreign IT companies to understand how it meets the requirements of their companies.",
-    "item3": "We found like-minded people with extensive programming experience who tired of just writing code, they wanted to communicate with people more - they ripe for teaching. It turned out that their pedagogical skills often not enough, despite the fact that they have already trained interns in their companies or taught friends to code. We taught them how to teach professionally.",
-    "item4": "Our team is from St. Petersburg, if you know what that means) St. Petersburg is like a metaphor for the cultural capital, a place for nerds and human connection."
+    "item1": "Our project is based on the program of the American bootcamps. They have existed for ten years already and have a high percentage of graduates who found a job.",
+    "item2": "We showed our program to developers who work for big IT companies to realize how it fits the requirements of these companies.",
+    "item3": "Then we found like-minded people with experience in programming who were tired of writing code and wanted to connect with people — they were ready to become teachers. It turned out that their pedagogical skills were often lacking — despite them already studying trainees or teaching friends how to code. And we taught them to teach professionally.",
+    "item4": ""
   },
   "FaqInfo": {
-    "title": "Frequently asked Questions",
-    "ask": "Didn't you find an answer? Ask a Question",
+    "title": "Frequently Asked Questions",
+    "ask": "Ask your question if you have not found the answer here",
     "btnText": "Ask a Question",
-    "requirements": "What kind of computer and operating system do you need?",
-    "todo": "What do you need to do before starting bootcamp training?",
-    "payment": "How can I pay for tuition?"
+    "requirements": "What computer and operating system are needed?",
+    "todo": "What do you have to do before bootcamp?",
+    "payment": "How can I pay for bootcamp?"
   },
   "Team": "Our Team",
   "FaqRequirements": {
-    "keyOne": "Any laptop will do, as long as it's fast. If it slows down, it's better to install Linux Ubuntu 20.04 LTS.",
-    "keyTwo": "It is preferable to have a Linux or MacOS operating system to get used to working with the command line."
+    "keyOne": "Any laptop will fit if it's fast. If it slows down, better install Linux Ubuntu 20.04 LTS",
+    "keyTwo": "Preferably to have Linux or macOS operating system to get used to working with the console."
   },
   "FaqTodo": {
-    "keyOne": "Talk to family and friends so that they do not distract you during the training. All cases after 3-4 months. It is important.",
-    "keyTwo": "Complete our preparatory program. You will practice the most difficult part for beginners, which means you will get more from the course. And also you will understand for yourself whether programming as a new profession suits you.",
-    "keyThree": "Set aside money for five months. You will study for three months and then, on average, look for a job for two months (respond to vacancies, solve test tasks, work out the mistakes that you made in interviews).",
-    "keyFour": "Tune in to plow) Rest awaits you in a couple of years."
+    "keyOne": "Talk to your family and friends so they do not distract you while studying. All business after three or four months. It is important.",
+    "keyTwo": "Do our prep program. It is the way to practice the most complicated part for beginners, which means you get more out of the course. And you will also see if programming is OK for you as a new profession.",
+    "keyThree": "Make your financial safety pillow for five months. You will study for three months and then two months on average to job search: respond to vacancies, solve test tasks, and work off mistakes you made during interviews.",
+    "keyFour": "Set yourself up to work hard. Rest awaits you in a couple of years, not earlier."
   },
   "FaqToPay": {
-    "keyOne": "Cash or bank transfer.",
-    "keyTwo": "There is a loan (installment plan) up to 2 years from Tinkoff Bank."
+    "keyOne": "You can pay in cash or by wire money transfer.",
+    "keyTwo": "There is a loan (installment plan) up to 2 years."
   },
   "Member": {
     "name": {
@@ -142,86 +142,86 @@
       "name3": "Kostya Efimov",
       "name4": "Sasha Chistyakov",
       "name5": "Andrey Smirnov",
-      "name6": "Igor Poddubniy",
+      "name6": "Igor Poddubny",
       "name7": "Gleb Svechnikov",
       "name8": "Yura Iovkov"
     },
     "status": {
       "status1": "Founder",
       "status2": "Co-founder",
-      "status3": "Technical Director, over 7 years of commercial experience",
-      "status4": "Project consultant, ex-technical director, over 20 years of commercial experience",
-      "status5": "Project consultant, over 10 years of commercial experience",
-      "status6": "JavaScript prep programmer with over 10 years of commercial experience",
-      "status7": "Creator of the first version of the front-end program, 14 years of commercial experience",
-      "status8": "Backend programmer, over 16 years of commercial experience"
+      "status3": "Technical Director, with over seven years of commercial experience",
+      "status4": "Project consultant, ex-technical director, and over 20 years of commercial experience",
+      "status5": "Project consultant, with over ten years of commercial experience",
+      "status6": "Author of a JavaScript preparatory program, with more than ten years of commercial experience",
+      "status7": "Creator of the first version of the frontend program, with 14 years of commercial experience",
+      "status8": "Backend programmer, with over 16 years of commercial experience"
     },
     "content": {
-      "content11": "Conducted an educational career guidance program for high school students \"City of the Future\" and a debate club",
+      "content11": "Conducted an educational career guidance program for high school students «City of the Future» and a debate club",
       "content12": "Organized a series of federal esports tournaments, as well as promotions with Greenpeace",
-      "content13": "Conducted more than 20 advertising campaigns, including for DNS",
+      "content13": "Conducted more than 20 advertising campaigns",
       "content21": "Main activity: consulting and corporate training",
       "content22": "Trained more than 60 specialists (sales, consulting, legal support of business purchase transactions, soft skills, teamwork)",
-      "content23": "Author / co-author of the books “Start in business. Buy a ready-made business or open a franchise?”, “All about business in two hours. Secrets of lawyers and accountants»",
-      "content31": "Contributor of the first version of the JavaScript program",
+      "content23": "Author and co-author of the books «Starting in business. Buy a ready-made business or open a franchise?», «All about business in two hours. Secrets of lawyers and accountants»",
+      "content31": "Author of the first version of the JavaScript program",
       "content32": "Made a digital system that manages meals in schools",
       "content33": "Created one of the three existing systems for water vending machines on the market",
-      "content41": "DevOps Engineer, Software Architect, Backend developer",
+      "content41": "DevOps Engineer, Software Architect, Backend Developer",
       "content42": "Taught Linux administration at the Graduate School of Engineering of the Polytechnic University",
       "content43": "Permanent speaker of IT conferences",
-      "content44": "Participant of PC-conferences GolangConf and DevOpsConf",
+      "content44": "Participant in PC-conferences GolangConf and DevOpsConf",
       "content45": "Co-organizer of the St. Petersburg community of DevOps engineers",
-      "content51": "Head of Client Development в X5 Retail Group",
-      "content52": "Conducted more than a thousand technical and not only interviews",
+      "content51": "Head of Client Development at X5 Retail Group",
+      "content52": "Conducted over a thousand technical and other interviews",
       "content53": "Gives lectures on team leadership and soft skills",
       "content54": "One of the organizers of Frontend Conf",
       "content55": "Host of the Frontend Weekend podcast",
       "content61": "C# developer at Veeam",
       "content62": "Wrote a training program for students of the Polytechnic University on mobile development",
       "content71": "UI developer",
-      "content72": "Studied at MIREA and PoliMi, interned at TVBlob, an Italian start-up to combine TV and the Internet before it became mainstream :)",
-      "content73": "Since 2011 specializes in frontend development. Worked at Early morning (web studio in Milan), Dnevnik.ru (international e-learning company), Intermedia (cloud office applications), Simlinic (IoT solutions for clinics), now developing interfaces at Infoculture.",
-      "content74": "Developed a program and led the circle \"Computer teaching mathematics\". In his free time, he is engaged in civic activism and maker work.",
-      "content81": "Taught computer graphics and databases at VPI VolgGTU",
-      "content82": "Backend for RomeWar game + wrote own framework for JS",
+      "content72": "Studied at the Moscow Institute of Radio Engineering, Electronics and Automation and the Polytechnic University of Milan, and interned at the Italian startup TVBlob to combine TV and the Internet before it became mainstream",
+      "content73": "Since 2011 specializes in frontend development. Worked at Early Morning (web studio in Milan), Dnevnik.ru (international e-learning company), Intermedia (cloud office applications), Simlinic (IoT solutions for clinics), and now developing interfaces at Infoculture project.",
+      "content74": "Developed a program and led the circle «Computer teaching mathematics»",
+      "content81": "Taught computer graphics and databases at the Volga Polytechnic Institute",
+      "content82": "He wrote the backend for the RomeWar game and also wrote his own framework for Javascript",
       "content83": "Own startup AirCMS"
     },
     "title": {
       "title": "Education:"
     },
     "education": {
-      "education11": "ITMO, University of Seoul, Oscar Brenifier Philosophical Counseling Program (phD Sorbonne University)",
+      "education11": "Institute of Fine Mechanics and Optics, University of Seoul, Philosophical Counseling by Oscar Brenifier (phD Sorbonne University)",
       "education12": "Moscow Institute of Advertising, Tourism and Show Business",
       "education21": "St. Petersburg Electrotechnical University, Faculty of Electronics",
-      "education22": "RSUE, Faculty of Law"
+      "education22": "Russian State University of Justice, Faculty of Law"
     }
   },
   "SchoolBegginer": {
-    "header": "So you decided to become a programmer. As a rule, you go to watch YouTube, read articles and maybe consult a friend. As soon as the first information entered your head, you realized that programming is too abstract. We need to define a bunch of new variables.",
+    "header": "So, you have decided to become a programmer. Usually, you start to watch Youtube, read articles, and maybe consult with your programmer friend. When the first information is inside your head, you understand — programming is too abstract. You have to define a bunch of new variables.",
     "listTitle": "For example:",
     "item1": "What industry do I want to work in?",
     "item2": "How much time does it take to master?",
     "item3": "How to study: on your own or go to school?",
     "item4": "What is the best programming language for a beginner?",
-    "item5": "What technologies do you need to master in order to be hired for your first job?",
-    "item6": "What is the best school to study at? How are they really different? And which one is right for me?",
-    "item7": "When is it time to finish studying and have to spend most of the time looking for a job?",
+    "item5": "What technologies do you need to master in order to be hired?",
+    "item6": "What school is the best for studying? What is the difference between them? And which exactly fits me?",
+    "item7": "When do I have to finish studying and spend more time on the job search?",
     "item8": "Why do employers ignore 95% of my applications? How to fix it?",
-    "item9": "Which companies are good for professional growth?",
-    "item10": "How do not to commit suicide when you read the job description of joon?",
-    "paragraph1": "Graduates from other schools often come to us because they could not find a job. They seem to already know something, but this is not enough to find a job.",
-    "paragraph2": "Sometimes you just need to clear your mind. Clearly prioritize and recognize your strengths.",
-    "paragraph3": "We are happy to help such guys, as we ourselves went through this hell)"
+    "item9": "What companies are good for career and professional growth?",
+    "item10": "How not to make suicide while reading a junior developer's vacancies?",
+    "paragraph1": "Graduates of other schools often go to us, because they have not found a job yet. They seem to already know something, but this is not enough to get a job.",
+    "paragraph2": "Sometimes you just need to sort out the mess in your head — clearly prioritize and recognize your strengths.",
+    "paragraph3": "We are happy to help such people, as we went through this hell."
   },
   "SchoolItemStuding": {
-    "header": "We do not try to cram as many facts about programming into you as possible - this is a road to depression, confirmed by our experience) We help you learn to think like an engineer.",
-    "listTitle": "Think like a software engineer:",
-    "item1": "What questions do you need to answer before you take on the task.",
-    "item2": "How to draw a flowchart so as not to get confused.",
-    "item3": "How to highlight the main thing in the task.",
-    "item4": "How much time should be allocated to a task.",
-    "item5": "What do you need to figure out on your own, and when is it time to ask the elders.",
-    "item6": "How to formulate questions so that colleagues understand you."
+    "header": "We are not trying to put inside of your head as much as possible about programming — it is a road to depression, confirmed by our experience. We help you to start thinking like an engineer.",
+    "listTitle": "What is engineering thinking in software:",
+    "item1": "What questions do you have to resolve before starting a task?",
+    "item2": "How to draw a flowchart so as not to get confused?",
+    "item3": "How to highlight the main thing in a task?",
+    "item4": "How much time to spend on a task?",
+    "item5": "What do I need to figure out on my own? And when is it time to ask the elders?",
+    "item6": "How to formulate questions so that colleagues understand you?"
   },
   "TrainingProgram": {
     "title_span": "Training program",
