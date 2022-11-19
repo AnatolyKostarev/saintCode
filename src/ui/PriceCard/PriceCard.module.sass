@@ -89,3 +89,121 @@
         display: flex
         flex-direction: column
         margin-top: auto
+
+// Media queries beggining
+
+@media (max-width: 1024px)
+    .Price
+        &__card
+            padding: 21px 10px
+            width: 23.415%
+
+        &__header
+            & p
+                font-size: 17px
+                font-weight: 700
+                line-height: 24px
+
+        &__discount
+            margin-bottom: 3px
+            font-size: 24px
+            line-height: 29px
+
+        &__real
+            margin-bottom: 13px
+            font-size: 20px
+            line-height: 24px
+
+        &__startDate
+            font-size: 12px
+            margin-bottom: 8px
+            line-height: 14px
+
+        &__finalDate
+            margin-bottom: 17px
+
+        &__type
+            margin-bottom: 16px
+            padding: 6px 20px
+
+        &__description
+            margin-bottom: 32px
+            height: 106px
+            font-size: 13px
+            line-height: 21px
+
+        &__btn
+            margin: 0 auto
+            max-width: 200px
+            font-size: 12px
+            font-weight: 700
+            line-height: 19px
+            
+
+@media (max-width: 992px)
+    .Price
+        &__card
+            position: relative
+            padding: 31px 30px
+            max-width: 842px
+            width: 100%
+
+        &__real
+            margin-bottom: 18px
+
+        &__startDate
+            position: absolute
+            top: 30px
+            right: 30px
+
+        &__finalDate
+            margin-bottom: 19px
+
+        &__type
+            margin-bottom: 32px
+            padding: 4px 20px
+
+        &__description
+            margin-bottom: 32px
+            height: 38px
+            font-size: 13px
+            line-height: 21px
+
+        &__btn
+            margin: 0
+            padding: 12px 0
+            max-width: 220px
+
+@media (max-width: 576px)
+    .Price
+        &__card
+            padding: 20px 15px
+            max-width: 546px
+
+        &__header
+            margin-bottom: 20px
+            & p
+                font-size: 16px
+                line-height: 22px
+
+        &__real
+            margin-bottom: 8px
+
+        &__startDate
+            position: static
+            margin-bottom: 18px
+
+        &__type
+            margin-bottom: 22px
+
+        &__description
+            height: 84px
+            font-size: 14px
+            line-height: 22px
+
+        &__btn
+            padding: 14px 52px
+            max-width: 100%
+            // font-size: 12px
+            // font-weight: 700
+            // line-height: 19px
