@@ -1,17 +1,19 @@
 .TrainingProgram
-    padding: 100px 0 126px
+    padding: 96px 0 100px
     &__header
         display: flex
         justify-content: space-between
         align-items: flex-start
-        margin-bottom: 60px
-        padding-bottom: 40px
+        margin-bottom: 57px
+        padding-bottom: 42px
         border-bottom: 1px solid rgba(89, 111, 95, 1)
         & div
             display: flex
             flex-direction: column
             justify-content: space-between
+            max-height: 252px
             & p
+                max-width: 187px
                 font-size: 26px
                 font-weight: 800
                 line-height: 31px
@@ -20,13 +22,16 @@
 
         & span
             color: rgba(125, 143, 130, 1)
+        &_title
+            flex-basis: 66.85%
+            line-height: 84px
 
     &__title
         display: flex
         justify-content: space-between
         align-items: center
         margin-bottom: 29px
-        padding: 0 99px 0 100px
+        padding: 0 99px
         & p:first-child
             max-width: 639px
             font-size: 32px
@@ -42,146 +47,10 @@
             opacity: 0.1
 
     &__tasks
-        padding: 0 99px 0 100px
-        & div
-            margin-bottom: 29px
-    &__title
-        display: flex
-        justify-content: space-between
-        align-items: center
         margin-bottom: 29px
-        padding: 0 99px 0 100px
-        & p:first-child
-            max-width: 639px
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: left
-        & p:last-child
-            align-self: flex-start
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: right
-            opacity: 0.1
-
-    &__tasks
-        padding: 0 99px 0 100px
-        & div
-            margin-bottom: 29px
-    &__title
-        display: flex
-        justify-content: space-between
-        align-items: center
-        margin-bottom: 29px
-        padding: 0 99px 0 100px
-        & p:first-child
-            max-width: 639px
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: left
-        & p:last-child
-            align-self: flex-start
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: right
-            opacity: 0.1
-
-    &__tasks
-        padding: 0 99px 0 100px
-        & div
-            margin-bottom: 29px
-    &__title
-        display: flex
-        justify-content: space-between
-        align-items: center
-        margin-bottom: 29px
-        padding: 0 99px 0 100px
-        & p:first-child
-            max-width: 639px
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: left
-        & p:last-child
-            align-self: flex-start
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: right
-            opacity: 0.1
-
-    &__tasks
-        padding: 0 99px 0 100px
-        & div
-            margin-bottom: 29px
-    &__title
-        display: flex
-        justify-content: space-between
-        align-items: center
-        margin-bottom: 29px
-        padding: 0 99px 0 100px
-        & p:first-child
-            max-width: 639px
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: left
-        & p:last-child
-            align-self: flex-start
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: right
-            opacity: 0.1
-
-    &__tasks
-        padding: 0 99px 0 100px
-        & div
-            margin-bottom: 29px
-    &__title
-        display: flex
-        justify-content: space-between
-        align-items: center
-        margin-bottom: 29px
-        padding: 0 99px 0 100px
-        & p:first-child
-            max-width: 639px
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: left
-        & p:last-child
-            align-self: flex-start
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: right
-            opacity: 0.1
-
-    &__tasks
-        padding: 0 99px 0 100px
-        box-sizing: border-box
-
-        & h3
-            display: inline-block
-            margin-right: 282px
-            max-width: 639px
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: left
-            color: rgba(251, 251, 251, 1)
-
-        & span
-            position: absolute
-            font-size: 32px
-            font-weight: 400
-            line-height: 38px
-            text-align: right
-            color: rgba(251, 251, 251, 0.1)
+        padding: 0 99px
+        &:last-child
+            margin-bottom: 0
 
     &__wrapper
         display: flex
@@ -189,115 +58,33 @@
         justify-content: flex-start
         align-items: flex-start
 
-    &__task
-        color: rgba(251, 251, 251, 1)
-        & p
-            margin-bottom: 6px
-            font-size: 20px
-            font-weight: 400
-            line-height: 36px
-            text-align: left
-
-        & ul
-            padding-left: 40px
-            font-size: 14px
-            font-weight: 400
-            line-height: 25px
-            text-align: left
-            list-style-type: disc
-            opacity: 0.6
-        display: flex
-        flex-wrap: wrap
-        justify-content: flex-start
-        align-items: flex-start
-
-    &__task
-        color: rgba(251, 251, 251, 1)
-        & p
-            margin-bottom: 6px
-            font-size: 20px
-            font-weight: 400
-            line-height: 36px
-            text-align: left
-
-        & ul
-            padding-left: 40px
-            font-size: 14px
-            font-weight: 400
-            line-height: 25px
-            text-align: left
-            list-style-type: disc
-            opacity: 0.6
-        display: flex
-        flex-wrap: wrap
-        justify-content: flex-start
-        align-items: flex-start
-
-    &__task
-        color: rgba(251, 251, 251, 1)
-        & p
-            margin-bottom: 6px
-            font-size: 20px
-            font-weight: 400
-            line-height: 36px
-            text-align: left
-
-        & ul
-            padding-left: 40px
-            font-size: 14px
-            font-weight: 400
-            line-height: 25px
-            text-align: left
-            list-style-type: disc
-            opacity: 0.6
-        display: flex
-        flex-wrap: wrap
-        justify-content: flex-start
-        align-items: flex-start
-
-    &__task
-        color: rgba(251, 251, 251, 1)
-        & p
-            margin-bottom: 6px
-            font-size: 20px
-            font-weight: 400
-            line-height: 36px
-            text-align: left
-
-        & ul
-            padding-left: 40px
-            font-size: 14px
-            font-weight: 400
-            line-height: 25px
-            text-align: left
-            list-style-type: disc
-            opacity: 0.6
-        display: flex
-        flex-wrap: wrap
-        justify-content: flex-start
-        align-items: flex-start
-
-    &__task
-        color: rgba(251, 251, 251, 1)
-        & p
-            margin-bottom: 6px
-            font-size: 20px
-            font-weight: 400
-            line-height: 36px
-            text-align: left
-
-        & ul
-            padding-left: 40px
-            font-size: 14px
-            font-weight: 400
-            line-height: 25px
-            text-align: left
-            list-style-type: disc
-            opacity: 0.6
-        display: flex
-        flex-wrap: wrap
-        justify-content: flex-start
-        align-items: flex-start
-
     &__panel
         margin: 30px 0 70px
+        &:last-child
+            margin-bottom: 0 
+
+
+.border
+    position: relative
+
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        top: -9px
+        left: 0
+        width: 1px
+        height: 1656px
+        background: rgba(89, 111, 95, 1)
+
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 41px
+        right: 0
+        width: 1px
+        height: 1686px
+        background: rgba(89, 111, 95, 1)
+    // border-left: 1px solid rgba(89, 111, 95, 1)
+    // border-right: 1px solid rgba(89, 111, 95, 1)
