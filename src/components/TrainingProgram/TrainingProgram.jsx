@@ -21,7 +21,9 @@ export const TrainingProgram = () => {
       <Container>
         <div className={s.TrainingProgram__header}>
           <SectionTitle className={s.TrainingProgram__header_title}>
-            <span>{t('TrainingProgram.title_span')}</span>
+            <span>
+              {t('TrainingProgram.title_span')}
+            </span>
             <br />
             {t('TrainingProgram.title')}
           </SectionTitle>
@@ -33,15 +35,20 @@ export const TrainingProgram = () => {
               height="206"
             />
             <p>
-              {t('TrainingProgram.subtitle_one')}{' '}
+              {t('TrainingProgram.subtitle_one')}
+              {' '}
               {t('TrainingProgram.subtitle_two')}
             </p>
           </div>
         </div>
         <div className={s.border}>
           <div className={s.TrainingProgram__title}>
-            <p>{t('TrainingProgram.task.one.title')}</p>
-            <p>01</p>
+            <p>
+              {t('TrainingProgram.task.one.title')}
+            </p>
+            <p>
+              01
+            </p>
           </div>
           <div className={s.TrainingProgram__tasks}>
             <div className={s.TrainingProgram__wrapper}>
@@ -54,8 +61,12 @@ export const TrainingProgram = () => {
             />
           </div>
           <div className={s.TrainingProgram__title}>
-            <p>{t('TrainingProgram.task.two.title')}</p>
-            <p>02</p>
+            <p>
+              {t('TrainingProgram.task.two.title')}
+            </p>
+            <p>
+              02
+            </p>
           </div>
           <div className={s.TrainingProgram__tasks}>
             <div className={s.TrainingProgram__wrapper}>
@@ -68,8 +79,12 @@ export const TrainingProgram = () => {
             />
           </div>
           <div className={s.TrainingProgram__title}>
-            <p>{t('TrainingProgram.task.three.title')}</p>
-            <p>03</p>
+            <p>
+              {t('TrainingProgram.task.three.title')}
+            </p>
+            <p>
+              03
+            </p>
           </div>
           <div className={s.TrainingProgram__tasks}>
             <div className={s.TrainingProgram__wrapper}>
@@ -82,8 +97,12 @@ export const TrainingProgram = () => {
             />
           </div>
           <div className={s.TrainingProgram__title}>
-            <p>{t('TrainingProgram.task.four.title')}</p>
-            <p>04</p>
+            <p>
+              {t('TrainingProgram.task.four.title')}
+            </p>
+            <p>
+              04
+            </p>
           </div>
           <div className={s.TrainingProgram__tasks}>
             <div className={s.TrainingProgram__wrapper}>
