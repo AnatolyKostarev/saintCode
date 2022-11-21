@@ -61,8 +61,7 @@
     &__panel
         margin: 30px 0 70px
         &:last-child
-            margin-bottom: 0 
-
+            margin-bottom: 0
 
 .border
     position: relative
@@ -86,4 +85,58 @@
         width: 1px
         height: 1835px
         background: rgba(89, 111, 95, 1)
-    
+
+// Media quaries beginning
+
+@media (max-width: 576px)
+    .TrainingProgram
+        padding: 50px 10px
+
+        &__header
+            flex-direction: column
+            margin-bottom: 70px
+            padding-bottom: 20px
+            & div
+                margin-top: 5px
+                flex-direction: row
+                column-gap: 18px
+                & img
+                    display: block
+                    max-width: 173px
+                    height: auto
+                & p
+                    max-width: 130px
+                    font-size: 18px
+                    font-weight: 400
+                    text-align: left
+
+            &_title
+                font-size: 32px
+                line-height: 38px
+                text-align: left
+                color: rgba(125, 143, 130, 1)
+
+        &__title
+            margin-bottom: 22px
+            padding: 0
+            & p:first-child
+                font-size: 22px
+                font-weight: 400
+                line-height: 31px
+
+            & p:last-child
+                display: none
+
+        &__tasks
+            margin-bottom: 50px
+            padding: 0
+
+        &__wrapper
+            flex-direction: column
+            gap: 20px 0
+
+    .border
+        position: static
+        &::before,
+        &::after
+            display: none
