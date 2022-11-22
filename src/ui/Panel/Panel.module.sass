@@ -23,10 +23,10 @@
 
 // Media quaries beggining
 
-@media (max-width: 576px)
+@media (max-width: 768px)
     .panel
         flex-direction: column
-        padding: 29px 0 32px 20px
+        padding: 39px 0 33px 30px
 
         & p
             display: block
@@ -36,6 +36,14 @@
             margin-bottom: 21px
             line-height: 17px
             color: rgba(255, 255, 255, 0.6)
+
+        & p:last-child
+            font-size: 22px
+            line-height: 33px
+
+@media (max-width: 576px)
+    .panel
+        padding: 29px 0 32px 20px
 
         & p:last-child
             max-width: 240px
