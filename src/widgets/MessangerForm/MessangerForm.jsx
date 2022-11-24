@@ -50,7 +50,7 @@ export const MessangerForm = () => {
     setIsLoader(true)
     console.info(data)
     try {
-      const response = await fetch('http://localhost:5000/messanger1', {
+      const response = await fetch('http://localhost:5000/messanger', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
