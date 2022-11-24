@@ -7,6 +7,7 @@ import { Alert } from '../../ui/Alert'
 import { Button } from '../../ui/Button'
 import { Loader } from '../../ui/Loader'
 import iconClose from './icon-close.png'
+import { handleChange } from '../../utils/inputHandleChange'
 import s from './ConsultForm.module.sass'
 
 export const ConsultForm = ({ setIsConsultForm }) => {
@@ -51,13 +52,6 @@ export const ConsultForm = ({ setIsConsultForm }) => {
       message: '',
     },
   })
-
-  function handleChange(e) {
-    setValue(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value.trimStart(),
-    }))
-  }
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
@@ -144,7 +138,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 type="text"
                 placeholder="Имя"
                 size={31}
-                onChange={handleChange}
+                onChange={e => handleChange(e, setValue)}
                 value={value.name}
                 style={
                   errors.name
@@ -176,7 +170,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 type="tel"
                 placeholder="+999 999999999"
                 size={31}
-                onChange={handleChange}
+                onChange={e => handleChange(e, setValue)}
                 value={value.tel}
                 style={
                   errors.tel
@@ -211,7 +205,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 type="email"
                 placeholder="Электронная почта"
                 size={31}
-                onChange={handleChange}
+                onChange={e => handleChange(e, setValue)}
                 value={value.email}
                 style={
                   errors.email
@@ -240,7 +234,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 })}
                 placeholder="Здесь можно написать вопрос = )"
                 cols={31}
-                onChange={handleChange}
+                onChange={e => handleChange(e, setValue)}
                 value={value.message}
                 style={
                   errors.message
