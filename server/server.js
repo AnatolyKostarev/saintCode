@@ -29,6 +29,8 @@ transporter.verify((err, success) => {
     : console.log(`🚀 Server is ready to take messages: ${success}`)
 })
 
+// API to send ConsultForm, SignInForm info to email
+
 app.post('/send', async (req, res) => {
   const mailOptions = {
     from: `${req.body.value.email}`,
@@ -37,6 +39,31 @@ app.post('/send', async (req, res) => {
     html: `<p>Здравствуйте! Перезвоните мне по номеру ${req.body.value.tel}</p>
     <p>Или отправьте сообщение по email ${req.body.value.email}</p>
     <p>Сообщение: ${req.body.value.message}</p>`,
+  }
+
+  transporter.sendMail(mailOptions, (err, data) => {
+    if (err) {
+      res.json({
+        status: 'fail',
+      })
+    } else {
+      console.log('Email sent successfully')
+      res.json({
+        status: 'success',
+      })
+    }
+  })
+})
+
+// API to send MessangerForm info to email
+
+app.post('/messanger', async (req, res) => {
+  const mailOptions = {
+    from: `${req.body.value.name}`,
+    to: process.env.EMAIL,
+    subject: `Сообщение от пользователя ${req.body.value.name}`,
+    html: `<p>Здравствуйте! Перезвоните мне по номеру ${req.body.value.tel}</p>
+    <p>Или оставьте свое сообщение в ${req.body.value.messanger}</p>`,
   }
 
   transporter.sendMail(mailOptions, (err, data) => {
