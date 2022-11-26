@@ -70,6 +70,7 @@ export const FaqInfo = () => {
             <FaqTodo show={isTodo} />
           </SchoolItem>
           <SchoolItem
+            className={clsx(s.faq__item_last, { [s.faq__item__active]: isPay })}
             title={t('FaqInfo.payment')}
             id={1}
             onClick={isPaySwitcher}

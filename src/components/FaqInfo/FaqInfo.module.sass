@@ -1,5 +1,5 @@
 .faq
-    padding: 92px 127px 126px
+    padding: 99px 0 239px
     background: rgba(62, 43, 46, 1)
 
     &__header
@@ -7,7 +7,7 @@
         justify-content: flex-start
         align-items: flex-end
         gap: 0 40px
-        margin-bottom: 75px
+        margin-bottom: 74px
 
     &__title
         flex-basis: 50%
@@ -26,11 +26,11 @@
 
     &__btn
         display: inline-block
-        padding: 15px 27px
+        padding: 15px 28px
         height: 54px
         color: #020303
         font-size: 16px
-        line-height: 1.55
+        line-height: 25px
         font-weight: 600
         background-color: #e97a8c
 
@@ -42,34 +42,124 @@
         gap: 40px 0
 
     &__item
-        padding: 25px 30px
+        padding: 25px 18px 25px 30px
         height: 104px
         &__active
             padding-bottom: 25px
             height: 100%
 
-        
+    &__item
+        &_last
+            padding: 18.5px 18px 18.5px 30px
+            width: 560px
+            height: 77px
+        &__active
+            padding-bottom: 25px
+            height: 100%
 
 // Responsive styles
 
-@media (max-width: 425px)
+@media (max-width: 1120px)
     .faq
-        padding: 25px 20px 45px
+        padding: 76px 42px 237px
 
         &__header
-            flex-direction: column
-            margin-bottom: 10px
+            gap: 0 88px
+            margin-bottom: 67px
+
+        &__title
+            flex-basis: 33.2%
+            font-weight: 700
 
         &__ask
-            flex-basis: 50% 0
-            margin-top: 10px
+            flex-basis: 66.8%
+            & p
+                margin-bottom: 32px
+                font-size: 18px
+                line-height: 27px
 
         &__items
             gap: 20px 0
 
         &__item
-            padding: 7px 30px
+            margin: 0
+            max-width: 460px
+            &__active
+                padding-bottom: 25px
+                height: 100%
+
+            &_last
+                margin: 0
+                max-width: 460px
+                width: 100%
+                &__active
+                    padding-bottom: 25px
+                    height: 100%
+
+@media (max-width: 992px)
+    .faq
+        padding: 77px 84px 65px
+
+        &__header
+            flex-direction: column
+            align-items: flex-start
+            margin-bottom: 60px
+            padding: 0 70px
+
+        &__title
+            font-weight: 700
+            margin-bottom: 19px
+
+        &__ask
+            flex-basis: 50% 0
+            & p
+                margin-bottom: 22px
+
+        &__item
+            max-width: 600px
+            &__active
+                padding-bottom: 25px
+                height: 100%
+
+            &_last
+                max-width: 600px
+                width: 100%
+                &__active
+                    padding-bottom: 25px
+                    height: 100%
+
+@media (max-width: 425px)
+    .faq
+        padding: 49px 20px 47px
+
+        &__header
+            margin-bottom: 30px
+            padding: 0
+
+        &__title
+            margin-bottom: 0
+            font-size: 24px
+            line-height: 29px
+
+        &__ask
+            margin-top: 8px
+            & p
+                margin-bottom: 18px
+                font-size: 14px
+                font-weight: 400
+                line-height: 21px
+
+        &__item
+            padding: 20px 8px 20px 20px
             height: 148px
             &__active
                 padding-bottom: 25px
                 height: 100%
+
+            &_last
+                padding: 20px 8px 20px 20px
+                width: 100%
+                height: 121px
+                &__active
+                    padding-bottom: 25px
+                    height: 100%
