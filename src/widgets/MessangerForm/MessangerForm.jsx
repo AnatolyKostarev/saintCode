@@ -46,9 +46,8 @@ export const MessangerForm = () => {
     }
   }, [formState, reset])
 
-  const onSubmit = async data => {
+  const onSubmit = async () => {
     setIsLoader(true)
-    console.info(data)
     try {
       const response = await fetch('http://localhost:5000/messanger', {
         method: 'POST',
