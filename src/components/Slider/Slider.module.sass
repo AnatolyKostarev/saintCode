@@ -1,0 +1,44 @@
+.Slider
+  height: max-content
+  width: 100%
+  position: relative
+  margin-top: 60px
+  user-select: none
+  touch-action: pan-y
+  &__track
+    display: flex
+    overflow: hidden
+  &__pagination
+    display: flex
+    align-items: center
+    max-width: max-content
+    margin-top: 30px
+    margin-left: auto
+  &__values
+    margin: 0 20px
+  &__separator
+    margin: 0 10px
+  &__btn
+    padding: 10px
+.slide
+  width: max-content
+  margin-right: 50px
+  transition: .4s
+  &:first-child
+    margin-left: calc((100vw - 1160px) / 2)
+
+.question
+  font-size: 18px
+  line-height: 1.55
+  font-weight: 800
+  text-align: left
+.answer
+  font-size: 15px
+  line-height: 1.55
+  font-weight: 400
+  color: rgb(199, 191, 210)
+  text-align: left
+.closed
+  max-height: 550px
+.transparent
+  opacity: .5

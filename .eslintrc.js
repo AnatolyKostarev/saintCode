@@ -1,3 +1,4 @@
+
 module.exports = {
   env: {
     browser: true,
@@ -41,5 +42,7 @@ module.exports = {
     'no-irregular-whitespace': 'warn',
     'no-multi-str': 'warn',
     'no-useless-escape': 'off',
+    'prefer-const': 'warn',
+    'no-return-assign': 'warn',
   },
 }
