@@ -288,5 +288,9 @@
         "item_32": "Practice passing technical interviews"
       }
     }
+  },
+  "BlogHeader": {
+    "title": "Get know us better",
+    "description": "Stories of our graduates, training recordings, articles and interviews from Saint Code Bootcamp"
   }
 }
