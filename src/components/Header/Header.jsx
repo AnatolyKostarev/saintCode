@@ -18,13 +18,13 @@ export const Header = () => {
   const [startScrolled, setStartScrolled] = useState(false)
 
   const changeHeader = () => {
-    window.scrollY >= 100
+    window.scrollY >= 120
       ? setScrolled(true)
       : setScrolled(false)
   }
 
   const startChangeHeader = () => {
-    window.scrollY >= 70 && window.scrollY <= 100
+    window.scrollY >= 100 && window.scrollY <= 190
       ? setStartScrolled(true)
       : setStartScrolled(false)
   }
@@ -74,7 +74,7 @@ export const Header = () => {
         <div className={s.block}>
           <Nav />
           <Button
-            className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled, [s.scrolled__start__btn]: startScrolled })}
+            className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled })}
             onClick={() => setIsConsultForm(true)}
             text={t('Header.btn')}
             style={{ background: background.button }}
