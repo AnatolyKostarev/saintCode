@@ -35,12 +35,12 @@ export const BlogArticle = ({
       </div>
       <div className={s.blogArticle__info}>
         <Link to={route}>
-          <p>
+          <p className={s.blogArticle__caption}>
             {caption}
           </p>
         </Link>
         <Link to={route}>
-          <p>
+          <p className={s.blogArticle__description}>
             {description}
           </p>
         </Link>
