@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import clsx from 'clsx'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Logo } from '../../ui/Logo'
@@ -7,11 +8,21 @@ import { Nav } from '../../ui/Nav'
 import { Button } from '../../ui/Button'
 import { ConsultForm } from '../../widgets/ConsultForm'
 import s from './Header.module.sass'
+import { LangSwitcher } from '../LangSwitcher'
 
 export const Header = () => {
-  const { t, i18n } = useTranslation()
+  const { t } = useTranslation()
   const location = useLocation()
   const [isConsultForm, setIsConsultForm] = useState(false)
+  const [scrolled, setScrolled] = useState(false)
+
+  const changeHeader = () => {
+    window.scrollY >= 100
+      ? setScrolled(true)
+      : setScrolled(false)
+  }
+
+  window.addEventListener('scroll', changeHeader)
 
   /* функция для изменения фона header, button в зависимости от адреса страницы */
   const background = {}
@@ -41,37 +52,26 @@ export const Header = () => {
   }
   changeBcg()
 
-  // For test translation
-  const toggleLang = async () => {
-    await i18n.changeLanguage(i18n.language === 'ru' ? 'en' : 'ru')
-  }
-
   return (
     <header
-      className={s.Header}
+      className={clsx(s.Header, { [s.scrolled]: scrolled })}
       style={{ background: background.header }}
     >
       <div className={s.wrapper}>
         <div className={s.block}>
-          <Logo />
+          <Logo className={s.scrolled__logo} />
           <Phone />
+          <LangSwitcher />
         </div>
         <div className={s.block}>
           <Nav />
           <Button
-            className={s.header__btn}
+            className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled })}
             onClick={() => setIsConsultForm(true)}
             text={t('Header.btn')}
             style={{ background: background.button }}
           />
         </div>
-      </div>
-      <div className={s.header__switcher}>
-        <Button
-          className={s.header__btnSwitcher}
-          text="RU / ENG"
-          onClick={toggleLang}
-        />
       </div>
       {isConsultForm && <ConsultForm setIsConsultForm={setIsConsultForm} />}
     </header>

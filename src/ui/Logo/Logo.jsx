@@ -4,16 +4,14 @@ import clsx from 'clsx'
 import schoolLogo from './school-logo.svg'
 import s from './Logo.module.sass'
 
-export const Logo = () => {
+export const Logo = ({ className }) => {
   return (
     <Link to="/">
-      <div className={clsx(s.Logo)}>
+      <div className={clsx(s.Logo, className)}>
         <img
           className={clsx(s.logo__img)}
           src={schoolLogo}
           alt="SaintCode - logo"
-          width="160"
-          height="64"
         />
       </div>
     </Link>
