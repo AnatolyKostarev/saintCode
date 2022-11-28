@@ -10,6 +10,7 @@ export const BlogArticle = ({
   caption,
   description,
   route,
+  icon = true,
 }) => {
   return (
     <article className={clsx(s.blogArticle, className)}>
@@ -25,7 +26,7 @@ export const BlogArticle = ({
         <div className={s.blogArticle__play}>
           <img
             className={s.blogArticle__img}
-            src={play}
+            src={icon ? play : null}
             alt="play"
             width="58"
             height="58"
