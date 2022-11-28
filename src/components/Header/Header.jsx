@@ -15,6 +15,7 @@ export const Header = () => {
   const location = useLocation()
   const [isConsultForm, setIsConsultForm] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [startScrolled, setStartScrolled] = useState(false)
 
   const changeHeader = () => {
     window.scrollY >= 100
@@ -22,6 +23,13 @@ export const Header = () => {
       : setScrolled(false)
   }
 
+  const startChangeHeader = () => {
+    window.scrollY >= 70 && window.scrollY <= 100
+      ? setStartScrolled(true)
+      : setStartScrolled(false)
+  }
+
+  window.addEventListener('scroll', startChangeHeader)
   window.addEventListener('scroll', changeHeader)
 
   /* функция для изменения фона header, button в зависимости от адреса страницы */
@@ -54,8 +62,8 @@ export const Header = () => {
 
   return (
     <header
-      className={clsx(s.Header, { [s.scrolled]: scrolled })}
-      style={{ background: background.header }}
+      className={clsx(s.Header, { [s.scrolled__start]: startScrolled, [s.scrolled]: scrolled })}
+      style={{ background: !scrolled ? background.header : 'rgb(70, 70, 70)' }}
     >
       <div className={s.wrapper}>
         <div className={s.block}>
@@ -66,7 +74,7 @@ export const Header = () => {
         <div className={s.block}>
           <Nav />
           <Button
-            className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled })}
+            className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled, [s.scrolled__start__btn]: startScrolled })}
             onClick={() => setIsConsultForm(true)}
             text={t('Header.btn')}
             style={{ background: background.button }}
