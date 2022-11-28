@@ -16,7 +16,7 @@ export const Layout = ({ children }) => {
   return (
     <>
       <Header />
-      <main>
+      <main style={{paddingTop: '118px'}}>
         {children}
       </main>
       {topIsActive

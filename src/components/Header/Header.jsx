@@ -63,7 +63,7 @@ export const Header = () => {
   return (
     <header
       className={clsx(s.Header, { [s.scrolled__start]: startScrolled, [s.scrolled]: scrolled })}
-      style={{ background: background.header }}
+      style={{ background: !scrolled ? background.header : 'rgb(70, 70, 70)'}}
     >
       <div className={s.wrapper}>
         <div className={s.block}>
