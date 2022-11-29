@@ -22,16 +22,18 @@ export const BlogArticle = ({
             width="500"
             height="190"
           />
+          {icon ? (
+            <div className={s.blogArticle__play}>
+              <img
+                className={s.blogArticle__img}
+                src={play}
+                alt="play"
+                width="58"
+                height="58"
+              />
+            </div>
+          ) : null}
         </Link>
-        <div className={s.blogArticle__play}>
-          <img
-            className={s.blogArticle__img}
-            src={icon ? play : null}
-            alt="play"
-            width="58"
-            height="58"
-          />
-        </div>
       </div>
       <div className={s.blogArticle__info}>
         <Link to={route}>
