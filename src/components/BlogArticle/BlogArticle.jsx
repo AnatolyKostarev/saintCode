@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import play from './icon-play.svg'
 import s from './BlogArticle.module.sass'
@@ -12,6 +13,7 @@ export const BlogArticle = ({
   route,
   icon = true,
 }) => {
+  const { t } = useTranslation()
   return (
     <article className={clsx(s.blogArticle, className)}>
       <div className={s.blogArticle__pic}>
@@ -38,12 +40,12 @@ export const BlogArticle = ({
       <div className={s.blogArticle__info}>
         <Link to={route}>
           <p className={s.blogArticle__caption}>
-            {caption}
+            {t(`blogArticle.caption.${caption}`)}
           </p>
         </Link>
         <Link to={route}>
           <p className={s.blogArticle__description}>
-            {description}
+            {t(`blogArticle.description.${description}`)}
           </p>
         </Link>
       </div>

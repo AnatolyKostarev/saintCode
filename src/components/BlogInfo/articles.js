@@ -10,54 +10,54 @@ export const articles = [
   {
     id: uuidv4(),
     image: backEnd,
-    caption: 'Тренинг собеседования Junior Backend Developer',
+    caption: 'item_1',
     description:
-      'Тренинг собеседования с техническим директором. Запись с занятий по трудоустройству для начинающих веб-разработчиков в SaintCode Bootcamp',
+      'item_1',
     route: '*',
     icon: true,
   },
   {
     id: uuidv4(),
     image: frontEnd,
-    caption: 'Тренинг собеседования Junior Frontend Developer',
+    caption: 'item_2',
     description:
-      'Тренинг собеседования с техническим директором. Запись с занятий по трудоустройству для начинающих веб-разработчиков в SaintCode Bootcamp',
+      'item_2',
     route: '*',
     icon: true,
   },
   {
     id: uuidv4(),
     image: time,
-    caption: 'Беспощадное время',
+    caption: 'item_3',
     description:
-      'Статья о работе с датой и временем в программировании. Автор — Игорь Поддубный, эксперт SaintCode Bootcamp',
+      'item_3',
     route: '*',
     icon: false,
   },
   {
     id: uuidv4(),
     image: interview,
-    caption: 'Интервью с разработчиком Игорем Поддубным',
+    caption: 'item_4',
     description:
-      'Интервью с разработчиком из международной IT-компании. В конце текста советы о том, с чего начать новичку',
+      'item_4',
     route: '*',
     icon: false,
   },
   {
     id: uuidv4(),
     image: hr,
-    caption: 'Кадровый голод в России на IT-специалистов',
+    caption: 'item_5',
     description:
-      'Почему в стране не хватает кадров — и на кого пойти учиться, чтобы быть востребованным',
+      'item_5',
     route: '*',
     icon: false,
   },
   {
     id: uuidv4(),
     image: developer,
-    caption: 'Интервью с разработчиком Николаем Поляковым',
+    caption: 'item_6',
     description:
-      'Интервью с senior frontend из международной IT-компании. В конце текста советы о том, с чего начать новичку',
+      'item_6',
     route: '*',
     icon: false,
   },

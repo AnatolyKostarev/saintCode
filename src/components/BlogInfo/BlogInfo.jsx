@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { BlogTitle } from '../BlogTitle/BlogTitle'
@@ -9,6 +10,7 @@ import s from './BlogInfo.module.sass'
 
 export const BlogInfo = () => {
   const [slice, setSlice] = useState(true)
+  const { t } = useTranslation()
 
   return (
     <Section className={s.blogInfo}>
@@ -25,7 +27,7 @@ export const BlogInfo = () => {
         {slice && (
           <Button
             className={s.blogInfo__btn}
-            text="Смотреть ещё"
+            text={t('BlogInfo.btn')}
             type="button"
             onClick={() => setSlice(false)}
           />
