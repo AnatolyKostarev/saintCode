@@ -16,7 +16,7 @@ export const FooterContacts = ({ className }) => {
   return (
     <div className={clsx(s.FooterContacts, className)}>
       <div className={clsx(s.inner__left)}>
-        <Phone linkSize={s.link__size} className={s.phone__size} />
+        <Phone className={s.phone__size} />
         <Email />
         <div className={clsx(s.address__info)}>
           <Address
