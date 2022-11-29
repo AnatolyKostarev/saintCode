@@ -1,1 +1,7 @@
 export { Blog } from './Blog'
+export { Time } from './Time/Time'
+export { BackendPage } from './BackendPage/BackendPage'
+export { FrontendPage } from './FrontendPage/FrontendPage'
+export { InterviewPoddubny } from './InterviewPoddubny/InterviewPoddubny'
+export { HR } from './HR/HR'
+export { InterviewPolyakov } from './InterviewPolyakov/InterviewPolyakov'
