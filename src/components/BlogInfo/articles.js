@@ -13,7 +13,7 @@ export const articles = [
     caption: 'item_1',
     description:
       'item_1',
-    route: '*',
+    route: '/blog/backend',
     icon: true,
   },
   {
@@ -22,7 +22,7 @@ export const articles = [
     caption: 'item_2',
     description:
       'item_2',
-    route: '*',
+    route: '/blog/frontend',
     icon: true,
   },
   {
@@ -31,7 +31,7 @@ export const articles = [
     caption: 'item_3',
     description:
       'item_3',
-    route: '*',
+    route: '/blog/time',
     icon: false,
   },
   {
@@ -40,7 +40,7 @@ export const articles = [
     caption: 'item_4',
     description:
       'item_4',
-    route: '*',
+    route: '/blog/interviewPoddubny',
     icon: false,
   },
   {
@@ -49,7 +49,7 @@ export const articles = [
     caption: 'item_5',
     description:
       'item_5',
-    route: '*',
+    route: '/blog/human_resources_it',
     icon: false,
   },
   {
@@ -58,7 +58,7 @@ export const articles = [
     caption: 'item_6',
     description:
       'item_6',
-    route: '*',
+    route: '/blog/interviewPolyakov',
     icon: false,
   },
 ]
