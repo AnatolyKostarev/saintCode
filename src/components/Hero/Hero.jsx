@@ -9,12 +9,6 @@ import s from './Hero.module.sass'
 export const Hero = () => {
   const HERO_BG = {
     backgroundImage: `url(${heroBG})`,
-    backgroundColor: '#39483d',
-    width: '100%',
-    height: '820px',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center center',
-    backgroundSize: 'cover',
   }
   return (
     <Section style={HERO_BG} className={s.Hero}>

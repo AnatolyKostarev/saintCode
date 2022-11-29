@@ -1,6 +1,5 @@
 .Header
-  padding-top: 32px
-  padding-bottom: 32px
+  padding: 30px 0
   font-weight: 600
   position: absolute
   top: 0
@@ -10,14 +9,17 @@
   display: flex
   justify-content: space-between
   align-items: center
-  max-width: 95%
-  margin: 0 auto
+  margin: 0 30px
   height: 100%
 
 .block
   display: flex
   align-items: center
-  gap: 40px
+  gap: 32px
+  &_right
+    display: flex
+    align-items: center
+    gap: 40px
 
 .header__btn
   width: 328px
@@ -48,6 +50,7 @@
     width: 310px
   &__logo
     width: 120px
+    height: auto
   &__start
     transform: translateY(-100%)
 
