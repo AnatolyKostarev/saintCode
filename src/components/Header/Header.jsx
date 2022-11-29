@@ -12,15 +12,13 @@ import { LangSwitcher } from '../LangSwitcher'
 
 export const Header = () => {
   const { t } = useTranslation()
-  const location = useLocation()
+  const { pathname } = useLocation()
   const [isConsultForm, setIsConsultForm] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [startScrolled, setStartScrolled] = useState(false)
 
   const changeHeader = () => {
-    window.scrollY >= 120
-      ? setScrolled(true)
-      : setScrolled(false)
+    window.scrollY >= 120 ? setScrolled(true) : setScrolled(false)
   }
 
   const startChangeHeader = () => {
@@ -35,23 +33,24 @@ export const Header = () => {
   /* функция для изменения фона header, button в зависимости от адреса страницы */
   const background = {}
   const changeBcg = () => {
-    switch (location.pathname) {
+    switch (pathname) {
       case '/school':
-        background.header = 'rgba(62, 43, 46, 1)'
-        background.button = 'rgba(233, 122, 140, 1)'
-        break
       case '/program':
-        background.header = 'rgba(62, 43, 46, 1)'
-        background.button = 'rgba(233, 122, 140, 1)'
-        break
       case '/faq':
         background.header = 'rgba(62, 43, 46, 1)'
         background.button = 'rgba(233, 122, 140, 1)'
         break
       case '/blog':
+      case '/blog/time':
+      case '/blog/backend':
+      case '/blog/frontend':
+      case '/blog/interviewPoddubny':
+      case '/blog/human_resources_it':
+      case '/blog/interviewPolyakov':
         background.header = 'rgba(72, 68, 57, 1)'
         background.button = 'rgba(255, 200, 52, 1)'
         break
+
       default:
         background.header = ''
         background.button = ''
@@ -62,7 +61,10 @@ export const Header = () => {
 
   return (
     <header
-      className={clsx(s.Header, { [s.scrolled__start]: startScrolled, [s.scrolled]: scrolled })}
+      className={clsx(s.Header, {
+        [s.scrolled__start]: startScrolled,
+        [s.scrolled]: scrolled,
+      })}
       style={{ background: !scrolled ? background.header : 'rgb(70, 70, 70)' }}
     >
       <div className={s.wrapper}>
