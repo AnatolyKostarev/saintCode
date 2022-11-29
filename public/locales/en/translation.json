@@ -292,5 +292,26 @@
   "BlogHeader": {
     "title": "Get know us better",
     "description": "Stories of our graduates, training recordings, articles and interviews from Saint Code Bootcamp"
+  },
+  "BlogInfo": {
+    "btn": "See more"
+  },
+  "blogArticle": {
+    "caption": {
+      "item_1": "Junior Backend Developer Interview Training",
+      "item_2": "Junior Backend Developer Interview Training",
+      "item_3": "Merciless time",
+      "item_4": "Interview with developer Igor Poddubny",
+      "item_5": "Personnel hunger in Russia for IT specialists",
+      "item_6": "Interview with developer Nikolai Polyakov"
+    },
+    "description": {
+      "item_1": "Interview training with the technical director. Recording from employment classes for novice web developers in SaintCode Bootcamp",
+      "item_2": "Interview training with the technical director. Recording from employment classes for novice web developers in SaintCode Bootcamp",
+      "item_3": "An article about working with date and time in programming. Author — Igor Poddubny, SaintCode Bootcamp expert",
+      "item_4": "Interview with a developer from an international IT company. At the end of the text, tips on where to start for a beginner",
+      "item_5": "Why is there not enough personnel in the country — and who to go to study to be in demand",
+      "item_6": "Interview with senior frontend from an international IT company. At the end of the text, tips on where to start for a beginner"
+    }
   }
 }
