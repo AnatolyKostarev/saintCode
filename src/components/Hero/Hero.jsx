@@ -1,5 +1,4 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { Title } from '../../ui/Title'
