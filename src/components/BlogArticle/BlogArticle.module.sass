@@ -12,7 +12,7 @@
 
     &__pic
         position: relative
-       
+
         & img
             display: block
             border-radius: 15px
@@ -40,3 +40,48 @@
         font-size: 18px
         font-weight: 400
         line-height: 29px
+
+// Responsive styles
+
+@media (width <= 1170px)
+    .blogArticle
+        gap: 0 40px
+        padding: 40px 0
+
+        &__pic
+
+            & img
+                max-width: 360px
+                object-fit: cover
+
+@media (width <= 768px)
+    .blogArticle
+        flex-direction: column
+        gap: 0
+        padding: 25px 0
+        border: 0
+
+        &__pic
+            margin-bottom: 28px
+            & img
+                max-width: 100%
+
+        &__caption
+            margin-bottom: 11px
+
+@media (width <= 576px)
+    .blogArticle
+        padding: 21px 0
+
+        &__pic
+            margin-bottom: 19px
+            & img
+                max-width: 100%
+
+        &__caption
+            font-size: 20px
+            line-height: 24px
+
+        &__description
+            font-size: 14px
+            line-height: 22px
