@@ -1,4 +1,3 @@
-import s from './Home.module.sass'
 import { Layout } from '../../layout'
 import { Hero } from '../../components/Hero'
 import { ForWho } from '../../components/ForWho'
@@ -13,7 +12,6 @@ import { Results } from '../../components/Results'
 import { CommercialProject } from '../../components/CommercialProject'
 import { StudentStory } from '../../components/StudentStory'
 import { Table } from '../../components/Table'
-import { IntersecPicture } from '../../components/IntersecPicture'
 import { Video } from '../../components/Video'
 
 export const Home = () => {
@@ -23,16 +21,15 @@ export const Home = () => {
         <Hero />
         <Video />
         <ForWho />
+        <QuestionsRemain />
         <SchoolComparison />
         <Table />
         <Price />
-        <QuestionsRemain />
         <DailySchedule />
         <StudentStory />
         <TrainingProgram />
         <Author />
         <CommercialProject />
-        <IntersecPicture className={s.secondPicture} />
         <Results />
         <Teachers />
       </Layout>

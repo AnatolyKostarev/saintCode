@@ -54,6 +54,7 @@ export const ForWho = () => {
             </p>
           </ForArticle>
         </div>
+        <div className={s.intersec} />
       </Container>
     </Section>
   )
