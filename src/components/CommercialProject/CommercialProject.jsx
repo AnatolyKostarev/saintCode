@@ -18,6 +18,23 @@ export const CommercialProject = () => {
                 &nbsp;— получить первые деньги за&nbsp;свой код
           </span>
         </SectionTitle>
+        <div className={s.intersec}>
+          <p className={s.intersec__text}>
+            <span className={s.gray}>
+              Но&nbsp;самое важное: когда компании будут
+              <br />
+              {' '}
+              решать, кого из&nbsp;новичков взять,
+              <br />
+              {' '}
+              они
+            </span>
+&nbsp;отдадут предпочтение кандидату
+            <br />
+            {' '}
+            с&nbsp;реальным опытом
+          </p>
+        </div>
       </Container>
     </Section>
   )

@@ -22,16 +22,16 @@ export const Home = () => {
         <Video />
         <ForWho />
         <QuestionsRemain />
+        <TrainingProgram />
+        <CommercialProject />
+        <Teachers />
+        <Author />
+        <Results />
+        <DailySchedule />
+        <StudentStory />
         <SchoolComparison />
         <Table />
         <Price />
-        <DailySchedule />
-        <StudentStory />
-        <TrainingProgram />
-        <Author />
-        <CommercialProject />
-        <Results />
-        <Teachers />
       </Layout>
     </>
   )
