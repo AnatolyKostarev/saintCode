@@ -69,11 +69,11 @@ export const Header = () => {
     >
       <div className={s.wrapper}>
         <div className={s.block}>
-          <Logo className={s.scrolled__logo} />
+          <Logo className={clsx({ [s.scrolled__logo]: scrolled })} />
           <Phone />
           <LangSwitcher />
         </div>
-        <div className={s.block}>
+        <div className={s.block_right}>
           <Nav />
           <Button
             className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled })}

@@ -14,12 +14,14 @@ import { CommercialProject } from '../../components/CommercialProject'
 import { StudentStory } from '../../components/StudentStory'
 import { Table } from '../../components/Table'
 import { IntersecPicture } from '../../components/IntersecPicture'
+import { Video } from '../../components/Video'
 
 export const Home = () => {
   return (
     <>
       <Layout>
         <Hero />
+        <Video />
         <ForWho />
         <SchoolComparison />
         <Table />

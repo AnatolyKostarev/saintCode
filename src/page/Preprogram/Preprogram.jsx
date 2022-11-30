@@ -6,7 +6,7 @@ import s from './Preprogram.module.sass'
 export const Preprogram = () => {
   return (
     <Layout>
-      <Section className={s.program}>
+      <Section className={s.Program}>
         <Container>
           <h2>
             Подготовительная программа
