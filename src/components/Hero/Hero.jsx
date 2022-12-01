@@ -6,7 +6,7 @@ import { Title } from '../../ui/Title'
 import { HeroArticle } from '../../ui/HeroArticle'
 import heroBG from './hero-bg.webp'
 import s from './Hero.module.sass'
-import {LangSwitcher} from "../LangSwitcher";
+import { LangSwitcher } from '../LangSwitcher'
 
 export const Hero = () => {
   const HERO_BG = {
