@@ -22,7 +22,9 @@ export const Hero = () => {
           &nbsp;
           {/* Перезапусти карьеру&nbsp; */}
           <span className={s.mark}>
-            — {t('Hero.message')}
+            —
+            {' '}
+            {t('Hero.message')}
             {/* — научись программировать */}
           </span>
         </p>
