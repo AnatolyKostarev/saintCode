@@ -16,7 +16,7 @@ export const StoryCard = ({
     <div className={clsx(s.StoryCard, className)}>
       <div className={clsx(s.student)}>
         <div className={clsx(s.photo__wrapper)}>
-          <img className={s.photo} width="104" height="104" src={studentPhoto} alt="Student - Photo" />
+          <img className={s.photo} width="100" height="100" src={studentPhoto} alt="Student - Photo" />
         </div>
         <div className={clsx(s.info__wrapper)}>
           <p className={clsx(s.name)}>

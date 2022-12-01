@@ -6,7 +6,7 @@ import { Section } from '../../ui/Section'
 export const Video = ({ className }) => {
   const videoRef = useRef(null)
 
-  const callbackObserver = (entries) => {
+  const callbackObserver = entries => {
     const [entry] = entries;
     (!entry.isIntersecting)
       ? videoRef.current.src = ''
