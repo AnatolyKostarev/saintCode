@@ -7,3 +7,19 @@
     height: 540px
     margin: 0 auto
     background-color: #000
+    position: relative
+    z-index: 1
+    &::after
+      content: url("https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg")
+      width: auto
+      height: auto
+      position: absolute
+      top: 50%
+      left: 50%
+      z-index: 2
+      transform: translate(-50%, -50%)
+  &__frame
+    z-index: 10
+    position: absolute
+    top: 0
+    left: 0
