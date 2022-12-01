@@ -9,6 +9,7 @@ import { Button } from '../../ui/Button'
 import { ConsultForm } from '../../widgets/ConsultForm'
 import s from './Header.module.sass'
 import { LangSwitcher } from '../LangSwitcher'
+import { Container } from '../../ui/Container'
 
 export const Header = () => {
   const { t } = useTranslation()
@@ -67,23 +68,23 @@ export const Header = () => {
       })}
       style={{ background: !scrolled ? background.header : 'rgb(70, 70, 70)' }}
     >
-      <div className={s.wrapper}>
-        <div className={s.block}>
-          <Logo className={clsx({ [s.scrolled__logo]: scrolled })} />
-          <Phone />
-          <LangSwitcher />
+      <Container className={s.container}>
+        <div className={s.wrapper}>
+          <div className={s.block}>
+            <Logo className={clsx({ [s.scrolled__logo]: scrolled })} />
+          </div>
+          <div className={s.block_right}>
+            <Nav />
+            <Button
+              className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled })}
+              onClick={() => setIsConsultForm(true)}
+              text={t('Header.btn')}
+              style={{ background: background.button }}
+            />
+          </div>
         </div>
-        <div className={s.block_right}>
-          <Nav />
-          <Button
-            className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled })}
-            onClick={() => setIsConsultForm(true)}
-            text={t('Header.btn')}
-            style={{ background: background.button }}
-          />
-        </div>
-      </div>
-      {isConsultForm && <ConsultForm setIsConsultForm={setIsConsultForm} />}
+        {isConsultForm && <ConsultForm setIsConsultForm={setIsConsultForm} />}
+      </Container>
     </header>
   )
 }

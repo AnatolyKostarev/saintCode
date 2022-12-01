@@ -13,7 +13,7 @@ export const LangSwitcher = () => {
     <div className={s.LangSwitcher}>
       <Button
         className={s.LangSwitcher__btn}
-        text="RU / ENG"
+        text="ENG / RU"
         onClick={toggleLang}
       />
     </div>

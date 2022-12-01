@@ -26,6 +26,7 @@ export const Video = ({ className }) => {
     <Section className={clsx(s.Video, className)}>
       <div className={clsx(s.Video__container)}>
         <iframe
+          className={s.Video__frame}
           ref={videoRef}
           width="960"
           height="540"
