@@ -1,8 +1,8 @@
-.list
-  display: flex
-  gap: 40px
-
-  & li
+.Nav
+  &__list
+    display: flex
+    gap: 40px
+  &__item
     color: #fff
     transition: all 0.2s linear
     &:hover
@@ -10,15 +10,21 @@
 .lnk
   padding: 10px 0
 @media (max-width: 1471px)
-  .list
-    gap: 30px
+  .Nav
+    &__list
+      gap: 30px
 
 @media (max-width: 1241px)
-  .list
-    & li
+  .Nav
+    &__item
       font-size: 14px
       line-height: 17px
 
-@media (max-width: 768px)
-  .list
+@media (max-width: 976px)
+  .Nav
     display: none
+
+@media (max-width: 768px)
+  .Nav
+    &__list
+      display: none

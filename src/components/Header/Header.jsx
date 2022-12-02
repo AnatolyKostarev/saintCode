@@ -63,22 +63,22 @@ export const Header = () => {
   return (
     <header
       className={clsx(s.Header, {
-        [s.scrolled__start]: startScrolled,
-        [s.scrolled]: scrolled,
+        [s.scrolled__start]: startScrolled && width > 976,
+        [s.scrolled]: scrolled && width > 976,
       })}
       style={{ background: !scrolled ? background.header : 'rgb(70, 70, 70)' }}
     >
       <Container className={s.container}>
         <div className={s.wrapper}>
           <div className={s.block}>
-            <Logo className={clsx({ [s.scrolled__logo]: scrolled })} />
+            <Logo className={clsx({ [s.scrolled__logo]: scrolled && width > 976 })} />
             {width <= 1471 && !scrolled
               && <LangSwitcher />}
           </div>
           <div className={s.block_right}>
             <Nav />
             <Button
-              className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled })}
+              className={clsx(s.header__btn, { [s.scrolled__btn]: scrolled && width > 976 })}
               onClick={() => setIsConsultForm(true)}
               text={t('Header.btn')}
               style={{ background: background.button }}

@@ -2,9 +2,11 @@ import React, { useState } from 'react'
 import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 import { ToTop } from '../components/ToTop'
+import { HeaderResponsive } from '../components/HeaderResponsive'
 
 export const Layout = ({ children }) => {
   const [topIsActive, setTopIsActive] = useState(false)
+  const { innerWidth: width } = window
 
   const changeHeader = () => {
     window.scrollY >= 1000
@@ -17,6 +19,8 @@ export const Layout = ({ children }) => {
     <>
       <Header />
       <main>
+        {width <= 976
+          && <HeaderResponsive />}
         {children}
       </main>
       {topIsActive
