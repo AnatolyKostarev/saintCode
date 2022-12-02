@@ -9,6 +9,8 @@ import s from './Hero.module.sass'
 import { LangSwitcher } from '../LangSwitcher'
 
 export const Hero = () => {
+  const { innerWidth: width } = window
+
   const HERO_BG = {
     backgroundImage: `url(${heroBG})`,
   }
@@ -49,7 +51,8 @@ export const Hero = () => {
           </Title>
         </HeroArticle>
       </Container>
-      <LangSwitcher />
+      {width > 1471
+        && <LangSwitcher />}
     </Section>
   )
 }

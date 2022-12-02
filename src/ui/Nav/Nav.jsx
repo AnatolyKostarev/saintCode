@@ -6,8 +6,9 @@ import s from './Nav.module.sass'
 
 export const Nav = () => {
   const { t } = useTranslation()
+
   return (
-    <nav className={clsx(s.Nav)}>
+    <nav>
       <ul className={clsx(s.list)}>
         <li>
           <Link to="/school">

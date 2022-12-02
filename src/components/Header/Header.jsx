@@ -3,7 +3,6 @@ import clsx from 'clsx'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Logo } from '../../ui/Logo'
-import { Phone } from '../../ui/Phone'
 import { Nav } from '../../ui/Nav'
 import { Button } from '../../ui/Button'
 import { ConsultForm } from '../../widgets/ConsultForm'
@@ -17,13 +16,14 @@ export const Header = () => {
   const [isConsultForm, setIsConsultForm] = useState(false)
   const [scrolled, setScrolled] = useState(false)
   const [startScrolled, setStartScrolled] = useState(false)
+  const { innerWidth: width } = window
 
   const changeHeader = () => {
-    window.scrollY >= 120 ? setScrolled(true) : setScrolled(false)
+    window.scrollY >= 600 ? setScrolled(true) : setScrolled(false)
   }
 
   const startChangeHeader = () => {
-    window.scrollY >= 100 && window.scrollY <= 190
+    window.scrollY >= 100 && window.scrollY <= 700
       ? setStartScrolled(true)
       : setStartScrolled(false)
   }
@@ -73,6 +73,8 @@ export const Header = () => {
           <div className={s.block}>
             <Logo className={clsx({ [s.scrolled__logo]: scrolled })} />
           </div>
+          {width <= 1471 && !scrolled
+            && <LangSwitcher />}
           <div className={s.block_right}>
             <Nav />
             <Button
