@@ -72,9 +72,9 @@ export const Header = () => {
         <div className={s.wrapper}>
           <div className={s.block}>
             <Logo className={clsx({ [s.scrolled__logo]: scrolled })} />
+            {width <= 1471 && !scrolled
+              && <LangSwitcher />}
           </div>
-          {width <= 1471 && !scrolled
-            && <LangSwitcher />}
           <div className={s.block_right}>
             <Nav />
             <Button
