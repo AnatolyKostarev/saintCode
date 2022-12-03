@@ -14,57 +14,62 @@
         color: rgba(255, 255, 255, 1)
 
     &__bcg
-        background: url('./bcg-time.jpg') no-repeat center/cover #ccc
-        background-attachment: fixed
-      
+        &_time
+            background: url('./bcg-time.jpg') no-repeat center/cover #ccc
+            background-attachment: fixed
 
-    &__description
+        &_clock
+            background: url('./bcg-clock.jpg') no-repeat center/cover #ccc
+            background-attachment: fixed
+
+    &__begining
         padding: 345px 0 45px
         background: rgba(63, 57, 72, 1)
 
-    &__preface
-        margin: 0 auto
+    &__opinion
         padding: 27px 0 28px
-        max-width: 960px
-        font-size: 24px
-        font-weight: 700
-        line-height: 38px
-        border-top: 4px solid rgba(114, 105, 126, 1)
 
-    &__decoration,
-    &__author
-        margin: 0 auto 24px
-        max-width: 960px
+    &__middle
+        padding: 70px 0 281px
+        background: rgba(35, 39, 53, 1)
 
-        & img
-            display: block
-            width: 100%
-            height: auto
-
-    &__author
+    &__message
         display: flex
+        flex-direction: column
         justify-content: flex-start
-        align-items: center
-        gap: 0 20px
-
-    &__avatar
-        & img
-            display: block
-            width: 100%
-            height: auto
-            max-width: 80px
-            max-height: 80px
-
-    &__info
-        & p:first-child
-            margin-bottom: 4px
-            font-size: 18px
-            font-weight: 700
-            line-height: 22px
-
-        & p:last-child
-            font-size: 13px
+        align-items: flex-start
+        gap: 38px 0
+        margin: 0 0 114px 0
+        padding-left: 100px
+        max-width: 952px
+        font-size: 20px
+        font-weight: 400
+        line-height: 31px
+        border: 0
+        &_last
+            display: flex
+            flex-direction: column
+            justify-content: flex-start
+            align-items: flex-start
+            gap: 38px 0
+            margin: 0 0 91px 0
+            padding-left: 100px
+            max-width: 952px
+            font-size: 20px
             font-weight: 400
-            line-height: 20px
-            letter-spacing: 1px
-            color: rgba(190, 151, 248, 1)
+            line-height: 31px
+            border: 0
+
+    &__code
+        margin-bottom: 115px
+        & p
+            margin-bottom: 30px
+            &:last-child
+                margin-bottom: 0
+
+    &__conclusion
+        padding: 340px 0 120px
+        background: rgba(63, 57, 72, 1)
+
+    &__authFooter
+        margin-bottom: 0
