@@ -1,0 +1,1 @@
+export { BcgAttachment } from './BcgAttachment'
