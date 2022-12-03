@@ -1,0 +1,74 @@
+.backendInterview
+    padding: 220px 0 301px
+    background: rgba(72, 68, 57, 1)
+    color: rgba(237, 237, 240, 1)
+
+    &__title
+        margin-bottom: 89px
+        max-width: 1000px
+
+    &__begining
+        padding: 270px 0 105px
+        background: rgba(63, 57, 72, 1)
+
+    &__keyboard
+        display: flex
+        padding: 181px 580px
+        max-width: 1160px
+        background: url('./image-keyboard.jpg') no-repeat center/cover #ccc
+        background-attachment: fixed
+        & button
+            display: block
+            border: 0
+            transform: translate(-50%)
+            background: transparent
+            cursor: pointer
+
+    &__playIcon
+        display: block
+        transition: all 0.3s linear
+        &:hover
+            transform: scale(1.1)
+            transition: all 0.3s linear
+
+    &__description
+        margin-bottom: 90px
+        font-size: 20px
+        line-height: 31px
+        border: 0
+        & p:first-child
+            margin-bottom: 32px
+
+    &__situation
+        @extend .backendInterview__description
+        margin-bottom: 75px
+        & p:first-child
+            font-size: 28px
+            line-height: 33px
+
+    &__code
+        margin-bottom: 75px
+        padding: 59px 0 59px 60px
+        font-size: 18px
+        line-height: 31px
+
+    &__timing
+        @extend .backendInterview__description
+        margin-bottom: 0
+        & p:first-child
+            font-size: 28px
+            line-height: 33px
+
+    &__training
+        padding: 128px 0 90px
+        background: rgba(62, 43, 46, 1)
+        &_title
+            margin-bottom: 20px
+
+        &_items
+            display: flex
+            justify-content: space-between
+            align-items: flex-start
+
+    &__letter
+        width: 560px
