@@ -8,6 +8,8 @@ import { BcgAttachment } from '../../../ui/BcgAttachment'
 import { AuthorSaid } from '../ui/AuthorSaid/AuthorSaid'
 import { DecorLine } from '../ui/DecorLine/DecorLine'
 import { AuthorFooter } from '../ui/AuthorFooter/AuthorFooter'
+import { InterviewPanel } from '../ui/InterviewPanel/InterviewPanel'
+import { interviewContent } from './interviewContent'
 import decorIcon from './icon-decoration.svg'
 import iconFounder from './icon-founder.jpg'
 import s from './InterviewPoddubny.module.sass'
@@ -51,6 +53,27 @@ export const InterviewPoddubny = ({
             authorName="Евгений Гриценко"
             notice="Основатель SaintCode Bootcamp"
           />
+        </Container>
+      </Section>
+      <Section className={s.InterviewPoddubny__interview}>
+        <Container className={s.InterviewPoddubny__container}>
+          <div className={s.InterviewPoddubny__answers}>
+            {interviewContent.map(item => (
+              <InterviewPanel
+                {...item}
+                key={item.id}
+              />
+            ))}
+          </div>
+          <p className={s.InterviewPoddubny__post}>
+            P.S. Если интересна та же область программирования, можно задать вопросы
+            {' '}
+            <a href="https://vk.com/ipodd">
+              лично
+            </a>
+            {' '}
+            Игорю.
+          </p>
         </Container>
       </Section>
     </Layout>
