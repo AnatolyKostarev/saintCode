@@ -36,16 +36,18 @@ export const TeacherCard = ({
           </p>
         </div>
       </div>
-      <div className={s.middle}>
-        <p className={s.working}>
-          Работал:
-        </p>
-        {children}
-      </div>
-      <div className={s.bottom}>
-        <p className={s.stack}>
-          {stack}
-        </p>
+      <div className={s.notop}>
+        <div className={s.middle}>
+          <p className={s.working}>
+            Работал:
+          </p>
+          {children}
+        </div>
+        <div className={s.bottom}>
+          <p className={s.stack}>
+            {stack}
+          </p>
+        </div>
       </div>
     </div>
   )

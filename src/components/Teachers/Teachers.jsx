@@ -9,8 +9,8 @@ import s from './Teachers.module.sass'
 export const Teachers = () => {
   return (
     <Section className={s.Teachers}>
-      <Container>
-        <SectionTitle>
+      <Container className={s.container}>
+        <SectionTitle className={s.title}>
           Преподаватели
         </SectionTitle>
         <div className={s.cards__container}>

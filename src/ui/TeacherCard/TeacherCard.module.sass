@@ -1,18 +1,21 @@
 .TeacherCard
   width: 560px
-  padding: 30px 30px 26px 30px
+  //padding: 30px 30px 26px 30px
   background: #4F373A
   display: flex
   flex-direction: column
 .top
+  padding: 30px 30px 0 30px
   display: flex
   gap: 29px
   max-height: max-content
   margin-bottom: 30px
+.notop
+  padding: 0 30px 30px 30px
 .name
-  font-weight: 700
+  font-weight: 400
   font-size: 26px
-  line-height: 120%
+  line-height: 31px
   color: #EDEDF0
   &__block
     max-height: 100%
@@ -54,3 +57,42 @@
   opacity: 0.6
   min-height: 38.4px
 
+@media (max-width: 1241px)
+  .TeacherCard
+    width: 460px
+  .top
+    padding: 20px 20px 0 20px
+  .notop
+    padding: 0 20px 20px 20px
+  .img
+    width: 120px
+    height: 120px
+  .stack
+    &:last-child
+      min-height: 57.6px
+@media (max-width: 976px)
+  .stack
+    &:last-child
+      min-height: 38.4px
+@media (max-width: 424px)
+  .name
+    font-weight: 400
+    font-size: 16px
+    line-height: 19px
+
+    margin-top: 17px
+  .img
+    width: 100px
+    height: 100px
+  .exp
+    font-weight: 400
+    font-size: 10px
+    line-height: 14px
+  .top
+    padding: 0
+  .trainees
+    font-weight: 400
+    font-size: 10px
+    line-height: 14px
+  .top
+    gap: 0 20px
