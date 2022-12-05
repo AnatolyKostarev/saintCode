@@ -12,7 +12,7 @@ export const ForWho = () => {
   const { t } = useTranslation()
   return (
     <Section className={s.ForWho}>
-      <Container>
+      <Container className={s.container}>
         <SectionTitle>
           <span className="transparent--blue">
             {t('ForWho.span1')}
