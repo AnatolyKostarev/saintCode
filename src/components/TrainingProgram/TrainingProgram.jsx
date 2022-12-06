@@ -18,7 +18,7 @@ export const TrainingProgram = () => {
   const { t } = useTranslation()
   return (
     <Section className={s.TrainingProgram}>
-      <Container>
+      <Container className={s.container}>
         <div className={s.TrainingProgram__header}>
           <SectionTitle className={s.TrainingProgram__header_title}>
             <span>

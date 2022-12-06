@@ -1,15 +1,14 @@
 .Author
-  padding: 110px 0 70px 0
+  padding: 100px 0 69px 0
   &__container
     display: flex
-    align-items: center
     gap: 90px
   &__name
-  font-weight: 700
-  font-size: 20px
-  line-height: 120%
-  text-align: center
-  color: #EDEDF0
+    font-weight: 700
+    font-size: 20px
+    line-height: 120%
+    text-align: center
+    color: #EDEDF0
   &__info
     font-weight: 400
     font-size: 13px
@@ -18,9 +17,9 @@
     color: #EDEDF0
     opacity: 0.4
 .title
-  font-weight: 800
+  font-weight: 700
   font-size: 40px
-  line-height: 120%
+  line-height: 48px
   color: #EDEDF0
 
 .left
@@ -32,7 +31,7 @@
 .right
   display: flex
   flex-direction: column
-  gap: 74px
+  gap: 43px
 
 .devis
   display: block
@@ -48,3 +47,61 @@
   flex-direction: column
   align-items: center
   gap: 10px
+
+@media (max-width: 1241px)
+  .Author
+    padding: 100px 0 32px 0
+    &__container
+      gap: 60px
+  .img
+    width: 300px
+    height: 300px
+  .title
+    font-size: 34px
+    line-height: 41px
+  .right
+    gap: 24px
+
+@media (max-width: 976px)
+  .Author
+    padding: 80px 0 23px 0
+    &__container
+      flex-direction: column-reverse
+      gap: 10px
+
+  .title
+    font-size: 30px
+    line-height: 36px
+    max-width: 470px
+
+  .left
+    display: flex
+    flex-direction: row
+    align-items: center
+    gap: 30px
+
+  .img
+    width: 100px
+    height: 100px
+
+
+
+@media (max-width: 662px)
+  .Author
+    &__container
+      max-width: 90%
+
+@media (max-width: 530px)
+  .Author
+    padding: 50px 0 31px 0
+    &__name
+      font-size: 16px
+      line-height: 19px
+    &__info
+      font-size: 13px
+      line-height: 16px
+  .title
+    font-size: 18px
+    line-height: 25px
+  .right
+    gap: 12px
