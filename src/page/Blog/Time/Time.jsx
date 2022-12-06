@@ -10,6 +10,7 @@ import { AuthorSaid } from '../ui/AuthorSaid/AuthorSaid'
 import { DecorLine } from '../ui/DecorLine/DecorLine'
 import { AuthorFooter } from '../ui/AuthorFooter/AuthorFooter'
 import { BlogPanel } from '../ui/BlogPanel/BlogPanel'
+import time from './bcg-time.jpg'
 import decoration from './icon-decoration.svg'
 import avatar from './icon-Poddubny.png'
 import s from './Time.module.sass'
@@ -26,7 +27,7 @@ export const Time = ({ className }) => {
           <p className={s.Time__subtitle}>
             или пара слов о работе с датой и временем в программировании
           </p>
-          <BcgAttachment className={s.Time__bcg_time} />
+          <BcgAttachment className={s.Time__bcg_time} img={time} />
         </Container>
       </Section>
       <Section className={s.Time__begining}>
@@ -47,6 +48,7 @@ export const Time = ({ className }) => {
             decorIcon={decoration}
           />
           <AuthorFooter
+            className={s.Time__authorfooter}
             avatar={avatar}
             alt="Poddubny"
             width="80"
