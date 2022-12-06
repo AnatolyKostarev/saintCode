@@ -15,7 +15,8 @@
 
     &__bcg
         &_time
-            background: url('./bcg-time.jpg') no-repeat center/cover #ccc
+            background: url('./bcg-time.jpg') no-repeat center #ccc
+            background-size: cover
             background-attachment: fixed
 
         &_clock
@@ -73,3 +74,116 @@
 
     &__authFooter
         margin-bottom: 0
+
+// Responsive styles
+
+@media ( width <= 1170px)
+    .Time
+        padding: 76px 42px 236px
+
+        &__subtitle
+            margin-bottom: 56px
+
+        &__begining
+            padding: 295px 42px 45px
+
+        &__opinion
+            padding: 27px 0 24px
+            margin: 0 96px 0 80px
+
+        &__decoration
+            margin: 0 96px 24px 80px
+
+        &__authorfooter,
+        &__authFooter
+            margin: 0 96px 0 80px
+
+        &__middle
+            padding: 70px 82px 249px
+
+        &__message
+            padding: 0 128px 0 40px
+            &_last
+                padding-left: 80px
+                padding-right: 168px
+
+        &__conclusion
+            padding: 70px 42px 100px
+
+@media ( width <= 768px)
+    .Time
+        padding: 76px 74px 155px
+
+        &__title
+            margin-bottom: 17px
+
+        &__subtitle
+            margin-bottom: 45px
+            max-width: 288px
+            font-size: 16px
+            line-height: 25px
+
+        &__bcg
+            &_time
+                background-attachment: unset
+
+        &__begining
+            padding: 285px 74px 45px
+
+        &__opinion
+            padding: 27px 0 24px
+            margin: 0 19px 0 10px
+
+        &__decoration
+            margin: 0 0 24px 0
+
+        &__authorfooter
+            margin: 0 19px 0 10px
+
+        &__middle
+            padding: 70px 44px 220px
+
+        &__message
+            padding: 0 46px 0 40px
+            &_last
+                margin-bottom: 68px
+                padding-left: 0
+                padding-right: 0
+
+        &__conclusion
+            padding: 70px 90px 84px 80px
+
+        &__authFooter
+            margin: 0
+
+@media ( width <= 576px)
+    .Time
+        padding: 49px 10px 68px
+
+        &__subtitle
+            margin-bottom: 22px
+
+        &__begining
+            padding: 120px 10px 30px
+
+        &__opinion,
+        &__authorfooter
+            margin: 0
+
+        &__middle
+            padding: 70px 20px 220px
+
+        &__message
+            margin-bottom: 82px
+            padding: 0
+            font-size: 16px
+            line-height: 23px
+            &_last
+                font-size: 16px
+                line-height: 23px
+
+        &__code
+            margin-bottom: 84px
+
+        &__conclusion
+            padding: 70px 10px 60px
