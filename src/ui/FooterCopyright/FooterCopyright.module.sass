@@ -1,8 +1,12 @@
 @import "src/config/styles/vars"
 
 .FooterCopyright
-  padding: 20px 0
+  padding: 22px 0
   background-color: #2F3A32
+
+.left
+  display: flex
+  gap: 80px
 
 .policy
   background: none
@@ -20,4 +24,30 @@
   line-height: 1.55
   font-weight: 400
   display: flex
-  gap: 100px
+  gap: 140px
+
+@media (max-width: 1241px)
+  .left
+    gap: 30px
+  .copy
+    gap: 55px
+
+@media (max-width: 976px)
+  .FooterCopyright
+    padding: 41px 0
+  .copy
+    flex-direction: column
+    gap: 25px 0
+  .policy
+    width: max-content
+
+@media (max-width: 662px)
+  .copy
+    max-width: 90%
+@media (max-width: 504px)
+  .copy
+    flex-direction: column
+    gap: 20px
+  .left
+    flex-direction: column
+    gap: 20px

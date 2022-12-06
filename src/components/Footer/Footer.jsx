@@ -12,7 +12,7 @@ export const Footer = ({ className }) => {
       <div className={s.Footer__map}>
         <img src={map} alt="map" />
       </div>
-      <Container>
+      <Container className={s.container}>
         <FooterContacts />
       </Container>
       <FooterCopyright />
