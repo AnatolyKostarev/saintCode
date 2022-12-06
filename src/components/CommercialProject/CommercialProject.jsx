@@ -7,7 +7,7 @@ import s from './CommercialProject.module.sass'
 export const CommercialProject = () => {
   return (
     <Section className={s.CommercialProject}>
-      <Container>
+      <Container className={s.container}>
         <SectionTitle className={s.title}>
           <span className="transparent">
             А&nbsp;ещё мы&nbsp;
@@ -22,11 +22,7 @@ export const CommercialProject = () => {
           <p className={s.intersec__text}>
             <span className={s.gray}>
               Но&nbsp;самое важное: когда компании будут
-              <br />
-              {' '}
               решать, кого из&nbsp;новичков взять,
-              <br />
-              {' '}
               они
             </span>
 &nbsp;отдадут предпочтение кандидату
