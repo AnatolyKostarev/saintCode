@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
+import { useTranslation } from 'react-i18next'
 import s from './InterviewPanel.module.sass'
 
 export const InterviewPanel = ({
@@ -8,6 +9,7 @@ export const InterviewPanel = ({
   background,
   text,
   position = 'left',
+  keyTranslate,
 }) => {
   const iconLeft = (
     <svg
@@ -76,18 +78,20 @@ export const InterviewPanel = ({
     right: '17px',
   }
 
+  const { t } = useTranslation()
+
   return (
     <div
       className={clsx(s.panel, className)}
       style={{ background }}
     >
       <p className={s.panel__name}>
-        {interviewer}
+        {t(`${keyTranslate}.interviewer.${interviewer}`)}
       </p>
       <div className={s.panel__text}>
         {text.map(elem => (
           <p key={elem}>
-            {elem}
+            {t(`${keyTranslate}.text.${elem}`)}
           </p>
         ))}
       </div>
