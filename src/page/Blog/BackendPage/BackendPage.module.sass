@@ -13,14 +13,16 @@
 
     &__keyboard
         display: flex
-        padding: 181px 580px
         max-width: 1160px
         background: url('./image-keyboard.jpg') no-repeat center/cover #ccc
         background-attachment: fixed
         & button
+            position: absolute
+            left: 50%
+            top: 50%
             display: block
             border: 0
-            transform: translate(-50%)
+            transform: translate(-50%, -50%)
             background: transparent
             cursor: pointer
 
@@ -70,5 +72,131 @@
             justify-content: space-between
             align-items: flex-start
 
-    &__letter
-        width: 560px
+    // &__letter
+    //     width: 560px
+
+// Responsive styles
+
+@media (width <= 1170px)
+    .backendInterview
+        padding: 76px 42px 236px
+
+        &__title
+            margin-bottom: 89px
+            max-width: 870px
+
+        &__description
+            padding: 0 90px
+            font-size: 18px
+            line-height: 1.55
+
+        &__situation
+            & p:first-child
+                font-size: 26px
+                line-height: 30px
+
+        &__code
+            margin-left: 90px
+            margin-right: 90px
+
+        &__training
+            padding-right: 32px
+            padding-left: 32px
+            &_title
+                max-width: 322px
+
+            &_items
+                gap: 0 40px
+
+@media (width <= 768px)
+    .backendInterview
+        padding: 76px 74px 155px
+
+        &__title
+            margin-bottom: 45px
+            padding-left: 40px
+            max-width: 395px
+
+        &__description
+            padding: 0 84px
+
+        &__code
+            padding: 39px 40px 39px
+            margin-left: 44px
+            margin-right: 44px
+
+        &__training
+            padding-right: 84px
+            padding-left: 84px
+
+            &_title
+                max-width: 443px
+                padding-left: 84px
+
+            &_items
+                display: block
+                // gap: 20px 0
+
+        &__letter
+            &:first-child
+                margin-bottom: 20px
+
+@media (width <= 576px)
+    .backendInterview
+        padding: 49px 58px 68px
+
+        &__title
+            margin-bottom: 45px
+            padding-left: 0
+
+        &__description
+            padding: 0 20px
+            font-size: 16px
+            font-weight: 400
+            line-height: 1.45
+
+        &__situation
+            & p:first-child
+                font-size: 24px
+                line-height: 30px
+
+        &__code
+            margin: 0 0 75px 0
+            padding: 20px
+
+        &__timing
+            & p:first-child
+                font-size: 24px
+                font-weight: 600
+                line-height: 28px
+
+        &__training
+            padding-right: 20px
+            padding-left: 20px
+
+            &_title
+                padding-left: 42px
+
+        &__letter
+            height: 67px
+            padding: 10px
+            
+
+@media (width <= 425px)
+    .backendInterview
+        padding: 49px 62px 68px
+
+        &__title
+            margin-bottom: 45px
+            padding-left: 0
+            max-width: 285px
+            font-size: 30px
+            line-height: 36px
+
+@media (width <= 375px)
+    .backendInterview
+        padding: 49px 37px 68px
+
+@media (width <= 320px)
+    .backendInterview
+        padding: 49px 10px 68px
