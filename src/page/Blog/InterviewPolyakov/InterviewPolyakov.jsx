@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
+import { useTranslation } from 'react-i18next'
 import { Layout } from '../../../layout'
 import { Section } from '../../../ui/Section'
 import { Container } from '../../../ui/Container'
@@ -14,15 +15,14 @@ import decorIcon from './icon-decoration.svg'
 import iconFounder from './icon-founder.jpg'
 import s from './IntreviewPolyakov.module.sass'
 
-export const InterviewPolyakov = ({
-  className,
-}) => {
+export const InterviewPolyakov = ({ className }) => {
+  const { t } = useTranslation()
   return (
     <Layout>
       <Section className={clsx(s.IntreviewPolyakov, className)}>
         <Container>
           <SectionTitle className={s.IntreviewPolyakov__title}>
-            Интервью с разработчиком Николаем Поляковым
+            {t('Polyakov.title')}
           </SectionTitle>
           <BcgAttachment className={s.IntreviewPolyakov__developer}>
             {' '}
@@ -33,15 +33,15 @@ export const InterviewPolyakov = ({
         <Container>
           <AuthorSaid className={s.IntreviewPolyakov__description}>
             <p>
-              Николай Поляков, разрабатывает веб-сервисы на JavaScript-фреймворках React/Redux и TypeScript.
+              {t('Polyakov.description.item_1')}
             </p>
             <p>
-              В конце текста советы, с чего начать новичку.
+              {t('Polyakov.description.item_2')}
             </p>
           </AuthorSaid>
           <AuthorSaid className={s.IntreviewPolyakov__situation}>
             <p>
-              Я буду выкладывать интервью с разработчиками, в которых ребята расскажут, как они стартовали, через сколько стали зарабатывать нормальные деньги и с чего лучше начинать новичку.
+              {t('Polyakov.description.item_3')}
             </p>
           </AuthorSaid>
           <DecorLine decorIcon={decorIcon} />
@@ -50,8 +50,8 @@ export const InterviewPolyakov = ({
             alt="founder"
             width="80"
             height="80"
-            authorName="Евгений Гриценко"
-            notice="Основатель SaintCode Bootcamp"
+            authorName={t('Polyakov.authorName')}
+            notice={t('Polyakov.notice')}
           />
         </Container>
       </Section>
@@ -60,6 +60,7 @@ export const InterviewPolyakov = ({
           <div className={s.IntreviewPolyakov__answers}>
             {interviewContent.map(item => (
               <InterviewPanel
+                keyTranslate="Polyakov"
                 {...item}
                 key={item.id}
               />
