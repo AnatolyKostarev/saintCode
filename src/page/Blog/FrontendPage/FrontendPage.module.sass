@@ -9,14 +9,16 @@
 
     &__laptop
         display: flex
-        padding: 181px 580px
         max-width: 1160px
         background: url('./image-laptop.jpg') no-repeat center/cover #ccc
         background-attachment: fixed
         & button
+            position: absolute
+            left: 50%
+            top: 50%
             display: block
             border: 0
-            transform: translate(-50%)
+            transform: translate(-50%, -50%)
             background: transparent
             cursor: pointer
 
