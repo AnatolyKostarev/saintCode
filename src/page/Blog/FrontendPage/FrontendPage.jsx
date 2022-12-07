@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import clsx from 'clsx'
+import { useTranslation } from 'react-i18next'
 import { Layout } from '../../../layout'
 import { Section } from '../../../ui/Section'
 import { Container } from '../../../ui/Container'
@@ -31,6 +32,8 @@ export const FrontendPage = ({ className }) => {
   const briefToggle = () => {
     setBrief(!brief)
   }
+
+  const { t } = useTranslation()
 
   return (
     <Layout>
