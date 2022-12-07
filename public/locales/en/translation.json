@@ -313,5 +313,122 @@
       "item_5": "Why is there not enough personnel in the country — and who to go to study to be in demand",
       "item_6": "Interview with senior frontend from an international IT company. At the end of the text, tips on where to start for a beginner"
     }
+  },
+  "Time": {
+    "title": "Merciless Time",
+    "subtitle": "A few words about working with date and time in programming",
+    "opinion": "You have read a headline and thought: some pensioner (Senior) Developer philosophizes on how time flies, and how to develop ourselves to stay afloat. Simply true, but I need to write about real problems in programming for beginners.",
+    "authorName": "Igor Poddubniy",
+    "notice": "Author. Developer",
+    "message": {
+      "item_1": "The peculiarities of working with date and time are underrated. Developers think it is obvious or there are a lot of ready-made tools.",
+      "item_2": "Yes, at the universities they talk about January 1, 1970, from which Unix time originates, UTC, and even mention a little about formatting. However, some topics are not mentioned. Look at examples from my experience.",
+      "item_3": "A few years ago, I moderated a contest for Windows Phone 7 App developers hosted by Microsoft at my university. Then this platform just came out and gave hope. The participants were first-year students, and therefore there were quite raw applications.",
+      "item_4": "One guy wrote a simple reminder: using the \"+/-\" buttons, the user sets how many minutes the alarm should go off, then presses \"Start\". The author set a reminder in one minute and was very happy when the alarm went off. The first thing that occurred to me was to set 60 minutes, to check that the alarm would go off in an hour.",
+      "item_5": "The guy realized that his code would not work by simply adding minutes. If the time is 11:20, then the alarm sets to 11:80. He quickly corrected the code by adding a condition:",
+      "item_6": "For sure, my next question was about 23:20. His code was now trying to set the alarm for 24:20.",
+      "item_7": "Well, what to do? The guy took his first steps in programming. But even experienced developers sometimes encounter similar errors.",
+      "item_8": "I had to make a certificate generator at work when I was a middle-level programmer. The certificate has an expiration date. We used some tools before to generate dates. It took as input the number of days that the certificate will be valid from the current date. We just set 3650 (ten years excluding leap years) and that is it.",
+      "item_9": "But we had to hardcode the expiration date in our own project on C++. You just can not add 3650 to the days, there is no such day in any month. Then I just added ten to the years and was done. Checked: and it works. The testers did not complain either. And we have successfully released the product with this code.",
+      "item_10": "Early in the morning on February 29, 2016, testers wrote to me: for some reason certificate generation does not work, and the rest of our product follows it. I got into the code and broke out in several cold sweats. Our product tried to generate certificates until February 29, 2026, and the date does not exist. Someone will probably think that the solution is elementary:",
+      "item_11": "Yes, in this case, it will work. But it is a \"crutch\" — bypassing the problem by adding unnecessary conditions. This is a solution to one current problem, but there will be other pitfalls.",
+      "item_12": "For example, many countries change the clocks twice a year: at the end of October one hour back, and at the end of March one hour ahead.",
+      "item_13": "It turns out that there is no whole hour between 2:00 and 3:00 am in March, and an extra hour in October, on the contrary. If we take March 28, 2020, at 2:30 am and add one year, we get a non-existent time of March 28, 2020, 2:30.",
+      "item_14": "This kind of problem is not so easy to solve, because the date floats from year to year. Also, in different countries, hours are translated into different numbers, and somewhere, as in Russia, they do not translate at all. What then to do?",
+      "item_15": "The solution is simple. Convert the date and time to Unix format before doing math operations. We take the original date and time and convert them using a ready-made function to seconds starting from January 1, 1970, add the required number of seconds (for example, ten years = 10 * 365 * 24 * 60 * 60 seconds), and using another ready-made function, translate back to date and time.",
+      "item_16": "There are ready-made functions or libraries for such operations in modern programming languages. For example, in",
+      "item_17": "So, it turns out to be very careful when working with such a simple and familiar entity as time. Do not forget about leap years and clock changes. Try not to get around problems by adding extra conditions, find a ready-made solution first. This is how you become a true professional."
+    },
+    "code": {
+      "item_1": "If minutes",
+      "item_2": "minutes = minutes % 60",
+      "item_3": "hours = hours + 1",
+      "item_4": " operation to get the remainder of a division",
+      "item_5": "If (month == february) and (day == 29)",
+      "item_6": "day = 28",
+      "item_7": "comparison operation,",
+      "item_8": "assignment operation"
+    }
+  },
+  "Polyakov": {
+    "title": "Interview with developer Nikolai Polyakov",
+    "authorName": "Evgeny Gritsenko",
+    "notice": "Saintcode Bootcamp founder",
+    "interviewer": {
+      "interviewer_1": "EVGENY",
+      "interviewer_2": "NIKOLAY"
+    },
+    "description": {
+      "item_1": "Nikolay Polyakov develops web services using React/Redux and TypeScript.",
+      "item_2": "Tips on where to start for a beginner are at the end.",
+      "item_3": "I will post interviews with the developers. Guys will tell how they started, after how long they began to earn decent money, and what is the best way for a beginner."
+    },
+    "text": {
+      "question_1": "What is your occupation now? What do you work for, and what kind of projects and technologies? And what are you responsible for on a project?",
+      "question_2": " What motivates you to be at your current job?",
+      "question_3": "If you see yourself in your next job, what should it be?",
+      "question_4": " After what salary does a project come out on top?",
+      "question_5": "So, now let's go back to the past. How did you get into programming?",
+      "question_6": "What learning sources did you use? Were there mentors?",
+      "question_7": "How long did it take to get paid 50k?",
+      "question_8": "How to start a newcomer?",
+      "answer_1": "Actually a lot. I work as a senior frontend developer in Ormco — one of the largest dental companies in the world. They are promoting braces analog, plastic mouth guards that gradually move teeth. The technology was developed 20 years ago: the patent has recently expired, and now other players can enter the market.",
+      "answer_2": "Our web department ensures the connection of all participants: doctors, 3D models of teeth creators, managers, shipment operators, and the production department.",
+      "answer_3": "In terms of technology, I work with React / Redux, Typescript, AWS, and Java Spring backend. Our main difficulty now is to rework the old code (legacy in Java) and write a new one through web applications (Single Page Application + API). SPA helps to speed up the service, as it reduces the number of calls between the server and the browser.",
+      "answer_4": "We are looking for Middle+ Javascript and Java developers now. Email: nickolay.pol@gmail.com.",
+      "answer_5": "It is interesting to work in an international company. In the USA, Russia, and India, we communicate in English from different time zones. I get how to do international projects, where people around the globe use your product.",
+      "answer_6": "I want to become a great CTO (Chief Technology Officer) and be able to build interesting and complex systems. So I would look for something with an even greater level of responsibility for the project. Not necessarily a big company. A small team could do great things too.",
+      "answer_7": "Some time ago I wanted to leave Russia. But now I like the place where I live, next to the Bitsevsky Forest. I would leave Russia only for some new experience.",
+      "answer_8": "I like Moscow: nature is good, and the cultural life is present, you can find almost everything. Russia does not have a bad education and healthcare system. True, the distances in Moscow are heavy. I have a friend from Germany, after the first day of sightseeing she gave up.",
+      "answer_9": " I would say that now in Moscow for 150-170k to a middle developer there are a lot of projects to choose from.",
+      "answer_10": "I believe that one should do \"what you can with the opportunities that you have and where you are\" and that \"opportunities come with the sleeves rolled up\".",
+      "answer_11": "If you focus only on interest all the time, you come to a situation where you flutter from project to project simply because interest has disappeared. And it does not depend on the salary.",
+      "answer_12": "On the other hand, doing what you initially do not like is very unproductive. There will be no development in this.",
+      "answer_13": "I studied programming at school. Then I went to the Mech-Math (Saratov State University named after N.G. Chernyshevsky) majoring in mathematician-system programming. At the university, I was an administrator and made financial programs in Delphi, and different sites in PHP.",
+      "answer_14": "Then I was brought into management and was engaged in finance. Then I made my own construction business, not related to IT anyhow. That is, I was not in IT for about 10-11 years. I updated the information in my head on how everything is done and returned to IT as a web developer.",
+      "answer_15": " First I used Coursera. There was a great web programming course from Hong Kong University. Then I realized the difference between our education and foreign.",
+      "answer_16": "We have been taught in such a way that everyone had to study everything himself, find all the sources, and the teachers only ask. In a counterweight, they told everything in such detail that it was hard not to understand. And it is good: if there is detailed info, you can always skip what you know. It is better than not having it.",
+      "answer_17": "Classmates in the course were my mentors. But it seems now you can find a lot on the Internet, the main thing is to have critical thinking. I came to the conclusion that it is best to study the documentation and source code if any.",
+      "answer_18": " I started on Coursera, and after two months a friend advised me to just post a resume. I thought that I still had to study for a long time. I was very surprised that they began to call 3-4 times a day for a vacancy for a junior position in web development.",
+      "answer_19": "I went to interviews, wrote down questions that I could not answer, and prepared to answer them. Three weeks after posting the resume, I went to work. My first salary as a programmer was more than 50k times two with something.",
+      "answer_20": "Also, passing interviews is a separate skill. Not always tied to current knowledge, and it must be developed separately.",
+      "answer_21": "Do what you really need or are interested in. If it is the web, what would you do? An online store for a friend or relative, or something that solves your problem or the problem of someone nearby. Then you can understand whether it will be interesting for you, and which part of the work you like more.",
+      "answer_22": "We talk about the web. Try to make a project with a Front: React, Vue or Angular, layout, html, state-management, git. And Backend: node.js, express (as first you can replace it with stubs, emulating the backend). And databases: for example MongoDB, but in fact any. Bash, Heroku (you can learn how to deploy your applications so that they are available on the web). If you can, learn something more: AWS, Azure, and Firebase."
+    }
+  },
+  "Poddubny": {
+    "title": "Interview with developer Igor Poddubniy",
+    "authorName": "Evgeny Gritsenko",
+    "notice": "Saintcode Bootcamp founder",
+    "interviewer": {
+      "interviewer_1": "EVGENY",
+      "interviewer_2": "IGOR"
+    },
+    "description": {
+      "item_1": "Igor works in an international IT company, develops applications for Windows and Web, and moved from St. Petersburg to Prague, where he now lives and works.",
+      "item_2": "Tips on where to start for a beginner are at the end.",
+      "item_3": "I will post interviews with the developers. Guys will tell how they started, after how long they began to earn decent money, and what is the best way for a beginner."
+    },
+    "text": {
+      "question_1": " What is your occupation now? What do you work for, and what kind of projects and technologies? And what are you responsible for on a project?",
+      "question_2": "What motivates you to be at your current job?",
+      "question_3": "If you see yourself in your next job, what should it be?",
+      "question_4": "After what salary does a project come out on top?",
+      "question_5": "So, now let's go back to the past. How did you get into programming?",
+      "question_6": "What learning sources did you use? Were there mentors?",
+      "question_7": "How long did it take to get paid 50k?",
+      "question_8": "How to start a newcomer?",
+      "answer_1": " I work for Veeam Software. I write installer programs in C++, C#, and WinAPI. In our field, we need not so much deep knowledge as broad knowledge. I am responsible for ensuring that the company's products are successfully deployed on the client's machine.",
+      "answer_2": "My company (Veeam) is very comfortable to work with. I doubt it will be easy to find such a good place.",
+      "answer_3": "Perhaps it is time to move from ordinary coding to project design and team leadership. I love programming in C#. And I like to live in my native city — St. Petersburg.",
+      "answer_4": " Good question. I think there are many factors to consider here, including the fact that I have a family and a child. Other things being equal, I think, from 100 thousand rubles.",
+      "answer_5": " I started at school in class seven. It was \"Logo\", where the turtle executes commands and draws lines. Then Turbo Pascal, Visual Basic. I took computer courses in high school, then entered St. Petersburg Polytechnic University as a programmer.",
+      "answer_6": "I can't say that it was really easy to get a job. At the university, they do not tell much of what it is desirable for a programmer to know. It is believed that the student must learn on his own, but it is not always clear what exactly needs to be learned.",
+      "answer_7": " At first, my sources were teachers and my older brother. Then books and the Internet. Now, with the development of various online courses, I improve my skills by watching videos on YouTube. If I need to immerse myself, then I go through many hours of courses.",
+      "answer_8": " I do not remember exactly. Probably two years after employment. But at that time 50k was a more serious amount than it is now. It was about 1.5k dollars.",
+      "answer_9": " If you need to learn how to code in a short time, it is best to sign up for some courses with homework and mentors.",
+      "answer_10": "Few people can organize themselves, so you need to have a good mentor who will point you in the right direction, answer questions and kick you when you start to be lazy.",
+      "answer_11": "I would suggest that you first learn the basics of C#, Java, or Javascript since these languages are very similar and it will not be difficult to switch from one language to another at the very beginning. And then go deeper."
+    }
   }
 }
