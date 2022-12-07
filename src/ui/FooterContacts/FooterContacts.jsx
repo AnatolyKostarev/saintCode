@@ -9,7 +9,6 @@ import { FooterLinks } from '../FooterLinks/FooterLinks'
 import { SocialBlock } from '../SocialBlock/SocialBlock'
 import fb from './fb.svg'
 import vk from './vk.svg'
-import inst from './inst.svg'
 import s from './FooterContacts.module.sass'
 
 export const FooterContacts = ({ className }) => {
@@ -30,7 +29,7 @@ export const FooterContacts = ({ className }) => {
       </div>
       <div className={clsx(s.inner__right)}>
         <FooterLinks />
-        <SocialBlock vk={vk} fb={fb} inst={inst} />
+        <SocialBlock vk={vk} fb={fb} />
       </div>
     </div>
   )

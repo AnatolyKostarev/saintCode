@@ -1,5 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import clsx from 'clsx'
 import s from './HeaderResponsive.module.sass'
 import { Logo } from '../../ui/Logo'
 import { Phone } from '../../ui/Phone'
@@ -7,9 +8,11 @@ import { Button } from '../../ui/Button'
 import cross from './cross.svg'
 
 export const HeaderResponsive = () => {
+  const [opened, setOpened] = useState(false)
+
   return (
-    <div className={s.HeaderResponsive}>
-      <input className={s.checkbox} type="checkbox" name="menu" id="menu_check" />
+    <div className={clsx(s.HeaderResponsive, { [s.bg]: opened })}>
+      <input onChange={() => setOpened(!opened)} className={s.checkbox} type="checkbox" name="menu" id="menu_check" />
       <div className={s.btn}>
         <div className={s.lines}>
           <span className={s.line} />
@@ -26,32 +29,32 @@ export const HeaderResponsive = () => {
           <nav>
             <ul className={s.list}>
               <li>
-                <Link className={s.lnk} to="/">
+                <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/' })} to="/">
                   Главная
                 </Link>
               </li>
               <li>
-                <Link className={s.lnk} to="/school">
+                <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/school' })} to="/school">
                   О школе
                 </Link>
               </li>
               <li>
-                <Link className={s.lnk} to="/program">
+                <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/program' })} to="/program">
                   Подготовительная программа
                 </Link>
               </li>
               <li>
-                <Link className={s.lnk} to="/faq">
+                <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/faq' })} to="/faq">
                   ЧАВО
                 </Link>
               </li>
               <li>
-                <Link className={s.lnk} to="/blog">
+                <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/blog' })} to="/blog">
                   Блог
                 </Link>
               </li>
               <li>
-                <Link className={s.lnk} to="/">
+                <Link className={clsx(s.lnk)} to="/">
                   Самостоятельное обучение
                 </Link>
               </li>

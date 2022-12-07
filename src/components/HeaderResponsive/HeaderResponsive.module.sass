@@ -3,6 +3,10 @@
   right: 0
   top: 0
   z-index: 1000
+.bg
+  width: 100vw
+  height: 100vh
+  background-color: rgba(0, 0, 0, 0.7)
 .btn
   width: 58px
   height: 58px
@@ -21,7 +25,7 @@
   z-index: 1100
   &:checked ~ .aside
     transform: translateX(0)
-    transition: .5s linear
+    transition: .3s linear
 
 .lines
   width: 28px
@@ -41,7 +45,7 @@
   background: #020303
 
 .aside
-  transition: .5s linear
+  transition: .3s linear
   transform: translateX(100%)
   background: #464646
   height: 100vh
@@ -97,3 +101,6 @@
   line-height: 31px
   color: #FFFFFF
   margin: 25px 0
+
+.active
+  color: #59F881
