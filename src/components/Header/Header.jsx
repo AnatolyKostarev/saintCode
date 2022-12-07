@@ -83,6 +83,7 @@ export const Header = () => {
             />
           </div>
         </div>
+        <LangSwitcher />
         {isConsultForm && <ConsultForm setIsConsultForm={setIsConsultForm} />}
       </Container>
     </header>
