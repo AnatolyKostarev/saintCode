@@ -10,7 +10,7 @@ export const SocialBlock = ({
     <div className={clsx(s.SocialBlock, className)}>
       <SocialRound href="https://vk.com/public191201156" alt="vk" icon={vk} />
       <SocialRound href="https://www.facebook.com/Saint-Code-Bootcamp-114797186729898" alt="fb" icon={fb} />
-      <SocialRound alt="tg" />
+      <SocialRound href="https://t.me/scbootcamp" alt="tg" icon={tg} />
     </div>
   )
 }

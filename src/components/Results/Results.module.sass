@@ -1,7 +1,7 @@
 @import "src/config/styles/vars"
 
 .Results
-  padding: 347px 0 100px 0
+  padding: 230px 0 92px 0
   background-color: $second-dark
   &__container
     display: flex
@@ -10,7 +10,7 @@
     grid-column-start: 2
 
 .left
-  max-width: 370px
+  max-width: 380px
   height: 100%
 .right
   max-width: 650px
@@ -18,3 +18,42 @@
   grid-template-columns: 1fr 1fr
   column-gap: 73px
   row-gap: 50px
+@media (max-width: 1241px)
+  .Results
+    padding: 76px 0 106px 0
+    &__container
+      flex-direction: column
+      gap: 60px
+  .left
+    max-width: 531px
+  .title
+    font-size: 52px
+    line-height: 62px
+
+@media (max-width: 976px)
+  .Results
+    padding: 77px 0 82px 0
+    &__container
+      gap: 40px
+  .left
+    max-width: 430px
+  .title
+    font-size: 42px
+    line-height: 50px
+  .right
+    max-width: 400px
+    display: flex
+    flex-direction: column
+    gap: 45px 0
+
+@media (max-width: 662px)
+  .Results
+    &__container
+      max-width: 90%
+@media (max-width: 504px)
+  .Results
+    padding: 48px 0 27px 0
+  .title
+    font-size: 30px
+    line-height: 36px
+    max-width: 310px
