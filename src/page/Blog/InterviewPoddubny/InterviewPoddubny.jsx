@@ -1,5 +1,6 @@
 import React from 'react'
 import clsx from 'clsx'
+import { useTranslation } from 'react-i18next'
 import { Layout } from '../../../layout'
 import { Section } from '../../../ui/Section'
 import { Container } from '../../../ui/Container'
@@ -14,15 +15,15 @@ import decorIcon from './icon-decoration.svg'
 import iconFounder from './icon-founder.jpg'
 import s from './InterviewPoddubny.module.sass'
 
-export const InterviewPoddubny = ({
-  className,
-}) => {
+export const InterviewPoddubny = ({ className }) => {
+  const { t } = useTranslation()
+
   return (
     <Layout>
       <Section className={clsx(s.InterviewPoddubny, className)}>
         <Container>
           <SectionTitle className={s.InterviewPoddubny__title}>
-            Интервью с разработчиком Игорем Поддубным
+            {t('Poddubny.title')}
           </SectionTitle>
           <BcgAttachment className={s.InterviewPoddubny__laptop}>
             {' '}
@@ -33,15 +34,15 @@ export const InterviewPoddubny = ({
         <Container>
           <AuthorSaid className={s.InterviewPoddubny__description}>
             <p>
-              Игорь работает в международной IT-компании, разрабатывает приложения под Windows и Web, переехал из Санкт-Петербурга в Прагу, где сейчас живёт и работает.
+              {t('Poddubny.description.item_1')}
             </p>
             <p>
-              В конце текста советы, с чего начать новичку.
+              {t('Poddubny.description.item_2')}
             </p>
           </AuthorSaid>
           <AuthorSaid className={s.InterviewPoddubny__situation}>
             <p>
-              Я буду выкладывать интервью с разработчиками, в которых ребята расскажут, как они стартовали, через сколько стали зарабатывать нормальные деньги и с чего лучше начинать новичку.
+              {t('Poddubny.description.item_3')}
             </p>
           </AuthorSaid>
           <DecorLine decorIcon={decorIcon} />
@@ -50,8 +51,8 @@ export const InterviewPoddubny = ({
             alt="founder"
             width="80"
             height="80"
-            authorName="Евгений Гриценко"
-            notice="Основатель SaintCode Bootcamp"
+            authorName={t('Poddubny.authorName')}
+            notice={t('Poddubny.notice')}
           />
         </Container>
       </Section>
@@ -60,13 +61,15 @@ export const InterviewPoddubny = ({
           <div className={s.InterviewPoddubny__answers}>
             {interviewContent.map(item => (
               <InterviewPanel
+                keyTranslate="Poddubny"
                 {...item}
                 key={item.id}
               />
             ))}
           </div>
           <p className={s.InterviewPoddubny__post}>
-            P.S. Если интересна та же область программирования, можно задать вопросы
+            P.S. Если интересна та же область программирования, можно задать
+            вопросы
             {' '}
             <a href="https://vk.com/ipodd">
               лично
