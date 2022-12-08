@@ -8,9 +8,11 @@
         max-width: 1020px
 
     &__laptop
-        display: flex
         max-width: 1160px
-        background: url('./image-laptop.jpg') no-repeat center/cover #ccc
+        min-width: 300px
+        width: 100%
+        background: url('./image-laptop.jpg') no-repeat center #ccc
+        background-size: cover
         background-attachment: fixed
         & button
             position: absolute
@@ -74,5 +76,164 @@
             flex-wrap: wrap
             gap: 20px 40px
 
-    &__letter
-        width: 560px
+    //Responsive styles
+
+@media (width <= 1170px)
+    .frontendInterview
+        padding: 200px 42px 0
+
+        &__title
+            margin-bottom: 89px
+            max-width: 870px
+
+        &__begining
+            padding-top: 105px
+
+        &__description
+            padding: 0 90px
+            font-size: 18px
+            line-height: 1.55
+
+        &__situation
+            & p:first-child
+                font-size: 26px
+                line-height: 30px
+
+        &__code
+            margin-left: 90px
+            margin-right: 90px
+
+        &__training
+            padding-right: 32px
+            padding-left: 32px
+            &_title
+                max-width: 322px
+
+            &_items
+                gap: 40px
+
+        &__letter
+            margin: 0
+            max-width: 460px
+
+        &__laptop
+            position: initial
+            max-height: 400px
+            background-attachment: scroll
+
+@media (width <= 768px)
+    .frontendInterview
+        padding: 172px 74px 0
+
+        &__title
+            margin-bottom: 45px
+            padding-left: 40px
+            max-width: 420px
+
+        &__begining
+            padding-top: 95px
+
+        &__description
+            padding: 0 84px
+
+        &__code
+            padding: 39px 40px 39px
+            margin-left: 44px
+            margin-right: 44px
+
+        &__training
+            padding-top: 65px
+            padding-right: 84px
+            padding-left: 84px
+            
+            &_title
+                max-width: 443px
+                padding-left: 84px
+
+            &_items
+                display: block
+
+        &__letter
+            max-width: 100%
+            &:nth-child(even)
+                margin: 20px 0
+
+        &__laptop
+            max-height: 320px
+
+@media (width <= 425px)
+    .frontendInterview
+        padding: 49px 62.5px 0
+
+        &__title
+            margin-bottom: 45px
+            padding-left: 0
+
+        &__begining
+            padding-top: 45px
+
+        &__description
+            padding: 0 20px
+            font-size: 16px
+            font-weight: 400
+            line-height: 1.45
+
+        &__situation
+            & p:first-child
+                font-size: 24px
+                line-height: 30px
+
+        &__code
+            margin: 0 0 75px 0
+            padding: 20px
+
+        &__timing
+            & p:first-child
+                font-size: 24px
+                font-weight: 600
+                line-height: 28px
+
+        &__training
+            padding-top: 45px
+            padding-right: 20px
+            padding-left: 20px
+
+            &_title
+                padding-left: 0
+                max-width: 230px
+
+            &_items
+                display: block
+
+        &__letter
+            margin: 0
+            padding-top: 13.5px
+            padding-bottom: 13.5px
+            max-width: 100%
+            max-height: 67px
+            &:nth-child(even)
+                margin: 20px 0
+
+        &__laptop
+            position: initial
+            background-attachment: scroll
+        
+        &__playIcon
+            max-width: 80px
+
+@media (width <= 375px)
+    .frontendInterview
+        padding: 49px 37.5px 0
+        
+        &__letter
+            &:nth-child(n + 2)
+                padding-top: 6.5px
+                padding-bottom: 6.5px
+            
+@media (width <= 320px)
+    .frontendInterview
+        padding: 49px 10px 0
+       
+        
+        
+
