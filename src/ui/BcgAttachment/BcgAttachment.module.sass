@@ -2,6 +2,9 @@
     position: absolute
     background-attachment: fixed
 
+    &__container
+        position: relative
+
     &__bcg
         display: block
         max-width: 1160px
@@ -10,49 +13,9 @@
         height: auto
         visibility: hidden
 
-// Responsive
-
 @media (width <= 1170px)
     .BcgAttachment
-        position: initial
-        background-attachment: unset
+        &__bcg
+            width: 100%
 
-        & img
-            max-width: 100%
-            max-height: 400px
 
-@media (width <= 768px)
-    .BcgAttachment
-        & img
-            max-height: 320px
-
-@media (width <= 576px)
-    .BcgAttachment
-        & img
-            width: 556px
-            max-height: 180px
-
-@media (width <= 525px)
-    .BcgAttachment
-        & img
-            width: 505px            
-
-@media (width <= 475px)
-    .BcgAttachment
-        & img
-            width: 455px
-
-@media (width <= 425px)
-    .BcgAttachment
-        & img
-            width: 405px
-
-@media (width <= 375px)
-    .BcgAttachment
-        & img
-            width: 355px                
-
-@media (width <= 320px)
-    .BcgAttachment
-        & img
-            width: 300px
