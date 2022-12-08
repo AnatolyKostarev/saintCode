@@ -3,6 +3,9 @@
     background: rgba(72, 68, 57, 1)
     color: rgba(237, 237, 240, 1)
 
+    &__container
+        position: relative
+
     &__title
         margin-bottom: 89px
         max-width: 1000px
@@ -12,9 +15,11 @@
         background: rgba(63, 57, 72, 1)
 
     &__keyboard
-        display: flex
         max-width: 1160px
-        background: url('./image-keyboard.jpg') no-repeat center/cover #ccc
+        min-width: 300px
+        width: 100%
+        background: url('./image-keyboard.jpg') no-repeat center #ccc
+        background-size: cover
         background-attachment: fixed
         & button
             position: absolute
@@ -72,18 +77,18 @@
             justify-content: space-between
             align-items: flex-start
 
-    // &__letter
-    //     width: 560px
-
 // Responsive styles
 
 @media (width <= 1170px)
     .backendInterview
-        padding: 76px 42px 236px
+        padding: 200px 42px 0
 
         &__title
             margin-bottom: 89px
             max-width: 870px
+
+        &__begining
+            padding-top: 105px
 
         &__description
             padding: 0 90px
@@ -108,14 +113,22 @@
             &_items
                 gap: 0 40px
 
+        &__keyboard
+            position: initial
+            max-height: 400px
+            background-attachment: scroll
+
 @media (width <= 768px)
     .backendInterview
-        padding: 76px 74px 155px
+        padding: 172px 74px 0
 
         &__title
             margin-bottom: 45px
             padding-left: 40px
             max-width: 395px
+
+        &__begining
+            padding-top: 95px
 
         &__description
             padding: 0 84px
@@ -126,6 +139,7 @@
             margin-right: 44px
 
         &__training
+            padding-top: 65px
             padding-right: 84px
             padding-left: 84px
 
@@ -138,16 +152,20 @@
                 // gap: 20px 0
 
         &__letter
+            max-width: 100%
             &:first-child
                 margin-bottom: 20px
 
 @media (width <= 576px)
     .backendInterview
-        padding: 49px 58px 68px
+        padding: 125px 58px 0
 
         &__title
             margin-bottom: 45px
             padding-left: 0
+
+        &__begining
+            padding-top: 45px
 
         &__description
             padding: 0 20px
@@ -171,6 +189,7 @@
                 line-height: 28px
 
         &__training
+            padding-top: 45px
             padding-right: 20px
             padding-left: 20px
 
@@ -178,13 +197,17 @@
                 padding-left: 42px
 
         &__letter
+            padding-top: 13.5px
+            padding-bottom: 13.5px
             height: 67px
-            padding: 10px
-            
+
+        &__playIcon
+            max-width: 80px
+            height: auto
 
 @media (width <= 425px)
     .backendInterview
-        padding: 49px 62px 68px
+        padding: 125px 62.5px 0
 
         &__title
             margin-bottom: 45px
@@ -193,10 +216,24 @@
             font-size: 30px
             line-height: 36px
 
+        &__training
+            padding-top: 45px
+            &_title
+                padding-left: 0
+
 @media (width <= 375px)
     .backendInterview
-        padding: 49px 37px 68px
+        padding: 125px 37px 0
+
+        &__letter
+            &:first-child
+                padding-top: 6.5px
+                padding-bottom: 6.5px
 
 @media (width <= 320px)
     .backendInterview
-        padding: 49px 10px 68px
+        padding: 125px 10px 0
+        &__letter
+            &:last-child
+                padding-top: 6.5px
+                padding-bottom: 6.5px

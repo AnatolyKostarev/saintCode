@@ -114,7 +114,7 @@ export const BackendPage = ({ className }) => {
               show={coverLetter}
             >
               <TrainingItem show={coverLetter}>
-                { coverLetterContent }
+                {coverLetterContent}
               </TrainingItem>
             </SchoolItem>
             <SchoolItem
@@ -125,7 +125,7 @@ export const BackendPage = ({ className }) => {
               show={brief}
             >
               <TrainingItem show={brief}>
-                { briefContent }
+                {briefContent}
               </TrainingItem>
             </SchoolItem>
           </div>
