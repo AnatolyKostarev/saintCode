@@ -36,11 +36,11 @@
   pointer-events: none
   background-color: gray
   &__wrapper
-    width: 100px
-    height: 100px
+    width: max-content
+    height: max-content
 .result
   font-size: 15px
-  font-weight: 800
+  font-weight: 700
   text-align: left
   line-height: 1.55
   color: #fff
@@ -64,3 +64,48 @@
   align-items: end
   &__dots
     padding-bottom: 10px
+.cross
+  position: absolute
+  top: 15px
+  right: 15px
+  background: none
+  border: none
+  color: #FFF
+  font-size: 25px
+  line-height: 25px
+
+
+@media (max-width: 1241px)
+  .name
+    font-size: 24px
+    line-height: 30px
+  .age
+    font-size: 14px
+    line-height: 22px
+
+@media (max-width: 976px)
+
+
+@media (max-width: 662px)
+  .StoryCard
+    padding: 30px
+  .name
+    font-size: 16px
+    line-height: 20px
+    margin-bottom: 6px
+  .age
+    font-size: 12px
+    line-height: 17px
+  .student
+    gap: 0 9px
+    margin-bottom: 26px
+  .photo
+    width: 50px
+    height: 50px
+  .result
+    font-size: 18px
+    line-height: 1.45
+@media (max-width: 564px)
+  .StoryCard
+    width: 100vw
+    height: 100%

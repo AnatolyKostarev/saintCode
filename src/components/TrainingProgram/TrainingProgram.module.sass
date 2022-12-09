@@ -63,8 +63,6 @@
         &:last-child
             margin-bottom: 0
 
-.container
-    max-width: 1160px
 
 .border
     position: relative
@@ -91,21 +89,11 @@
 
 // Media quaries beginning
 
-@media (max-width: 1170px)
-    .border
-        position: static
-        &::before,
-        &::after
-            display: none
-
-
-@media (max-width: 1024px)
+@media (max-width: 1241px)
+    .container
+        max-width: 920px
     .TrainingProgram
-        padding: 96px 42px 70px
-
-@media (max-width: 768px)
-    .TrainingProgram
-        padding: 77px 74px 80px
+        padding: 96px 0 70px
 
         &__header
             flex-direction: column
@@ -148,7 +136,63 @@
         &__tasks
             padding: 0
 
-@media (max-width: 576px)
+    .border
+        position: static
+        &::before,
+        &::after
+            display: none
+
+@media (max-width: 976px)
+    .container
+        max-width: 620px
+    .TrainingProgram
+        padding: 77px 0 80px
+
+        &__header
+            flex-direction: column
+            margin-bottom: 57px
+            padding-bottom: 35px
+            & div
+                margin-top: 10px
+                flex-direction: row
+                align-items: center
+                & img
+                    display: block
+                    max-width: 209px
+                    max-height: 153px
+                & p
+                    max-width: 144px
+                    font-size: 20px
+                    font-weight: 400
+                    line-height: 34px
+            &_title
+                font-size: 42px
+                font-weight: 700
+                line-height: 50px
+                color: rgba(125, 143, 130, 1)
+
+        &__title
+            position: relative
+            margin-bottom: 33px
+            padding: 0
+            & p:first-child
+                max-width: 576px
+                font-size: 32px
+                font-weight: 400
+                line-height: 38px
+
+            & p:last-child
+                position: absolute
+                top: -42px
+                right: 0
+
+        &__tasks
+            padding: 0
+
+
+@media (max-width: 662px)
+    .container
+        max-width: 90%
     .TrainingProgram
         padding: 50px 10px
 

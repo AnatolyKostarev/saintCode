@@ -29,8 +29,8 @@ export const Home = () => {
         <Results />
         <DailySchedule />
         <StudentStory />
-        <SchoolComparison />
-        <Table />
+        {/* <SchoolComparison /> */}
+        {/* <Table /> */}
         <Price />
       </Layout>
     </>

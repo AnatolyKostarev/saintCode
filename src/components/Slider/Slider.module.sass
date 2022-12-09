@@ -2,7 +2,7 @@
   height: max-content
   width: 100%
   position: relative
-  margin-top: 60px
+  margin-top: 47px
   user-select: none
   touch-action: pan-y
   &__track
@@ -22,7 +22,7 @@
     padding: 10px
 .slide
   width: max-content
-  margin-right: 50px
+  margin-right: 20px
   transition: .4s
   &:first-child
     margin-left: calc((100vw - 1160px) / 2)
@@ -42,3 +42,43 @@
   max-height: 550px
 .transparent
   opacity: .5
+
+
+@media (max-width: 1241px)
+  .container
+    max-width: 940px
+  .Slider__pagination
+    margin: 30px auto 0
+  .closed
+    max-width: 440px
+  .slide
+    &:first-child
+      margin-left: calc((100vw - 940px) / 2)
+@media (max-width: 976px)
+  .container
+    max-width: 620px
+  .closed
+    max-width: 420px
+  .slide
+    margin-right: 40px
+    &:first-child
+      margin-left: calc((100vw - 620px) / 2)
+
+@media (max-width: 662px)
+  .container
+    max-width: 90%
+  .closed
+    max-width: 240px
+    max-height: 440px
+  .slide
+    margin-right: 20px
+    &:first-child
+      margin-left: calc((100vw - 90%) / 2)
+  .Slider
+    &__pagination
+      margin: 11px auto 0
+    &__btn
+      padding: 0
+  .question
+    font-size: 15px
+    line-height: 1.45

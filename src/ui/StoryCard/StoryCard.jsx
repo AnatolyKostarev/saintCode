@@ -1,6 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
 import s from './StoryCard.module.sass'
+import { Button } from '../Button'
 
 export const StoryCard = ({
   studentPhoto,
@@ -10,6 +11,7 @@ export const StoryCard = ({
   genderOption,
   className,
   isOpen,
+  setIsOpen,
   children,
 }) => {
   return (
@@ -26,6 +28,10 @@ export const StoryCard = ({
             {studentAge}
           </p>
         </div>
+        {isOpen
+          && (
+            <Button onClick={() => setIsOpen(!isOpen)} text="x" className={s.cross} />
+          )}
       </div>
       <div className={clsx(s.story)}>
         <strong className={clsx(s.result)}>

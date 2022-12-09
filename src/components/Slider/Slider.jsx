@@ -13,8 +13,19 @@ export const Slider = ({ className }) => {
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
   let [position, setPosition] = useState(0)
+  const { innerWidth: width } = window
+  const [slideWidth, setSlideWidth] = useState(() => {
+    if (width <= 1241) return 440
+    if (width <= 976) return 420
+    if (width <= 662) return 240
+    return 540
+  })
   const slider = useRef(null)
   const minSwipeDistance = 50
+
+  // if (width <= 1241) setSlideWidth(() => 440)
+  // if (width <= 976) setSlideWidth(() => 420)
+  // if (width <= 662) setSlideWidth(() => 240)
 
   const onTouchStart = e => {
     setTouchEnd(null)
@@ -25,12 +36,12 @@ export const Slider = ({ className }) => {
 
   const prevHandler = () => {
     if (position === 0) return null
-    setPosition(position += 565)
+    setPosition(position += slideWidth)
     return slider.current.childNodes.forEach(e => e.style = `transform: translateX(${position}px)`)
   }
   const nextHandler = () => {
-    if (position === -2260) return null
-    setPosition(position -= 565)
+    if (position === -(slideWidth * 4)) return null
+    setPosition(position -= slideWidth)
     return slider.current.childNodes.forEach(e => e.style = `transform: translateX(${position}px)`)
   }
 
@@ -81,7 +92,7 @@ export const Slider = ({ className }) => {
           </div>
         ))}
       </div>
-      <Container>
+      <Container className={s.container}>
         <div className={clsx(s.Slider__pagination)}>
           <input
             className={clsx(s.Slider__btn, { [s.transparent]: position >= 0 })}
@@ -100,22 +111,22 @@ export const Slider = ({ className }) => {
                       1
                     </span>
                   )
-                  case -565: return (
+                  case -(slideWidth): return (
                     <span>
                       2
                     </span>
                   )
-                  case -1130: return (
+                  case -((slideWidth * 2)): return (
                     <span>
                       3
                     </span>
                   )
-                  case -1695: return (
+                  case -(slideWidth * 3): return (
                     <span>
                       4
                     </span>
                   )
-                  case -2260: return (
+                  case -(slideWidth * 4): return (
                     <span>
                       5
                     </span>
@@ -156,6 +167,7 @@ export const Slider = ({ className }) => {
                 : 'Устроился фронтенд-разработчиком в '}
               key={elem.id}
               isOpen={isOpen}
+              setIsOpen={setIsOpen}
             >
               {elem.QA.map(e => (
                 <div key={e.answer}>

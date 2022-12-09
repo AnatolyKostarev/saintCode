@@ -9,8 +9,8 @@ import { Slider } from '../Slider'
 export const StudentStory = () => {
   return (
     <Section className={clsx(s.StudentStory)}>
-      <Container>
-        <SectionTitle>
+      <Container className={s.container}>
+        <SectionTitle className={s.title}>
           Истории студентов
         </SectionTitle>
       </Container>
