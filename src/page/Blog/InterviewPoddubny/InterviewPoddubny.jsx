@@ -45,8 +45,9 @@ export const InterviewPoddubny = ({ className }) => {
               {t('Poddubny.description.item_3')}
             </p>
           </AuthorSaid>
-          <DecorLine decorIcon={decorIcon} />
+          <DecorLine className={s.InterviewPoddubny__decorline} decorIcon={decorIcon} />
           <AuthorFooter
+            className={s.InterviewPoddubny__footer}
             avatar={iconFounder}
             alt="founder"
             width="80"
@@ -61,6 +62,7 @@ export const InterviewPoddubny = ({ className }) => {
           <div className={s.InterviewPoddubny__answers}>
             {interviewContent.map(item => (
               <InterviewPanel
+                className={s.InterviewPoddubny__panel}
                 keyTranslate="Poddubny"
                 {...item}
                 key={item.id}

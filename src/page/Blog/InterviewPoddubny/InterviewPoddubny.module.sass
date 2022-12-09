@@ -8,16 +8,12 @@
         max-width: 1020px
 
     &__laptop
-        display: flex
         max-width: 1160px
-        background: url('./image-interview.jpg') no-repeat center/cover #ccc
+        min-width: 300px
+        width: 100%
+        background: url('./image-interview.jpg') no-repeat center #ccc
+        background-size: cover
         background-attachment: fixed
-        & button
-            display: block
-            border: 0
-            transform: translate(-50%)
-            background: transparent
-            cursor: pointer
 
     &__begining
         padding: 270px 0 105px
@@ -61,3 +57,119 @@
         & a
             text-decoration: underline
             color: rgba(134, 152, 217, 1)
+
+// Responsive styles
+
+@media (width <= 1170px)
+    .InterviewPoddubny
+        padding: 200px 42px 0
+
+        &__title
+            margin-bottom: 89px
+            max-width: 620px
+
+        &__begining
+            padding: 60px 0 45px
+
+        &__description
+            margin: 0 0 75px 0
+            padding-left: 122px
+            font-size: 18px
+            line-height: 1.55
+            & p:first-child
+                max-width: 700px
+
+        &__situation
+            max-width: 780px
+            font-size: 26px
+            line-height: 30px
+
+        &__laptop
+            position: initial
+            max-height: 400px
+            background-attachment: scroll
+
+        &__decorline,
+        &__footer
+            max-width: 780px
+
+        &__container
+            padding: 0 122px
+
+@media (width <= 768px)
+    .InterviewPoddubny
+        padding: 172px 74px 0
+
+        &__title
+            margin-bottom: 45px
+            padding-left: 40px
+            max-width: 444px
+
+        &__laptop
+            max-height: 320px
+
+        &__begining
+            padding-right: 74px
+            padding-left: 74px
+
+        &__description
+            max-width: 600px
+            padding-left: 0
+
+        &__situation
+            font-size: 24px
+            line-height: 38px
+
+        &__container
+            padding: 0 64px
+
+@media (width <= 576px)
+    .InterviewPoddubny
+        padding: 125px 58px 0
+
+        &__title
+            margin-bottom: 10px
+            padding-left: 0
+            max-width: 430px
+
+        &__laptop
+            max-height: 260px
+
+        &__begining
+            padding-right: 20px
+            padding-left: 20px
+
+        &__container
+            padding: 0 20px
+
+        &__post
+            font-size: 16px
+            line-height: 1.45
+
+@media (width <= 425px)
+    .InterviewPoddubny
+        padding-left: 37px
+        padding-right: 37px
+
+        &__title
+            max-width: 286px
+
+        &__laptop
+            max-height: 180px
+
+        &__begining
+            padding-top: 30px
+            padding-bottom: 30px
+
+        &__description
+            margin-bottom: 45px
+            font-size: 16px
+            line-height: 1.45
+
+        &__interview
+            padding: 59px 0 45px
+
+@media (width <= 320px)
+    .InterviewPoddubny
+        padding-left: 10px
+        padding-right: 10px
