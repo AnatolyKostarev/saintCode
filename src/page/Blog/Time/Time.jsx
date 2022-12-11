@@ -11,6 +11,7 @@ import { DecorLine } from '../ui/DecorLine/DecorLine'
 import { AuthorFooter } from '../ui/AuthorFooter/AuthorFooter'
 import { BlogPanel } from '../ui/BlogPanel/BlogPanel'
 import time from './bcg-time.jpg'
+import clock from './bcg-clock.jpg'
 import decoration from './icon-decoration.svg'
 import avatar from './icon-Poddubny.png'
 import s from './Time.module.sass'
@@ -27,7 +28,10 @@ export const Time = ({ className }) => {
           <p className={s.Time__subtitle}>
             {t('Time.subtitle')}
           </p>
-          <BcgAttachment className={s.Time__bcg_time} img={time} />
+          <BcgAttachment
+            className={s.Time__bcg_time}
+            img={time}
+          />
         </Container>
       </Section>
       <Section className={s.Time__begining}>
@@ -137,7 +141,10 @@ export const Time = ({ className }) => {
               {t('Time.message.item_11')}
             </p>
           </AuthorSaid>
-          <BcgAttachment className={s.Time__bcg_clock} />
+          <BcgAttachment
+            className={s.Time__bcg_clock}
+            img={clock}
+          />
         </Container>
       </Section>
       <Section className={s.Time__conclusion}>
@@ -158,9 +165,8 @@ export const Time = ({ className }) => {
             <p>
               {t('Time.message.item_16')}
               {' '}
-              JavaScript:
-              moment().add(10, &apos;years&apos;); в C#:
-              DateTime.Now.AddYears(10).
+              JavaScript: moment().add(10,
+              &apos;years&apos;); в C#: DateTime.Now.AddYears(10).
             </p>
             <p>
               {t('Time.message.item_17')}
