@@ -44,7 +44,7 @@ export const InterviewPolyakov = ({ className }) => {
               {t('Polyakov.description.item_3')}
             </p>
           </AuthorSaid>
-          <DecorLine decorIcon={decorIcon} />
+          <DecorLine className={s.IntreviewPolyakov__decorline} decorIcon={decorIcon} />
           <AuthorFooter
             avatar={iconFounder}
             alt="founder"

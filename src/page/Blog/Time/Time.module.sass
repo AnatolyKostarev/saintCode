@@ -15,12 +15,19 @@
 
     &__bcg
         &_time
+            max-width: 1160px
+            min-width: 300px
+            width: 100%
             background: url('./bcg-time.jpg') no-repeat center #ccc
             background-size: cover
             background-attachment: fixed
 
         &_clock
-            background: url('./bcg-clock.jpg') no-repeat center/cover #ccc
+            max-width: 1160px
+            min-width: 300px
+            width: 100%
+            background: url('./bcg-clock.jpg') no-repeat center #ccc
+            background-size: cover
             background-attachment: fixed
 
     &__begining
@@ -79,10 +86,16 @@
 
 @media ( width <= 1170px)
     .Time
-        padding: 76px 42px 236px
+        padding: 196px 42px 236px
 
         &__subtitle
             margin-bottom: 56px
+
+        &__bcg
+            &_time
+                max-height: 400px
+            &_clock
+                max-height: 400px
 
         &__begining
             padding: 295px 42px 45px
@@ -108,11 +121,11 @@
                 padding-right: 168px
 
         &__conclusion
-            padding: 70px 42px 100px
+            padding: 290px 42px 100px
 
 @media ( width <= 768px)
     .Time
-        padding: 76px 74px 155px
+        padding: 173px 74px 155px
 
         &__title
             margin-bottom: 17px
@@ -125,10 +138,12 @@
 
         &__bcg
             &_time
-                background-attachment: unset
+                max-height: 320px
+            &_clock
+                max-height: 320px
 
         &__begining
-            padding: 285px 74px 45px
+            padding: 295px 74px 45px
 
         &__opinion
             padding: 27px 0 24px
@@ -151,34 +166,45 @@
                 padding-right: 0
 
         &__conclusion
-            padding: 70px 90px 84px 80px
+            padding: 250px 90px 84px 80px
 
         &__authFooter
             margin: 0
 
 @media ( width <= 576px)
     .Time
-        padding: 49px 10px 68px
+        padding: 117px 10px 80px
 
         &__subtitle
             margin-bottom: 22px
 
+        &__bcg
+            &_time,
+            &_clock
+                background-attachment: scroll
+                max-height: 180px
+
         &__begining
-            padding: 120px 10px 30px
+            padding: 130px 20px 30px
+
+        &__opinion
+            padding: 56px 0 58px
 
         &__opinion,
         &__authorfooter
             margin: 0
 
         &__middle
-            padding: 70px 20px 220px
+            padding: 70px 10px 137px
+           
 
         &__message
             margin-bottom: 82px
-            padding: 0
+            padding: 0 10px
             font-size: 16px
             line-height: 23px
             &_last
+                padding: 0 10px
                 font-size: 16px
                 line-height: 23px
 
