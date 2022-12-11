@@ -81,14 +81,14 @@
 
 @media (width <= 1170px)
     .backendInterview
-        padding: 200px 42px 0
+        padding: 196px 42px 236px
 
         &__title
-            margin-bottom: 89px
+            margin-bottom: 56px
             max-width: 870px
 
         &__begining
-            padding-top: 105px
+            padding: 295px 42px 45px
 
         &__description
             padding: 0 90px
@@ -114,13 +114,11 @@
                 gap: 0 40px
 
         &__keyboard
-            position: initial
             max-height: 400px
-            background-attachment: scroll
 
 @media (width <= 768px)
     .backendInterview
-        padding: 172px 74px 0
+        padding: 173px 74px 155px
 
         &__title
             margin-bottom: 45px
@@ -128,7 +126,7 @@
             max-width: 395px
 
         &__begining
-            padding-top: 95px
+            padding: 295px 74px 45px
 
         &__description
             padding: 0 84px
@@ -149,7 +147,7 @@
 
             &_items
                 display: block
-        
+
         &__keyboard
             max-height: 320px
 
@@ -158,16 +156,23 @@
             &:first-child
                 margin-bottom: 20px
 
+        &__keyboard
+            max-height: 320px
+
 @media (width <= 576px)
     .backendInterview
-        padding: 125px 58px 0
+        padding: 117px 10px 80px
 
         &__title
             margin-bottom: 45px
             padding-left: 0
 
+        &__keyboard
+            max-height: 180px
+            background-attachment: scroll
+
         &__begining
-            padding-top: 45px
+            padding: 130px 20px 30px
 
         &__description
             padding: 0 20px
@@ -209,14 +214,36 @@
 
 @media (width <= 425px)
     .backendInterview
-        padding: 125px 62.5px 0
-
         &__title
             margin-bottom: 45px
             padding-left: 0
             max-width: 285px
             font-size: 30px
             line-height: 36px
+
+        &__begining
+            padding: 130px 20px 30px
+
+        &__description
+            padding: 0 20px
+            font-size: 16px
+            font-weight: 400
+            line-height: 1.45
+
+        &__situation
+            & p:first-child
+                font-size: 24px
+                line-height: 30px
+
+        &__code
+            margin: 0 0 75px 0
+            padding: 20px
+
+        &__timing
+            & p:first-child
+                font-size: 24px
+                font-weight: 600
+                line-height: 28px
 
         &__training
             padding-top: 45px
@@ -225,8 +252,6 @@
 
 @media (width <= 375px)
     .backendInterview
-        padding: 125px 37px 0
-
         &__letter
             &:first-child
                 padding-top: 6.5px
@@ -234,7 +259,6 @@
 
 @media (width <= 320px)
     .backendInterview
-        padding: 125px 10px 0
         &__letter
             &:last-child
                 padding-top: 6.5px
