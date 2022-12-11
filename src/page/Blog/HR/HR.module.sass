@@ -56,8 +56,11 @@
             line-height: 31px
 
         &_structure
-            @extend .HR__candidate
+            max-width: 1160px
+            min-width: 300px
+            width: 100%
             background: url('./img/Group2068.jpg') no-repeat center #ccc
+            background-size: cover
             background-attachment: scroll
 
     &__position
@@ -114,17 +117,15 @@
             padding-left: 100px
             max-width: 960px
 
-    &__blog
-        margin-bottom: 45px
-        padding: 60px
-
-        & p
-            font-size: 18px
-            font-weight: 600
-            line-height: 1.6
+        &_blog
+            margin-bottom: 45px
+            padding: 60px
 
     &__stuff
         padding: 113px 0 60px
+        font-size: 18px
+        font-weight: 400
+        line-height: 1.55
         background: rgba(35, 39, 53, 1)
 
         &_title
@@ -216,27 +217,25 @@
 
 @media (width <= 1170px)
     .HR
-        padding: 200px 42px 0
+        padding: 196px 42px 236px
 
         &__title
-            margin-bottom: 89px
+            margin-bottom: 56px
             max-width: 790px
 
         &__candidate
-            position: initial
             max-height: 400px
-            background-attachment: scroll
 
         &__begining
-            padding: 60px 0 45px
+            padding: 286px 42px 45px
 
         &__description
-            margin: 0 0 51px 0
-            padding-left: 122px
+            margin-bottom: 51px
             font-size: 18px
             font-weight: 400
             line-height: 1.55
-            & p:first-child
+            & p
+                margin: 0 auto
                 max-width: 780px
 
         &__situation
@@ -254,7 +253,7 @@
             margin-bottom: 0
 
         &__origins
-            padding: 105px 0
+            padding: 105px 42px 236px
 
             &_title
                 padding-left: 0
@@ -263,7 +262,7 @@
                 font-size: 60px
                 font-weight: 600
                 line-height: 1.23
-            
+
             &_article
                 padding-left: 0
                 margin: 0 auto 111px
@@ -273,4 +272,363 @@
                 & p
                     max-width: 700px
 
-        
+            &_structure
+                max-height: 400px
+
+        &__position
+            padding: 248px 42px 60px
+            font-size: 18px
+            line-height: 1.55
+
+            &_preface,
+            &_title,
+            &_quontity
+                padding: 0
+                margin: 0 auto
+                max-width: 780px
+
+            &_title
+                margin-top: 98px
+                margin-bottom: 33px
+
+            &_quontity
+                margin-bottom: 66px
+
+            &_statement,
+            &_growth,
+            &_problem
+                padding: 0
+                margin: 0 auto 66px
+                max-width: 780px
+
+            &_how
+                padding: 0
+                margin: 0 auto 60px
+                max-width: 780px
+                font-size: 26px
+                line-height: 1.17
+
+            &_problem
+                margin-bottom: 6px
+
+        &__stuff
+            padding: 113px 42px 105px
+
+            &_title
+                padding: 0
+                margin: 0 auto 39px
+                max-width: 780px
+                font-size: 60px
+                line-height: 1.13
+
+            &_subtitle
+                padding: 0 80px 0 0
+                margin: 0 auto 60px
+                max-width: 780px
+
+            &_rating,
+            &_expiarence
+                padding: 0
+                margin: 0 auto 45px
+                max-width: 780px
+
+            &_text
+                padding: 0
+                margin: 0 auto 60px
+                max-width: 780px
+
+            &_blog
+                padding: 40px
+                margin-bottom: 30px
+                max-width: 860px
+                &:last-child
+                    margin-bottom: 0
+
+        &__terms
+            padding: 113px 42px 66px
+            font-size: 18px
+            font-weight: 400
+            line-height: 1.55
+
+            &_title
+                padding: 0
+                margin: 0 auto 33px
+                max-width: 780px
+                font-size: 60px
+                line-height: 1.23
+
+            &_subtitle
+                padding: 0
+                margin: 0 auto 60px
+                max-width: 780px
+
+            &_blog
+                padding: 40px
+                margin-bottom: 45px
+                max-width: 860px
+
+            &_salary
+                padding: 0
+                margin: 0 auto 45px
+                max-width: 780px
+
+            &_description
+                padding: 0
+                margin: 0 auto
+                max-width: 780px
+
+        &__conclution
+            padding: 113px 42px 105px
+            font-size: 18px
+            font-weight: 400
+            line-height: 1.55
+
+            &_title
+                padding: 0
+                margin: 0 auto 33px
+                max-width: 780px
+                font-size: 60px
+                line-height: 1.23
+
+            &_description
+                padding: 0
+                margin: 0 auto
+                max-width: 780px
+
+@media (width <= 768px)
+    .HR
+        padding: 173px 74px 155px
+
+        &__title
+            margin-bottom: 45px
+            padding-left: 40px
+            max-width: 440px
+
+        &__candidate
+            max-height: 320px
+            background-attachment: scroll
+
+        &__begining
+            padding: 260px 74px 45px
+
+        &__origins
+            padding: 113px 74px 186px
+            &_title,
+            &_article
+                max-width: 600px
+
+            &_structure
+                max-height: 320px
+
+        &__position
+            padding: 188px 0 60px
+            &_blog
+                max-width: 680px
+                padding: 40px
+
+            &_preface,
+            &_title,
+            &_quontity,
+            &_statement,
+            &_how,
+            &_problem
+                max-width: 600px
+
+        &__stuff
+            padding: 113px 0 105px
+
+            &_title,
+            &_subtitle,
+            &_text
+                padding: 0
+                max-width: 600px
+
+            &_expiarence
+                & p
+                    padding: 0
+                    max-width: 600px
+
+            &_blogs
+                margin: 0 auto
+                max-width: 680px
+
+        &__terms
+            padding: 113px 0 66px
+
+            &_title,
+            &_subtitle,
+            &_description
+                padding: 0
+                max-width: 600px
+
+            &_blog
+                margin: 0 auto 40px
+                max-width: 680px
+
+            &_salary
+                & p
+                    margin: 0 auto 45px
+                    padding: 0
+                    max-width: 600px
+
+        &__conclution
+            &_title,
+            &_description
+                padding: 0
+                max-width: 600px
+
+@media (width <= 576px)
+    .HR
+        padding: 117px 10px 80px
+
+        &__title
+            padding: 0
+            margin-bottom: 60px
+            max-width: 285px
+            font-size: 30px
+            font-weight: 800
+            line-height: 36px
+
+        &__candidate
+            max-height: 180px
+
+        &__begining
+            padding: 130px 20px 30px
+
+        &__origins
+            padding: 53px 10px 80px
+
+            &_title
+                padding: 0 10px
+
+            &_article
+                margin: 0 auto 50px
+                padding: 0 10px
+
+            &_structure
+                max-height: 180px
+
+        &__position
+            padding: 160px 0 45px
+
+            &_preface
+                max-width: 280px
+
+            &_title
+                padding: 0 20px
+                font-size: 30px
+                line-height: 1.23
+
+            &_quontity
+                margin-bottom: 21px
+                padding: 0 20px
+                font-size: 16px
+                line-height: 1.45
+
+            &_blog
+                padding: 20px
+                margin-bottom: 23px
+                font-size: 18px
+                line-height: 1.6
+
+            &_statement
+                margin-bottom: 23px
+                padding: 0 20px
+                font-size: 16px
+                line-height: 1.45
+
+            &_growth
+                margin-bottom: 23px
+
+            &_how
+                padding: 0 20px
+                font-size: 24px
+
+            &_problem
+                padding: 0 20px
+                font-size: 18px
+                line-height: 1.6
+
+        &__stuff
+            padding: 53px 0 45px
+
+            &_title
+                padding: 0 20px
+                margin-bottom: 24px
+                font-size: 30px
+                line-height: 1.23
+
+            &_subtitle
+                margin-bottom: 15px
+                padding: 0 20px
+                font-size: 16px
+                line-height: 1.45
+
+            &_text
+                margin-bottom: 23px
+                padding: 0 20px
+                font-size: 16px
+                line-height: 1.45
+
+            &_expiarence
+                font-size: 16px
+                line-height: 1.45
+                & p
+                    padding: 0 20px
+                    margin-bottom: 30px
+
+            &_blog
+                padding: 20px
+                margin-bottom: 23px
+                font-size: 18px
+                line-height: 1.6
+                &:last-child
+                    margin-bottom: 0
+
+        &__terms
+            padding: 53px 0 21px
+
+            &_title
+                padding: 0 20px
+                margin-bottom: 33px
+                font-size: 30px
+                line-height: 1.23
+
+            &_subtitle
+                margin-bottom: 21px
+                padding: 0 20px
+                font-size: 16px
+                line-height: 1.45
+
+            &_blog
+                padding: 20px
+                margin-bottom: 23px
+                font-size: 18px
+                line-height: 1.6
+
+            &_salary
+                margin-bottom: 23px
+                font-size: 16px
+                line-height: 1.45
+                & p
+                    padding: 0 20px
+                    margin-bottom: 21px
+
+            &_description
+                padding: 0 20px
+                font-size: 16px
+                line-height: 1.45
+
+        &__conclution
+            padding: 53px 0 51px
+
+            &_title
+                padding: 0 20px
+                margin-bottom: 26px
+                font-size: 30px
+                line-height: 1.23
+
+            &_description
+                padding: 0 20px
+                font-size: 16px
+                line-height: 1.45
