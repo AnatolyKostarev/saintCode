@@ -10,8 +10,6 @@ import { AuthorSaid } from '../ui/AuthorSaid/AuthorSaid'
 import { DecorLine } from '../ui/DecorLine/DecorLine'
 import { AuthorFooter } from '../ui/AuthorFooter/AuthorFooter'
 import { BlogPanel } from '../ui/BlogPanel/BlogPanel'
-import time from './bcg-time.jpg'
-import clock from './bcg-clock.jpg'
 import decoration from './icon-decoration.svg'
 import avatar from './icon-Poddubny.png'
 import s from './Time.module.sass'
@@ -30,7 +28,6 @@ export const Time = ({ className }) => {
           </p>
           <BcgAttachment
             className={s.Time__bcg_time}
-            img={time}
           />
         </Container>
       </Section>
@@ -143,7 +140,6 @@ export const Time = ({ className }) => {
           </AuthorSaid>
           <BcgAttachment
             className={s.Time__bcg_clock}
-            img={clock}
           />
         </Container>
       </Section>
