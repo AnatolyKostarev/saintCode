@@ -1,4 +1,6 @@
-import React, { useRef, useState } from 'react'
+import React, {
+  useEffect, useLayoutEffect, useRef, useState,
+} from 'react'
 import clsx from 'clsx'
 import s from './Slider.module.sass'
 import arrow from './Vector.svg'
@@ -14,18 +16,16 @@ export const Slider = ({ className }) => {
   const [touchEnd, setTouchEnd] = useState(null)
   let [position, setPosition] = useState(0)
   const { innerWidth: width } = window
-  const [slideWidth, setSlideWidth] = useState(() => {
-    if (width <= 1241) return 440
-    if (width <= 976) return 420
-    if (width <= 662) return 240
-    return 540
-  })
+  const [slideWidth, setSlideWidth] = useState(540)
   const slider = useRef(null)
+  const slideRef = useRef(null)
   const minSwipeDistance = 50
 
-  // if (width <= 1241) setSlideWidth(() => 440)
-  // if (width <= 976) setSlideWidth(() => 420)
-  // if (width <= 662) setSlideWidth(() => 240)
+  const slideResize = () => {
+    setSlideWidth(slideRef.current.clientWidth)
+  }
+
+  useEffect(() => slideResize(), [])
 
   const onTouchStart = e => {
     setTouchEnd(null)
@@ -69,6 +69,7 @@ export const Slider = ({ className }) => {
               setSelectID(student.id)
               setIsOpen(true)
             }}
+            ref={slideRef}
           >
             <StoryCard
               {...student}
@@ -143,7 +144,7 @@ export const Slider = ({ className }) => {
             </span>
           </div>
           <input
-            className={clsx(s.Slider__btn, { [s.transparent]: position <= -2260 })}
+            className={clsx(s.Slider__btn, { [s.transparent]: position <= -slideWidth * 4 })}
             disabled={position <= -2260}
             onClick={nextHandler}
             style={{ transform: 'rotate(-180deg)' }}
