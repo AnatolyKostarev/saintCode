@@ -26,7 +26,7 @@ export const HR = ({ className }) => {
           <SectionTitle className={s.HR__title}>
             Кадровый голод в России на IT-специалистов
           </SectionTitle>
-          <BcgAttachment className={s.HR__candidate}> </BcgAttachment>
+          <BcgAttachment className={s.HR__candidate} />
         </Container>
       </Section>
       <Section className={s.HR__begining}>
@@ -69,14 +69,12 @@ export const HR = ({ className }) => {
           </SectionTitle>
           <div className={s.HR__origins_article}>
             {origins.map(paragraph => (
-              <p>
+              <p key={paragraph}>
                 {paragraph}
               </p>
             ))}
           </div>
-          <BcgAttachment className={s.HR__origins_structure}>
-            {' '}
-          </BcgAttachment>
+          <BcgAttachment className={s.HR__origins_structure} />
         </Container>
       </Section>
       <Section className={s.HR__position}>
@@ -97,7 +95,7 @@ export const HR = ({ className }) => {
             Фонда Развития Интернет-Инициатив (ФРИИ) говорится:
           </p>
           <BlogPanel
-            className={s.HR__blog}
+            className={s.HR__position_blog}
             background="#2a2533"
           >
             <p>
@@ -137,7 +135,7 @@ export const HR = ({ className }) => {
             яма». Простыми словами — родилось слишком мало детей:
           </p>
           <BlogPanel
-            className={s.HR__blog}
+            className={s.HR__position_blog}
             background="#2a2533"
           >
             <p>
@@ -204,7 +202,7 @@ export const HR = ({ className }) => {
           </div>
           <div className={s.HR__stuff_blogs}>
             <BlogPanel
-              className={s.HR__blog}
+              className={s.HR__stuff_blog}
               background="#161821"
             >
               <p>
@@ -212,7 +210,7 @@ export const HR = ({ className }) => {
               </p>
             </BlogPanel>
             <BlogPanel
-              className={s.HR__blog}
+              className={s.HR__stuff_blog}
               background="#161821"
             >
               <p>
@@ -220,7 +218,7 @@ export const HR = ({ className }) => {
               </p>
             </BlogPanel>
             <BlogPanel
-              className={s.HR__blog}
+              className={s.HR__stuff_blog}
               background="#161821"
             >
               <p>
@@ -228,7 +226,7 @@ export const HR = ({ className }) => {
               </p>
             </BlogPanel>
             <BlogPanel
-              className={s.HR__blog}
+              className={s.HR__stuff_blog}
               background="#161821"
             >
               <p>
@@ -247,8 +245,8 @@ export const HR = ({ className }) => {
             В большинстве случаев это стандартная пятидневка в офисе.
           </p>
           <BlogPanel
-            className={s.HR__blog}
-            background="#161821"
+            className={s.HR__terms_blog}
+            background="#2a2533"
           >
             <p>
               Гибкий график предлагался только в 8,5% объявлений, удалённая работа — в 9% («Яндекс» и HH, 2018).
