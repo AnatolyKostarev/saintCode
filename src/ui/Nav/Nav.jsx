@@ -4,28 +4,29 @@ import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
 import s from './Nav.module.sass'
 
-export const Nav = () => {
+export const Nav = ({ className }) => {
   const { t } = useTranslation()
+
   return (
     <nav className={clsx(s.Nav)}>
-      <ul className={clsx(s.list)}>
-        <li>
-          <Link to="/school">
+      <ul className={clsx(s.Nav__list, className)}>
+        <li className={clsx(s.Nav__item)}>
+          <Link className={s.lnk} to="/school">
             {t('Nav.school')}
           </Link>
         </li>
-        <li>
-          <Link to="/program">
+        <li className={clsx(s.Nav__item)}>
+          <Link className={s.lnk} to="/program">
             {t('Nav.program')}
           </Link>
         </li>
-        <li>
-          <Link to="/faq">
+        <li className={clsx(s.Nav__item)}>
+          <Link className={s.lnk} to="/faq">
             {t('Nav.faq')}
           </Link>
         </li>
-        <li>
-          <Link to="/blog">
+        <li className={clsx(s.Nav__item)}>
+          <Link className={s.lnk} to="/blog">
             {t('Nav.blog')}
           </Link>
         </li>

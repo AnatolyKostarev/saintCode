@@ -43,5 +43,6 @@ module.exports = {
     'no-useless-escape': 'off',
     'prefer-const': 'warn',
     'no-return-assign': 'warn',
+    'no-restricted-globals': 'warn',
   },
 }

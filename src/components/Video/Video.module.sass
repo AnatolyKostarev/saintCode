@@ -10,7 +10,7 @@
     position: relative
     z-index: 1
     &::after
-      content: url("https://upload.wikimedia.org/wikipedia/commons/b/b8/YouTube_Logo_2017.svg")
+      content: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='88' viewBox='3 0 505 220'%3E%3Cpath fill='%23fff' d='M29 175v-55L4 40h21l14 52.663L53 40h21l-25 80v55zm41-34.5V108q0-35 27-35t27 35v32.5q0 36-27 36t-27-36zm19 8.5q0 11 8 11t8-11v-47.7q0-11-8-11t-8 11zm49 6V74h19v80q0 5.2 3 5.7 5.2 1 12-8.7V74h19v101h-19v-11q-10 12.4-20 12.7-14 0-14-21zM251 9q-36 1-42 42a570 570 0 0 0 0 119q6 41 42 42a1820 1820 0 0 0 209 0q36-1 42-42a570 570 0 0 0 0-119q-6-41-42-42a1820 1820 0 0 0-209 0zm1 166V60h-21V41h63v19h-22v115zm39 0V75h19v79q0 5.2 3 5.7 5.2 1 12-8.7V75h19v100h-19v-11q-10 12.4-20 12.7-14 0-14-21zm68 0V41h18v43.5q9-11 19-11 17 0 17 30v46.9q0 26-17 26-9 0-19-11.5V175zm18-20a19 11 65 0 0 17-8V99a19 11 120 0 0-17-4.5zm48-12v-34.5q0-34 27.5-35 27.5 1 27.5 35V128h-36v20q0 12 9 12 8 0 8-11v-9h19v6q0 30-27.5 30.5-26-1-27.5-31zm19-30h17v-13q0-10-8.5-10t-8.5 10z'/%3E%3C/svg%3E")
       width: auto
       height: auto
       position: absolute
@@ -23,3 +23,43 @@
     position: absolute
     top: 0
     left: 0
+@media (max-width: 1241px)
+  .Video
+    &__container
+      width: 703px
+      height: 439px
+    &__frame
+      width: 703px
+      height: 439px
+@media (max-width: 976px)
+  .Video
+    &__container
+      width: 100%
+      height: 432px
+    &__frame
+      width: 100%
+      height: 432px
+@media (max-width: 696px)
+  .Video
+    &__container
+      width: 100%
+      height: 360px
+    &__frame
+      width: 100%
+      height: 360px
+@media (max-width: 604px)
+  .Video
+    &__container
+      width: 100%
+      height: 300px
+    &__frame
+      width: 100%
+      height: 300px
+@media (max-width: 474px)
+  .Video
+    &__container
+      width: 100%
+      height: 220px
+    &__frame
+      width: 100%
+      height: 220px

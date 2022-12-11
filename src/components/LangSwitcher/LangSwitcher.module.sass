@@ -1,8 +1,8 @@
 .LangSwitcher
   position: absolute
-  right: 40px
-  top: 52px
-  z-index: 10
+  right: 30px
+  top: 42px
+  z-index: 110
   &__btn
     font-size: 16px
     font-weight: 700
@@ -11,3 +11,25 @@
     color: rgba(255, 255, 255, 1)
     background: transparent
     z-index: 100
+
+    padding: 10px
+  &__eng
+    &::after
+      content: ''
+      display: block
+      width: 30px
+      height: 1px
+      background-color: #FFF
+  &__ru
+    &::after
+      content: ''
+      display: block
+      width: 19px
+      height: 1px
+      background-color: #FFF
+      margin-left: auto
+
+@media (max-width: 1470px)
+  .LangSwitcher
+    position: static
+

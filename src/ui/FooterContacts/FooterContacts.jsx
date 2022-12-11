@@ -9,7 +9,7 @@ import { FooterLinks } from '../FooterLinks/FooterLinks'
 import { SocialBlock } from '../SocialBlock/SocialBlock'
 import fb from './fb.svg'
 import vk from './vk.svg'
-import inst from './inst.svg'
+import tg from './tg.svg'
 import s from './FooterContacts.module.sass'
 
 export const FooterContacts = ({ className }) => {
@@ -17,7 +17,7 @@ export const FooterContacts = ({ className }) => {
     <div className={clsx(s.FooterContacts, className)}>
       <div className={clsx(s.inner__left)}>
         <Phone className={s.phone__size} />
-        <Email />
+        <Email className={s.email} />
         <div className={clsx(s.address__info)}>
           <Address
             city="Санкт-Петербург"
@@ -30,7 +30,7 @@ export const FooterContacts = ({ className }) => {
       </div>
       <div className={clsx(s.inner__right)}>
         <FooterLinks />
-        <SocialBlock vk={vk} fb={fb} inst={inst} />
+        <SocialBlock vk={vk} fb={fb} tg={tg} />
       </div>
     </div>
   )

@@ -11,7 +11,7 @@ export const Results = () => {
     <Section className={s.Results}>
       <Container className={s.Results__container}>
         <div className={s.left}>
-          <SectionTitle>
+          <SectionTitle className={s.title}>
             Что ты получишь
             {' '}
             <span className="transparent--blue">

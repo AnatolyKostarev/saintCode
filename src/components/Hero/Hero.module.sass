@@ -3,7 +3,7 @@
   padding-bottom: 278px
   background-color: #39483d
   width: 100%
-  height: 820px
+  height: 900px
   background-repeat: no-repeat
   background-size: cover
   background-position: center center
@@ -17,3 +17,39 @@
 .mark
   color: rgba(115, 138, 218, 0.7)
 
+@media (max-width: 1241px)
+  .Hero
+    padding-top: 167px
+    padding-bottom: 155px
+    height: 700px
+    &__subtitle
+      font-size: 48px
+      line-height: 58px
+      max-width: 665px
+  .container
+    max-width: 940px
+@media (max-width: 976px)
+  .Hero
+    padding-top: 200px
+    padding-bottom: 401px
+    height: 1024px
+    &__subtitle
+      font-size: 40px
+      line-height: 48px
+  .container
+    max-width: 620px
+@media (max-width: 683px)
+  .Hero
+    &__subtitle
+      max-width: 85%
+  .container
+    max-width: 90%
+@media (max-width: 564px)
+  .Hero
+    padding-top: 114px
+    padding-bottom: 88px
+    height: 568px
+    &__subtitle
+      font-size: 24px
+      line-height: 29px
+      max-width: 245px

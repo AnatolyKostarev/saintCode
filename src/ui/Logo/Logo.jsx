@@ -7,9 +7,9 @@ import s from './Logo.module.sass'
 export const Logo = ({ className }) => {
   return (
     <Link to="/">
-      <div className={clsx(s.Logo, className)}>
+      <div className={clsx(s.Logo)}>
         <img
-          className={clsx(s.logo__img)}
+          className={clsx(s.logo__img, className)}
           src={schoolLogo}
           alt="SaintCode - logo"
         />

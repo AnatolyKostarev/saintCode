@@ -1,4 +1,6 @@
-import React, { useRef, useState } from 'react'
+import React, {
+  useEffect, useLayoutEffect, useRef, useState,
+} from 'react'
 import clsx from 'clsx'
 import s from './Slider.module.sass'
 import arrow from './Vector.svg'
@@ -13,8 +15,17 @@ export const Slider = ({ className }) => {
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
   let [position, setPosition] = useState(0)
+  const { innerWidth: width } = window
+  const [slideWidth, setSlideWidth] = useState(540)
   const slider = useRef(null)
+  const slideRef = useRef(null)
   const minSwipeDistance = 50
+
+  const slideResize = () => {
+    setSlideWidth(slideRef.current.clientWidth)
+  }
+
+  useEffect(() => slideResize(), [])
 
   const onTouchStart = e => {
     setTouchEnd(null)
@@ -25,12 +36,12 @@ export const Slider = ({ className }) => {
 
   const prevHandler = () => {
     if (position === 0) return null
-    setPosition(position += 565)
+    setPosition(position += slideWidth)
     return slider.current.childNodes.forEach(e => e.style = `transform: translateX(${position}px)`)
   }
   const nextHandler = () => {
-    if (position === -2260) return null
-    setPosition(position -= 565)
+    if (position === -(slideWidth * 4)) return null
+    setPosition(position -= slideWidth)
     return slider.current.childNodes.forEach(e => e.style = `transform: translateX(${position}px)`)
   }
 
@@ -58,6 +69,7 @@ export const Slider = ({ className }) => {
               setSelectID(student.id)
               setIsOpen(true)
             }}
+            ref={slideRef}
           >
             <StoryCard
               {...student}
@@ -81,7 +93,7 @@ export const Slider = ({ className }) => {
           </div>
         ))}
       </div>
-      <Container>
+      <Container className={s.container}>
         <div className={clsx(s.Slider__pagination)}>
           <input
             className={clsx(s.Slider__btn, { [s.transparent]: position >= 0 })}
@@ -100,22 +112,22 @@ export const Slider = ({ className }) => {
                       1
                     </span>
                   )
-                  case -565: return (
+                  case -(slideWidth): return (
                     <span>
                       2
                     </span>
                   )
-                  case -1130: return (
+                  case -((slideWidth * 2)): return (
                     <span>
                       3
                     </span>
                   )
-                  case -1695: return (
+                  case -(slideWidth * 3): return (
                     <span>
                       4
                     </span>
                   )
-                  case -2260: return (
+                  case -(slideWidth * 4): return (
                     <span>
                       5
                     </span>
@@ -132,7 +144,7 @@ export const Slider = ({ className }) => {
             </span>
           </div>
           <input
-            className={clsx(s.Slider__btn, { [s.transparent]: position <= -2260 })}
+            className={clsx(s.Slider__btn, { [s.transparent]: position <= -slideWidth * 4 })}
             disabled={position <= -2260}
             onClick={nextHandler}
             style={{ transform: 'rotate(-180deg)' }}
@@ -156,6 +168,7 @@ export const Slider = ({ className }) => {
                 : 'Устроился фронтенд-разработчиком в '}
               key={elem.id}
               isOpen={isOpen}
+              setIsOpen={setIsOpen}
             >
               {elem.QA.map(e => (
                 <div key={e.answer}>
