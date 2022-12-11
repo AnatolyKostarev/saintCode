@@ -1,8 +1,8 @@
 import React from 'react'
 import clsx from 'clsx'
+import { Container } from '../Container'
 import clock from './bcg-clock.jpg'
 import s from './BcgAttachment.module.sass'
-import { Container } from '../Container'
 
 export const BcgAttachment = ({ className, children }) => {
   return (

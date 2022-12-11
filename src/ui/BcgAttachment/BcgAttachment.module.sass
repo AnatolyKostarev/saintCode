@@ -9,8 +9,6 @@
         display: block
         max-width: 1160px
         max-height: 482px
-        min-height: 180px
-        height: auto
         visibility: hidden
 
 @media (width <= 1170px)
@@ -18,4 +16,7 @@
         &__bcg
             width: 100%
 
-
+@media (width <= 320px)
+    .BcgAttachment
+        &__bcg
+            max-height: 180px
