@@ -50,8 +50,9 @@ export const HR = ({ className }) => {
               особо ждал сюрпризов, так как кручусь в отрасли последние 5 лет.
             </p>
           </AuthorSaid>
-          <DecorLine decorIcon={decorIcon} />
+          <DecorLine className={s.HR__decorline} decorIcon={decorIcon} />
           <AuthorFooter
+            className={s.HR__footer}
             avatar={iconFounder}
             alt="founder"
             width="80"
@@ -73,7 +74,9 @@ export const HR = ({ className }) => {
               </p>
             ))}
           </div>
-          <BcgAttachment className={s.HR__origins_structure}> </BcgAttachment>
+          <BcgAttachment className={s.HR__origins_structure}>
+            {' '}
+          </BcgAttachment>
         </Container>
       </Section>
       <Section className={s.HR__position}>

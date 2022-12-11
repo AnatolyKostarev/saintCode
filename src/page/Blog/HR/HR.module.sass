@@ -9,7 +9,10 @@
 
     &__candidate
         max-width: 1160px
-        background: url('./img/image-hr.jpg') no-repeat center/cover #ccc
+        min-width: 300px
+        width: 100%
+        background: url('./img/image-hr.jpg') no-repeat center #ccc
+        background-size: cover
         background-attachment: fixed
 
     &__begining
@@ -21,8 +24,6 @@
         font-size: 20px
         line-height: 31px
         border: 0
-        & p:first-child
-            margin-bottom: 32px
 
     &__situation
         display: flex
@@ -56,7 +57,7 @@
 
         &_structure
             @extend .HR__candidate
-            background: url('./img/Group2068.jpg') no-repeat center/cover #ccc
+            background: url('./img/Group2068.jpg') no-repeat center #ccc
             background-attachment: scroll
 
     &__position
@@ -210,7 +211,66 @@
 
             & p:nth-child(even)
                 margin: 30px 0
-                
+
+//Responsive styles
+
+@media (width <= 1170px)
+    .HR
+        padding: 200px 42px 0
+
+        &__title
+            margin-bottom: 89px
+            max-width: 790px
+
+        &__candidate
+            position: initial
+            max-height: 400px
+            background-attachment: scroll
+
+        &__begining
+            padding: 60px 0 45px
+
+        &__description
+            margin: 0 0 51px 0
+            padding-left: 122px
+            font-size: 18px
+            font-weight: 400
+            line-height: 1.55
+            & p:first-child
+                max-width: 780px
+
+        &__situation
+            padding: 20px 0
+            max-width: 780px
+            font-size: 24px
+            font-weight: 600
+            line-height: 1.6
+
+        &__decorline,
+        &__footer
+            max-width: 780px
+
+        &__footer
+            margin-bottom: 0
+
+        &__origins
+            padding: 105px 0
+
+            &_title
+                padding-left: 0
+                margin: 0 auto 30px
+                max-width: 780px
+                font-size: 60px
+                font-weight: 600
+                line-height: 1.23
+            
+            &_article
+                padding-left: 0
+                margin: 0 auto 111px
+                max-width: 780px
+                font-size: 18px
+                line-height: 1.55
+                & p
+                    max-width: 700px
 
         
-            
