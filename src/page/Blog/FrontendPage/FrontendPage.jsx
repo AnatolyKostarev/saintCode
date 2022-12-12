@@ -10,11 +10,11 @@ import { AuthorSaid } from '../ui/AuthorSaid/AuthorSaid'
 import { BlogPanel } from '../ui/BlogPanel/BlogPanel'
 import { TimingItem } from '../ui/TimingItem/TimingItem'
 import { SchoolItem } from '../../../ui/SchoolItem'
+import { TrainingItem } from '../ui/TrainingItem/TrainingItem'
 import { timing } from './frontendTiming'
 import { vacancyContent, coverLetterContent, briefContent } from './trainingMaterials'
 import play from './icon-play.svg'
 import s from './FrontendPage.module.sass'
-import { TrainingItem } from '../ui/TrainingItem/TrainingItem'
 
 export const FrontendPage = ({ className }) => {
   const [vacancy, setVacancy] = useState(false)

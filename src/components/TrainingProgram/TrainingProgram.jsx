@@ -16,6 +16,7 @@ import s from './TrainingProgram.module.sass'
 
 export const TrainingProgram = () => {
   const { t } = useTranslation()
+  
   return (
     <Section className={s.TrainingProgram}>
       <Container className={s.container}>

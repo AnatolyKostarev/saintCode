@@ -5,7 +5,6 @@ import s from './PriceCard.module.sass'
 
 export const PriceCard = ({
   location,
-  // start,
   type,
   price,
   priceWithDiscount,

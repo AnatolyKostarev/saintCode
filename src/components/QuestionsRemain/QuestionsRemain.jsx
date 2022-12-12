@@ -5,8 +5,8 @@ import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
-import s from './QuestionsReman.module.sass'
 import { MessangerForm } from '../../widgets/MessangerForm'
+import s from './QuestionsReman.module.sass'
 
 export const QuestionsRemain = ({ title, subtitle, className }) => {
   const { t } = useTranslation()

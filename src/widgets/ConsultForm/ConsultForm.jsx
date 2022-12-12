@@ -42,7 +42,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
     handleSubmit,
     reset,
     formState,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     mode: 'onSubmit',
     defaultValues: {

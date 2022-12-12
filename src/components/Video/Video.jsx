@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import clsx from 'clsx'
-import s from './Video.module.sass'
 import { Section } from '../../ui/Section'
+import s from './Video.module.sass'
 
 export const Video = ({ className }) => {
   const videoRef = useRef(null)

@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
-import s from './TableRow.module.sass'
 import { Container } from '../Container'
+import s from './TableRow.module.sass'
 
 export const TableRow = ({
   firstParam, children,
