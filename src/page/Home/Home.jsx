@@ -1,4 +1,4 @@
-import s from './Home.module.sass'
+import { useTranslation } from 'react-i18next'
 import { Layout } from '../../layout'
 import { Hero } from '../../components/Hero'
 import { ForWho } from '../../components/ForWho'
@@ -14,15 +14,17 @@ import { CommercialProject } from '../../components/CommercialProject'
 import { StudentStory } from '../../components/StudentStory'
 import { Table } from '../../components/Table'
 import { Video } from '../../components/Video'
+import s from './Home.module.sass'
 
 export const Home = () => {
+  const { t } = useTranslation()
   return (
     <>
       <Layout>
         <Hero />
         <Video />
         <ForWho />
-        <QuestionsRemain title="Сложно? Давай объясним!" subtitle="Оставь заявку — мы свяжемся с тобой через мессенджер." />
+        <QuestionsRemain title={t('QuestionsRemain.top.title')} subtitle={t('QuestionsRemain.top.subtitle')} />
         <TrainingProgram />
         <CommercialProject />
         <Teachers />
@@ -30,10 +32,10 @@ export const Home = () => {
         <Results />
         <DailySchedule />
         <StudentStory />
-        {/* <SchoolComparison /> */}
-        {/* <Table /> */}
+        {/* <SchoolComparison />
+        <Table /> */}
         <Price />
-        <QuestionsRemain className={s.bottom} title="Остались вопросы?" subtitle="Запишись на бесплатную консультацию — всё расскажем и объясним." />
+        <QuestionsRemain className={s.bottom} title={t('QuestionsRemain.bottom.title')} subtitle={t('QuestionsRemain.bottom.subtitle')} />
       </Layout>
     </>
   )

@@ -55,8 +55,14 @@
     "btn": "Sign up"
   },
   "QuestionsRemain": {
-    "title": "Is it difficult? Let's explain!",
-    "subtitle": "Leave a request - we will contact you via messenger.",
+    "top": {
+      "title": "Is it difficult? Let's explain!",
+      "subtitle": "Leave a request - we will contact you via messenger."
+    },
+    "bottom": {
+      "title": "Any other questions?",
+      "subtitle": "Sign up for a free consultation — we will tell and explain everything."
+    },
     "input": {
       "label": {
         "name": "Name",
