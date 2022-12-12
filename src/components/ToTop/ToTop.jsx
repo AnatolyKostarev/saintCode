@@ -1,6 +1,6 @@
 import React from 'react'
-import s from './ToTop.module.sass'
 import { Portal } from '../../ui/Portal'
+import s from './ToTop.module.sass'
 
 export const ToTop = () => {
   return (

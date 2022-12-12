@@ -1,10 +1,10 @@
 import React from 'react'
 import clsx from 'clsx'
-import s from './StudentStory.module.sass'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
 import { Slider } from '../Slider'
+import s from './StudentStory.module.sass'
 
 export const StudentStory = () => {
   return (

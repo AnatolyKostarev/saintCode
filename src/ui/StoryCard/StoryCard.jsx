@@ -1,7 +1,7 @@
 import React from 'react'
 import clsx from 'clsx'
-import s from './StoryCard.module.sass'
 import { Button } from '../Button'
+import s from './StoryCard.module.sass'
 
 export const StoryCard = ({
   studentPhoto,
@@ -18,7 +18,13 @@ export const StoryCard = ({
     <div className={clsx(s.StoryCard, className)}>
       <div className={clsx(s.student)}>
         <div className={clsx(s.photo__wrapper)}>
-          <img className={s.photo} width="100" height="100" src={studentPhoto} alt="Student - Photo" />
+          <img
+            className={s.photo}
+            src={studentPhoto}
+            width="100"
+            height="100"
+            alt="Student - Photo"
+          />
         </div>
         <div className={clsx(s.info__wrapper)}>
           <p className={clsx(s.name)}>
@@ -30,7 +36,11 @@ export const StoryCard = ({
         </div>
         {isOpen
           && (
-            <Button onClick={() => setIsOpen(!isOpen)} text="x" className={s.cross} />
+            <Button
+              className={s.cross}
+              onClick={() => setIsOpen(!isOpen)}
+              text="x"
+            />
           )}
       </div>
       <div className={clsx(s.story)}>
