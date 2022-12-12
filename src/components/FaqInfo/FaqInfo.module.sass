@@ -1,5 +1,5 @@
 .faq
-    padding: 219px 0 239px
+    padding: 223px 0 239px
     background: rgba(62, 43, 46, 1)
 
     &__header
@@ -59,9 +59,9 @@
 
 // Responsive styles
 
-@media (max-width: 1120px)
+@media (max-width: 1170px)
     .faq
-        padding: 76px 42px 237px
+        padding: 196px 42px 237px
 
         &__header
             gap: 0 88px
@@ -79,6 +79,8 @@
                 line-height: 27px
 
         &__items
+            margin: 0 auto
+            max-width: 940px
             gap: 20px 0
 
         &__item
@@ -98,7 +100,7 @@
 
 @media (max-width: 992px)
     .faq
-        padding: 77px 84px 65px
+        padding: 196px 84px 65px
 
         &__header
             flex-direction: column
@@ -115,22 +117,26 @@
             & p
                 margin-bottom: 22px
 
+        &__items
+            margin: 0 auto
+            max-width: 908px
+            gap: 20px 0
+
         &__item
-            max-width: 600px
+            max-width: 100%
             &__active
                 padding-bottom: 25px
                 height: 100%
 
             &_last
-                max-width: 600px
-                width: 100%
+                max-width: 100%
                 &__active
                     padding-bottom: 25px
                     height: 100%
 
-@media (max-width: 425px)
+@media (max-width: 576px)
     .faq
-        padding: 49px 20px 47px
+        padding: 145px 20px 47px
 
         &__header
             margin-bottom: 30px
@@ -150,16 +156,71 @@
                 line-height: 21px
 
         &__item
-            padding: 20px 8px 20px 20px
-            height: 148px
+            padding: 47px 8px 47px 20px
+            min-height: 148px
             &__active
                 padding-bottom: 25px
-                height: 100%
+                max-height: 100%
+
+            &_last
+                padding: 40.5px 8px 40.5px 20px
+                width: 100%
+                min-height: 121px
+                &__active
+                    padding-bottom: 25px
+                    max-height: 100%
+
+@media (width <= 425px)
+    .faq
+        &__item
+            padding: 47px 8px 47px 20px
+            min-height: 148px
+            &:nth-child(2)
+                padding: 33.5px 8px 33.5px 20px
+            &__active
+                padding-bottom: 25px
+                max-height: 100%
+
+            &_last
+                padding: 33.5px 8px 33.5px 20px
+                width: 100%
+                min-height: 121px
+                &__active
+                    padding-bottom: 25px
+                    max-height: 100%
+
+@media (width <= 375px)
+    .faq
+        &__item
+            padding: 33.5px 8px 33.5px 20px
+            min-height: 148px
+            &__active
+                padding-bottom: 25px
+                max-height: 100%
+
+            &_last
+                padding: 33.5px 8px 33.5px 20px
+                width: 100%
+                min-height: 121px
+                &__active
+                    padding-bottom: 25px
+                    max-height: 100%
+
+@media (width <= 320px)
+    .faq
+        &__item
+            padding: 20px 8px 20px 20px
+            min-height: 148px
+            &:nth-child(2)
+                padding: 20px 8px 20px 20px
+            &__active
+                padding-bottom: 25px
+                max-height: 100%
 
             &_last
                 padding: 20px 8px 20px 20px
                 width: 100%
-                height: 121px
+                min-height: 121px
                 &__active
                     padding-bottom: 25px
-                    height: 100%
+                    max-height: 100%

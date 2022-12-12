@@ -8,6 +8,7 @@ import { SchoolItem } from '../../ui/SchoolItem'
 import { FaqRequirements } from '../../ui/FaqItemContent/FaqRequirements'
 import { FaqTodo } from '../../ui/FaqItemContent/FaqTodo'
 import { FaqToPay } from '../../ui/FaqItemContent/FaqToPay'
+import { ConsultForm } from '../../widgets/ConsultForm'
 import { Button } from '../../ui/Button'
 import s from './FaqInfo.module.sass'
 
@@ -15,6 +16,7 @@ export const FaqInfo = () => {
   const [isRequire, setIsRecuire] = useState(true)
   const [isTodo, setIsTodo] = useState(false)
   const [isPay, setIsPay] = useState(false)
+  const [isConsultForm, setIsConsultForm] = useState(false)
 
   const { t } = useTranslation()
 
@@ -38,13 +40,11 @@ export const FaqInfo = () => {
             {t('FaqInfo.title')}
           </SectionTitle>
           <div className={s.faq__ask}>
-            <p>
-              {t('FaqInfo.ask')}
-            </p>
+            <p>{t('FaqInfo.ask')}</p>
             <Button
               className={s.faq__btn}
               text={t('FaqInfo.btnText')}
-
+              onClick={() => setIsConsultForm(true)}
             />
           </div>
         </div>
@@ -79,6 +79,7 @@ export const FaqInfo = () => {
             <FaqToPay show={isPay} />
           </SchoolItem>
         </div>
+        {isConsultForm && <ConsultForm setIsConsultForm={setIsConsultForm} />}
       </Container>
     </Section>
   )
