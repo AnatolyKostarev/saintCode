@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import clsx from 'clsx'
-import s from './Table.module.sass'
 import { Section } from '../../ui/Section'
 import { SectionTitle } from '../../ui/SectionTitle'
 import { Container } from '../../ui/Container'
@@ -8,6 +7,7 @@ import { TableOption } from '../../ui/TableOption/TableOption'
 import { tableData } from './tableData'
 import { TableRow } from '../../ui/TableRow'
 import { tableDataKeys } from './tableDataKeys'
+import s from './Table.module.sass'
 
 export const Table = ({ className }) => {
   const [selectedSchool, setSelectedSchool] = useState(['Saint Code'])

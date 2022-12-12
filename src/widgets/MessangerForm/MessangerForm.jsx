@@ -26,7 +26,7 @@ export const MessangerForm = () => {
     handleSubmit,
     reset,
     formState,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     mode: 'onSubmit',
     defaultValues: {

@@ -1,8 +1,8 @@
 import React from 'react'
-import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
-import s from './LangSwitcher.module.sass'
+import { useTranslation } from 'react-i18next'
 import { Button } from '../../ui/Button'
+import s from './LangSwitcher.module.sass'
 
 export const LangSwitcher = () => {
   const { i18n } = useTranslation()

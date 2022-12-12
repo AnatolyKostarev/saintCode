@@ -2,12 +2,12 @@ import React, {
   useEffect, useLayoutEffect, useRef, useState,
 } from 'react'
 import clsx from 'clsx'
-import s from './Slider.module.sass'
 import arrow from './Vector.svg'
 import { studentData } from './studentData'
 import { StoryCard } from '../../ui/StoryCard'
 import { Modal } from '../Modal'
 import { Container } from '../../ui/Container'
+import s from './Slider.module.sass'
 
 export const Slider = ({ className }) => {
   const [isOpen, setIsOpen] = useState(false)

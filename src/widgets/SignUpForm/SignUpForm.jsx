@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+import { handleChange } from '../../utils/inputHandleChange'
 import { Portal } from '../../ui/Portal'
 import { Form } from '../../ui/Form'
 import { Alert } from '../../ui/Alert'
@@ -48,7 +49,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
     handleSubmit,
     reset,
     formState,
-    formState: { errors, isValid },
+    formState: { errors },
   } = useForm({
     mode: 'onSubmit',
     defaultValues: {
@@ -58,13 +59,6 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
       message: '',
     },
   })
-
-  function handleChange(e) {
-    setValue(prev => ({
-      ...prev,
-      [e.target.name]: e.target.value.trimStart(),
-    }))
-  }
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
@@ -160,7 +154,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     type="text"
                     placeholder="Имя"
                     size={39}
-                    onChange={handleChange}
+                    onChange={e => handleChange(e, setValue)}
                     value={value.name}
                     style={
                       errors.name
@@ -192,7 +186,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     type="tel"
                     placeholder="+7 (999) 999 99 99"
                     size={39}
-                    onChange={handleChange}
+                    onChange={e => handleChange(e, setValue)}
                     value={value.tel}
                     style={
                   errors.tel
@@ -231,7 +225,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     type="email"
                     placeholder="Электронная почта"
                     size={39}
-                    onChange={handleChange}
+                    onChange={e => handleChange(e, setValue)}
                     value={value.email}
                     style={
                       errors.email
@@ -260,7 +254,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     })}
                     placeholder="Здесь можно написать вопрос = )"
                     cols={42}
-                    onChange={handleChange}
+                    onChange={e => handleChange(e, setValue)}
                     value={value.message}
                     style={
                     errors.message

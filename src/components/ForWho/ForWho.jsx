@@ -2,11 +2,11 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { Container } from '../../ui/Container'
 import { Section } from '../../ui/Section'
+import { SectionTitle } from '../../ui/SectionTitle'
 import { ForArticle } from '../../ui/ForArticle'
 import leftSVG from './left.svg'
 import rightSVG from './rigth.svg'
 import s from './ForWho.module.sass'
-import { SectionTitle } from '../../ui/SectionTitle'
 
 export const ForWho = () => {
   const { t } = useTranslation()
