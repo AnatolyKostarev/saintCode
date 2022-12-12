@@ -35,6 +35,7 @@ export const SchoolInfo = () => {
         </SectionTitle>
         <div className={s.school__items}>
           <SchoolItem
+            className={s.school__item}
             title={t('SchoolInfo.project')}
             id={1}
             onClick={isProjectSwitcher}
@@ -43,6 +44,7 @@ export const SchoolInfo = () => {
             <SchoolItemsProject show={isProject} />
           </SchoolItem>
           <SchoolItem
+            className={s.school__item}
             title={t('SchoolInfo.problem')}
             id={2}
             onClick={isBeginnerSwitcher}
@@ -51,6 +53,7 @@ export const SchoolInfo = () => {
             <SchoolBeginner show={isBeginner} />
           </SchoolItem>
           <SchoolItem
+            className={s.school__item}
             title={t('SchoolInfo.web')}
             id={3}
             onClick={isHowSwitcher}
