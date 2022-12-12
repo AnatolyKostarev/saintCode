@@ -40,7 +40,9 @@ export const FaqInfo = () => {
             {t('FaqInfo.title')}
           </SectionTitle>
           <div className={s.faq__ask}>
-            <p>{t('FaqInfo.ask')}</p>
+            <p>
+              {t('FaqInfo.ask')}
+            </p>
             <Button
               className={s.faq__btn}
               text={t('FaqInfo.btnText')}
