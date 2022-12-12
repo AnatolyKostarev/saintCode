@@ -15,18 +15,54 @@
 
 // Responsive styles
 
-@media (max-width: 1024px)
+@media (width <= 1170px)
     .school
-        padding: 90px 64px
+        padding: 196px 0 90px
 
-@media (max-width: 768px)
-    .school
         &__title
-            margin-bottom: 20px
+            margin: 0 auto 67px
+            max-width: 940px
 
         &__items
-            flex-direction: column
+            margin: 0 auto
+            max-width: 940px
             gap: 20px 0
+
+        &__item
+            margin: 0
+            max-width: 460px
+
+@media (width <= 992px)
+    .school
+        &__title
+            margin: 0 auto 67px
+            max-width: 908px
+
+        &__items
+            margin: 0 auto
+            max-width: 908px
+            gap: 20px 0
+
+        &__item
+            margin: 0
+            max-width: 444px
+
+
+@media (width <= 768px)
+    .school
+        &__title
+            margin: 0 auto 67px
+            max-width: 460px
+
+        &__items
+            margin: 0 auto
+            padding: 0 84px
+            max-width: 100%
+            gap: 20px 0
+
+        &__item
+            margin: 0
+            max-width: 100%
 
 @media (max-width: 576px)
     .school
