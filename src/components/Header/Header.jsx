@@ -2,13 +2,13 @@ import React, { useState } from 'react'
 import clsx from 'clsx'
 import { useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Logo } from '../../ui/Logo'
+import { Container } from '../../ui/Container'
 import { Nav } from '../../ui/Nav'
+import { Logo } from '../../ui/Logo'
 import { Button } from '../../ui/Button'
 import { ConsultForm } from '../../widgets/ConsultForm'
-import s from './Header.module.sass'
 import { LangSwitcher } from '../LangSwitcher'
-import { Container } from '../../ui/Container'
+import s from './Header.module.sass'
 
 export const Header = () => {
   const { t } = useTranslation()
