@@ -1,18 +1,30 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
-import s from './HeaderResponsive.module.sass'
+import { ConsultForm } from '../../widgets/ConsultForm'
 import { Logo } from '../../ui/Logo'
 import { Phone } from '../../ui/Phone'
 import { Button } from '../../ui/Button'
 import cross from './cross.svg'
+import s from './HeaderResponsive.module.sass'
 
 export const HeaderResponsive = () => {
   const [opened, setOpened] = useState(false)
+  const [isConsultForm, setIsConsultForm] = useState(false)
+
+  const { t } = useTranslation()
 
   return (
     <div className={clsx(s.HeaderResponsive, { [s.bg]: opened })}>
-      <input onChange={() => setOpened(!opened)} className={s.checkbox} type="checkbox" name="menu" id="menu_check" />
+      <input
+        className={s.checkbox}
+        onClick={() => setIsConsultForm(false)}
+        onChange={() => setOpened(!opened)}
+        type="checkbox"
+        name="menu"
+        id="menu_check"
+      />
       <div className={s.btn}>
         <div className={s.lines}>
           <span className={s.line} />
@@ -65,9 +77,11 @@ export const HeaderResponsive = () => {
           <Phone className={s.phone} />
           <Button
             className={s.call__btn}
-            text="Люблю поговорить, позвони мне"
+            text={t('Header.btn')}
+            onClick={() => setIsConsultForm(true)}
           />
         </div>
+        {isConsultForm && <ConsultForm setIsConsultForm={setIsConsultForm} />}
       </aside>
     </div>
   )
