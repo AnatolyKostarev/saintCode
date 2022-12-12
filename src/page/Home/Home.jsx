@@ -1,3 +1,4 @@
+import s from './Home.module.sass'
 import { Layout } from '../../layout'
 import { Hero } from '../../components/Hero'
 import { ForWho } from '../../components/ForWho'
@@ -21,7 +22,7 @@ export const Home = () => {
         <Hero />
         <Video />
         <ForWho />
-        <QuestionsRemain />
+        <QuestionsRemain title="Сложно? Давай объясним!" subtitle="Оставь заявку — мы свяжемся с тобой через мессенджер." />
         <TrainingProgram />
         <CommercialProject />
         <Teachers />
@@ -32,6 +33,7 @@ export const Home = () => {
         {/* <SchoolComparison /> */}
         {/* <Table /> */}
         <Price />
+        <QuestionsRemain className={s.bottom} title="Остались вопросы?" subtitle="Запишись на бесплатную консультацию — всё расскажем и объясним." />
       </Layout>
     </>
   )

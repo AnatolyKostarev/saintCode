@@ -11,7 +11,7 @@ export const DailySchedule = () => {
   const { t } = useTranslation()
   return (
     <Section className={s.schedule}>
-      <Container>
+      <Container className={s.container}>
         <SectionTitle className={s.schedule__title}>
           <span>
             {t('DailySchedule.title')}

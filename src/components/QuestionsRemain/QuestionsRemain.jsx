@@ -1,23 +1,23 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import clsx from 'clsx'
 import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
-
 import s from './QuestionsReman.module.sass'
-import { MessangerForm } from '../../widgets/MessangerForm/MessangerForm'
+import { MessangerForm } from '../../widgets/MessangerForm'
 
-export const QuestionsRemain = () => {
+export const QuestionsRemain = ({ title, subtitle, className }) => {
   const { t } = useTranslation()
   return (
-    <Section className={s.QuestionsRemain}>
-      <Container>
+    <Section className={clsx(s.QuestionsRemain, className)}>
+      <Container className={s.container}>
         <SectionTitle className={s.QuestionsRemain__title}>
-          {t('QuestionsRemain.title')}
+          {title}
         </SectionTitle>
         <p className={s.QuestionsRemain__subtitle}>
-          {t('QuestionsRemain.subtitle')}
+          {subtitle}
         </p>
         <MessangerForm />
         <p className={s.QuestionsRemain__conditions}>

@@ -13,7 +13,7 @@ export const Price = () => {
   const [isSignUpForm, setIsSignUpForm] = useState(false)
   return (
     <Section className={s.Price}>
-      <Container>
+      <Container className={s.container}>
         <SectionTitle className={s.Price__title}>
           {t('Price.title')}
         </SectionTitle>
