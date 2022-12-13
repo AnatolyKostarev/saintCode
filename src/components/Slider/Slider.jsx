@@ -1,5 +1,5 @@
 import React, {
-  useEffect, useLayoutEffect, useRef, useState,
+  useEffect, useRef, useState,
 } from 'react'
 import clsx from 'clsx'
 import s from './Slider.module.sass'
