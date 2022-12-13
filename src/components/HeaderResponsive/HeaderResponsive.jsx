@@ -10,6 +10,10 @@ import cross from './cross.svg'
 export const HeaderResponsive = () => {
   const [opened, setOpened] = useState(false)
 
+  const bodyBlock = () => opened ? document.body.style.overflow = 'hidden' : document.body.style.overflow = ''
+
+  bodyBlock()
+
   return (
     <div className={clsx(s.HeaderResponsive, { [s.bg]: opened })}>
       <input onChange={() => setOpened(!opened)} className={s.checkbox} type="checkbox" name="menu" id="menu_check" />
