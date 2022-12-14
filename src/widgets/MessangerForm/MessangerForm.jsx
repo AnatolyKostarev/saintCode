@@ -73,7 +73,7 @@ export const MessangerForm = () => {
     setTimeout(() => {
       setDisabled(false)
       setAlert(false)
-    }, 3000)
+    }, 5000)
     reset()
   }
 
@@ -197,11 +197,7 @@ export const MessangerForm = () => {
         <Alert
           type={alertType}
           className={s.QuestionsRemain__alert}
-        >
-          {alertType === 'success'
-            ? 'Ваше сообщение успешно доставлено'
-            : 'Упс...Не удалось отправить заявку!'}
-        </Alert>
+        />
       )}
     </>
   )
