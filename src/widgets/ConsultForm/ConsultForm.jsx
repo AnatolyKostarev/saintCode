@@ -98,9 +98,6 @@ export const ConsultForm = ({ setIsConsultForm }) => {
         className={s.consultForm}
         onSubmit={handleSubmit(onSubmit)}
       >
-        <p className={s.consultForm__title}>
-          Получи консультацию
-        </p>
         <button
           className={s.consultForm__close}
           type="button"
@@ -112,13 +109,12 @@ export const ConsultForm = ({ setIsConsultForm }) => {
           />
         </button>
         {isAlert ? (
-          <Alert type={alertType}>
-            {alertType === 'success'
-              ? 'Ваше сообщение успешно доставлено'
-              : 'Упс...Не удалось отправить заявку!'}
-          </Alert>
+          <Alert type={alertType} />
         ) : (
           <div className={s.consultForm__wrapper}>
+            <p className={s.consultForm__title}>
+              Получи консультацию
+            </p>
             <div>
               <input
                 className={s.consultForm__name}
@@ -160,11 +156,11 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 id="tel"
                 name="tel"
                 {...register('tel', {
-                  required: 'Обязательное поле',
+                  required: 'Напиши телефон',
                   pattern: {
                     value:
                       /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-                    message: 'Введите в формате +999 999999999',
+                    message: 'Напиши телефон +999 999999999',
                   },
                 })}
                 type="tel"
@@ -174,7 +170,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 value={value.tel}
                 style={
                   errors.tel
-                    ? { outline: '1px solid red' }
+                    ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
                     : { outline: 'none' }
                 }
               />
@@ -252,32 +248,27 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 )}
               </>
             </div>
-            {errors.tel && (
-              <Alert type="warn">
-                Пожалуйста, заполните все обязательные поля
-              </Alert>
-            )}
+            <Button
+              className={s.consultForm__btn}
+              text={isLoader ? <Loader /> : 'Отправить'}
+              type="submit"
+              disabled={disabled}
+            />
+            <p className={s.consultForm__terms}>
+              Нажимая на кнопку Отправить, ты
+            </p>
+
+            <p className={s.consultForm__terms}>
+              принимаешь
+              {' '}
+              <Link to="*">
+                <span>
+                  условия передачи информации
+                </span>
+              </Link>
+            </p>
           </div>
         )}
-        <Button
-          className={s.consultForm__btn}
-          text={isLoader ? <Loader /> : 'Отправить'}
-          type="submit"
-          disabled={disabled}
-        />
-        <p className={s.consultForm__terms}>
-          Нажимая на кнопку Отправить, ты
-        </p>
-
-        <p className={s.consultForm__terms}>
-          принимаешь
-          {' '}
-          <Link to="*">
-            <span>
-              условия передачи информации
-            </span>
-          </Link>
-        </p>
       </Form>
     </Portal>
   )
