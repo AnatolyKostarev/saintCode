@@ -76,7 +76,7 @@ export const MessangerForm = () => {
     setTimeout(() => {
       setDisabled(false)
       setAlert(false)
-    }, 3000)
+    }, 5000)
     reset()
   }
 
@@ -111,7 +111,9 @@ export const MessangerForm = () => {
             placeholder={t('QuestionsRemain.input.placeholder.name')}
             value={value.name}
             style={
-              errors.name ? { outline: '1px solid red' } : { outline: 'none' }
+              errors.name
+                ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
+                : { outline: 'none' }
             }
           />
           <>
@@ -208,11 +210,7 @@ export const MessangerForm = () => {
         <Alert
           type={alertType}
           className={s.QuestionsRemain__alert}
-        >
-          {alertType === 'success'
-            ? 'Ваше сообщение успешно доставлено'
-            : 'Упс...Не удалось отправить заявку!'}
-        </Alert>
+        />
       )}
     </>
   )

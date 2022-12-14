@@ -114,9 +114,6 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
             onSubmit={handleSubmit(onSubmit)}
 
           >
-            <p className={s.consultForm__title}>
-              Записаться на обучение онлайн
-            </p>
             <button
               className={s.consultForm__close}
               type="button"
@@ -135,12 +132,15 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
               </Alert>
             ) : (
               <div className={s.consultForm__wrapper}>
+                <p className={s.consultForm__title}>
+                  Записаться на обучение онлайн
+                </p>
                 <div>
                   <input
                     className={s.consultForm__name}
                     id="name"
                     {...register('name', {
-                      required: 'Обязательное поле',
+                      required: 'Напиши имя',
                       minLength: {
                         value: 3,
                         message: 'Минимум 3 символа',
@@ -158,7 +158,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     value={value.name}
                     style={
                       errors.name
-                        ? { outline: '1px solid red' }
+                        ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
                         : { outline: 'none' }
                     }
                   />
@@ -176,11 +176,11 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     id="tel"
                     name="tel"
                     {...register('tel', {
-                      required: 'Пожалуйста, заполните все обязательные поля',
+                      required: 'Напиши телефон',
                       pattern: {
                         value:
                           /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-                        message: 'Введите в формате +999 999999999',
+                        message: 'Наипиши в формате +999 999999999',
                       },
                     })}
                     type="tel"
@@ -189,10 +189,10 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     onChange={e => handleChange(e, setValue)}
                     value={value.tel}
                     style={
-                  errors.tel
-                    ? { outline: '1px solid red' }
-                    : { outline: 'none' }
-                }
+                      errors.tel
+                        ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
+                        : { outline: 'none' }
+                    }
                   />
                   <>
                     {errors.tel && (
@@ -208,7 +208,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     id="email"
                     name="email"
                     {...register('email', {
-                      required: 'Пожалуйста, заполните все обязательные поля',
+                      // required: 'Пожалуйста, заполните все обязательные поля',
                       minLength: {
                         value: 6,
                         message: 'Минимум 6 символов, в ключая @',
@@ -219,7 +219,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                       },
                       pattern: {
                         value: /\S+@\S+\.\S+/,
-                        message: 'Недопустимый формат email',
+                        message: 'Неправильно указана почта',
                       },
                     })}
                     type="email"
@@ -229,7 +229,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     value={value.email}
                     style={
                       errors.email
-                        ? { outline: '1px solid red' }
+                        ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
                         : { outline: 'none' }
                     }
                   />
@@ -257,10 +257,10 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     onChange={e => handleChange(e, setValue)}
                     value={value.message}
                     style={
-                    errors.message
-                      ? { outline: '1px solid red' }
-                      : { outline: 'none' }
-                  }
+                      errors.message
+                        ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
+                        : { outline: 'none' }
+                    }
                   >
                     Здесь можно написать вопрос = )
                   </textarea>
@@ -272,29 +272,24 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     )}
                   </>
                 </div>
-                {errors.tel && (
-                  <Alert type="warn">
-                    Пожалуйста, заполните все обязательные поля
-                  </Alert>
-                )}
+                <Button
+                  className={s.consultForm__btn}
+                  text={isLoader ? <Loader /> : 'Отправить'}
+                  type="submit"
+                  disabled={disabled}
+                />
+                <p className={s.consultForm__terms}>
+                  Нажимая на кнопку Отправить, ты принимаешь
+                </p>
+                <p className={s.consultForm__terms}>
+                  <Link to="*">
+                    <span>
+                      условия передачи информации
+                    </span>
+                  </Link>
+                </p>
               </div>
             )}
-            <Button
-              className={s.consultForm__btn}
-              text={isLoader ? <Loader /> : 'Отправить'}
-              type="submit"
-              disabled={disabled}
-            />
-            <p className={s.consultForm__terms}>
-              Нажимая на кнопку Отправить, ты принимаешь
-            </p>
-            <p className={s.consultForm__terms}>
-              <Link to="*">
-                <span>
-                  условия передачи информации
-                </span>
-              </Link>
-            </p>
           </Form>
         </div>
       </div>
