@@ -114,9 +114,6 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
             onSubmit={handleSubmit(onSubmit)}
 
           >
-            <p className={s.consultForm__title}>
-              Записаться на обучение онлайн
-            </p>
             <button
               className={s.consultForm__close}
               type="button"
@@ -135,6 +132,9 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
               </Alert>
             ) : (
               <div className={s.consultForm__wrapper}>
+                <p className={s.consultForm__title}>
+                  Записаться на обучение онлайн
+                </p>
                 <div>
                   <input
                     className={s.consultForm__name}
@@ -272,29 +272,24 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     )}
                   </>
                 </div>
-                {errors.tel && (
-                  <Alert type="warn">
-                    Пожалуйста, заполните все обязательные поля
-                  </Alert>
-                )}
+                <Button
+                  className={s.consultForm__btn}
+                  text={isLoader ? <Loader /> : 'Отправить'}
+                  type="submit"
+                  disabled={disabled}
+                />
+                <p className={s.consultForm__terms}>
+                  Нажимая на кнопку Отправить, ты принимаешь
+                </p>
+                <p className={s.consultForm__terms}>
+                  <Link to="*">
+                    <span>
+                      условия передачи информации
+                    </span>
+                  </Link>
+                </p>
               </div>
             )}
-            <Button
-              className={s.consultForm__btn}
-              text={isLoader ? <Loader /> : 'Отправить'}
-              type="submit"
-              disabled={disabled}
-            />
-            <p className={s.consultForm__terms}>
-              Нажимая на кнопку Отправить, ты принимаешь
-            </p>
-            <p className={s.consultForm__terms}>
-              <Link to="*">
-                <span>
-                  условия передачи информации
-                </span>
-              </Link>
-            </p>
           </Form>
         </div>
       </div>
