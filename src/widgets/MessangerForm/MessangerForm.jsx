@@ -73,7 +73,7 @@ export const MessangerForm = () => {
     setTimeout(() => {
       setDisabled(false)
       setAlert(false)
-    }, 3000)
+    }, 5000)
     reset()
   }
 
@@ -108,7 +108,9 @@ export const MessangerForm = () => {
             placeholder={t('QuestionsRemain.input.placeholder.name')}
             value={value.name}
             style={
-              errors.name ? { outline: '1px solid red' } : { outline: 'none' }
+              errors.name
+                ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
+                : { outline: 'none' }
             }
           />
           <>
@@ -128,7 +130,7 @@ export const MessangerForm = () => {
           </label>
           <input
             {...register('tel', {
-              required: 'Обязательное поле',
+              required: 'Напиши телефон',
               pattern: {
                 value:
                   /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
@@ -142,7 +144,9 @@ export const MessangerForm = () => {
             placeholder={t('QuestionsRemain.input.placeholder.phone')}
             value={value.tel}
             style={
-              errors.tel ? { outline: '1px solid red' } : { outline: 'none' }
+              errors.tel
+                ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
+                : { outline: 'none' }
             }
           />
           <>
@@ -197,11 +201,7 @@ export const MessangerForm = () => {
         <Alert
           type={alertType}
           className={s.QuestionsRemain__alert}
-        >
-          {alertType === 'success'
-            ? 'Ваше сообщение успешно доставлено'
-            : 'Упс...Не удалось отправить заявку!'}
-        </Alert>
+        />
       )}
     </>
   )
