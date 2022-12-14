@@ -138,7 +138,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 value={value.name}
                 style={
                   errors.name
-                    ? { outline: '1px solid red' }
+                    ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
                     : { outline: 'none' }
                 }
               />
@@ -205,7 +205,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 value={value.email}
                 style={
                   errors.email
-                    ? { outline: '1px solid red' }
+                    ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
                     : { outline: 'none' }
                 }
               />
@@ -234,7 +234,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 value={value.message}
                 style={
                   errors.message
-                    ? { outline: '1px solid red' }
+                    ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
                     : { outline: 'none' }
                 }
               >
