@@ -1,21 +1,38 @@
-.warn,
-.success {
+.alert {
+  padding: 107px 60px 115px;
+  max-width: 100%;
+  color: rgba(0, 0, 0, 1);
+  background: #fff;
+}
+
+.alert > div > div {
+  margin: 0 auto 20px;
+  max-width: 130px;
+}
+
+.alert > div img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.title {
   margin-bottom: 20px;
-  padding: 10px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 50px;
   text-align: center;
 }
 
-.warn {
-  background: #f95d51;
+.subtitle {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 35px;
+  text-align: center;
 }
 
-.success {
-  background: #59f881;
-}
-
-.children {
-  padding: 10px;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.55;
+@media (width <= 320px) {
+  .alert {
+    padding: 107px 0 115px;
+  }
 }
