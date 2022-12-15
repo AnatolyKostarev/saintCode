@@ -9,17 +9,17 @@
     "offLine": "Singapore or online from anywhere."
   },
   "ForWho": {
-    "span1": "Our",
-    "span2": "format",
-    "span3": "suits",
-    "span4": "you,",
-    "span5": "if you:",
+    "span1": "Good",
+    "span2": "if",
+    "span3": "you:",
+    "span4": "",
+    "span5": "",
     "span6": "want",
-    "span7": "to quickly find your first job as a",
-    "span8": "developer?",
-    "text1": "Ready to study five days a week from 12.00 to 19.00, plow like a galley slave,",
-    "text2": "in order to master in three months a program",
-    "text3": ", that others master in a year and a half"
+    "span7": "to find your first job as a developer",
+    "span8": "rapidly.",
+    "text1": "Ready to study five days a week from morning till evening. Plow like a horse — ",
+    "text2": "to get in three months a program",
+    "text3": " that others take a year and a half."
   },
   "SchoolComparison": {
     "title": "School",
@@ -28,7 +28,7 @@
     "btn": "View comparison table"
   },
   "Price": {
-    "title": "What is the price?"
+    "title": "How much does it cost?"
   },
   "PriceCard": {
     "location": {
@@ -87,15 +87,15 @@
     }
   },
   "DailySchedule": {
-    "title": "Daily",
-    "subtitle": "schedule"
+    "title": "Schedule",
+    "subtitle": "of the day"
   },
   "ScheduleCard": {
     "text1": "With a mentor. New theory, collaborative problem solving, checking homework",
-    "text2": "Lunch and independent problem solving",
-    "text3": "With a mentor. Consolidation of material, analysis of difficult moments",
-    "text4": "Alone or with another student",
-    "text5": "Free time"
+    "text2": "Lunch and self-task-solve.",
+    "text3": "Study with a mentor: fix knowledge, and investigate complex cases.",
+    "text4": "Study alone or in pairs with another student.",
+    "text5": "Spare time"
   },
   "Header": {
     "btn": "I'd like to talk, call me"
@@ -230,27 +230,27 @@
     "item6": "How to formulate questions so that colleagues understand you?"
   },
   "TrainingProgram": {
-    "title_span": "Training program",
-    "title": "for web developer (frontend)",
-    "subtitle_one": "busy",
-    "subtitle_two": "months of study",
+    "title_span": "Web developer (frontend)",
+    "title": "training program",
+    "subtitle_one": "Intense",
+    "subtitle_two": "months of studying",
     "total": "Result",
     "task": {
       "one": {
-        "title": "Learn how to design static web pages in 3 weeks",
-        "description": "Written landing page and pizza ordering service"
+        "title": "You will learn to create static web pages in three weeks.",
+        "description": "You have created a landing page and pizza order site"
       },
       "two": {
-        "title": "Learn how to create dynamic web pages in 5 weeks with JavaScript",
-        "description": "Pizza ordering service"
+        "title": "You will learn to create dynamic web pages on Javascript in five weeks.",
+        "description": "You have created pizza order service that works"
       },
       "three": {
-        "title": "Learn how to use React to build modern web apps in 4 weeks",
-        "description": "Rewrite a pizza ordering service with React"
+        "title": "You will learn to use React for creating modern web services in four weeks",
+        "description": "You have re-written a pizza order service on React"
       },
       "four": {
-        "title": "Prepare for a job search",
-        "description": "Sent high-quality CVs and cover letters to relevant companies. Ready for a technical interview"
+        "title": "You will prepare for a job search",
+        "description": "You have sent attractive resumes and cover letters to decent companies. You are ready to attend a technical interview"
       }
     },
     "TrainingData": {
@@ -262,11 +262,11 @@
       },
       "items": {
         "item_1": "Terminal",
-        "item_2": "Learn how to work in a team",
-        "item_3": "You will write understandable comments to your code",
+        "item_2": "Learn how to work as a team",
+        "item_3": "Start to write clear comments to your code",
         "item_4": "Typography",
         "item_5": "Responsive and adaptive design",
-        "item_7": "Grid",
+        "item_7": "Modular grid",
         "item_8": "Flexbox",
         "item_9": "Grid",
         "item_10": "BEM",
@@ -274,24 +274,24 @@
         "item_12": "Local server",
         "item_13": "Semantic layout",
         "item_14": "Variables, data types, operators",
-        "item_15": "Branches, cycles",
+        "item_15": "Branches, loops",
         "item_16": "Functions, arrays, objects",
-        "item_17": "Learned to write simple programs",
-        "item_18": "Dive into data types and their methods",
-        "item_19": "Modules, division of the program into parts",
-        "item_20": "Working with a document",
+        "item_17": "Can write simple programs",
+        "item_18": "Immersion into data types and their methods",
+        "item_19": " Modules and program decomposition",
+        "item_20": "Document Object Model (DOM)",
         "item_21": "Events and error handling",
-        "item_22": "You can create simple services?",
-        "item_23": "Asynchronous communication with the server (API)",
+        "item_22": "Can write simple services",
+        "item_23": "Asynchronous interaction with the server (API)",
         "item_24": "Data storage",
         "item_25": "Components and their lifecycle",
         "item_26": "State",
         "item_27": "Events",
         "item_28": "Render",
         "item_29": "Hook",
-        "item_30": "Write a resume and cover letter (American style)",
-        "item_31": "Learn how to find the right companies",
-        "item_32": "Practice passing technical interviews"
+        "item_30": " You will write a resume and a cover letter in the American style",
+        "item_31": "You will understand how to find a decent company",
+        "item_32": "You will train on how to attend a technical interview"
       }
     }
   },
@@ -435,6 +435,83 @@
       "answer_9": " If you need to learn how to code in a short time, it is best to sign up for some courses with homework and mentors.",
       "answer_10": "Few people can organize themselves, so you need to have a good mentor who will point you in the right direction, answer questions and kick you when you start to be lazy.",
       "answer_11": "I would suggest that you first learn the basics of C#, Java, or Javascript since these languages are very similar and it will not be difficult to switch from one language to another at the very beginning. And then go deeper."
+    }
+  },
+  "CommercialProject": {
+    "title-span": "Also, ",
+    "title": "we give you an opportunity to execute a simple commercial project",
+    "subtitle": "  and gain first money for your code",
+    "important-span": "But most important: when employers are choosing among newcomers, they",
+    "important1": "  are hiring candidates",
+    "important2": " with real experience"
+  },
+  "Results": {
+    "title": "What do you get",
+    "title1": " in our bootcamp?"
+  },
+  "ResultsArticle": {
+    "subtitle": {
+      "subtitle1": "Small group (6-12 students)",
+      "subtitle2": "A mentor",
+      "subtitle3": "Connections",
+      "subtitle4": "Like-minded people",
+      "subtitle5": "Program"
+    },
+    "text": {
+      "text1": "It allows mentors to give attention to every student. If the student is forcing trouble with some topic, he gets an extra explanation. If he knows more than others — he gets advanced tasks.",
+      "text2": "Coaches care about your progress. They often call up with the students in the evening or on weekends, although this is not their duty.",
+      "text3": "Fellow students, mentors, and guest experts become a part of your professional contacts, which help to find a job.",
+      "text4": "It is easier to reach your goals in a group",
+      "text5": "Our curriculum is based on the experience of the world's leading bootcamps"
+    }
+  },
+  "Author": {
+    "name": "Zhenya Gritsenko",
+    "info": "Course founder",
+    "title": {
+      "block1": "We help people without experience",
+      "block2": "(or with little experience)",
+      "block3": "in programming to find their first web developer job in a ",
+      "block4": "decent company in two months."
+    }
+  },
+  "Teachers": {
+    "title": "Mentors"
+  },
+  "TeacherCard": {
+    "teacherName": {
+      "teacher1": "Yura Matukhin",
+      "teacher2": "Kostya Efimov",
+      "teacher3": "Vasya Shlykov",
+      "teacher4": "Sasha Vivtonenko"
+    },
+    "experience": {
+      "experience1": "8 years of commercial experience",
+      "experience2": "7 years of commercial experience",
+      "experience3": "5 years of commercial experience",
+      "experience4": "7 years of commercial experience"
+    },
+    "traineeCount": {
+      "count1": "Have trained 42 students",
+      "count2": "Have trained 16 students",
+      "count3": "Have trained 4 students",
+      "count4": "Have trained 23 students"
+    },
+    "stack": {
+      "stack1": "HTML, CSS, JavaScript (React/Redux, Vue, Svelte, TypeScript), Webpack, Sass, BEM",
+      "stack2": "HTML, CSS, JS (Vue, Vuex), Stylus, BEM, PHP (Laravel, Symfony), C, PostgreSQL, MySQL, Redis",
+      "stack3": "HTML, CSS, JavaScript/jQuery, PostgreSQL, MongoDB, Node.js, Express, Hapi, Nest, React, TypeScript, Redux, Context API",
+      "stack4": "HTML, CSS, JavaScript (Svelte), Node.js, Nginx, PostgreSQL, NoSQL"
+    },
+    "working": "Track record:",
+    "list": {
+      "list1": "Frontend developer at the Canadian startup Life House Hotels, at StudWork studio, and sports app Ride With Locals. Also, took part in the creation of the Pyrus, an analog of Jira",
+      "list2": "Have been working on promotional projects for Lays, Philips, Siemens, Beeline, Ford, Amediateka, Renault, Sony Xperia, Unicredit Bank",
+      "list3": "Fullstack developer at the Pilki company. Worked at American project Consumer Reports, and New Zealand software development company 7Glyphs. Have created crypto wallet Freewallet and web site for large real estate agency Vladis",
+      "list4": "Have developed a control and interaction system for vending machines for water",
+      "list5": "Backend developer at Kari and MySoft companies",
+      "list6": "Head of the IT department at EthereumWorks and Vpluse.",
+      "list7": " Developer at CRM Agency Smart"
     }
   }
 }
