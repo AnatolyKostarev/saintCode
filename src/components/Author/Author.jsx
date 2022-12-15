@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
@@ -8,6 +9,8 @@ import Devis from './devis.svg'
 import s from './Author.module.sass'
 
 export const Author = () => {
+  const { t } = useTranslation()
+
   return (
     <Section className={s.Author}>
       <Container className={s.Author__container}>
@@ -23,10 +26,10 @@ export const Author = () => {
           </div>
           <div className={s.text}>
             <p className={s.Author__name}>
-              Женя Гриценко
+              {t('Author.name')}
             </p>
             <p className={s.Author__info}>
-              Основатель курса
+              {t('Author.info')}
             </p>
           </div>
         </div>
@@ -41,17 +44,16 @@ export const Author = () => {
             />
           </div>
           <SectionTitle className={s.title}>
-            Мы помогаем людям без&nbsp;опыта
+            {t('Author.title.block1')}
             {' '}
             <span className="transparent">
-              (с&nbsp;небольшим опытом)
+              {t('Author.title.block2')}
+              {' '}
             </span>
             {' '}
-            в&nbsp;программировании получить
-            первую работу веб-разработчиком.
-            В&nbsp;среднем наши студенты
-            устраиваются через 2&nbsp;месяца
-            после выпуска.
+            {t('Author.title.block3')}
+            <br />
+            {t('Author.title.block4')}
           </SectionTitle>
         </div>
       </Container>

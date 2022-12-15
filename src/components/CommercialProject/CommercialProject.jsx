@@ -1,34 +1,34 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import { Section } from '../../ui/Section'
 import { Container } from '../../ui/Container'
 import { SectionTitle } from '../../ui/SectionTitle'
 import s from './CommercialProject.module.sass'
 
 export const CommercialProject = () => {
+  const { t } = useTranslation()
   return (
     <Section className={s.CommercialProject}>
       <Container className={s.container}>
         <SectionTitle className={s.title}>
           <span className="transparent">
-            А&nbsp;ещё мы&nbsp;
+            {t('CommercialProject.title-span')}
+&nbsp;
           </span>
-          дадим возможность выполнить простой коммерческий
-          проект
+          {t('CommercialProject.title')}
           <span className="transparent">
-                &nbsp;— получить первые деньги за&nbsp;свой код
+            {t('CommercialProject.subtitle')}
           </span>
         </SectionTitle>
         <div className={s.intersec}>
           <p className={s.intersec__text}>
             <span className={s.gray}>
-              Но&nbsp;самое важное: когда компании будут
-              решать, кого из&nbsp;новичков взять,
-              они
+              {t('CommercialProject.important-span')}
             </span>
-&nbsp;отдадут предпочтение кандидату
+            {t('CommercialProject.important1')}
             <br />
             {' '}
-            с&nbsp;реальным опытом
+            {t('CommercialProject.important2')}
           </p>
         </div>
       </Container>

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import s from './TeacherCard.module.sass'
 
@@ -12,6 +13,7 @@ export const TeacherCard = ({
   stack,
   children,
 }) => {
+  const { t } = useTranslation()
   return (
     <div className={clsx(s.TeacherCard, className)}>
       <div className={s.top}>
@@ -26,26 +28,26 @@ export const TeacherCard = ({
         </div>
         <div className={s.name__block}>
           <p className={s.name}>
-            {teacherName}
+            {t(`TeacherCard.teacherName.${teacherName}`)}
           </p>
           <p className={s.exp}>
-            {`${experience} коммерческого опыта`}
+            {t(`TeacherCard.experience.${experience}`)}
           </p>
           <p className={s.trainees}>
-            {traineeCount}
+            {t(`TeacherCard.traineeCount.${traineeCount}`)}
           </p>
         </div>
       </div>
       <div className={s.notop}>
         <div className={s.middle}>
           <p className={s.working}>
-            Работал:
+            {t('TeacherCard.working')}
           </p>
           {children}
         </div>
         <div className={s.bottom}>
           <p className={s.stack}>
-            {stack}
+            {t(`TeacherCard.stack.${stack}`)}
           </p>
         </div>
       </div>
