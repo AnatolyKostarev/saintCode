@@ -1,10 +1,12 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import s from './ResultsArticle.module.sass'
 
 export const ResultsArticle = ({
   className, icon, subtitle, text,
 }) => {
+  const { t } = useTranslation()
   return (
     <article className={clsx(s.ResultsArticle, className)}>
       <img
@@ -15,10 +17,10 @@ export const ResultsArticle = ({
         alt="icon"
       />
       <p className={clsx(s.subtitle)}>
-        {subtitle}
+        {t(`ResultsArticle.subtitle.${subtitle}`)}
       </p>
       <p className={clsx(s.text)}>
-        {text}
+        {t(`ResultsArticle.text.${text}`)}
       </p>
     </article>
   )
