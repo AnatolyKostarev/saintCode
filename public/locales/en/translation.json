@@ -646,6 +646,6 @@
   },
   "BusinessHours": {
     "from": "Open from",
-    "till": "to"
+    "to": "to"
   }
 }
