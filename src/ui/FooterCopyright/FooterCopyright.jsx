@@ -1,10 +1,13 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import { Container } from '../Container'
 import { Button } from '../Button'
 import s from './FooterCopyright.module.sass'
 
 export const FooterCopyright = ({ className }) => {
+  const { t } = useTranslation()
+
   return (
     <div className={clsx(s.FooterCopyright, className)}>
       <Container className={s.copy}>
@@ -14,10 +17,10 @@ export const FooterCopyright = ({ className }) => {
             {new Date().getFullYear()}
           </p>
           <p className={clsx(s.text)}>
-            ИП Мельников | ИНН 781435967821 ОГРНИП 319784700259930
+            {t('FooterCopyright.text')}
           </p>
         </div>
-        <Button className={clsx(s.policy)} text="Политика конфиденциальности" />
+        <Button className={clsx(s.policy)} text={t('FooterCopyright.policy')} />
       </Container>
     </div>
   )
