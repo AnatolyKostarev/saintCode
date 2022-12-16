@@ -1,12 +1,13 @@
 import React, {
   useEffect, useRef, useState,
 } from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
-import arrow from './Vector.svg'
+import { Modal } from '../Modal'
 import { studentData } from './studentData'
 import { StoryCard } from '../../ui/StoryCard'
-import { Modal } from '../Modal'
 import { Container } from '../../ui/Container'
+import arrow from './Vector.svg'
 import s from './Slider.module.sass'
 
 export const Slider = ({ className }) => {
@@ -20,6 +21,7 @@ export const Slider = ({ className }) => {
   const slider = useRef(null)
   const slideRef = useRef(null)
   const minSwipeDistance = 50
+  const { t } = useTranslation()
 
   const slideResize = () => {
     setSlideWidth(slideRef.current.clientWidth)
@@ -74,18 +76,18 @@ export const Slider = ({ className }) => {
             <StoryCard
               {...student}
               genderOption={student.studentGender === 'female'
-                ? 'Устроилась фронтенд-разработчицей в '
-                : 'Устроился фронтенд-разработчиком в '}
+                ? t('Slider.closed.female')
+                : t('Slider.closed.male')}
               key={student.id}
               className={s.closed}
             >
               {student.QA.map(e => (
                 <div key={e.answer}>
                   <strong className={clsx(s.question)}>
-                    {e.question}
+                    {t(`Slider.QA.question.${e.question}`)}
                   </strong>
                   <p className={clsx(s.answer)}>
-                    {e.answer}
+                    {t(`Slider.QA.answer.${e.answer}`)}
                   </p>
                 </div>
               ))}
@@ -164,8 +166,8 @@ export const Slider = ({ className }) => {
             <StoryCard
               {...elem}
               genderOption={elem.studentGender === 'female'
-                ? 'Устроилась фронтенд-разработчицей в '
-                : 'Устроился фронтенд-разработчиком в '}
+                ? t('Slider.closed.female')
+                : t('Slider.closed.female')}
               key={elem.id}
               isOpen={isOpen}
               setIsOpen={setIsOpen}
@@ -173,10 +175,10 @@ export const Slider = ({ className }) => {
               {elem.QA.map(e => (
                 <div key={e.answer}>
                   <strong className={clsx(s.question)}>
-                    {e.question}
+                    {t(`Slider.QA.question.${e.question}`)}
                   </strong>
                   <p className={clsx(s.answer)}>
-                    {e.answer}
+                    {t(`Slider.QA.answer.${e.answer}`)}
                   </p>
                 </div>
               ))}

@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import { Address } from '../Address/Address'
 import { Place } from '../Place/Place'
@@ -13,6 +14,8 @@ import tg from './tg.svg'
 import s from './FooterContacts.module.sass'
 
 export const FooterContacts = ({ className }) => {
+  const { t } = useTranslation()
+
   return (
     <div className={clsx(s.FooterContacts, className)}>
       <div className={clsx(s.inner__left)}>
@@ -20,9 +23,8 @@ export const FooterContacts = ({ className }) => {
         <Email className={s.email} />
         <div className={clsx(s.address__info)}>
           <Address
-            city="Санкт-Петербург"
-            address="Загородный проспект, дом 12 (в арку и налево, подъезд №2),
-            3 этаж, пом. 15"
+            city={t('FooterContacts.city')}
+            address={t('FooterContacts.address')}
           />
           <Place text="SaintCode Bootcamp" />
           <BusinessHours from="12:00" to="19:00" />

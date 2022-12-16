@@ -1,4 +1,5 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import { Button } from '../Button'
 import s from './StoryCard.module.sass'
@@ -14,6 +15,7 @@ export const StoryCard = ({
   setIsOpen,
   children,
 }) => {
+  const { t } = useTranslation()
   return (
     <div className={clsx(s.StoryCard, className)}>
       <div className={clsx(s.student)}>
@@ -28,10 +30,10 @@ export const StoryCard = ({
         </div>
         <div className={clsx(s.info__wrapper)}>
           <p className={clsx(s.name)}>
-            {studentName}
+            {t(`Slider.studentName.${studentName}`)}
           </p>
           <p className={clsx(s.age)}>
-            {studentAge}
+            {t(`Slider.studentAge.${studentAge}`)}
           </p>
         </div>
         {isOpen
@@ -47,7 +49,7 @@ export const StoryCard = ({
         <strong className={clsx(s.result)}>
           {genderOption}
           <span className={clsx(s.result__company)}>
-            {studentResult}
+            {t(`Slider.studentResult.${studentResult}`)}
           </span>
         </strong>
         <div className={clsx(s.qa)}>
