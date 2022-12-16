@@ -1,17 +1,24 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import s from './BusinessHours.module.sass'
 
 export const BusinessHours = ({ className, from, to }) => {
+  const { t } = useTranslation()
+
   return (
     <p className={clsx(s.BusinessHours, className)}>
-      Время работы с
+      {t('BusinessHours.from')}
       {' '}
-      {from}
+      <time>
+        {from}
+      </time>
       {' '}
-      до
+      {t('BusinessHours.to')}
       {' '}
-      {to}
+      <time>
+        {to}
+      </time>
     </p>
   )
 }
