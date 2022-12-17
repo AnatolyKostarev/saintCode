@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { handleChange } from '../../utils/inputHandleChange'
@@ -21,6 +22,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
   const [isAlert, setIsAlert] = useState(false)
   const [alertType, setAlertType] = useState('success')
   const [disabled, setDisabled] = useState(false)
+  const { t } = useTranslation()
 
   const escSignUpForm = e => {
     if (e.key === 'Escape') {
@@ -125,34 +127,30 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
               />
             </button>
             {isAlert ? (
-              <Alert type={alertType}>
-                {alertType === 'success'
-                  ? 'Ваше сообщение успешно доставлено'
-                  : 'Упс...Не удалось отправить заявку!'}
-              </Alert>
+              <Alert type={alertType} />
             ) : (
               <div className={s.consultForm__wrapper}>
                 <p className={s.consultForm__title}>
-                  Записаться на обучение онлайн
+                  {t('SignUpForm.title')}
                 </p>
                 <div>
                   <input
                     className={s.consultForm__name}
                     id="name"
                     {...register('name', {
-                      required: 'Напиши имя',
+                      required: t('SignUpForm.name.name'),
                       minLength: {
                         value: 3,
-                        message: 'Минимум 3 символа',
+                        message: t('SignUpForm.name.minLength'),
                       },
                       maxLength: {
                         value: 50,
-                        message: 'максимум 50 символов',
+                        message: t('SignUpForm.name.maxLength'),
                       },
 
                     })}
                     type="text"
-                    placeholder="Имя"
+                    placeholder={t('SignUpForm.name.placeholder')}
                     size={39}
                     onChange={e => handleChange(e, setValue)}
                     value={value.name}
@@ -176,15 +174,15 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     id="tel"
                     name="tel"
                     {...register('tel', {
-                      required: 'Напиши телефон',
+                      required: t('SignUpForm.tel.required'),
                       pattern: {
                         value:
                           /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-                        message: 'Наипиши в формате +999 999999999',
+                        message: t('SignUpForm.tel.message'),
                       },
                     })}
                     type="tel"
-                    placeholder="+7 (999) 999 99 99"
+                    placeholder="+999 999999999"
                     size={39}
                     onChange={e => handleChange(e, setValue)}
                     value={value.tel}
@@ -211,19 +209,19 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                       // required: 'Пожалуйста, заполните все обязательные поля',
                       minLength: {
                         value: 6,
-                        message: 'Минимум 6 символов, в ключая @',
+                        message: t('SignUpForm.mail.minLength'),
                       },
                       maxLength: {
                         value: 50,
-                        message: 'Максимум 50 символов',
+                        message: t('SignUpForm.mail.maxLength'),
                       },
                       pattern: {
                         value: /\S+@\S+\.\S+/,
-                        message: 'Неправильно указана почта',
+                        message: t('SignUpForm.mail.message'),
                       },
                     })}
                     type="email"
-                    placeholder="Электронная почта"
+                    placeholder={t('SignUpForm.mail.placeholder')}
                     size={39}
                     onChange={e => handleChange(e, setValue)}
                     value={value.email}
@@ -249,10 +247,10 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     {...register('message', {
                       maxLength: {
                         value: 500,
-                        message: 'Максимум 500 символов',
+                        message: t('SignUpForm.textarea.maxLength'),
                       },
                     })}
-                    placeholder="Здесь можно написать вопрос = )"
+                    placeholder={t('SignUpForm.textarea.placeholder')}
                     cols={42}
                     onChange={e => handleChange(e, setValue)}
                     value={value.message}
@@ -262,7 +260,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                         : { outline: 'none' }
                     }
                   >
-                    Здесь можно написать вопрос = )
+                    {t('SignUpForm.textarea.placeholder')}
                   </textarea>
                   <>
                     {errors.message && (
@@ -274,17 +272,17 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                 </div>
                 <Button
                   className={s.consultForm__btn}
-                  text={isLoader ? <Loader /> : 'Отправить'}
+                  text={isLoader ? <Loader /> : t('SignUpForm.button')}
                   type="submit"
                   disabled={disabled}
                 />
                 <p className={s.consultForm__terms}>
-                  Нажимая на кнопку Отправить, ты принимаешь
+                  {t('SignUpForm.terms.text1')}
                 </p>
                 <p className={s.consultForm__terms}>
                   <Link to="*">
                     <span>
-                      условия передачи информации
+                      {t('SignUpForm.terms.text2')}
                     </span>
                   </Link>
                 </p>
