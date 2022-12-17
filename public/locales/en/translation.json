@@ -647,5 +647,66 @@
   "BusinessHours": {
     "from": "Open from",
     "to": "to"
+  },
+  "ConsultForm": {
+    "title": "Get a consultation",
+    "name": {
+      "minLength": "Minimum 3 characters",
+      "maxLength": "Maximum 50 characters",
+      "placeholder": "Name"
+    },
+    "tel": {
+      "required": "Write a phone",
+      "message": "Write a phone +999 999999999"
+    },
+    "mail": {
+      "maxLength": "Maximum 50 characters",
+      "message": "Invalid email format",
+      "placeholder": "Email"
+    },
+    "textarea": {
+      "maxLength": "Maximum 500 characters",
+      "placeholder": "Here you can write a question =)"
+    },
+    "button": "Send",
+    "terms": {
+      "text1": "By clicking on the Send button, you",
+      "text2": "accept",
+      "text3": "the terms of confidentiality"
+    }
+  },
+  "SignUpForm": {
+    "title": "Sign up for training",
+    "name": {
+      "name": "Write name",
+      "minLength": "Minimum 3 characters",
+      "maxLength": "Maximum 50 characters",
+      "placeholder": "Name"
+    },
+    "tel": {
+      "required": "Write a phone",
+      "message": "Write a phone +999 999999999"
+    },
+    "mail": {
+      "maxLength": "Maximum 50 characters",
+      "minLength": "Minimum 6 characters, including @",
+      "message": "Invalid email format",
+      "placeholder": "Email"
+    },
+    "textarea": {
+      "maxLength": "Maximum 500 characters",
+      "placeholder": "Here you can write a question =)"
+    },
+    "button": "Send",
+    "terms": {
+      "text1": "By clicking on the Send button, you accept",
+      "text2": "the terms of confidentiality"
+    }
+  },
+  "Alert": {
+    "positiveInfo": "We will contact you soon",
+    "negativeInfo": "Try to send later or mail to",
+    "error": "Error",
+    "sent": "Sent"
   }
 }
