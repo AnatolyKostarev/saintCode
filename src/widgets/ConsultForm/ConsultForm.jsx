@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { Portal } from '../../ui/Portal'
@@ -21,6 +22,8 @@ export const ConsultForm = ({ setIsConsultForm }) => {
   const [isAlert, setIsAlert] = useState(false)
   const [alertType, setAlertType] = useState('success')
   const [disabled, setDisabled] = useState(false)
+
+  const { t } = useTranslation()
 
   const escConsultForm = e => {
     if (e.key === 'Escape') {
@@ -113,7 +116,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
         ) : (
           <div className={s.consultForm__wrapper}>
             <p className={s.consultForm__title}>
-              Получи консультацию
+              {t('ConsultForm.title')}
             </p>
             <div>
               <input
@@ -124,15 +127,15 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                   // required: 'Обязательное поле',
                   minLength: {
                     value: 3,
-                    message: 'Минимум 3 символа',
+                    message: t('ConsultForm.name.minLength'),
                   },
                   maxLength: {
                     value: 50,
-                    message: 'Максимум 50 символов',
+                    message: t('ConsultForm.name.maxLength'),
                   },
                 })}
                 type="text"
-                placeholder="Имя"
+                placeholder={t('ConsultForm.name.placeholder')}
                 size={31}
                 onChange={e => handleChange(e, setValue)}
                 value={value.name}
@@ -156,11 +159,11 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 id="tel"
                 name="tel"
                 {...register('tel', {
-                  required: 'Напиши телефон',
+                  required: t('ConsultForm.tel.required'),
                   pattern: {
                     value:
                       /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-                    message: 'Напиши телефон +999 999999999',
+                    message: t('ConsultForm.tel.message'),
                   },
                 })}
                 type="tel"
@@ -191,15 +194,15 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                   // required: 'Обязательное поле',
                   maxLength: {
                     value: 50,
-                    message: 'Максимум 50 символов',
+                    message: t('ConsultForm.email.maxLength'),
                   },
                   pattern: {
                     value: /\S+@\S+\.\S+/,
-                    message: 'Недопустимый формат email',
+                    message: t('ConsultForm.mail.message'),
                   },
                 })}
                 type="email"
-                placeholder="Электронная почта"
+                placeholder={t('ConsultForm.mail.placeholder')}
                 size={31}
                 onChange={e => handleChange(e, setValue)}
                 value={value.email}
@@ -225,10 +228,10 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 {...register('message', {
                   maxLength: {
                     value: 500,
-                    message: 'Максимум 500 символов',
+                    message: t('ConsultForm.textarea.maxLength'),
                   },
                 })}
-                placeholder="Здесь можно написать вопрос = )"
+                placeholder={t('ConsultForm.textarea.placeholder')}
                 cols={31}
                 onChange={e => handleChange(e, setValue)}
                 value={value.message}
@@ -238,7 +241,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                     : { outline: 'none' }
                 }
               >
-                Здесь можно написать вопрос = )
+                {t('ConsultForm.textarea.placeholder')}
               </textarea>
               <>
                 {errors.message && (
@@ -250,20 +253,19 @@ export const ConsultForm = ({ setIsConsultForm }) => {
             </div>
             <Button
               className={s.consultForm__btn}
-              text={isLoader ? <Loader /> : 'Отправить'}
+              text={isLoader ? <Loader /> : t('ConsultForm.button')}
               type="submit"
               disabled={disabled}
             />
             <p className={s.consultForm__terms}>
-              Нажимая на кнопку Отправить, ты
+              {t('ConsultForm.terms.text1')}
             </p>
-
             <p className={s.consultForm__terms}>
-              принимаешь
+              {t('ConsultForm.terms.text2')}
               {' '}
               <Link to="*">
                 <span>
-                  условия передачи информации
+                  {t('ConsultForm.terms.text3')}
                 </span>
               </Link>
             </p>
