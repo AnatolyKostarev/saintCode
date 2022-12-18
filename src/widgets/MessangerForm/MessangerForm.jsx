@@ -6,7 +6,9 @@ import { Form } from '../../ui/Form'
 import { SourceLoader } from '../../ui/SourceLoader'
 import { Alert } from '../../ui/Alert'
 import { Button } from '../../ui/Button'
+import 'react-phone-input-2/lib/style.css'
 import s from './MessangerForm.module.sass'
+import PhoneInput from "react-phone-input-2";
 
 export const MessangerForm = () => {
   const { t } = useTranslation()
@@ -20,6 +22,7 @@ export const MessangerForm = () => {
   const [alert, setAlert] = useState(false)
   const [alertType, setAlertType] = useState('success')
   const [disabled, setDisabled] = useState(false)
+  const [tel, setTel] = useState()
 
   const {
     register,
@@ -126,24 +129,32 @@ export const MessangerForm = () => {
           >
             {t('QuestionsRemain.input.label.phone')}
           </label>
-          <input
-            {...register('tel', {
-              required: 'Обязательное поле',
-              pattern: {
-                value:
-                  /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-                message: 'Введите в формате +999 999999999',
-              },
-            })}
-            onChange={e => handleChange(e, setValue)}
-            className={s.QuestionsRemain__input}
-            type="tel"
-            id="tel"
-            placeholder={t('QuestionsRemain.input.placeholder.phone')}
-            value={value.tel}
-            style={
-              errors.tel ? { outline: '1px solid red' } : { outline: 'none' }
-            }
+          {/*<input*/}
+          {/*  {...register('tel', {*/}
+          {/*    required: 'Обязательное поле',*/}
+          {/*    pattern: {*/}
+          {/*      value:*/}
+          {/*        /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,*/}
+          {/*      message: 'Введите в формате +999 999999999',*/}
+          {/*    },*/}
+          {/*  })}*/}
+          {/*  onChange={e => handleChange(e, setValue)}*/}
+          {/*  className={s.QuestionsRemain__input}*/}
+          {/*  type="tel"*/}
+          {/*  id="tel"*/}
+          {/*  placeholder={t('QuestionsRemain.input.placeholder.phone')}*/}
+          {/*  value={value.tel}*/}
+          {/*  style={*/}
+          {/*    errors.tel ? { outline: '1px solid red' } : { outline: 'none' }*/}
+          {/*  }*/}
+          {/*/>*/}
+          <PhoneInput
+            inputClass={s.QuestionsRemain__input}
+            dropdownStyle={{color: '#000'}}
+            buttonStyle={{border: 'none', background: 'none'}}
+            country='ru'
+            value={tel}
+            onChange={setTel}
           />
           <>
             {errors.tel && (
