@@ -151,7 +151,7 @@ export const MessangerForm = () => {
           <PhoneInput
             inputClass={s.QuestionsRemain__input}
             dropdownStyle={{ color: '#000' }}
-            buttonStyle={{ border: 'none', background: 'none' }}
+            buttonStyle={{ border: 'none', background: 'none', margin: '0' }}
             country="ru"
             value={tel}
             onChange={setTel}

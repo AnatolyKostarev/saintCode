@@ -19,8 +19,7 @@ export const Layout = ({ children }) => {
     <>
       <Header />
       <main>
-        {width <= 976
-          && <HeaderResponsive />}
+        <HeaderResponsive />
         {children}
       </main>
       {topIsActive
