@@ -707,6 +707,6 @@
     "positiveInfo": "We will contact you soon",
     "negativeInfo": "Try to send later or mail to",
     "error": "Error",
-    "sent": "Sent"
+    "delivered": "Sent"
   }
 }
