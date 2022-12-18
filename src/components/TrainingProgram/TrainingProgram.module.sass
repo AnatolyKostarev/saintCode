@@ -19,12 +19,19 @@
                 line-height: 31px
                 text-align: left
                 color: rgba(251, 251, 251, 1)
+                &::selection
+                    background: #99FEB3
 
         & span
             color: rgba(125, 143, 130, 1)
+            &::selection
+                background: #99FEB3
+
         &_title
             flex-basis: 66.85%
             line-height: 84px
+            &::selection
+                background: #99FEB3
 
     &__title
         display: flex
@@ -32,12 +39,16 @@
         align-items: center
         margin-bottom: 29px
         padding: 0 99px
+        &::selection
+            background: #99FEB3
         & p:first-child
             max-width: 639px
             font-size: 32px
             font-weight: 400
             line-height: 38px
             text-align: left
+            &::selection
+                background: #99FEB3
         & p:last-child
             align-self: flex-start
             font-size: 32px
@@ -45,10 +56,14 @@
             line-height: 38px
             text-align: right
             opacity: 0.1
+            &::selection
+                background: #99FEB3
 
     &__tasks
         margin-bottom: 57px
         padding: 0 99px
+        &::selection
+            background: #99FEB3
         &:last-child
             margin-bottom: 0
 
@@ -62,6 +77,8 @@
         margin: 30px 0 70px
         &:last-child
             margin-bottom: 0
+        &::selection
+            background: #99FEB3
 
 
 .border

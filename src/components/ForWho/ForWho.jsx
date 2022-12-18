@@ -13,7 +13,7 @@ export const ForWho = () => {
   return (
     <Section className={s.ForWho}>
       <Container className={s.container}>
-        <SectionTitle>
+        <SectionTitle className={s.title}>
           <span className="transparent--blue">
             {t('ForWho.span1')}
           </span>

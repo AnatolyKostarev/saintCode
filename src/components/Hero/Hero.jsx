@@ -33,7 +33,7 @@ export const Hero = () => {
           </span>
         </p>
         <HeroArticle>
-          <Title>
+          <Title className={s.title}>
             {t('Hero.school')}
             {/* Школа программирования */}
             <br />

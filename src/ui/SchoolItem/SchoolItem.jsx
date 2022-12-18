@@ -18,7 +18,7 @@ export const SchoolItem = ({
             {title}
           </p>
           <div className={clsx(s.school__cross, { [s.school__cross__rotate]: show })}>
-            &#10006;
+            <span className={clsx(s.school__cross_item)}>&#10006;</span>
           </div>
         </button>
         {children}

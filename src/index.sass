@@ -28,11 +28,17 @@ ul
 
 .transparent
   opacity: 0.5
+  &::selection
+    background: #91A1D9
   &--blue
     color: rgba(81, 87, 107, 1)
+    &::selection
+      background: #91A1D9
 
 .focus
   color: #738ada
+  &::selection
+    background: #91A1D9
 
 select
   padding-right: 19px
