@@ -31,10 +31,10 @@ export const Alert = ({ className, type = 'success' }) => {
     >
       <div>
         <div>
-          <img src={type !== 'success' ? failure : delivered} alt="" width="130" height="130" />
+          <img src={type !== 'success' ? failure : delivered} alt="icon" width="130" height="130" />
         </div>
         <p className="title">
-          {type !== 'success' ? t('Alert.error') : t('Alert.sent')}
+          {type !== 'success' ? t('Alert.error') : t('Alert.delivered')}
         </p>
         <p className="subtitle">
           {type !== 'success' ? negativeInfo : positiveInfo}
