@@ -33,12 +33,12 @@ transporter.verify((err, success) => {
 
 app.post('/send', async (req, res) => {
   const mailOptions = {
-    from: `${req.body.value.email}`,
+    from: `${req.body.email}`,
     to: process.env.EMAIL,
-    subject: `Сообщение от пользователя ${req.body.value.name}`,
-    html: `<p>Здравствуйте! Перезвоните мне по номеру ${req.body.value.tel}</p>
-    <p>Или отправьте сообщение по email ${req.body.value.email}</p>
-    <p>Сообщение: ${req.body.value.message}</p>`,
+    subject: `Сообщение от пользователя ${req.body.name}`,
+    html: `<p>Здравствуйте! Перезвоните мне по номеру ${req.body.tel}</p>
+    <p>Или отправьте сообщение по email ${req.body.email}</p>
+    <p>Сообщение: ${req.body.message}</p>`,
   }
 
   transporter.sendMail(mailOptions, (err, data) => {
@@ -59,11 +59,11 @@ app.post('/send', async (req, res) => {
 
 app.post('/messanger', async (req, res) => {
   const mailOptions = {
-    from: `${req.body.value.name}`,
+    from: `${req.body.name}`,
     to: process.env.EMAIL,
-    subject: `Сообщение от пользователя ${req.body.value.name}`,
-    html: `<p>Здравствуйте! Перезвоните мне по номеру ${req.body.value.tel}</p>
-    <p>Или оставьте свое сообщение в ${req.body.value.messanger}</p>`,
+    subject: `Сообщение от пользователя ${req.body.name}`,
+    html: `<p>Здравствуйте! Перезвоните мне по номеру ${req.body.tel}</p>
+    <p>Или оставьте свое сообщение в ${req.body.message}</p>`,
   }
 
   transporter.sendMail(mailOptions, (err, data) => {

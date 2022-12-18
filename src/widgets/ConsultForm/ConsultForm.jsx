@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
+import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { Portal } from '../../ui/Portal'
@@ -12,18 +13,38 @@ import { handleChange } from '../../utils/inputHandleChange'
 import s from './ConsultForm.module.sass'
 
 export const ConsultForm = ({ setIsConsultForm }) => {
-  const [value, setValue] = useState({
-    name: '',
-    tel: '',
-    email: '',
-    message: '',
-  })
+  const [name, setName] = useState('')
+  const [tel, setTel] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
+  // const [value, setValue] = useState({
+  //   name: '',
+  //   tel: value1,
+  //   email: '',
+  //   message: '',
+  // })
   const [isLoader, setIsLoader] = useState(false)
   const [isAlert, setIsAlert] = useState(false)
   const [alertType, setAlertType] = useState('success')
   const [disabled, setDisabled] = useState(false)
 
+  // console.log('#value1', value1)
+  // console.log('#value', value)
+
+  console.log(name, tel, email, message)
+
   const { t } = useTranslation()
+
+  const nameChange = e => {
+    setName(e.target.value.trimStart())
+  }
+
+  const emailChange = e => {
+    setEmail(e.target.value.trimStart())
+  }
+  const messageChange = e => {
+    setMessage(e.target.value.trimStart())
+  }
 
   const escConsultForm = e => {
     if (e.key === 'Escape') {
@@ -42,28 +63,29 @@ export const ConsultForm = ({ setIsConsultForm }) => {
 
   const {
     register,
+    control,
     handleSubmit,
     reset,
     formState,
     formState: { errors },
   } = useForm({
     mode: 'onSubmit',
-    defaultValues: {
-      name: '',
-      tel: '',
-      email: '',
-      message: '',
-    },
+    // defaultValues: {
+    //   name: '',
+    //   tel: '',
+    //   email: '',
+    //   message: '',
+    // },
   })
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
-      reset({
-        name: '',
-        tel: '',
-        email: '',
-        message: '',
-      })
+      reset(
+        name,
+        tel,
+        email,
+        message,
+      )
     }
   }, [formState, reset])
 
@@ -75,15 +97,21 @@ export const ConsultForm = ({ setIsConsultForm }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ value }),
+        body: JSON.stringify({
+          name, email, message, tel,
+        }),
       })
       const res = await response.json()
-      await setValue({
-        name: '',
-        tel: '',
-        email: '',
-        message: '',
-      })
+      await setName(name)
+      await setEmail(email)
+      await setMessage(message)
+      await setTel(tel)
+      // await setValue({
+      //   name: '',
+      //   tel: '',
+      //   email: '',
+      //   message: '',
+      // })
     } catch (error) {
       setIsLoader(false)
       setIsAlert(true)
@@ -137,11 +165,15 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 type="text"
                 placeholder={t('ConsultForm.name.placeholder')}
                 size={31}
-                onChange={e => handleChange(e, setValue)}
-                value={value.name}
+                onChange={nameChange}
+                value={name}
                 style={
                   errors.name
-                    ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
+                    ? {
+                      outline: '1px solid #EA6342',
+                      background: 'rgba(234, 99, 66, 0.1)',
+                      border: 0,
+                    }
                     : { outline: 'none' }
                 }
               />
@@ -154,7 +186,16 @@ export const ConsultForm = ({ setIsConsultForm }) => {
               </>
             </div>
             <div>
-              <input
+              <PhoneInputWithCountry
+                name="phoneInputWithCountrySelect"
+                control={control}
+                rules={{ required: true }}
+                onChange={setTel}
+                value={tel}
+                // onChange={e => handleChange(e, setValue)}
+                // value={value.tel}
+              />
+              {/* <input
                 className={s.consultForm__tel}
                 id="tel"
                 name="tel"
@@ -183,7 +224,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                     {errors.tel.message || 'Error'}
                   </p>
                 )}
-              </>
+              </> */}
             </div>
             <div>
               <input
@@ -204,11 +245,15 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 type="email"
                 placeholder={t('ConsultForm.mail.placeholder')}
                 size={31}
-                onChange={e => handleChange(e, setValue)}
-                value={value.email}
+                onChange={emailChange}
+                value={email}
                 style={
                   errors.email
-                    ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
+                    ? {
+                      outline: '1px solid #EA6342',
+                      background: 'rgba(234, 99, 66, 0.1)',
+                      border: 0,
+                    }
                     : { outline: 'none' }
                 }
               />
@@ -233,11 +278,15 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 })}
                 placeholder={t('ConsultForm.textarea.placeholder')}
                 cols={31}
-                onChange={e => handleChange(e, setValue)}
-                value={value.message}
+                onChange={messageChange}
+                value={message}
                 style={
                   errors.message
-                    ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
+                    ? {
+                      outline: '1px solid #EA6342',
+                      background: 'rgba(234, 99, 66, 0.1)',
+                      border: 0,
+                    }
                     : { outline: 'none' }
                 }
               >
