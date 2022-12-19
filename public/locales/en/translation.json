@@ -708,5 +708,13 @@
     "negativeInfo": "Try to send later or mail to",
     "error": "Error",
     "delivered": "Sent"
+  },
+  "HeaderResponsive": {
+    "home": "Home",
+    "about": "About",
+    "program": "Preparatory program",
+    "FAQ": "FAQ",
+    "blog": "Blog",
+    "independent": "Independent learning"
   }
 }
