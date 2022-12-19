@@ -46,32 +46,32 @@ export const HeaderResponsive = () => {
             <ul className={s.list}>
               <li>
                 <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/' })} to="/">
-                  Главная
+                  {t('HeaderResponsive.home')}
                 </Link>
               </li>
               <li>
                 <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/school' })} to="/school">
-                  О школе
+                  {t('HeaderResponsive.about')}
                 </Link>
               </li>
               <li>
                 <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/program' })} to="/program">
-                  Подготовительная программа
+                  {t('HeaderResponsive.program')}
                 </Link>
               </li>
               <li>
                 <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/faq' })} to="/faq">
-                  ЧАВО
+                  {t('HeaderResponsive.FAQ')}
                 </Link>
               </li>
               <li>
                 <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/blog' })} to="/blog">
-                  Блог
+                  {t('HeaderResponsive.blog')}
                 </Link>
               </li>
               <li>
                 <Link className={clsx(s.lnk)} to="/">
-                  Самостоятельное обучение
+                  {t('HeaderResponsive.independent')}
                 </Link>
               </li>
             </ul>
