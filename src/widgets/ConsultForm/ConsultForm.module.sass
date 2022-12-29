@@ -46,7 +46,8 @@
         display: block
         margin-bottom: 5px
         padding: 19px 20px 18px 20px
-        max-width: 360px
+        //max-width: 360px
+        width: 100%
         border: 1px solid #e0e0e0
         background: rgba(255, 255, 255, 1)
         box-sizing: border-box
@@ -60,7 +61,7 @@
     &__message
         @extend .consultForm__name
         margin-bottom: 0
-        padding: 0px 20px
+        padding: 0 20px
         max-width: 360px
         line-height: 50px
         color: rgba(128, 128, 128, 1)
@@ -102,6 +103,28 @@
     text-align: left
     color: rgba(234, 99, 66, 1)
 
+.phone__input
+    display: block
+    width: 100% !important
+    //height: 54px !important
+    border-radius: 0 !important
+    font-size: 16px
+    font-weight: 400
+    line-height: 24px
+    text-align: left
+    color: rgba(2, 3, 3, 0.8)
+    background-color: #fff
+    font-family: 'JetBrains Mono', monospace
+    margin-bottom: 5px
+    height: 60.5px !important
+    border: 1px solid #e0e0e0 !important
+    box-sizing: border-box
+    &::placeholder
+        font-size: 16px
+        line-height: 1.33
+        color: rgba(0, 0, 0, 0.5)
+    &:focus
+        outline: none
 
 @keyframes show
     0%
@@ -157,7 +180,7 @@
             color: rgba(128, 128, 128, 1)
             &::placeholder
                 font-size: 13.5px
-                
+
 
         &__btn
             margin-bottom: 15px

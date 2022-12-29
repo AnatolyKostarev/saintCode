@@ -15,6 +15,10 @@ export const HeaderResponsive = () => {
 
   const { t } = useTranslation()
 
+  const bodyBlock = () => opened ? document.body.style.overflow = 'hidden' : document.body.style.overflow = ''
+
+  bodyBlock()
+
   return (
     <div className={clsx(s.HeaderResponsive, { [s.bg]: opened })}>
       <input
