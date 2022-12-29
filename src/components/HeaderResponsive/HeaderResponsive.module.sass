@@ -2,7 +2,8 @@
   position: fixed
   right: 0
   top: 0
-  z-index: 1000
+  z-index: 100
+  display: none
 .bg
   width: 100vw
   height: 100vh
@@ -87,7 +88,8 @@
 
 .call__btn
   width: 100%
-  padding: 4px 0
+  min-height: 44px
+  padding: 4px 35px
   background-color: #59F881
   font-weight: 700
   font-size: 14px
@@ -104,3 +106,7 @@
 
 .active
   color: #59F881
+
+@media (max-width: 976px)
+  .HeaderResponsive
+    display: block

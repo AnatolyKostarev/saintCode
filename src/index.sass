@@ -28,11 +28,20 @@ ul
 
 .transparent
   opacity: 0.5
+  &::selection
+    background: #91A1D9
+    color: #000
   &--blue
     color: rgba(81, 87, 107, 1)
+    &::selection
+      background: #91A1D9
+      color: #000
 
 .focus
   color: #738ada
+  &::selection
+    background: #91A1D9
+    color: #000
 
 select
   padding-right: 19px
@@ -41,3 +50,10 @@ select
   appearance: none
   &:focus
     outline: none
+
+.react-tel-input .selected-flag:hover, .react-tel-input .selected-flag:focus
+  background-color: transparent
+
+.react-tel-input .flag-dropdown.open .selected-flag
+  background: transparent
+  border-radius: 0 0 0 0

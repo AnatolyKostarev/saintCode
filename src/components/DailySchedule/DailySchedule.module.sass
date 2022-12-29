@@ -3,8 +3,14 @@
     background: rgba(62, 43, 46, 1)
 
     &__title
+        &::selection
+            background: #EA9FAB
+            color: #000
         & span
             color: rgba(146, 115, 120, 1)
+            &::selection
+                background: #EA9FAB
+                color: #000
     &__cards
         display: grid
         grid-template-columns: repeat(4, minmax(25%, 280px))

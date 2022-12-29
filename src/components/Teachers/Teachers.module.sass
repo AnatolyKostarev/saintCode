@@ -24,6 +24,9 @@
     display: flex
     align-items: flex-start
     max-width: 468px
+    &::selection
+      background: #EA9FAB
+      color: #000
     &::before
       content: ''
       min-width: 6px
@@ -32,6 +35,10 @@
       display: inline-block
       margin-right: 10px
       margin-top: 8px
+.title
+  &::selection
+    background: #EA9FAB
+    color: #000
 
 @media (max-width: 1241px)
   .Teachers

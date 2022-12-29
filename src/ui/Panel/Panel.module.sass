@@ -5,6 +5,9 @@
 
     & p
         display: inline-block
+        &::selection
+            background: #99FEB3
+            color: #000
 
     & p:first-child
         margin-right: 95px
@@ -14,12 +17,18 @@
         letter-spacing: 0.2em
         text-align: left
         text-transform: uppercase
+        &::selection
+            background: #99FEB3
+            color: #000
     & p:last-child
         font-size: 24px
         font-weight: 400
         line-height: 36px
         text-align: left
         color: rgba(173, 234, 189, 1)
+        &::selection
+            background: #99FEB3
+            color: #000
 
 // Responsive styles
 

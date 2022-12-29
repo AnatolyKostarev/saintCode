@@ -17,18 +17,26 @@
         margin-bottom: 5px
         font-weight: 400
         line-height: 21px
+        &::selection
+            background: #9A8BB6
+            color: #000
 
     &__input
+        padding: 15px 19px 15px 19px
         display: block
-        width: 280px
-        padding: 15px 109px 15px 19px
+        width: 100%
+        min-width: 280px
+        height: 54px !important
+        //padding: 0 19px
+        border-radius: 0 !important
         font-size: 16px
         font-weight: 400
         line-height: 24px
         text-align: left
-        border: 0
+        border: 0 !important
         color: rgba(2, 3, 3, 0.8)
         background-color: #fff
+        font-family: 'JetBrains Mono', monospace
         &::placeholder
             font-size: 16px
             font-weight: 400
@@ -76,11 +84,11 @@
         &__input
             padding: 15px 19px 15px 19px
             width: 100%
+            min-width: 100%
 
         &__btn
             padding: 15px
             width: 100%
-            max-width: 180px
 
 @media (max-width: 976px)
     .QuestionsRemain

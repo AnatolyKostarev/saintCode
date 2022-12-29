@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
-import PhoneInputWithCountry from 'react-phone-number-input/react-hook-form'
+import PhoneInput from 'react-phone-input-2'
 import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { Portal } from '../../ui/Portal'
@@ -186,14 +186,13 @@ export const ConsultForm = ({ setIsConsultForm }) => {
               </>
             </div>
             <div>
-              <PhoneInputWithCountry
-                name="phoneInputWithCountrySelect"
-                control={control}
-                rules={{ required: true }}
-                onChange={setTel}
+              <PhoneInput
+                inputClass={s.phone__input}
+                dropdownStyle={{ color: '#000' }}
+                buttonStyle={{ border: 'none', background: 'none', margin: '0' }}
+                country="ru"
                 value={tel}
-                // onChange={e => handleChange(e, setValue)}
-                // value={value.tel}
+                onChange={setTel}
               />
               {/* <input
                 className={s.consultForm__tel}
