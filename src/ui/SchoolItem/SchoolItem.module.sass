@@ -2,14 +2,15 @@
     &__item
         padding: 18.5px 30px
         max-width: 560px
-        height: 77px
+        max-height: 77px
         background: rgba(85, 63, 67, 1)
         overflow: hidden
         box-sizing: border-box
+        transition: max-height 0.5s ease-in-out
         &__active
             @extend .school__item
-            padding-bottom: 25px
-            height: 100%
+            max-height: 108vh
+            transition: max-height 0.5s ease-in-out
 
     &__btn
         display: flex
@@ -27,7 +28,7 @@
         &:hover .school__cross
             background: rgba(255, 255, 255, 1)
             color: rgba(62, 43, 46, 1)
-            transition: all 0.2s linear
+            transition: 0.5s ease-in-out
         & p:first-child
             font-size: 20px
             font-weight: 700
@@ -43,7 +44,7 @@
         background: rgba(62, 43, 46, 1)
         color: rgba(255, 255, 255, 0.7)
         transform: rotate(-45deg)
-        transition: all 0.2s linear
+        transition: 0.5s ease-in-out
         position: relative
         &__rotate
             @extend .school__cross
@@ -54,24 +55,40 @@
             left: 50%
             transform: translate(-50%, -50%)
 
-
-@media (width <= 1024px)
+@media (width <= 1170px)
     .school
         &__item
             margin: 0 auto
-
+            &__active
+                max-height: 135vh
+           
         &__btn
             & p:first-child
                 max-width: 336px
 
-@media (width <= 425px)
+@media (width <= 768px)
+    .school
+        &__item
+            &__active
+                max-height: 114vh
+
+@media (width <= 576px)
     .school
         &__item
             padding: 6.5px 20px
-            height: 94px
+            max-height: 94px
             &__active
-                @extend .school__item
                 padding-bottom: 25px
-                height: 100%
-                transition: all 0.2s linear
+                max-height: 162vh
 
+@media (width <= 375px)
+    .school
+        &__item
+            &__active
+                max-height: 174vh
+
+@media (width <= 320px)
+    .school
+        &__item
+            &__active
+                max-height: 204vh
