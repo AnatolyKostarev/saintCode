@@ -721,5 +721,11 @@
     "item1": "Preparatory program",
     "item2": "Independent learning",
     "item3": "Job openings"
+  },
+  "NotFoundArticle": {
+    "item1": "Ups!",
+    "item2": "So sorry",
+    "error": "We can't open this page",
+    "buttonText": "Let's Go Home"
   }
 }
