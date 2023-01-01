@@ -1,19 +1,21 @@
 import React from 'react'
+import { useTranslation } from 'react-i18next'
 import clsx from 'clsx'
 import { Link } from 'react-router-dom'
 import s from './FooterLinks.module.sass'
 
 export const FooterLinks = ({ className }) => {
+  const { t } = useTranslation()
   return (
     <div className={clsx(s.FooterLinks, className)}>
       <Link to="/program">
-        Подготовительная программа
+        {t('FooterLink.item1')}
       </Link>
       <Link to="/">
-        Самостоятельное обучение
+        {t('FooterLink.item2')}
       </Link>
       <Link to="/school">
-        Вакансии
+        {t('FooterLink.item3')}
       </Link>
     </div>
   )

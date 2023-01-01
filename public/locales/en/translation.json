@@ -645,7 +645,7 @@
     "address": "Zagorodniy prospect, bld. 12 (into the arch and to the left, entrance number 2), 2 floor, office. 15"
   },
   "BusinessHours": {
-    "from": "Open from",
+    "from": "Open from ",
     "to": "to"
   },
   "ConsultForm": {
@@ -716,5 +716,10 @@
     "FAQ": "FAQ",
     "blog": "Blog",
     "independent": "Independent learning"
+  },
+  "FooterLink": {
+    "item1": "Preparatory program",
+    "item2": "Independent learning",
+    "item3": "Job openings"
   }
 }
