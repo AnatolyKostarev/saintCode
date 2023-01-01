@@ -63,7 +63,7 @@ app.post('/messanger', async (req, res) => {
     to: process.env.EMAIL,
     subject: `Сообщение от пользователя ${req.body.name}`,
     html: `<p>Здравствуйте! Перезвоните мне по номеру ${req.body.tel}</p>
-    <p>Или оставьте свое сообщение в ${req.body.message}</p>`,
+    <p>Или оставьте свое сообщение в ${req.body.messanger}</p>`,
   }
 
   transporter.sendMail(mailOptions, (err, data) => {
