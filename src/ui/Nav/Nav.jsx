@@ -16,7 +16,7 @@ export const Nav = ({ className }) => {
           </Link>
         </li>
         <li className={clsx(s.Nav__item)}>
-          <Link className={s.lnk} to="/program">
+          <Link className={s.lnk} to="*">
             {t('Nav.program')}
           </Link>
         </li>
