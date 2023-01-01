@@ -66,7 +66,8 @@ export const ConsultForm = ({ setIsConsultForm }) => {
     }
   }, [formState, reset])
 
-  const onSubmit = async () => {
+  const onSubmit = async data => {
+    // console.log('data', data)
     setIsLoader(true)
     try {
       const response = await fetch('http://45.130.42.68:8080/api/saintcode/send', {
@@ -74,18 +75,9 @@ export const ConsultForm = ({ setIsConsultForm }) => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({
-          name,
-          email,
-          message,
-          tel,
-        }),
+        body: JSON.stringify(data),
       })
       const res = await response.json()
-      setName(name)
-      setEmail(email)
-      setMessage(message)
-      setTel(tel)
     } catch (error) {
       setIsLoader(false)
       setIsAlert(true)
@@ -170,7 +162,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                     message: t('ConsultForm.tel.message'),
                   },
                 }}
-                render={({ field: { ref, value, ...field } }) => (
+                render={({ field: { ref, ...field } }) => (
                   <PhoneInput
                     {...field}
                     inputClass={s.phone__input}
@@ -186,7 +178,6 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                       required: true,
                       autoFocus: true,
                     }}
-                    value={setTel(value)}
                     style={
                       errors.tel
                         ? {
