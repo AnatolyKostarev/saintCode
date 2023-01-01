@@ -9,7 +9,7 @@ import { articles } from './articles'
 import s from './BlogInfo.module.sass'
 
 export const BlogInfo = () => {
-  const [slice, setSlice] = useState(true)
+  const [slice, setSlice] = useState(false)
   const { t } = useTranslation()
 
   return (

@@ -76,7 +76,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
   const onSubmit = async () => {
     setIsLoader(true)
     try {
-      const response = await fetch('http://localhost:5000/send', {
+      const response = await fetch('http://45.130.42.68:8080/api/saintcode/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
