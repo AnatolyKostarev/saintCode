@@ -7,7 +7,6 @@
 /.idea
 # testing
 /coverage
-/server
 
 # production
 /build
