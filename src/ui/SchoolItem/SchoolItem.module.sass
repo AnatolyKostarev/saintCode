@@ -16,6 +16,7 @@
         display: flex
         justify-content: space-between
         align-items: center
+        gap: 0 5px
         width: 100%
         font-size: 19px
         font-weight: 700
@@ -61,10 +62,7 @@
             margin: 0 auto
             &__active
                 max-height: 135vh
-           
-        &__btn
-            & p:first-child
-                max-width: 336px
+
 
 @media (width <= 768px)
     .school
@@ -81,6 +79,10 @@
                 padding-bottom: 25px
                 max-height: 162vh
 
+        &__btn
+            & p:first-child
+                max-width: 202px
+
 @media (width <= 375px)
     .school
         &__item
@@ -92,3 +94,7 @@
         &__item
             &__active
                 max-height: 204vh
+
+            &__btn
+                & p:first-child
+                    max-width: 187px
