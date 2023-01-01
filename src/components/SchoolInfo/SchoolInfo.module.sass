@@ -30,8 +30,8 @@
 
         &__item
             margin: 0
-            max-width: 460px
             padding: 11.5px 30px
+            max-width: 460px
 
 @media (width <= 992px)
     .school
@@ -48,6 +48,7 @@
 
         &__item
             margin: 0
+            padding: 18.5px 30px
             max-width: 100%
 
 @media (width <= 768px)
@@ -68,19 +69,16 @@
             margin: 0
             max-width: 100%
 
-@media (width <= 425px)
+@media (width <= 705px)
+    .school
+        &__item
+            padding: 11.5px 30px            
+
+@media (width <= 576px)
     .school
         padding: 117px 20px 45px
         &__title
             margin-bottom: 18px
-
-        &__item
-            padding: 20px 16px
-            &:nth-child(n + 2)
-                padding: 20px 16px
-
-@media (width <= 320px)
-    .school
         &__item
             padding: 20px 16px
             &:nth-child(n + 2)
