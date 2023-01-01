@@ -7,24 +7,24 @@ import hr from './img/image-HR.jpg'
 import developer from './img/image-developer.jpg'
 
 export const articles = [
-  {
-    id: uuidv4(),
-    image: backEnd,
-    caption: 'item_1',
-    description:
-      'item_1',
-    route: '/blog/backend',
-    icon: true,
-  },
-  {
-    id: uuidv4(),
-    image: frontEnd,
-    caption: 'item_2',
-    description:
-      'item_2',
-    route: '/blog/frontend',
-    icon: true,
-  },
+  // {
+  //   id: uuidv4(),
+  //   image: backEnd,
+  //   caption: 'item_1',
+  //   description:
+  //     'item_1',
+  //   route: '/blog/backend',
+  //   icon: true,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   image: frontEnd,
+  //   caption: 'item_2',
+  //   description:
+  //     'item_2',
+  //   route: '/blog/frontend',
+  //   icon: true,
+  // },
   {
     id: uuidv4(),
     image: time,
@@ -43,15 +43,15 @@ export const articles = [
     route: '/blog/interviewPoddubny',
     icon: false,
   },
-  {
-    id: uuidv4(),
-    image: hr,
-    caption: 'item_5',
-    description:
-      'item_5',
-    route: '/blog/human_resources_it',
-    icon: false,
-  },
+  // {
+  //   id: uuidv4(),
+  //   image: hr,
+  //   caption: 'item_5',
+  //   description:
+  //     'item_5',
+  //   route: '/blog/human_resources_it',
+  //   icon: false,
+  // },
   {
     id: uuidv4(),
     image: developer,
