@@ -657,7 +657,7 @@
     },
     "tel": {
       "required": "Write a phone",
-      "message": "Write a phone +999 999999999"
+      "message": "Invalid number"
     },
     "mail": {
       "maxLength": "Maximum 50 characters",

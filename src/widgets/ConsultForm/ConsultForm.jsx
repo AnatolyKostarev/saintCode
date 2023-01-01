@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import PhoneInput from 'react-phone-input-2'
-import { useForm } from 'react-hook-form'
+import { useForm, Controller } from 'react-hook-form'
 import { Link } from 'react-router-dom'
 import { Portal } from '../../ui/Portal'
 import { Form } from '../../ui/Form'
@@ -9,7 +9,6 @@ import { Alert } from '../../ui/Alert'
 import { Button } from '../../ui/Button'
 import { Loader } from '../../ui/Loader'
 import iconClose from './icon-close.png'
-import { handleChange } from '../../utils/inputHandleChange'
 import s from './ConsultForm.module.sass'
 
 export const ConsultForm = ({ setIsConsultForm }) => {
@@ -17,21 +16,10 @@ export const ConsultForm = ({ setIsConsultForm }) => {
   const [tel, setTel] = useState('')
   const [email, setEmail] = useState('')
   const [message, setMessage] = useState('')
-  // const [value, setValue] = useState({
-  //   name: '',
-  //   tel: value1,
-  //   email: '',
-  //   message: '',
-  // })
   const [isLoader, setIsLoader] = useState(false)
   const [isAlert, setIsAlert] = useState(false)
   const [alertType, setAlertType] = useState('success')
   const [disabled, setDisabled] = useState(false)
-
-  // console.log('#value1', value1)
-  // console.log('#value', value)
-
-  console.log(name, tel, email, message)
 
   const { t } = useTranslation()
 
@@ -70,48 +58,34 @@ export const ConsultForm = ({ setIsConsultForm }) => {
     formState: { errors },
   } = useForm({
     mode: 'onSubmit',
-    // defaultValues: {
-    //   name: '',
-    //   tel: '',
-    //   email: '',
-    //   message: '',
-    // },
   })
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
-      reset(
-        name,
-        tel,
-        email,
-        message,
-      )
+      reset(name, tel, email, message)
     }
   }, [formState, reset])
 
   const onSubmit = async () => {
     setIsLoader(true)
     try {
-      const response = await fetch('http://localhost:5000/send', {
+      const response = await fetch('http://45.130.42.68:8080/api/saintcode/send', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
-          name, email, message, tel,
+          name,
+          email,
+          message,
+          tel,
         }),
       })
       const res = await response.json()
-      await setName(name)
-      await setEmail(email)
-      await setMessage(message)
-      await setTel(tel)
-      // await setValue({
-      //   name: '',
-      //   tel: '',
-      //   email: '',
-      //   message: '',
-      // })
+      setName(name)
+      setEmail(email)
+      setMessage(message)
+      setTel(tel)
     } catch (error) {
       setIsLoader(false)
       setIsAlert(true)
@@ -186,36 +160,45 @@ export const ConsultForm = ({ setIsConsultForm }) => {
               </>
             </div>
             <div>
-              <PhoneInput
-                inputClass={s.phone__input}
-                dropdownStyle={{ color: '#000' }}
-                buttonStyle={{ border: 'none', background: 'none', margin: '0' }}
-                country="ru"
-                value={tel}
-                onChange={setTel}
-              />
-              {/* <input
-                className={s.consultForm__tel}
-                id="tel"
+              <Controller
+                control={control}
                 name="tel"
-                {...register('tel', {
+                rules={{
                   required: t('ConsultForm.tel.required'),
-                  pattern: {
-                    value:
-                      /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                  minLength: {
+                    value: 10,
                     message: t('ConsultForm.tel.message'),
                   },
-                })}
-                type="tel"
-                placeholder="+999 999999999"
-                size={31}
-                onChange={e => handleChange(e, setValue)}
-                value={value.tel}
-                style={
-                  errors.tel
-                    ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
-                    : { outline: 'none' }
-                }
+                }}
+                render={({ field: { ref, value, ...field } }) => (
+                  <PhoneInput
+                    {...field}
+                    inputClass={s.phone__input}
+                    dropdownStyle={{ color: '#000' }}
+                    buttonStyle={{
+                      border: 'none',
+                      background: 'none',
+                      margin: '0',
+                    }}
+                    country="ru"
+                    inputExtraProps={{
+                      ref,
+                      required: true,
+                      autoFocus: true,
+                    }}
+                    value={setTel(value)}
+                    style={
+                      errors.tel
+                        ? {
+                          outline: '1px solid #EA6342',
+                          background: 'rgba(234, 99, 66, 0.1)',
+                          marginBottom: '5px',
+                          border: 0,
+                        }
+                        : { outline: 'none' }
+                    }
+                  />
+                )}
               />
               <>
                 {errors.tel && (
@@ -223,7 +206,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                     {errors.tel.message || 'Error'}
                   </p>
                 )}
-              </> */}
+              </>
             </div>
             <div>
               <input
@@ -244,6 +227,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                 type="email"
                 placeholder={t('ConsultForm.mail.placeholder')}
                 size={31}
+                maxLength="50"
                 onChange={emailChange}
                 value={email}
                 style={
@@ -276,6 +260,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
                   },
                 })}
                 placeholder={t('ConsultForm.textarea.placeholder')}
+                maxLength="500"
                 cols={31}
                 onChange={messageChange}
                 value={message}
