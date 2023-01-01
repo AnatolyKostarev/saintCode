@@ -33,27 +33,27 @@ export const FaqInfo = () => {
   }
 
   return (
-    <Section className={s.faq}>
+    <Section className={s.faqInfo}>
       <Container>
-        <div className={s.faq__header}>
-          <SectionTitle className={s.faq__title}>
+        <div className={s.faqInfo__header}>
+          <SectionTitle className={s.faqInfo__title}>
             {t('FaqInfo.title')}
           </SectionTitle>
-          <div className={s.faq__ask}>
+          <div className={s.faqInfo__ask}>
             <p>
               {t('FaqInfo.ask')}
             </p>
             <Button
-              className={s.faq__btn}
+              className={s.faqInfo__btn}
               text={t('FaqInfo.btnText')}
               onClick={() => setIsConsultForm(true)}
             />
           </div>
         </div>
 
-        <div className={s.faq__items}>
+        <div className={s.faqInfo__items}>
           <SchoolItem
-            className={clsx(s.faq__item, { [s.faq__item__active]: isRequire })}
+            className={clsx(s.faqInfo__item, { [s.faqInfo__item__active]: isRequire })}
             title={t('FaqInfo.requirements')}
             id={1}
             onClick={isRequireSwitcher}
@@ -63,7 +63,7 @@ export const FaqInfo = () => {
           </SchoolItem>
 
           <SchoolItem
-            className={clsx(s.faq__item, { [s.faq__item__active]: isTodo })}
+            className={clsx(s.faqInfo__item, { [s.faqInfo__item__active]: isTodo })}
             title={t('FaqInfo.todo')}
             id={1}
             onClick={isTodoSwitcher}
@@ -72,7 +72,7 @@ export const FaqInfo = () => {
             <FaqTodo show={isTodo} />
           </SchoolItem>
           <SchoolItem
-            className={clsx(s.faq__item_last, { [s.faq__item__active]: isPay })}
+            className={clsx(s.faqInfo__item_last, { [s.faqInfo__item__active]: isPay })}
             title={t('FaqInfo.payment')}
             id={1}
             onClick={isPaySwitcher}
