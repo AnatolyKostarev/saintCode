@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import { useForm } from 'react-hook-form'
 import { Link } from 'react-router-dom'
-import { handleChange } from '../../utils/inputHandleChange'
+import { useTranslation } from 'react-i18next'
+import { useForm, Controller } from 'react-hook-form'
+import PhoneInput from 'react-phone-input-2'
+import { APP_URL, APP_CONSULT } from '../../api'
 import { Portal } from '../../ui/Portal'
 import { Form } from '../../ui/Form'
 import { Alert } from '../../ui/Alert'
@@ -12,17 +13,28 @@ import iconClose from '../ConsultForm/icon-close.png'
 import s from './SignUpForm.module.sass'
 
 export const SignUpForm = ({ setIsSignUpForm }) => {
-  const [value, setValue] = useState({
-    name: '',
-    tel: '',
-    email: '',
-    message: '',
-  })
+  const [name, setName] = useState('')
+  const [tel, setTel] = useState('')
+  const [email, setEmail] = useState('')
+  const [message, setMessage] = useState('')
   const [isLoader, setIsLoader] = useState(false)
   const [isAlert, setIsAlert] = useState(false)
   const [alertType, setAlertType] = useState('success')
   const [disabled, setDisabled] = useState(false)
+
   const { t } = useTranslation()
+
+  const nameChange = e => {
+    setName(e.target.value.trimStart())
+  }
+
+  const emailChange = e => {
+    setEmail(e.target.value.trimStart())
+  }
+
+  const messageChange = e => {
+    setMessage(e.target.value.trimStart())
+  }
 
   const escSignUpForm = e => {
     if (e.key === 'Escape') {
@@ -48,48 +60,32 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
 
   const {
     register,
+    control,
     handleSubmit,
     reset,
     formState,
     formState: { errors },
   } = useForm({
     mode: 'onSubmit',
-    defaultValues: {
-      name: '',
-      tel: '',
-      email: '',
-      message: '',
-    },
   })
 
   useEffect(() => {
     if (formState.isSubmitSuccessful) {
-      reset({
-        name: '',
-        tel: '',
-        email: '',
-        message: '',
-      })
+      reset(name, tel, email, message)
     }
   }, [formState, reset])
 
-  const onSubmit = async () => {
+  const onSubmit = async data => {
     setIsLoader(true)
     try {
-      const response = await fetch('http://45.130.42.68:8080/api/saintcode/send', {
+      const response = await fetch(`${APP_URL}${APP_CONSULT}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ value }),
+        body: JSON.stringify(data),
       })
       const res = await response.json()
-      await setValue({
-        name: '',
-        tel: '',
-        email: '',
-        message: '',
-      })
     } catch (error) {
       setIsLoader(false)
       setIsAlert(true)
@@ -137,6 +133,7 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                   <input
                     className={s.consultForm__name}
                     id="name"
+                    name="name"
                     {...register('name', {
                       required: t('SignUpForm.name.name'),
                       minLength: {
@@ -152,8 +149,8 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     type="text"
                     placeholder={t('SignUpForm.name.placeholder')}
                     size={39}
-                    onChange={e => handleChange(e, setValue)}
-                    value={value.name}
+                    onChange={nameChange}
+                    value={name}
                     style={
                       errors.name
                         ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
@@ -169,28 +166,44 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                   </>
                 </div>
                 <div>
-                  <input
-                    className={s.consultForm__tel}
-                    id="tel"
+                  <Controller
+                    control={control}
                     name="tel"
-                    {...register('tel', {
+                    rules={{
                       required: t('SignUpForm.tel.required'),
-                      pattern: {
-                        value:
-                          /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
+                      minLength: {
+                        value: 10,
                         message: t('SignUpForm.tel.message'),
                       },
-                    })}
-                    type="tel"
-                    placeholder="+999 999999999"
-                    size={39}
-                    onChange={e => handleChange(e, setValue)}
-                    value={value.tel}
-                    style={
+                    }}
+                    render={({ field: { ref, ...field } }) => (
+                      <PhoneInput
+                        {...field}
+                        inputClass={s.phone__input}
+                        dropdownStyle={{ color: '#000' }}
+                        buttonStyle={{
+                          border: 'none',
+                          background: 'none',
+                          margin: '0',
+                        }}
+                        country="ru"
+                        inputExtraProps={{
+                          ref,
+                          required: true,
+                          autoFocus: true,
+                        }}
+                        style={
                       errors.tel
-                        ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
+                        ? {
+                          outline: '1px solid #EA6342',
+                          background: 'rgba(234, 99, 66, 0.1)',
+                          marginBottom: '5px',
+                          border: 0,
+                        }
                         : { outline: 'none' }
                     }
+                      />
+                    )}
                   />
                   <>
                     {errors.tel && (
@@ -223,8 +236,8 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     type="email"
                     placeholder={t('SignUpForm.mail.placeholder')}
                     size={39}
-                    onChange={e => handleChange(e, setValue)}
-                    value={value.email}
+                    onChange={emailChange}
+                    value={email}
                     style={
                       errors.email
                         ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
@@ -252,8 +265,8 @@ export const SignUpForm = ({ setIsSignUpForm }) => {
                     })}
                     placeholder={t('SignUpForm.textarea.placeholder')}
                     cols={42}
-                    onChange={e => handleChange(e, setValue)}
-                    value={value.message}
+                    onChange={messageChange}
+                    value={message}
                     style={
                       errors.message
                         ? { outline: '1px solid #EA6342', background: 'rgba(234, 99, 66, 0.1)', border: 0 }
