@@ -70,11 +70,12 @@ export const InterviewPoddubny = ({ className }) => {
             ))}
           </div>
           <p className={s.InterviewPoddubny__post}>
-            P.S. Если интересна та же область программирования, можно задать
-            вопросы
+            P.S.
+            {' '}
+            {t('Poddubny.ps')}
             {' '}
             <a href="https://vk.com/ipodd">
-              лично
+              {t('Poddubny.personally')}
             </a>
             {' '}
             Игорю.
