@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import { useTranslation } from 'react-i18next'
-import PhoneInput from 'react-phone-input-2'
-import { useForm, Controller } from 'react-hook-form'
 import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next'
+import { useForm, Controller } from 'react-hook-form'
+import PhoneInput from 'react-phone-input-2'
+import { APP_URL, APP_CONSULT } from '../../api'
 import { Portal } from '../../ui/Portal'
 import { Form } from '../../ui/Form'
 import { Alert } from '../../ui/Alert'
@@ -30,6 +31,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
   const emailChange = e => {
     setEmail(e.target.value.trimStart())
   }
+
   const messageChange = e => {
     setMessage(e.target.value.trimStart())
   }
@@ -70,7 +72,7 @@ export const ConsultForm = ({ setIsConsultForm }) => {
     // console.log('data', data)
     setIsLoader(true)
     try {
-      const response = await fetch('http://45.130.42.68:8080/api/saintcode/send', {
+      const response = await fetch(`${APP_URL}${APP_CONSULT}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
