@@ -435,7 +435,9 @@
       "answer_9": " If you need to learn how to code in a short time, it is best to sign up for some courses with homework and mentors.",
       "answer_10": "Few people can organize themselves, so you need to have a good mentor who will point you in the right direction, answer questions and kick you when you start to be lazy.",
       "answer_11": "I would suggest that you first learn the basics of C#, Java, or Javascript since these languages are very similar and it will not be difficult to switch from one language to another at the very beginning. And then go deeper."
-    }
+    },
+    "ps": "If you are interested in the same area of programming, you can ask questions",
+    "personally": "personally"
   },
   "CommercialProject": {
     "title-span": "Also, ",
