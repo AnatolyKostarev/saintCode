@@ -36,7 +36,6 @@ export const Header = () => {
   const changeBcg = () => {
     switch (pathname) {
       case '/school':
-      case '/program':
       case '/faq':
         background.header = 'rgba(62, 43, 46, 1)'
         background.button = 'rgba(233, 122, 140, 1)'
