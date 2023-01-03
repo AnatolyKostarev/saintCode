@@ -8,7 +8,7 @@ export const FooterLinks = ({ className }) => {
   const { t } = useTranslation()
   return (
     <div className={clsx(s.FooterLinks, className)}>
-      <Link to="/program">
+      <Link to="*">
         {t('FooterLink.item1')}
       </Link>
       <Link to="/">

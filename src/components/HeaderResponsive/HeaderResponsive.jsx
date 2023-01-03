@@ -55,7 +55,7 @@ export const HeaderResponsive = () => {
                 </Link>
               </li>
               <li>
-                <Link className={clsx(s.lnk, { [s.active]: location.pathname === '/program' })} to="/program">
+                <Link className={clsx(s.lnk, { [s.active]: location.pathname === '*' })} to="*">
                   {t('HeaderResponsive.program')}
                 </Link>
               </li>

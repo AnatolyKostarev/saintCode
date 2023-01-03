@@ -10,7 +10,7 @@ import { NotFound } from './page/NotFound'
 export const routes = [
   { path: '/', element: <Home /> },
   { path: '/school', element: <School /> },
-  { path: '/program', element: <Preprogram /> },
+  // { path: '/program', element: <Preprogram /> },
   { path: '/faq', element: <FAQ /> },
   { path: '/blog', element: <Blog /> },
   { path: '/blog/time', element: <Time /> },
