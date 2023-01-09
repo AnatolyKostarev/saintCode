@@ -1,11 +1,11 @@
-import Alex from './Alex.png'
-import Alex2x from './Alex-2x.png'
-import Yuri from './Yuri.png'
-import Yuri2x from './Yuri-2x.png'
-import Vasylii from './Vasylii.png'
+import Alex from './Alex.webp'
+import Alex2x from './Alex-2x.webp'
+import Yuri from './Yuri.webp'
+import Yuri2x from './Yuri-2x.webp'
+import Vasylii from './Vasylii.webp'
 import Vasylii2x from './Vasylii-2x.png'
-import Kostya from './Kostya.png'
-import Kostya2x from './Kostya-2x.png'
+import Kostya from './Kostya.webp'
+import Kostya2x from './Kostya-2x.webp'
 
 export const teachersData = [
   {
